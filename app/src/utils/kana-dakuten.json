@@ -1,0 +1,127 @@
+{
+  "ga": {
+    "hiragana": "が",
+    "katakana": "ガ",
+    "romaji": "ga"
+  },
+  "gi": {
+    "hiragana": "ぎ",
+    "katakana": "ギ",
+    "romaji": "gi"
+  },
+  "gu": {
+    "hiragana": "ぐ",
+    "katakana": "グ",
+    "romaji": "gu"
+  },
+  "ge": {
+    "hiragana": "げ",
+    "katakana": "ゲ",
+    "romaji": "ge"
+  },
+  "go": {
+    "hiragana": "ご",
+    "katakana": "ゴ",
+    "romaji": "go"
+  },
+  "za": {
+    "hiragana": "ざ",
+    "katakana": "ザ",
+    "romaji": "za"
+  },
+  "ji": {
+    "hiragana": "じ",
+    "katakana": "ジ",
+    "romaji": "ji"
+  },
+  "zu": {
+    "hiragana": "ず",
+    "katakana": "ズ",
+    "romaji": "zu"
+  },
+  "ze": {
+    "hiragana": "ぜ",
+    "katakana": "ゼ",
+    "romaji": "ze"
+  },
+  "zo": {
+    "hiragana": "ぞ",
+    "katakana": "ゾ",
+    "romaji": "zo"
+  },
+  "da": {
+    "hiragana": "だ",
+    "katakana": "ダ",
+    "romaji": "da"
+  },
+  "dzi": {
+    "hiragana": "ぢ",
+    "katakana": "ヂ",
+    "romaji": "dzi"
+  },
+  "dzu": {
+    "hiragana": "づ",
+    "katakana": "ヅ",
+    "romaji": "dzu"
+  },
+  "de": {
+    "hiragana": "で",
+    "katakana": "デ",
+    "romaji": "de"
+  },
+  "do": {
+    "hiragana": "ど",
+    "katakana": "ド",
+    "romaji": "do"
+  },
+  "ba": {
+    "hiragana": "ば",
+    "katakana": "バ",
+    "romaji": "ba"
+  },
+  "bi": {
+    "hiragana": "び",
+    "katakana": "ビ",
+    "romaji": "bi"
+  },
+  "bu": {
+    "hiragana": "ぶ",
+    "katakana": "ブ",
+    "romaji": "bu"
+  },
+  "be": {
+    "hiragana": "べ",
+    "katakana": "ベ",
+    "romaji": "be"
+  },
+  "bo": {
+    "hiragana": "ぼ",
+    "katakana": "ボ",
+    "romaji": "bo"
+  },
+  "pa": {
+    "hiragana": "ぱ",
+    "katakana": "パ",
+    "romaji": "pa"
+  },
+  "pi": {
+    "hiragana": "ぴ",
+    "katakana": "ピ",
+    "romaji": "pi"
+  },
+  "pu": {
+    "hiragana": "ぷ",
+    "katakana": "プ",
+    "romaji": "pu"
+  },
+  "pe": {
+    "hiragana": "ぺ",
+    "katakana": "ペ",
+    "romaji": "pe"
+  },
+  "po": {
+    "hiragana": "ぽ",
+    "katakana": "ポ",
+    "romaji": "po"
+  }
+}

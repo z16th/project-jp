@@ -1,0 +1,62 @@
+[
+  {
+    "value": "や",
+    "class": "xや"
+  },
+  {
+    "value": "ゆ",
+    "class": "xゆ"
+  },
+  {
+    "value": "よ",
+    "class": "xよ"
+  },
+  {
+    "value": "k",
+    "class": "yk"
+  },
+  {
+    "value": "sh",
+    "class": "ysh"
+  },
+  {
+    "value": "ch",
+    "class": "ych"
+  },
+  {
+    "value": "n",
+    "class": "yn"
+  },
+  {
+    "value": "h",
+    "class": "yh"
+  },
+  {
+    "value": "m",
+    "class": "ym"
+  },
+  {
+    "value": "r",
+    "class": "yr"
+  },
+  {
+    "value": "g",
+    "class": "yg"
+  },
+  {
+    "value": "j",
+    "class": "yj"
+  },
+  {
+    "value": "d",
+    "class": "yd"
+  },
+  {
+    "value": "b",
+    "class": "yb"
+  },
+  {
+    "value": "p",
+    "class": "yp"
+  }
+]

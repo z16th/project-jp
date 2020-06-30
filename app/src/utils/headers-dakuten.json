@@ -1,0 +1,42 @@
+[
+  {
+    "value": "a",
+    "class": "xa"
+  },
+  {
+    "value": "i",
+    "class": "xi"
+  },
+  {
+    "value": "u",
+    "class": "xu"
+  },
+  {
+    "value": "e",
+    "class": "xe"
+  },
+  {
+    "value": "o",
+    "class": "xo"
+  },
+  {
+    "value": "g",
+    "class": "yg"
+  },
+  {
+    "value": "z",
+    "class": "yz"
+  },
+  {
+    "value": "d",
+    "class": "yd"
+  },
+  {
+    "value": "b",
+    "class": "yb"
+  },
+  {
+    "value": "p",
+    "class": "yp"
+  }
+]

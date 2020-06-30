@@ -1,0 +1,66 @@
+[
+  {
+    "value": "a",
+    "class": "xa"
+  },
+  {
+    "value": "i",
+    "class": "xi"
+  },
+  {
+    "value": "u",
+    "class": "xu"
+  },
+  {
+    "value": "e",
+    "class": "xe"
+  },
+  {
+    "value": "o",
+    "class": "xo"
+  },
+  {
+    "value": "-",
+    "class": "y-"
+  },
+  {
+    "value": "k",
+    "class": "yk"
+  },
+  {
+    "value": "s",
+    "class": "ys"
+  },
+  {
+    "value": "t",
+    "class": "yt"
+  },
+  {
+    "value": "n",
+    "class": "yn"
+  },
+  {
+    "value": "h",
+    "class": "yh"
+  },
+  {
+    "value": "m",
+    "class": "ym"
+  },
+  {
+    "value": "y",
+    "class": "yy"
+  },
+  {
+    "value": "r",
+    "class": "yr"
+  },
+  {
+    "value": "w",
+    "class": "yw"
+  },
+  {
+    "value": "n",
+    "class": "ynn"
+  }
+]

@@ -1,0 +1,35 @@
+.header{
+
+  margin-top: 64px;
+}
+
+.description{
+  border: 2px solid rebeccapurple;
+  padding: 12px;
+}
+.description:hover{
+  cursor: pointer;
+  background-color: rgba(102, 51, 153, 0.432);
+}
+
+.table{
+  display: grid;
+  gap: 12px;
+}
+
+.tab-head{
+  font-size: 2rem;
+}
+
+.kana{
+  background-color: #ababab;
+  border-radius: 100%;
+  font-size: 2rem;
+}
+
+.kana:hover{
+  background-color: cadetblue;
+  cursor: pointer;
+}
+
+
