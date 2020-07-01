@@ -64,11 +64,38 @@ const combinationsGrid = {
   `
 }
 
+const fonts = [
+  'Kosugi Maru',
+  'Sawarabi Gothic',
+  'Noto Serif JP',
+]
+
 export default function Syllabaries(){
+  const [ currentFont, setCurrentFont ] = React.useState('Noto Serif JP')
+
+  const nextFont = () => {
+    fonts.forEach((e, i) => {
+      if(e === currentFont) {
+        if( i < fonts.length - 1) 
+          return setCurrentFont(fonts[i + 1])
+          
+        return setCurrentFont(fonts[0])
+      }
+    })
+  }
+
   return(
     <div id='syllabaries'>
+      <div 
+        id='font' 
+        className='noselect'
+        onClick={() => setCurrentFont(nextFont)}
+      >
+        Cambiar Fuente
+      </div>
       <h1>Escritura y Pronunciación</h1>
       <h2>Esta página contiene audios para los Caracteres Simples, da click en cada caracter para escuchar.</h2>
+      <div id='tables' style={{fontFamily: currentFont}}>
       <Table 
         label={'Caracteres Simples'}
         dataJSON={kanaSimple} 
@@ -87,6 +114,7 @@ export default function Syllabaries(){
         headersJSON={headersCombinations}
         styleObj={combinationsGrid}
       />
+      </div>
     </div>
   )
 }
