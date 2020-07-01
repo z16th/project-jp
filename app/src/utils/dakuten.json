@@ -1,0 +1,176 @@
+{
+  "kana":[
+    {
+      "hiragana": "が",
+      "katakana": "ガ",
+      "romaji": "ga"
+    },
+    {
+      "hiragana": "ぎ",
+      "katakana": "ギ",
+      "romaji": "gi"
+    },
+    {
+      "hiragana": "ぐ",
+      "katakana": "グ",
+      "romaji": "gu"
+    },
+    {
+      "hiragana": "げ",
+      "katakana": "ゲ",
+      "romaji": "ge"
+    },
+    {
+      "hiragana": "ご",
+      "katakana": "ゴ",
+      "romaji": "go"
+    },
+    {
+      "hiragana": "ざ",
+      "katakana": "ザ",
+      "romaji": "za"
+    },
+    {
+      "hiragana": "じ",
+      "katakana": "ジ",
+      "romaji": "ji"
+    },
+    {
+      "hiragana": "ず",
+      "katakana": "ズ",
+      "romaji": "zu"
+    },
+    {
+      "hiragana": "ぜ",
+      "katakana": "ゼ",
+      "romaji": "ze"
+    },
+    {
+      "hiragana": "ぞ",
+      "katakana": "ゾ",
+      "romaji": "zo"
+    },
+    {
+      "hiragana": "だ",
+      "katakana": "ダ",
+      "romaji": "da"
+    },
+    {
+      "hiragana": "ぢ",
+      "katakana": "ヂ",
+      "romaji": "dzi"
+    },
+    {
+      "hiragana": "づ",
+      "katakana": "ヅ",
+      "romaji": "dzu"
+    },
+    {
+      "hiragana": "で",
+      "katakana": "デ",
+      "romaji": "de"
+    },
+    {
+      "hiragana": "ど",
+      "katakana": "ド",
+      "romaji": "do"
+    },
+    {
+      "hiragana": "ば",
+      "katakana": "バ",
+      "romaji": "ba"
+    },
+    {
+      "hiragana": "び",
+      "katakana": "ビ",
+      "romaji": "bi"
+    },
+    {
+      "hiragana": "ぶ",
+      "katakana": "ブ",
+      "romaji": "bu"
+    },
+    {
+      "hiragana": "べ",
+      "katakana": "ベ",
+      "romaji": "be"
+    },
+    {
+      "hiragana": "ぼ",
+      "katakana": "ボ",
+      "romaji": "bo"
+    },
+    {
+      "hiragana": "ぱ",
+      "katakana": "パ",
+      "romaji": "pa"
+    },
+    {
+      "hiragana": "ぴ",
+      "katakana": "ピ",
+      "romaji": "pi"
+    },
+    {
+      "hiragana": "ぷ",
+      "katakana": "プ",
+      "romaji": "pu"
+    },
+    {
+      "hiragana": "ぺ",
+      "katakana": "ペ",
+      "romaji": "pe"
+    },
+    {
+      "hiragana": "ぽ",
+      "katakana": "ポ",
+      "romaji": "po"
+    }
+  ],
+  "headers":[
+    {
+      "value": "a",
+      "class": "xa"
+    },
+    {
+      "value": "i",
+      "class": "xi"
+    },
+    {
+      "value": "u",
+      "class": "xu"
+    },
+    {
+      "value": "e",
+      "class": "xe"
+    },
+    {
+      "value": "o",
+      "class": "xo"
+    },
+    {
+      "value": "g",
+      "class": "yg"
+    },
+    {
+      "value": "z",
+      "class": "yz"
+    },
+    {
+      "value": "d",
+      "class": "yd"
+    },
+    {
+      "value": "b",
+      "class": "yb"
+    },
+    {
+      "value": "p",
+      "class": "yp"
+    }
+  ],
+  "gridStyle":{
+    "grid-template-columns": "repeat(6, 100px)",
+    "grid-template-rows": "repeat(6, 100px)",
+    "grid-template-areas":"'. xa xi xu xe xo''yg ga gi gu ge go''yz za ji zu ze zo''yd da dzi dzu de do''yb ba bi bu be bo''yp pa pi pu pe po'"
+  }
+}
