@@ -1,11 +1,13 @@
-import React from 'react';
-import './App.css';
-import Syllabaries from './components/Syllabaries';
+import React from 'react'
+import './App.css'
+
+import Syllabaries from './components/SyllabaryPage'
+import KanjiPage from './components/KanjiPage';
 
 function App() {
   return (
     <div className="App">
-      <Syllabaries />
+      <KanjiPage />
     </div>
   );
 }
