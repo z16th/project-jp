@@ -1,19 +1,42 @@
 .kanji-card{
+  display: flex;
   width: 30vw;
-  height: 200px;
+  height: 220px;
   padding: 12px;
   margin: 12px;
-  display: flex;
+  border-radius: 24px;
   background-color: skyblue;
 }
 
+.kanji-card:hover{
+  background-color: rgba(241, 146, 36, 0.61);
+}
+
 .kanji-left{
-  width: 120px;
+  display: flex;
+  flex-direction: column;
+  
+  width: 150px;
   text-align: center;
+  border: 1px solid black;
+  border-radius: 16px;
 }
 
 .kanji-char{
+  height: 162px;
   font-size: 6rem;
+}
+
+.kanji-animation{
+  height: 162px;
+}
+
+.kanji-animation > .controls{
+  display: flex;
+  justify-content: space-evenly;
+}
+.kanji-animation > .controls:hover{
+  cursor: pointer;
 }
 
 .kanji-strokes:hover{

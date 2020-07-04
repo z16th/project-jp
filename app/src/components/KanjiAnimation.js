@@ -33,6 +33,7 @@ const KanjiAnimation = ({ name, onReset, onPause }) => {
        <Icon
         ref={svgRef}
         name={`0${name}-jlect`}
+        style={{paddingTop: '16px'}}
         onLoad={() => {
           if (svgRef.current) {
             svgRef.current.pauseAnimations();
@@ -41,10 +42,10 @@ const KanjiAnimation = ({ name, onReset, onPause }) => {
         }}
       />
       <div className="controls">
-        <button onClick={handlePause}>
+        <div onClick={handlePause}>
           {isPaused ? '▶' : '◼'}
-        </button>
-        <button onClick={handleReset}>⟳</button>
+        </div>
+        <div onClick={handleReset}>⟳</div>
       </div>
     </div>
   );

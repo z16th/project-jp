@@ -1,32 +1,34 @@
-.header{
+
+
+.table-section > .header{
   margin-top: 64px;
 }
 
-.description{
+.table-section > .description{
   border: 2px solid rebeccapurple;
   padding: 12px;
 }
-.description:hover{
+.table-section > .description:hover{
   cursor: pointer;
   background-color: rgba(102, 51, 153, 0.432);
 }
 
-.table{
+.table-section > .table{
   display: grid;
   gap: 12px;
 }
 
-.tab-head{
+.table-section > .tab-head{
   font-size: 2rem;
 }
 
-.kana{
+.table-section > .kana{
   background-color: #ababab;
   border-radius: 100%;
   font-size: 2rem;
 }
 
-.kana:hover{
+.table-section > .kana:hover{
   background-color: cadetblue;
   cursor: pointer;
 }

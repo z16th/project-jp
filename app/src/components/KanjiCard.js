@@ -25,7 +25,7 @@ export default function KanjiCard({data}){
         {showAnimation &&
           <KanjiAnimation name={utf16} width={120} height={120} />
         }
-        <div className='kanji-strokes'  onClick={handleAnimationClick}>Trazos: {strokes}</div>
+        <div className='kanji-strokes noselect'  onClick={handleAnimationClick}>Trazos: {strokes}</div>
         <div className='kanji-number'>No: {number}</div>
       </div>
 
