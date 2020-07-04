@@ -169,8 +169,8 @@
     }
   ],
   "gridStyle":{
-    "grid-template-columns": "repeat(6, 100px)",
-    "grid-template-rows": "repeat(6, 100px)",
-    "grid-template-areas":"'. xa xi xu xe xo''yg ga gi gu ge go''yz za ji zu ze zo''yd da dzi dzu de do''yb ba bi bu be bo''yp pa pi pu pe po'"
+    "gridTemplateColumns": "repeat(6, 100px)",
+    "gridTemplateRows": "repeat(6, 100px)",
+    "gridTemplateAreas":"'. xa xi xu xe xo''yg ga gi gu ge go''yz za ji zu ze zo''yd da dzi dzu de do''yb ba bi bu be bo''yp pa pi pu pe po'"
   }
 }

@@ -244,8 +244,8 @@
     }
   ],
   "gridStyle": {
-    "grid-template-columns": "repeat(4, 100px)",
-    "grid-template-rows": "repeat(14, 100px)",
-    "grid-template-areas": "'. xや xゆ xよ''yk kya kyu kyo''ysh sha shu sho''ych cha chu cho''yn nya nyu nyo''yh hya hyu hyo''ym mya myu myo''yr rya ryu ryo''. . . .''yg gya gyu gyo''yj ja ju jo''yd dya dyu dyo''yb bya byu byo''yp pya pyu pyo'"
+    "gridTemplateColumns": "repeat(6, 100px)",
+    "gridTemplateRows": "repeat(14, 100px)",
+    "gridTemplateAreas": "'. xや . xゆ . xよ' 'yk kya . kyu . kyo''ysh sha . shu . sho' 'ych cha . chu . cho''yn nya . nyu . nyo''yh hya . hyu . hyo' 'ym mya . myu . myo' 'yr rya . ryu . ryo' '. . . . . .' 'yg gya . gyu . gyo' 'yj ja . ju . jo' 'yd dya . dyu . dyo''yb bya . byu . byo' 'yp pya . pyu . pyo'"
   }
 }

@@ -1,722 +1,882 @@
 [
   {
+    "utf16": "4e00",
     "number": "1",
     "strokes": "1",
     "character": "一",
-    "onyomi": "イチ",
-    "kunyomi": "いつ",
-    "meaning": "uno",
-    "utf16": "4e00"
+    "onyomiKana": "イチ",
+    "onyomiRomaji": "ichi",
+    "kunyomiKana": "いつ",
+    "kunyomiRomaji": "itsu",
+    "meaning": "uno"
   },
   {
+    "utf16": "53f3",
     "number": "2",
     "strokes": "5",
     "character": "右",
-    "onyomi": "ウ、ユウ",
-    "kunyomi": "みぎ",
-    "meaning": "derecha",
-    "utf16": "53f3"
+    "onyomiKana": "ウ、ユウ",
+    "onyomiRomaji": "u, yū",
+    "kunyomiKana": "みぎ",
+    "kunyomiRomaji": "migi",
+    "meaning": "derecha"
   },
   {
+    "utf16": "96e8",
     "number": "3",
     "strokes": "8",
     "character": "雨",
-    "onyomi": "ウ",
-    "kunyomi": "あめ、あま～",
-    "meaning": "lluvia",
-    "utf16": "96e8"
+    "onyomiKana": "ウ",
+    "onyomiRomaji": "u",
+    "kunyomiKana": "あめ、あま～",
+    "kunyomiRomaji": "ame, ama～",
+    "meaning": "lluvia"
   },
   {
+    "utf16": "5186",
     "number": "4",
     "strokes": "4",
     "character": "円",
-    "onyomi": "エン",
-    "kunyomi": "まる.い",
-    "meaning": "yen, redondo",
-    "utf16": "5186"
+    "onyomiKana": "エン",
+    "onyomiRomaji": "en",
+    "kunyomiKana": "まる.い",
+    "kunyomiRomaji": "maru.i",
+    "meaning": "yen, redondo"
   },
   {
+    "utf16": "738b",
     "number": "5",
     "strokes": "4",
     "character": "王",
-    "onyomi": "オウ",
-    "kunyomi": "．．．",
-    "meaning": "rey, gobernante",
-    "utf16": "738b"
+    "onyomiKana": "オウ",
+    "onyomiRomaji": "ō",
+    "kunyomiKana": "．．．",
+    "kunyomiRomaji": "．．．",
+    "meaning": "rey, gobernante"
   },
   {
+    "utf16": "97f3",
     "number": "6",
     "strokes": "9",
     "character": "音",
-    "onyomi": "オン、イン",
-    "kunyomi": "おと、ね",
-    "meaning": "sonido",
-    "utf16": "97f3"
+    "onyomiKana": "オン、イン",
+    "onyomiRomaji": "on, in",
+    "kunyomiKana": "おと、ね",
+    "kunyomiRomaji": "oto, ne",
+    "meaning": "sonido"
   },
   {
+    "utf16": "4e0b",
     "number": "7",
     "strokes": "3",
     "character": "下",
-    "onyomi": "カ、ゲ",
-    "kunyomi": "した、もと、しも、さ.げる、お.りる、くだ.さる",
-    "meaning": "debajo de, bajar",
-    "utf16": "4e0b"
+    "onyomiKana": "カ、ゲ",
+    "onyomiRomaji": "ka, ge",
+    "kunyomiKana": "した、もと、しも、さ.げる、お.りる、くだ.さる",
+    "kunyomiRomaji": "shita, moto, shimo, sa.geru, o.riru, kuda.saru",
+    "meaning": "debajo de, bajar"
   },
   {
+    "utf16": "706b",
     "number": "8",
     "strokes": "4",
     "character": "火",
-    "onyomi": "カ",
-    "kunyomi": "ひ",
-    "meaning": "fuego",
-    "utf16": "706b"
+    "onyomiKana": "カ",
+    "onyomiRomaji": "ka",
+    "kunyomiKana": "ひ",
+    "kunyomiRomaji": "hi",
+    "meaning": "fuego"
   },
   {
+    "utf16": "82b1",
     "number": "9",
     "strokes": "7",
     "character": "花",
-    "onyomi": "カ",
-    "kunyomi": "はな",
-    "meaning": "flor, florecer",
-    "utf16": "82b1"
+    "onyomiKana": "カ",
+    "onyomiRomaji": "ka",
+    "kunyomiKana": "はな",
+    "kunyomiRomaji": "hana",
+    "meaning": "flor, florecer"
   },
   {
+    "utf16": "8c9d",
     "number": "10",
     "strokes": "7",
     "character": "貝",
-    "onyomi": "．．．",
-    "kunyomi": "かい",
-    "meaning": "caparazón, marisco",
-    "utf16": "8c9d"
+    "onyomiKana": "．．．",
+    "onyomiRomaji": "．．．",
+    "kunyomiKana": "かい",
+    "kunyomiRomaji": "kai",
+    "meaning": "caparazón, marisco"
   },
   {
+    "utf16": "5b66",
     "number": "11",
     "strokes": "8",
     "character": "学",
-    "onyomi": "ガク",
-    "kunyomi": "まな.ぶ",
-    "meaning": "aprendizaje",
-    "utf16": "5b66"
+    "onyomiKana": "ガク",
+    "onyomiRomaji": "gaku",
+    "kunyomiKana": "まな.ぶ",
+    "kunyomiRomaji": "mana.bu",
+    "meaning": "aprendizaje"
   },
   {
+    "utf16": "6c17",
     "number": "12",
     "strokes": "6",
     "character": "気",
-    "onyomi": "キ、ケ",
-    "kunyomi": "．．．",
-    "meaning": "espíritu, mente, corazón, energía",
-    "utf16": "6c17"
+    "onyomiKana": "キ、ケ",
+    "onyomiRomaji": "ki, ke",
+    "kunyomiKana": "．．．",
+    "kunyomiRomaji": "．．．",
+    "meaning": "espíritu, mente, corazón, energía"
   },
   {
+    "utf16": "4e5d",
     "number": "13",
     "strokes": "2",
     "character": "九",
-    "onyomi": "キュウ、ク",
-    "kunyomi": "ここの～",
-    "meaning": "nueve",
-    "utf16": "4e5d"
+    "onyomiKana": "キュウ、ク",
+    "onyomiRomaji": "kyū, ku",
+    "kunyomiKana": "ここの～",
+    "kunyomiRomaji": "kokono～",
+    "meaning": "nueve"
   },
   {
+    "utf16": "4f11",
     "number": "14",
     "strokes": "6",
     "character": "休",
-    "onyomi": "キュウ",
-    "kunyomi": "やす.む",
-    "meaning": "descanso, descansar",
-    "utf16": "4f11"
+    "onyomiKana": "キュウ",
+    "onyomiRomaji": "kyū",
+    "kunyomiKana": "やす.む",
+    "kunyomiRomaji": "yasu.mu",
+    "meaning": "descanso, descansar"
   },
   {
+    "utf16": "7389",
     "number": "15",
     "strokes": "5",
     "character": "玉",
-    "onyomi": "ギョウク",
-    "kunyomi": "たま",
-    "meaning": "joya, bola",
-    "utf16": "7389"
+    "onyomiKana": "ギョウク",
+    "onyomiRomaji": "gyōku",
+    "kunyomiKana": "たま",
+    "kunyomiRomaji": "tama",
+    "meaning": "joya, bola"
   },
   {
+    "utf16": "91d1",
     "number": "16",
     "strokes": "8",
     "character": "金",
-    "onyomi": "キン、コン",
-    "kunyomi": "かね",
-    "meaning": "oro, metal, dinero",
-    "utf16": "91d1"
+    "onyomiKana": "キン、コン",
+    "onyomiRomaji": "kin, kon",
+    "kunyomiKana": "かね",
+    "kunyomiRomaji": "kane",
+    "meaning": "oro, metal, dinero"
   },
   {
+    "utf16": "7a7a",
     "number": "17",
     "strokes": "8",
     "character": "空",
-    "onyomi": "クウ",
-    "kunyomi": "そら、から",
-    "meaning": "cielo, vacío",
-    "utf16": "7a7a"
+    "onyomiKana": "クウ",
+    "onyomiRomaji": "kū",
+    "kunyomiKana": "そら、から",
+    "kunyomiRomaji": "sora, kara",
+    "meaning": "cielo, vacío"
   },
   {
+    "utf16": "6708",
     "number": "18",
     "strokes": "4",
     "character": "月",
-    "onyomi": "ゲツ、ガツ",
-    "kunyomi": "つき",
-    "meaning": "luna, mes",
-    "utf16": "6708"
+    "onyomiKana": "ゲツ、ガツ",
+    "onyomiRomaji": "getsu, gatsu",
+    "kunyomiKana": "つき",
+    "kunyomiRomaji": "tsuki",
+    "meaning": "luna, mes"
   },
   {
+    "utf16": "72ac",
     "number": "19",
     "strokes": "4",
     "character": "犬",
-    "onyomi": "ケン",
-    "kunyomi": "いぬ",
-    "meaning": "perro",
-    "utf16": "72ac"
+    "onyomiKana": "ケン",
+    "onyomiRomaji": "ken",
+    "kunyomiKana": "いぬ",
+    "kunyomiRomaji": "inu",
+    "meaning": "perro"
   },
   {
+    "utf16": "898b",
     "number": "20",
     "strokes": "7",
     "character": "見",
-    "onyomi": "ケン",
-    "kunyomi": "み.る／.せる／.える",
-    "meaning": "observar, ver, mostrar",
-    "utf16": "898b"
+    "onyomiKana": "ケン",
+    "onyomiRomaji": "ken",
+    "kunyomiKana": "み.る／.せる／.える",
+    "kunyomiRomaji": "mi.ru／.seru／.eru",
+    "meaning": "observar, ver, mostrar"
   },
   {
+    "utf16": "4e94",
     "number": "21",
     "strokes": "4",
     "character": "五",
-    "onyomi": "ゴ",
-    "kunyomi": "いつ～",
-    "meaning": "cinco",
-    "utf16": "4e94"
+    "onyomiKana": "ゴ",
+    "onyomiRomaji": "go",
+    "kunyomiKana": "いつ～",
+    "kunyomiRomaji": "itsu～",
+    "meaning": "cinco"
   },
   {
+    "utf16": "53e3",
     "number": "22",
     "strokes": "3",
     "character": "口",
-    "onyomi": "コウ、ク",
-    "kunyomi": "くち",
-    "meaning": "boca",
-    "utf16": "53e3"
+    "onyomiKana": "コウ、ク",
+    "onyomiRomaji": "kō, ku",
+    "kunyomiKana": "くち",
+    "kunyomiRomaji": "kuchi",
+    "meaning": "boca"
   },
   {
+    "utf16": "6821",
     "number": "23",
     "strokes": "10",
     "character": "校",
-    "onyomi": "コウ",
-    "kunyomi": "．．．",
-    "meaning": "escuela, prueba",
-    "utf16": "6821"
+    "onyomiKana": "コウ",
+    "onyomiRomaji": "kō",
+    "kunyomiKana": "．．．",
+    "kunyomiRomaji": "．．．",
+    "meaning": "escuela, prueba"
   },
   {
+    "utf16": "5de6",
     "number": "24",
     "strokes": "5",
     "character": "左",
-    "onyomi": "サ",
-    "kunyomi": "ひだり",
-    "meaning": "izquierda",
-    "utf16": "5de6"
+    "onyomiKana": "サ",
+    "onyomiRomaji": "sa",
+    "kunyomiKana": "ひだり",
+    "kunyomiRomaji": "hidari",
+    "meaning": "izquierda"
   },
   {
+    "utf16": "4e09",
     "number": "25",
     "strokes": "3",
     "character": "三",
-    "onyomi": "サン",
-    "kunyomi": "み～",
-    "meaning": "tres",
-    "utf16": "4e09"
+    "onyomiKana": "サン",
+    "onyomiRomaji": "san",
+    "kunyomiKana": "み～",
+    "kunyomiRomaji": "mi～",
+    "meaning": "tres"
   },
   {
+    "utf16": "5c71",
     "number": "26",
     "strokes": "3",
     "character": "山",
-    "onyomi": "サン",
-    "kunyomi": "やま",
-    "meaning": "montaña, colina",
-    "utf16": "5c71"
+    "onyomiKana": "サン",
+    "onyomiRomaji": "san",
+    "kunyomiKana": "やま",
+    "kunyomiRomaji": "yama",
+    "meaning": "montaña, colina"
   },
   {
+    "utf16": "5b50",
     "number": "27",
     "strokes": "3",
     "character": "子",
-    "onyomi": "シ、ス",
-    "kunyomi": "こ",
-    "meaning": "niño/a",
-    "utf16": "5b50"
+    "onyomiKana": "シ、ス",
+    "onyomiRomaji": "shi, su",
+    "kunyomiKana": "こ",
+    "kunyomiRomaji": "ko",
+    "meaning": "niño/a"
   },
   {
+    "utf16": "56db",
     "number": "28",
     "strokes": "5",
     "character": "四",
-    "onyomi": "シ",
-    "kunyomi": "よ～、よん",
-    "meaning": "cuatro",
-    "utf16": "56db"
+    "onyomiKana": "シ",
+    "onyomiRomaji": "shi",
+    "kunyomiKana": "よ～、よん",
+    "kunyomiRomaji": "yo～, yon",
+    "meaning": "cuatro"
   },
   {
+    "utf16": "7cf8",
     "number": "29",
     "strokes": "6",
     "character": "糸",
-    "onyomi": "シ",
-    "kunyomi": "いと",
-    "meaning": "hilo",
-    "utf16": "7cf8"
+    "onyomiKana": "シ",
+    "onyomiRomaji": "shi",
+    "kunyomiKana": "いと",
+    "kunyomiRomaji": "ito",
+    "meaning": "hilo"
   },
   {
+    "utf16": "5b57",
     "number": "30",
     "strokes": "6",
     "character": "字",
-    "onyomi": "ジ",
-    "kunyomi": "．．．",
-    "meaning": "letra, símbolo",
-    "utf16": "5b57"
+    "onyomiKana": "ジ",
+    "onyomiRomaji": "ji",
+    "kunyomiKana": "．．．",
+    "kunyomiRomaji": "．．．",
+    "meaning": "letra, símbolo"
   },
   {
+    "utf16": "8033",
     "number": "31",
     "strokes": "6",
     "character": "耳",
-    "onyomi": "ジ",
-    "kunyomi": "みみ",
-    "meaning": "oreja",
-    "utf16": "8033"
+    "onyomiKana": "ジ",
+    "onyomiRomaji": "ji",
+    "kunyomiKana": "みみ",
+    "kunyomiRomaji": "mimi",
+    "meaning": "oreja"
   },
   {
+    "utf16": "4e03",
     "number": "32",
     "strokes": "2",
     "character": "七",
-    "onyomi": "シチ",
-    "kunyomi": "なな",
-    "meaning": "siete",
-    "utf16": "4e03"
+    "onyomiKana": "シチ",
+    "onyomiRomaji": "shichi",
+    "kunyomiKana": "なな",
+    "kunyomiRomaji": "nana",
+    "meaning": "siete"
   },
   {
+    "utf16": "8eca",
     "number": "33",
     "strokes": "7",
     "character": "車",
-    "onyomi": "シャ",
-    "kunyomi": "くるま",
-    "meaning": "vehículo, auto, carro",
-    "utf16": "8eca"
+    "onyomiKana": "シャ",
+    "onyomiRomaji": "sha",
+    "kunyomiKana": "くるま",
+    "kunyomiRomaji": "kuruma",
+    "meaning": "vehículo, auto, carro"
   },
   {
+    "utf16": "624b",
     "number": "34",
     "strokes": "4",
     "character": "手",
-    "onyomi": "シュ",
-    "kunyomi": "て",
-    "meaning": "mano",
-    "utf16": "624b"
+    "onyomiKana": "シュ",
+    "onyomiRomaji": "shu",
+    "kunyomiKana": "て",
+    "kunyomiRomaji": "te",
+    "meaning": "mano"
   },
   {
+    "utf16": "5341",
     "number": "35",
     "strokes": "2",
     "character": "十",
-    "onyomi": "ジュウ",
-    "kunyomi": "とお",
-    "meaning": "diez",
-    "utf16": "5341"
+    "onyomiKana": "ジュウ",
+    "onyomiRomaji": "jū",
+    "kunyomiKana": "とお",
+    "kunyomiRomaji": "tō",
+    "meaning": "diez"
   },
   {
+    "utf16": "51fa",
     "number": "36",
     "strokes": "5",
     "character": "出",
-    "onyomi": "シュツ",
-    "kunyomi": "で.る、だ.す",
-    "meaning": "salir, sacar",
-    "utf16": "51fa"
+    "onyomiKana": "シュツ",
+    "onyomiRomaji": "shutsu",
+    "kunyomiKana": "で.る、だ.す",
+    "kunyomiRomaji": "de.ru, da.su",
+    "meaning": "salir, sacar"
   },
   {
+    "utf16": "5973",
     "number": "37",
     "strokes": "2",
     "character": "女",
-    "onyomi": "ジョ、ニョ、ニョウ",
-    "kunyomi": "おんな、め",
-    "meaning": "mujer",
-    "utf16": "5973"
+    "onyomiKana": "ジョ、ニョ、ニョウ",
+    "onyomiRomaji": "jo, nyo, nyō",
+    "kunyomiKana": "おんな、め",
+    "kunyomiRomaji": "onna, me",
+    "meaning": "mujer"
   },
   {
+    "utf16": "5c0f",
     "number": "38",
     "strokes": "3",
     "character": "小",
-    "onyomi": "ショウ",
-    "kunyomi": "ちい.さい、こ、お～",
-    "meaning": "pequeño",
-    "utf16": "5c0f"
+    "onyomiKana": "ショウ",
+    "onyomiRomaji": "shō",
+    "kunyomiKana": "ちい.さい、こ、お～",
+    "kunyomiRomaji": "chii.sai, ko, o～",
+    "meaning": "pequeño"
   },
   {
+    "utf16": "4e0a",
     "number": "39",
     "strokes": "3",
     "character": "上",
-    "onyomi": "ジョウ",
-    "kunyomi": "うえ、うわ～、かみ、あ.げる／.がる、のぼ.る",
-    "meaning": "arriba, encima, sobre, subir",
-    "utf16": "4e0a"
+    "onyomiKana": "ジョウ",
+    "onyomiRomaji": "jō",
+    "kunyomiKana": "うえ、うわ～、かみ、あ.げる／.がる、のぼ.る",
+    "kunyomiRomaji": "ue, uwa～, kami, a.geru／.garu, nobo.ru",
+    "meaning": "arriba, encima, sobre, subir"
   },
   {
+    "utf16": "68ee",
     "number": "40",
     "strokes": "12",
     "character": "森",
-    "onyomi": "シン",
-    "kunyomi": "もり",
-    "meaning": "bosque",
-    "utf16": "68ee"
+    "onyomiKana": "シン",
+    "onyomiRomaji": "shin",
+    "kunyomiKana": "もり",
+    "kunyomiRomaji": "mori",
+    "meaning": "bosque"
   },
   {
+    "utf16": "4eba",
     "number": "41",
     "strokes": "2",
     "character": "人",
-    "onyomi": "ジン、ニン",
-    "kunyomi": "ひと",
-    "meaning": "persona(s)",
-    "utf16": "4eba"
+    "onyomiKana": "ジン、ニン",
+    "onyomiRomaji": "jin, nin",
+    "kunyomiKana": "ひと",
+    "kunyomiRomaji": "hito",
+    "meaning": "persona(s)"
   },
   {
+    "utf16": "6c34",
     "number": "42",
     "strokes": "4",
     "character": "水",
-    "onyomi": "スイ",
-    "kunyomi": "みず",
-    "meaning": "agua",
-    "utf16": "6c34"
+    "onyomiKana": "スイ",
+    "onyomiRomaji": "sui",
+    "kunyomiKana": "みず",
+    "kunyomiRomaji": "mizu",
+    "meaning": "agua"
   },
   {
+    "utf16": "6b63",
     "number": "43",
     "strokes": "5",
     "character": "正",
-    "onyomi": "セイ、ショウ",
-    "kunyomi": "ただ.し、ただ.す、まさ",
-    "meaning": "correcto, apropiado",
-    "utf16": "6b63"
+    "onyomiKana": "セイ、ショウ",
+    "onyomiRomaji": "sei, shō",
+    "kunyomiKana": "ただ.し、ただ.す、まさ",
+    "kunyomiRomaji": "tada.shi, tada.su, masa",
+    "meaning": "correcto, apropiado"
   },
   {
+    "utf16": "751f",
     "number": "44",
     "strokes": "5",
     "character": "生",
-    "onyomi": "セイ、ショウ",
-    "kunyomi": "い.きる／.かす、う.む／.まれる、なま",
-    "meaning": "vida, nacimiento, crecimiento",
-    "utf16": "751f"
+    "onyomiKana": "セイ、ショウ",
+    "onyomiRomaji": "sei, shō",
+    "kunyomiKana": "い.きる／.かす、う.む／.まれる、なま",
+    "kunyomiRomaji": "i.kiru／.kasu, u.mu／.mareru, nama",
+    "meaning": "vida, nacimiento, crecimiento"
   },
   {
+    "utf16": "9752",
     "number": "45",
     "strokes": "8",
     "character": "青",
-    "onyomi": "セイ、ショウ",
-    "kunyomi": "あお.い",
-    "meaning": "joven, fresco, verde/azul",
-    "utf16": "9752"
+    "onyomiKana": "セイ、ショウ",
+    "onyomiRomaji": "sei, shō",
+    "kunyomiKana": "あお.い",
+    "kunyomiRomaji": "ao.i",
+    "meaning": "joven, fresco, verde/azul"
   },
   {
+    "utf16": "5915",
     "number": "46",
     "strokes": "3",
     "character": "夕",
-    "onyomi": "セキ",
-    "kunyomi": "ゆう",
-    "meaning": "tarde",
-    "utf16": "5915"
+    "onyomiKana": "セキ",
+    "onyomiRomaji": "seki",
+    "kunyomiKana": "ゆう",
+    "kunyomiRomaji": "yū",
+    "meaning": "tarde"
   },
   {
+    "utf16": "77f3",
     "number": "47",
     "strokes": "5",
     "character": "石",
-    "onyomi": "セキ、シャク",
-    "kunyomi": "いし",
-    "meaning": "piedra, roca",
-    "utf16": "77f3"
+    "onyomiKana": "セキ、シャク",
+    "onyomiRomaji": "seki, shaku",
+    "kunyomiKana": "いし",
+    "kunyomiRomaji": "ishi",
+    "meaning": "piedra, roca"
   },
   {
+    "utf16": "8d64",
     "number": "48",
     "strokes": "7",
     "character": "赤",
-    "onyomi": "セキ、シャク",
-    "kunyomi": "あか.い",
-    "meaning": "rojo",
-    "utf16": "8d64"
+    "onyomiKana": "セキ、シャク",
+    "onyomiRomaji": "seki, shaku",
+    "kunyomiKana": "あか.い",
+    "kunyomiRomaji": "aka.i",
+    "meaning": "rojo"
   },
   {
+    "utf16": "5343",
     "number": "49",
     "strokes": "3",
     "character": "千",
-    "onyomi": "セン",
-    "kunyomi": "ち",
-    "meaning": "mil",
-    "utf16": "5343"
+    "onyomiKana": "セン",
+    "onyomiRomaji": "sen",
+    "kunyomiKana": "ち",
+    "kunyomiRomaji": "chi",
+    "meaning": "mil"
   },
   {
+    "utf16": "5ddd",
     "number": "50",
     "strokes": "3",
     "character": "川",
-    "onyomi": "セン",
-    "kunyomi": "かわ",
-    "meaning": "río",
-    "utf16": "5ddd"
+    "onyomiKana": "セン",
+    "onyomiRomaji": "sen",
+    "kunyomiKana": "かわ",
+    "kunyomiRomaji": "kawa",
+    "meaning": "río"
   },
   {
+    "utf16": "5148",
     "number": "51",
     "strokes": "6",
     "character": "先",
-    "onyomi": "セン",
-    "kunyomi": "さき",
-    "meaning": "previo, preceder",
-    "utf16": "5148"
+    "onyomiKana": "セン",
+    "onyomiRomaji": "sen",
+    "kunyomiKana": "さき",
+    "kunyomiRomaji": "saki",
+    "meaning": "previo, preceder"
   },
   {
+    "utf16": "65e9",
     "number": "52",
     "strokes": "6",
     "character": "早",
-    "onyomi": "ソウ",
-    "kunyomi": "はや.い",
-    "meaning": "temprano, pronto,rápido",
-    "utf16": "65e9"
+    "onyomiKana": "ソウ",
+    "onyomiRomaji": "sō",
+    "kunyomiKana": "はや.い",
+    "kunyomiRomaji": "haya.i",
+    "meaning": "temprano, pronto,rápido"
   },
   {
+    "utf16": "8349",
     "number": "53",
     "strokes": "9",
     "character": "草",
-    "onyomi": "ソウ",
-    "kunyomi": "くさ",
-    "meaning": "pasto, hierba, planta",
-    "utf16": "8349"
+    "onyomiKana": "ソウ",
+    "onyomiRomaji": "sō",
+    "kunyomiKana": "くさ",
+    "kunyomiRomaji": "kusa",
+    "meaning": "pasto, hierba, planta"
   },
   {
+    "utf16": "8db3",
     "number": "54",
     "strokes": "7",
     "character": "足",
-    "onyomi": "ソク",
-    "kunyomi": "あし、た.りる",
-    "meaning": "pierna, pie, suficiente, satisfacer",
-    "utf16": "8db3"
+    "onyomiKana": "ソク",
+    "onyomiRomaji": "soku",
+    "kunyomiKana": "あし、た.りる",
+    "kunyomiRomaji": "ashi, ta.riru",
+    "meaning": "pierna, pie, suficiente, satisfacer"
   },
   {
+    "utf16": "6751",
     "number": "55",
     "strokes": "7",
     "character": "村",
-    "onyomi": "ソン",
-    "kunyomi": "むら",
-    "meaning": "pueblo, aldea",
-    "utf16": "6751"
+    "onyomiKana": "ソン",
+    "onyomiRomaji": "son",
+    "kunyomiKana": "むら",
+    "kunyomiRomaji": "mura",
+    "meaning": "pueblo, aldea"
   },
   {
+    "utf16": "5927",
     "number": "56",
     "strokes": "3",
     "character": "大",
-    "onyomi": "ダイ、タイ",
-    "kunyomi": "おお.き、おお～",
-    "meaning": "gran, grande",
-    "utf16": "5927"
+    "onyomiKana": "ダイ、タイ",
+    "onyomiRomaji": "dai, tai",
+    "kunyomiKana": "おお.き、おお～",
+    "kunyomiRomaji": "ō.ki, ō～",
+    "meaning": "gran, grande"
   },
   {
+    "utf16": "7537",
     "number": "57",
     "strokes": "7",
     "character": "男",
-    "onyomi": "ダン、ナン",
-    "kunyomi": "おとこ",
-    "meaning": "hombre, varon, masculino",
-    "utf16": "7537"
+    "onyomiKana": "ダン、ナン",
+    "onyomiRomaji": "dan, nan",
+    "kunyomiKana": "おとこ",
+    "kunyomiRomaji": "otoko",
+    "meaning": "hombre, varon, masculino"
   },
   {
+    "utf16": "7af9",
     "number": "58",
     "strokes": "6",
     "character": "竹",
-    "onyomi": "チク",
-    "kunyomi": "たけ",
-    "meaning": "bambú",
-    "utf16": "7af9"
+    "onyomiKana": "チク",
+    "onyomiRomaji": "chiku",
+    "kunyomiKana": "たけ",
+    "kunyomiRomaji": "take",
+    "meaning": "bambú"
   },
   {
+    "utf16": "4e2d",
     "number": "59",
     "strokes": "4",
     "character": "中",
-    "onyomi": "チュウ",
-    "kunyomi": "なか",
-    "meaning": "en medio, dentro",
-    "utf16": "4e2d"
+    "onyomiKana": "チュウ",
+    "onyomiRomaji": "chū",
+    "kunyomiKana": "なか",
+    "kunyomiRomaji": "naka",
+    "meaning": "en medio, dentro"
   },
   {
+    "utf16": "866b",
     "number": "60",
     "strokes": "6",
     "character": "虫",
-    "onyomi": "チュウ",
-    "kunyomi": "むし",
-    "meaning": "insecto, bicho, gusano",
-    "utf16": "866b"
+    "onyomiKana": "チュウ",
+    "onyomiRomaji": "chū",
+    "kunyomiKana": "むし",
+    "kunyomiRomaji": "mushi",
+    "meaning": "insecto, bicho, gusano"
   },
   {
+    "utf16": "753a",
     "number": "61",
     "strokes": "7",
     "character": "町",
-    "onyomi": "チョウ",
-    "kunyomi": "まち",
-    "meaning": "ciudad, pueblo",
-    "utf16": "753a"
+    "onyomiKana": "チョウ",
+    "onyomiRomaji": "chō",
+    "kunyomiKana": "まち",
+    "kunyomiRomaji": "machi",
+    "meaning": "ciudad, pueblo"
   },
   {
+    "utf16": "5929",
     "number": "62",
     "strokes": "4",
     "character": "天",
-    "onyomi": "テン",
-    "kunyomi": "あま～、あめ",
-    "meaning": "cielo, celestial",
-    "utf16": "5929"
+    "onyomiKana": "テン",
+    "onyomiRomaji": "ten",
+    "kunyomiKana": "あま～、あめ",
+    "kunyomiRomaji": "ama～, ame",
+    "meaning": "cielo, celestial"
   },
   {
+    "utf16": "7530",
     "number": "63",
     "strokes": "5",
     "character": "田",
-    "onyomi": "デン",
-    "kunyomi": "た",
-    "meaning": "campo de arroz, arrozal",
-    "utf16": "7530"
+    "onyomiKana": "デン",
+    "onyomiRomaji": "den",
+    "kunyomiKana": "た",
+    "kunyomiRomaji": "ta",
+    "meaning": "campo de arroz, arrozal"
   },
   {
+    "utf16": "571f",
     "number": "64",
     "strokes": "3",
     "character": "土",
-    "onyomi": "ド、ト",
-    "kunyomi": "つち",
-    "meaning": "tierra, suelo",
-    "utf16": "571f"
+    "onyomiKana": "ド、ト",
+    "onyomiRomaji": "do, to",
+    "kunyomiKana": "つち",
+    "kunyomiRomaji": "tsuchi",
+    "meaning": "tierra, suelo"
   },
   {
+    "utf16": "4e8c",
     "number": "65",
     "strokes": "2",
     "character": "二",
-    "onyomi": "ニ",
-    "kunyomi": "ふた～",
-    "meaning": "dos",
-    "utf16": "4e8c"
+    "onyomiKana": "ニ",
+    "onyomiRomaji": "ni",
+    "kunyomiKana": "ふた～",
+    "kunyomiRomaji": "futa～",
+    "meaning": "dos"
   },
   {
+    "utf16": "65e5",
     "number": "66",
     "strokes": "4",
     "character": "日",
-    "onyomi": "ニチ、ジツ",
-    "kunyomi": "ひ、～か",
-    "meaning": "sol, día",
-    "utf16": "65e5"
+    "onyomiKana": "ニチ、ジツ",
+    "onyomiRomaji": "nichi, jitsu",
+    "kunyomiKana": "ひ、～か",
+    "kunyomiRomaji": "hi, ～ka",
+    "meaning": "sol, día"
   },
   {
+    "utf16": "5165",
     "number": "67",
     "strokes": "2",
     "character": "入",
-    "onyomi": "ニュウ",
-    "kunyomi": "はい.る、い.れる／.る",
-    "meaning": "entrar, meter",
-    "utf16": "5165"
+    "onyomiKana": "ニュウ",
+    "onyomiRomaji": "nyū",
+    "kunyomiKana": "はい.る、い.れる／.る",
+    "kunyomiRomaji": "hai.ru, i.reru／.ru",
+    "meaning": "entrar, meter"
   },
   {
+    "utf16": "5e74",
     "number": "68",
     "strokes": "6",
     "character": "年",
-    "onyomi": "ネン",
-    "kunyomi": "とし",
-    "meaning": "año",
-    "utf16": "5e74"
+    "onyomiKana": "ネン",
+    "onyomiRomaji": "nen",
+    "kunyomiKana": "とし",
+    "kunyomiRomaji": "toshi",
+    "meaning": "año"
   },
   {
+    "utf16": "767d",
     "number": "69",
     "strokes": "5",
     "character": "白",
-    "onyomi": "ハク",
-    "kunyomi": "しろ.い、しら～",
-    "meaning": "blanco",
-    "utf16": "767d"
+    "onyomiKana": "ハク",
+    "onyomiRomaji": "haku",
+    "kunyomiKana": "しろ.い、しら～",
+    "kunyomiRomaji": "shiro.i, shira～",
+    "meaning": "blanco"
   },
   {
+    "utf16": "516b",
     "number": "70",
     "strokes": "2",
     "character": "八",
-    "onyomi": "ハチ",
-    "kunyomi": "や～",
-    "meaning": "ocho",
-    "utf16": "516b"
+    "onyomiKana": "ハチ",
+    "onyomiRomaji": "hachi",
+    "kunyomiKana": "や～",
+    "kunyomiRomaji": "ya～",
+    "meaning": "ocho"
   },
   {
+    "utf16": "767e",
     "number": "71",
     "strokes": "6",
     "character": "百",
-    "onyomi": "ヒャク",
-    "kunyomi": "．．．",
-    "meaning": "cien",
-    "utf16": "767e"
+    "onyomiKana": "ヒャク",
+    "onyomiRomaji": "hyaku",
+    "kunyomiKana": "．．．",
+    "kunyomiRomaji": "．．．",
+    "meaning": "cien"
   },
   {
+    "utf16": "6587",
     "number": "72",
     "strokes": "4",
     "character": "文",
-    "onyomi": "ブン、モン",
-    "kunyomi": "ふみ",
-    "meaning": "escritura, texto",
-    "utf16": "6587"
+    "onyomiKana": "ブン、モン",
+    "onyomiRomaji": "bun, mon",
+    "kunyomiKana": "ふみ",
+    "kunyomiRomaji": "fumi",
+    "meaning": "escritura, texto"
   },
   {
+    "utf16": "6728",
     "number": "73",
     "strokes": "4",
     "character": "木",
-    "onyomi": "ボク、モク",
-    "kunyomi": "き、こ",
-    "meaning": "árbol, madera",
-    "utf16": "6728"
+    "onyomiKana": "ボク、モク",
+    "onyomiRomaji": "boku, moku",
+    "kunyomiKana": "き、こ",
+    "kunyomiRomaji": "ki, ko",
+    "meaning": "árbol, madera"
   },
   {
+    "utf16": "672c",
     "number": "74",
     "strokes": "5",
     "character": "本",
-    "onyomi": "ホン",
-    "kunyomi": "もと",
-    "meaning": "origen, libro, verdadero, principal, contador (para objetos cilíndricos)",
-    "utf16": "672c"
+    "onyomiKana": "ホン",
+    "onyomiRomaji": "hon",
+    "kunyomiKana": "もと",
+    "kunyomiRomaji": "moto",
+    "meaning": "origen, libro, verdadero, principal, contador (para objetos cilíndricos)"
   },
   {
+    "utf16": "540d",
     "number": "75",
     "strokes": "6",
     "character": "名",
-    "onyomi": "メイ、ミョウ",
-    "kunyomi": "な",
-    "meaning": "nombre, fama",
-    "utf16": "540d"
+    "onyomiKana": "メイ、ミョウ",
+    "onyomiRomaji": "mei, myō",
+    "kunyomiKana": "な",
+    "kunyomiRomaji": "na",
+    "meaning": "nombre, fama"
   },
   {
+    "utf16": "76ee",
     "number": "76",
     "strokes": "5",
     "character": "目",
-    "onyomi": "モク",
-    "kunyomi": "め、ま",
-    "meaning": "ojo, mirar, malla, sufijo ordinal",
-    "utf16": "76ee"
+    "onyomiKana": "モク",
+    "onyomiRomaji": "moku",
+    "kunyomiKana": "め、ま",
+    "kunyomiRomaji": "me, ma",
+    "meaning": "ojo, mirar, malla, sufijo ordinal"
   },
   {
+    "utf16": "7acb",
     "number": "77",
     "strokes": "5",
     "character": "立",
-    "onyomi": "リツ",
-    "kunyomi": "た.つ／.てる",
-    "meaning": "parar, levantar, subir",
-    "utf16": "7acb"
+    "onyomiKana": "リツ",
+    "onyomiRomaji": "ritsu",
+    "kunyomiKana": "た.つ／.てる",
+    "kunyomiRomaji": "ta.tsu／.teru",
+    "meaning": "parar, levantar, subir"
   },
   {
+    "utf16": "529b",
     "number": "78",
     "strokes": "2",
     "character": "力",
-    "onyomi": "リョク、リキ",
-    "kunyomi": "ちから",
-    "meaning": "fuerza, esfuerzo",
-    "utf16": "529b"
+    "onyomiKana": "リョク、リキ",
+    "onyomiRomaji": "ryoku, riki",
+    "kunyomiKana": "ちから",
+    "kunyomiRomaji": "chikara",
+    "meaning": "fuerza, esfuerzo"
   },
   {
+    "utf16": "6797",
     "number": "79",
     "strokes": "8",
     "character": "林",
-    "onyomi": "リン",
-    "kunyomi": "はやし",
-    "meaning": "bosque",
-    "utf16": "6797"
+    "onyomiKana": "リン",
+    "onyomiRomaji": "rin",
+    "kunyomiKana": "はやし",
+    "kunyomiRomaji": "hayashi",
+    "meaning": "bosque"
   },
   {
+    "utf16": "516d",
     "number": "80",
     "strokes": "4",
     "character": "六",
-    "onyomi": "ロク",
-    "kunyomi": "む～",
-    "meaning": "seis",
-    "utf16": "516d"
+    "onyomiKana": "ロク",
+    "onyomiRomaji": "roku",
+    "kunyomiKana": "む～",
+    "kunyomiRomaji": "mu～",
+    "meaning": "seis"
   }
 ]

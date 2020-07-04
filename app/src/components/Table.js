@@ -15,15 +15,15 @@ const PlayAudioFromID = (audioId) => {
 
 export default function Table({dataJSON, headersJSON,styleObj, label}){
   const [ currentSyllabary, setCurrentSyllabary ] = React.useState('hiragana')
-  const kanas = {...dataJSON}
 
   const nextSyllabary = () => {
     if(currentSyllabary === 'hiragana') return setCurrentSyllabary('katakana')
     if(currentSyllabary === 'katakana') return setCurrentSyllabary('romaji')
     if(currentSyllabary === 'romaji') return setCurrentSyllabary('hiragana')
   }
+
   return(
-    <React.Fragment>
+    <div className='table-section'>
       <h1 className='header'>
         {currentSyllabary && label}
       </h1>
@@ -35,27 +35,27 @@ export default function Table({dataJSON, headersJSON,styleObj, label}){
         {!currentSyllabary && 'Error'}
       </h2>
 
-      <div className='table' style={styleObj}>
-        {Object.keys(kanas).map(kana => 
+      <div className='table' style={{...styleObj}}>
+        {dataJSON.map(kana => 
           <div 
-            key={kanas[kana].romaji}
-            className={`kana flex-center ${kanas[kana].romaji}`}
-            style={{gridArea: kanas[kana].romaji}}
-            onClick={() => PlayAudioFromID(kanas[kana].romaji)}
+            key={kana.romaji}
+            className={`kana flex-center ${kana.romaji}`}
+            style={{gridArea: kana.romaji}}
+            onClick={() => PlayAudioFromID(kana.romaji)}
             >
-              {kanas[kana][currentSyllabary]}
+              {kana[currentSyllabary]}
           </div>
         ) }
-        {headersJSON.map(e => (
+        {headersJSON.map(header => (
           <div 
-            key={e.class} 
-            className={`${e.class} tab-head flex-center`}
-            style={{gridArea: e.class}}
+            key={header.class} 
+            className={`${header.class} tab-head flex-center`}
+            style={{gridArea: header.class}}
           >
-            {e.value}
+            {header.value}
           </div>
         ))}
       </div>
-    </React.Fragment>
+    </div>
   )
 }

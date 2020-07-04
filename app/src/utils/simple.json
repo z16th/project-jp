@@ -298,8 +298,8 @@
     }
   ],
   "gridStyle":{
-    "grid-template-columns": "repeat(6, 100px)",
-    "grid-template-rows": "repeat(12, 100px)",
-    "grid-template-areas":"'. xa xi xu xe xo''y- a i u e o''yk ka ki ku ke ko''ys sa shi su se so''yt ta chi tsu te to''yn na ni nu ne no''yh ha hi fu he ho''ym ma mi mu me mo''yy ya . yu . yo''yr ra ri ru re ro''yw wa . . . wo''ynn n . . . .'"
+    "gridTemplateColumns": "repeat(6, 100px)",
+    "gridTemplateRows": "repeat(12, 100px)",
+    "gridTemplateAreas":"'. xa xi xu xe xo''y- a i u e o''yk ka ki ku ke ko''ys sa shi su se so''yt ta chi tsu te to''yn na ni nu ne no''yh ha hi fu he ho''ym ma mi mu me mo''yy ya . yu . yo''yr ra ri ru re ro''yw wa . . . wo''ynn n . . . .'"
   }
 }
