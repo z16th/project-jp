@@ -1,0 +1,36 @@
+.kanji-card{
+  width: 30vw;
+  height: 200px;
+  padding: 12px;
+  margin: 12px;
+  display: flex;
+  background-color: skyblue;
+}
+
+.kanji-left{
+  width: 120px;
+  text-align: center;
+}
+
+.kanji-char{
+  font-size: 6rem;
+}
+
+.kanji-strokes:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.178);
+}
+
+.kanji-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 24px;
+  max-width: 66vw;
+  word-wrap: break-word;
+}
+
+.kanji-reading:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.178);
+}

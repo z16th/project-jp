@@ -1,0 +1,12 @@
+#kanji-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#kanji-table{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
