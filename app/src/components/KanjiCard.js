@@ -16,7 +16,7 @@ export default function KanjiCard({data}){
   }
 
   return(
-    <div className='kanji-card'>
+    <div className='kanji-card noselect'>
 
       <div className='kanji-left'>
         {!showAnimation &&
@@ -25,17 +25,17 @@ export default function KanjiCard({data}){
         {showAnimation &&
           <KanjiAnimation name={utf16} width={120} height={120} />
         }
-        <div className='kanji-strokes noselect'  onClick={handleAnimationClick}>Trazos: {strokes}</div>
-        <div className='kanji-number'>No: {number}</div>
+        <div className='kanji-strokes'  onClick={handleAnimationClick}><b>Trazos:</b> {strokes}</div>
+        <div className='kanji-number'><b>No:</b> {number}</div>
       </div>
 
       <div className='kanji-right'>
         <div className='kanji-reading' onClick={handleReadingClick}>
-          <div className='kanji-onyomi'>On-yomi: {data[`onyomi${displayType}`]}</div>
-          <div className='kanji-kunyomi'>Kun-yomi: {data[`kunyomi${displayType}`]}</div>
+          <div className='kanji-onyomi'><b>On-yomi:</b> {data[`onyomi${displayType}`]}</div>
+          <div className='kanji-kunyomi'><b>Kun-yomi:</b> {data[`kunyomi${displayType}`]}</div>
         </div>
         <br></br>
-        <div className='kanji-meaning'>Significado: {meaning}</div>
+        <div className='kanji-meaning'><b>Significado:</b> {meaning}</div>
       </div>
 
     </div>

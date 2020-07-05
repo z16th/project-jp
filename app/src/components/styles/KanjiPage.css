@@ -1,3 +1,13 @@
+@media (min-width: 800px){
+  #kanji-page ul{
+    padding-left: 32px;
+  }
+  .p{
+    width: 50%;
+    text-align: justify;
+  }
+}
+
 #kanji-page{
   display: flex;
   flex-direction: column;
@@ -11,14 +21,19 @@
   justify-content: center;
 }
 
-p{
-  width: 66vw;
+.p{
   padding: 16px;
   border-radius: 12px;
-  text-align: justify;
   background-color: rgba(0, 0, 0, 0.041);
 }
 
-li{
-  width: 55vw;
+@media (max-width: 416px){
+  #bibliography{
+    width: 90%;
+  }  
+}
+
+#bibliography{
+  font-size: 0.9rem;
+  margin-top: 32px;
 }

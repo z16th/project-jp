@@ -5,7 +5,7 @@
     "strokes": "1",
     "character": "一",
     "onyomiKana": "イチ",
-    "onyomiRomaji": "ichi",
+    "onyomiRomaji": "ICHI",
     "kunyomiKana": "いつ",
     "kunyomiRomaji": "itsu",
     "meaning": "uno"
@@ -16,7 +16,7 @@
     "strokes": "5",
     "character": "右",
     "onyomiKana": "ウ、ユウ",
-    "onyomiRomaji": "u, yū",
+    "onyomiRomaji": "U, YŪ",
     "kunyomiKana": "みぎ",
     "kunyomiRomaji": "migi",
     "meaning": "derecha"
@@ -27,7 +27,7 @@
     "strokes": "8",
     "character": "雨",
     "onyomiKana": "ウ",
-    "onyomiRomaji": "u",
+    "onyomiRomaji": "U",
     "kunyomiKana": "あめ、あま～",
     "kunyomiRomaji": "ame, ama～",
     "meaning": "lluvia"
@@ -38,7 +38,7 @@
     "strokes": "4",
     "character": "円",
     "onyomiKana": "エン",
-    "onyomiRomaji": "en",
+    "onyomiRomaji": "EN",
     "kunyomiKana": "まる.い",
     "kunyomiRomaji": "maru.i",
     "meaning": "yen, redondo"
@@ -49,7 +49,7 @@
     "strokes": "4",
     "character": "王",
     "onyomiKana": "オウ",
-    "onyomiRomaji": "ō",
+    "onyomiRomaji": "Ō",
     "kunyomiKana": "．．．",
     "kunyomiRomaji": "．．．",
     "meaning": "rey, gobernante"
@@ -60,7 +60,7 @@
     "strokes": "9",
     "character": "音",
     "onyomiKana": "オン、イン",
-    "onyomiRomaji": "on, in",
+    "onyomiRomaji": "ON, IN",
     "kunyomiKana": "おと、ね",
     "kunyomiRomaji": "oto, ne",
     "meaning": "sonido"
@@ -71,7 +71,7 @@
     "strokes": "3",
     "character": "下",
     "onyomiKana": "カ、ゲ",
-    "onyomiRomaji": "ka, ge",
+    "onyomiRomaji": "KA, GE",
     "kunyomiKana": "した、もと、しも、さ.げる、お.りる、くだ.さる",
     "kunyomiRomaji": "shita, moto, shimo, sa.geru, o.riru, kuda.saru",
     "meaning": "debajo de, bajar"
@@ -82,7 +82,7 @@
     "strokes": "4",
     "character": "火",
     "onyomiKana": "カ",
-    "onyomiRomaji": "ka",
+    "onyomiRomaji": "KA",
     "kunyomiKana": "ひ",
     "kunyomiRomaji": "hi",
     "meaning": "fuego"
@@ -93,7 +93,7 @@
     "strokes": "7",
     "character": "花",
     "onyomiKana": "カ",
-    "onyomiRomaji": "ka",
+    "onyomiRomaji": "KA",
     "kunyomiKana": "はな",
     "kunyomiRomaji": "hana",
     "meaning": "flor, florecer"
@@ -115,7 +115,7 @@
     "strokes": "8",
     "character": "学",
     "onyomiKana": "ガク",
-    "onyomiRomaji": "gaku",
+    "onyomiRomaji": "GAKU",
     "kunyomiKana": "まな.ぶ",
     "kunyomiRomaji": "mana.bu",
     "meaning": "aprendizaje"
@@ -126,7 +126,7 @@
     "strokes": "6",
     "character": "気",
     "onyomiKana": "キ、ケ",
-    "onyomiRomaji": "ki, ke",
+    "onyomiRomaji": "KI, KE",
     "kunyomiKana": "．．．",
     "kunyomiRomaji": "．．．",
     "meaning": "espíritu, mente, corazón, energía"
@@ -137,7 +137,7 @@
     "strokes": "2",
     "character": "九",
     "onyomiKana": "キュウ、ク",
-    "onyomiRomaji": "kyū, ku",
+    "onyomiRomaji": "KYŪ, KU",
     "kunyomiKana": "ここの～",
     "kunyomiRomaji": "kokono～",
     "meaning": "nueve"
@@ -148,7 +148,7 @@
     "strokes": "6",
     "character": "休",
     "onyomiKana": "キュウ",
-    "onyomiRomaji": "kyū",
+    "onyomiRomaji": "KYŪ",
     "kunyomiKana": "やす.む",
     "kunyomiRomaji": "yasu.mu",
     "meaning": "descanso, descansar"
@@ -159,7 +159,7 @@
     "strokes": "5",
     "character": "玉",
     "onyomiKana": "ギョウク",
-    "onyomiRomaji": "gyōku",
+    "onyomiRomaji": "GYŌKU",
     "kunyomiKana": "たま",
     "kunyomiRomaji": "tama",
     "meaning": "joya, bola"
@@ -170,7 +170,7 @@
     "strokes": "8",
     "character": "金",
     "onyomiKana": "キン、コン",
-    "onyomiRomaji": "kin, kon",
+    "onyomiRomaji": "KIN, KON",
     "kunyomiKana": "かね",
     "kunyomiRomaji": "kane",
     "meaning": "oro, metal, dinero"
@@ -181,7 +181,7 @@
     "strokes": "8",
     "character": "空",
     "onyomiKana": "クウ",
-    "onyomiRomaji": "kū",
+    "onyomiRomaji": "KŪ",
     "kunyomiKana": "そら、から",
     "kunyomiRomaji": "sora, kara",
     "meaning": "cielo, vacío"
@@ -192,7 +192,7 @@
     "strokes": "4",
     "character": "月",
     "onyomiKana": "ゲツ、ガツ",
-    "onyomiRomaji": "getsu, gatsu",
+    "onyomiRomaji": "GETSU, GATSU",
     "kunyomiKana": "つき",
     "kunyomiRomaji": "tsuki",
     "meaning": "luna, mes"
@@ -203,7 +203,7 @@
     "strokes": "4",
     "character": "犬",
     "onyomiKana": "ケン",
-    "onyomiRomaji": "ken",
+    "onyomiRomaji": "KEN",
     "kunyomiKana": "いぬ",
     "kunyomiRomaji": "inu",
     "meaning": "perro"
@@ -214,7 +214,7 @@
     "strokes": "7",
     "character": "見",
     "onyomiKana": "ケン",
-    "onyomiRomaji": "ken",
+    "onyomiRomaji": "KEN",
     "kunyomiKana": "み.る／.せる／.える",
     "kunyomiRomaji": "mi.ru/.seru/.eru",
     "meaning": "observar, ver, mostrar"
@@ -225,7 +225,7 @@
     "strokes": "4",
     "character": "五",
     "onyomiKana": "ゴ",
-    "onyomiRomaji": "go",
+    "onyomiRomaji": "GO",
     "kunyomiKana": "いつ～",
     "kunyomiRomaji": "itsu～",
     "meaning": "cinco"
@@ -236,7 +236,7 @@
     "strokes": "3",
     "character": "口",
     "onyomiKana": "コウ、ク",
-    "onyomiRomaji": "kō, ku",
+    "onyomiRomaji": "KŌ, KU",
     "kunyomiKana": "くち",
     "kunyomiRomaji": "kuchi",
     "meaning": "boca"
@@ -247,7 +247,7 @@
     "strokes": "10",
     "character": "校",
     "onyomiKana": "コウ",
-    "onyomiRomaji": "kō",
+    "onyomiRomaji": "KŌ",
     "kunyomiKana": "．．．",
     "kunyomiRomaji": "．．．",
     "meaning": "escuela, prueba"
@@ -258,7 +258,7 @@
     "strokes": "5",
     "character": "左",
     "onyomiKana": "サ",
-    "onyomiRomaji": "sa",
+    "onyomiRomaji": "SA",
     "kunyomiKana": "ひだり",
     "kunyomiRomaji": "hidari",
     "meaning": "izquierda"
@@ -269,7 +269,7 @@
     "strokes": "3",
     "character": "三",
     "onyomiKana": "サン",
-    "onyomiRomaji": "san",
+    "onyomiRomaji": "SAN",
     "kunyomiKana": "み～",
     "kunyomiRomaji": "mi～",
     "meaning": "tres"
@@ -280,7 +280,7 @@
     "strokes": "3",
     "character": "山",
     "onyomiKana": "サン",
-    "onyomiRomaji": "san",
+    "onyomiRomaji": "SAN",
     "kunyomiKana": "やま",
     "kunyomiRomaji": "yama",
     "meaning": "montaña, colina"
@@ -291,7 +291,7 @@
     "strokes": "3",
     "character": "子",
     "onyomiKana": "シ、ス",
-    "onyomiRomaji": "shi, su",
+    "onyomiRomaji": "SHI, SU",
     "kunyomiKana": "こ",
     "kunyomiRomaji": "ko",
     "meaning": "niño/a"
@@ -302,7 +302,7 @@
     "strokes": "5",
     "character": "四",
     "onyomiKana": "シ",
-    "onyomiRomaji": "shi",
+    "onyomiRomaji": "SHI",
     "kunyomiKana": "よ～、よん",
     "kunyomiRomaji": "yo～, yon",
     "meaning": "cuatro"
@@ -313,7 +313,7 @@
     "strokes": "6",
     "character": "糸",
     "onyomiKana": "シ",
-    "onyomiRomaji": "shi",
+    "onyomiRomaji": "SHI",
     "kunyomiKana": "いと",
     "kunyomiRomaji": "ito",
     "meaning": "hilo"
@@ -324,7 +324,7 @@
     "strokes": "6",
     "character": "字",
     "onyomiKana": "ジ",
-    "onyomiRomaji": "ji",
+    "onyomiRomaji": "JI",
     "kunyomiKana": "．．．",
     "kunyomiRomaji": "．．．",
     "meaning": "letra, símbolo"
@@ -335,7 +335,7 @@
     "strokes": "6",
     "character": "耳",
     "onyomiKana": "ジ",
-    "onyomiRomaji": "ji",
+    "onyomiRomaji": "JI",
     "kunyomiKana": "みみ",
     "kunyomiRomaji": "mimi",
     "meaning": "oreja"
@@ -346,7 +346,7 @@
     "strokes": "2",
     "character": "七",
     "onyomiKana": "シチ",
-    "onyomiRomaji": "shichi",
+    "onyomiRomaji": "SHICHI",
     "kunyomiKana": "なな",
     "kunyomiRomaji": "nana",
     "meaning": "siete"
@@ -357,7 +357,7 @@
     "strokes": "7",
     "character": "車",
     "onyomiKana": "シャ",
-    "onyomiRomaji": "sha",
+    "onyomiRomaji": "SHA",
     "kunyomiKana": "くるま",
     "kunyomiRomaji": "kuruma",
     "meaning": "vehículo, auto, carro"
@@ -368,7 +368,7 @@
     "strokes": "4",
     "character": "手",
     "onyomiKana": "シュ",
-    "onyomiRomaji": "shu",
+    "onyomiRomaji": "SHU",
     "kunyomiKana": "て",
     "kunyomiRomaji": "te",
     "meaning": "mano"
@@ -379,7 +379,7 @@
     "strokes": "2",
     "character": "十",
     "onyomiKana": "ジュウ",
-    "onyomiRomaji": "jū",
+    "onyomiRomaji": "JŪ",
     "kunyomiKana": "とお",
     "kunyomiRomaji": "tō",
     "meaning": "diez"
@@ -390,7 +390,7 @@
     "strokes": "5",
     "character": "出",
     "onyomiKana": "シュツ",
-    "onyomiRomaji": "shutsu",
+    "onyomiRomaji": "SHUTSU",
     "kunyomiKana": "で.る、だ.す",
     "kunyomiRomaji": "de.ru, da.su",
     "meaning": "salir, sacar"
@@ -401,7 +401,7 @@
     "strokes": "2",
     "character": "女",
     "onyomiKana": "ジョ、ニョ、ニョウ",
-    "onyomiRomaji": "jo, nyo, nyō",
+    "onyomiRomaji": "JO, NYO, NYŌ",
     "kunyomiKana": "おんな、め",
     "kunyomiRomaji": "onna, me",
     "meaning": "mujer"
@@ -412,7 +412,7 @@
     "strokes": "3",
     "character": "小",
     "onyomiKana": "ショウ",
-    "onyomiRomaji": "shō",
+    "onyomiRomaji": "SHŌ",
     "kunyomiKana": "ちい.さい、こ、お～",
     "kunyomiRomaji": "chii.sai, ko, o～",
     "meaning": "pequeño"
@@ -423,7 +423,7 @@
     "strokes": "3",
     "character": "上",
     "onyomiKana": "ジョウ",
-    "onyomiRomaji": "jō",
+    "onyomiRomaji": "JŌ",
     "kunyomiKana": "うえ、うわ～、かみ、あ.げる／.がる、のぼ.る",
     "kunyomiRomaji": "ue, uwa～, kami, a.geru/.garu, nobo.ru",
     "meaning": "arriba, encima, sobre, subir"
@@ -434,7 +434,7 @@
     "strokes": "12",
     "character": "森",
     "onyomiKana": "シン",
-    "onyomiRomaji": "shin",
+    "onyomiRomaji": "SHIN",
     "kunyomiKana": "もり",
     "kunyomiRomaji": "mori",
     "meaning": "bosque"
@@ -445,7 +445,7 @@
     "strokes": "2",
     "character": "人",
     "onyomiKana": "ジン、ニン",
-    "onyomiRomaji": "jin, nin",
+    "onyomiRomaji": "JIN, NIN",
     "kunyomiKana": "ひと",
     "kunyomiRomaji": "hito",
     "meaning": "persona(s)"
@@ -456,7 +456,7 @@
     "strokes": "4",
     "character": "水",
     "onyomiKana": "スイ",
-    "onyomiRomaji": "sui",
+    "onyomiRomaji": "SUI",
     "kunyomiKana": "みず",
     "kunyomiRomaji": "mizu",
     "meaning": "agua"
@@ -467,7 +467,7 @@
     "strokes": "5",
     "character": "正",
     "onyomiKana": "セイ、ショウ",
-    "onyomiRomaji": "sei, shō",
+    "onyomiRomaji": "SEI, SHŌ",
     "kunyomiKana": "ただ.し、ただ.す、まさ",
     "kunyomiRomaji": "tada.shi, tada.su, masa",
     "meaning": "correcto, apropiado"
@@ -478,7 +478,7 @@
     "strokes": "5",
     "character": "生",
     "onyomiKana": "セイ、ショウ",
-    "onyomiRomaji": "sei, shō",
+    "onyomiRomaji": "SEI, SHŌ",
     "kunyomiKana": "い.きる／.かす、う.む／.まれる、なま",
     "kunyomiRomaji": "i.kiru/.kasu, u.mu/.mareru, nama",
     "meaning": "vida, nacimiento, crecimiento"
@@ -489,7 +489,7 @@
     "strokes": "8",
     "character": "青",
     "onyomiKana": "セイ、ショウ",
-    "onyomiRomaji": "sei, shō",
+    "onyomiRomaji": "SEI, SHŌ",
     "kunyomiKana": "あお.い",
     "kunyomiRomaji": "ao.i",
     "meaning": "joven, fresco, verde/azul"
@@ -500,7 +500,7 @@
     "strokes": "3",
     "character": "夕",
     "onyomiKana": "セキ",
-    "onyomiRomaji": "seki",
+    "onyomiRomaji": "SEKI",
     "kunyomiKana": "ゆう",
     "kunyomiRomaji": "yū",
     "meaning": "tarde"
@@ -511,7 +511,7 @@
     "strokes": "5",
     "character": "石",
     "onyomiKana": "セキ、シャク",
-    "onyomiRomaji": "seki, shaku",
+    "onyomiRomaji": "SEKI, SHAKU",
     "kunyomiKana": "いし",
     "kunyomiRomaji": "ishi",
     "meaning": "piedra, roca"
@@ -522,7 +522,7 @@
     "strokes": "7",
     "character": "赤",
     "onyomiKana": "セキ、シャク",
-    "onyomiRomaji": "seki, shaku",
+    "onyomiRomaji": "SEKI, SHAKU",
     "kunyomiKana": "あか.い",
     "kunyomiRomaji": "aka.i",
     "meaning": "rojo"
@@ -533,7 +533,7 @@
     "strokes": "3",
     "character": "千",
     "onyomiKana": "セン",
-    "onyomiRomaji": "sen",
+    "onyomiRomaji": "SEN",
     "kunyomiKana": "ち",
     "kunyomiRomaji": "chi",
     "meaning": "mil"
@@ -544,7 +544,7 @@
     "strokes": "3",
     "character": "川",
     "onyomiKana": "セン",
-    "onyomiRomaji": "sen",
+    "onyomiRomaji": "SEN",
     "kunyomiKana": "かわ",
     "kunyomiRomaji": "kawa",
     "meaning": "río"
@@ -555,7 +555,7 @@
     "strokes": "6",
     "character": "先",
     "onyomiKana": "セン",
-    "onyomiRomaji": "sen",
+    "onyomiRomaji": "SEN",
     "kunyomiKana": "さき",
     "kunyomiRomaji": "saki",
     "meaning": "previo, preceder"
@@ -566,7 +566,7 @@
     "strokes": "6",
     "character": "早",
     "onyomiKana": "ソウ",
-    "onyomiRomaji": "sō",
+    "onyomiRomaji": "SŌ",
     "kunyomiKana": "はや.い",
     "kunyomiRomaji": "haya.i",
     "meaning": "temprano, pronto,rápido"
@@ -577,7 +577,7 @@
     "strokes": "9",
     "character": "草",
     "onyomiKana": "ソウ",
-    "onyomiRomaji": "sō",
+    "onyomiRomaji": "SŌ",
     "kunyomiKana": "くさ",
     "kunyomiRomaji": "kusa",
     "meaning": "pasto, hierba, planta"
@@ -588,7 +588,7 @@
     "strokes": "7",
     "character": "足",
     "onyomiKana": "ソク",
-    "onyomiRomaji": "soku",
+    "onyomiRomaji": "SOKU",
     "kunyomiKana": "あし、た.りる",
     "kunyomiRomaji": "ashi, ta.riru",
     "meaning": "pierna, pie, suficiente, satisfacer"
@@ -599,7 +599,7 @@
     "strokes": "7",
     "character": "村",
     "onyomiKana": "ソン",
-    "onyomiRomaji": "son",
+    "onyomiRomaji": "SON",
     "kunyomiKana": "むら",
     "kunyomiRomaji": "mura",
     "meaning": "pueblo, aldea"
@@ -610,7 +610,7 @@
     "strokes": "3",
     "character": "大",
     "onyomiKana": "ダイ、タイ",
-    "onyomiRomaji": "dai, tai",
+    "onyomiRomaji": "DAI, TAI",
     "kunyomiKana": "おお.き、おお～",
     "kunyomiRomaji": "ō.ki, ō～",
     "meaning": "gran, grande"
@@ -621,7 +621,7 @@
     "strokes": "7",
     "character": "男",
     "onyomiKana": "ダン、ナン",
-    "onyomiRomaji": "dan, nan",
+    "onyomiRomaji": "DAN, NAN",
     "kunyomiKana": "おとこ",
     "kunyomiRomaji": "otoko",
     "meaning": "hombre, varon, masculino"
@@ -632,7 +632,7 @@
     "strokes": "6",
     "character": "竹",
     "onyomiKana": "チク",
-    "onyomiRomaji": "chiku",
+    "onyomiRomaji": "CHIKU",
     "kunyomiKana": "たけ",
     "kunyomiRomaji": "take",
     "meaning": "bambú"
@@ -643,7 +643,7 @@
     "strokes": "4",
     "character": "中",
     "onyomiKana": "チュウ",
-    "onyomiRomaji": "chū",
+    "onyomiRomaji": "CHŪ",
     "kunyomiKana": "なか",
     "kunyomiRomaji": "naka",
     "meaning": "en medio, dentro"
@@ -654,7 +654,7 @@
     "strokes": "6",
     "character": "虫",
     "onyomiKana": "チュウ",
-    "onyomiRomaji": "chū",
+    "onyomiRomaji": "CHŪ",
     "kunyomiKana": "むし",
     "kunyomiRomaji": "mushi",
     "meaning": "insecto, bicho, gusano"
@@ -665,7 +665,7 @@
     "strokes": "7",
     "character": "町",
     "onyomiKana": "チョウ",
-    "onyomiRomaji": "chō",
+    "onyomiRomaji": "CHŌ",
     "kunyomiKana": "まち",
     "kunyomiRomaji": "machi",
     "meaning": "ciudad, pueblo"
@@ -676,7 +676,7 @@
     "strokes": "4",
     "character": "天",
     "onyomiKana": "テン",
-    "onyomiRomaji": "ten",
+    "onyomiRomaji": "TEN",
     "kunyomiKana": "あま～、あめ",
     "kunyomiRomaji": "ama～, ame",
     "meaning": "cielo, celestial"
@@ -687,7 +687,7 @@
     "strokes": "5",
     "character": "田",
     "onyomiKana": "デン",
-    "onyomiRomaji": "den",
+    "onyomiRomaji": "DEN",
     "kunyomiKana": "た",
     "kunyomiRomaji": "ta",
     "meaning": "campo de arroz, arrozal"
@@ -698,7 +698,7 @@
     "strokes": "3",
     "character": "土",
     "onyomiKana": "ド、ト",
-    "onyomiRomaji": "do, to",
+    "onyomiRomaji": "DO, TO",
     "kunyomiKana": "つち",
     "kunyomiRomaji": "tsuchi",
     "meaning": "tierra, suelo"
@@ -709,7 +709,7 @@
     "strokes": "2",
     "character": "二",
     "onyomiKana": "ニ",
-    "onyomiRomaji": "ni",
+    "onyomiRomaji": "NI",
     "kunyomiKana": "ふた～",
     "kunyomiRomaji": "futa～",
     "meaning": "dos"
@@ -720,7 +720,7 @@
     "strokes": "4",
     "character": "日",
     "onyomiKana": "ニチ、ジツ",
-    "onyomiRomaji": "nichi, jitsu",
+    "onyomiRomaji": "NICHI, JITSU",
     "kunyomiKana": "ひ、～か",
     "kunyomiRomaji": "hi, ～ka",
     "meaning": "sol, día"
@@ -731,7 +731,7 @@
     "strokes": "2",
     "character": "入",
     "onyomiKana": "ニュウ",
-    "onyomiRomaji": "nyū",
+    "onyomiRomaji": "NYŪ",
     "kunyomiKana": "はい.る、い.れる／.る",
     "kunyomiRomaji": "hai.ru, i.reru/.ru",
     "meaning": "entrar, meter"
@@ -742,7 +742,7 @@
     "strokes": "6",
     "character": "年",
     "onyomiKana": "ネン",
-    "onyomiRomaji": "nen",
+    "onyomiRomaji": "NEN",
     "kunyomiKana": "とし",
     "kunyomiRomaji": "toshi",
     "meaning": "año"
@@ -753,7 +753,7 @@
     "strokes": "5",
     "character": "白",
     "onyomiKana": "ハク",
-    "onyomiRomaji": "haku",
+    "onyomiRomaji": "HAKU",
     "kunyomiKana": "しろ.い、しら～",
     "kunyomiRomaji": "shiro.i, shira～",
     "meaning": "blanco"
@@ -764,7 +764,7 @@
     "strokes": "2",
     "character": "八",
     "onyomiKana": "ハチ",
-    "onyomiRomaji": "hachi",
+    "onyomiRomaji": "HACHI",
     "kunyomiKana": "や～",
     "kunyomiRomaji": "ya～",
     "meaning": "ocho"
@@ -775,7 +775,7 @@
     "strokes": "6",
     "character": "百",
     "onyomiKana": "ヒャク",
-    "onyomiRomaji": "hyaku",
+    "onyomiRomaji": "HYAKU",
     "kunyomiKana": "．．．",
     "kunyomiRomaji": "．．．",
     "meaning": "cien"
@@ -786,7 +786,7 @@
     "strokes": "4",
     "character": "文",
     "onyomiKana": "ブン、モン",
-    "onyomiRomaji": "bun, mon",
+    "onyomiRomaji": "BUN, MON",
     "kunyomiKana": "ふみ",
     "kunyomiRomaji": "fumi",
     "meaning": "escritura, texto"
@@ -797,7 +797,7 @@
     "strokes": "4",
     "character": "木",
     "onyomiKana": "ボク、モク",
-    "onyomiRomaji": "boku, moku",
+    "onyomiRomaji": "BOKU, MOKU",
     "kunyomiKana": "き、こ",
     "kunyomiRomaji": "ki, ko",
     "meaning": "árbol, madera"
@@ -808,10 +808,10 @@
     "strokes": "5",
     "character": "本",
     "onyomiKana": "ホン",
-    "onyomiRomaji": "hon",
+    "onyomiRomaji": "HON",
     "kunyomiKana": "もと",
     "kunyomiRomaji": "moto",
-    "meaning": "origen, libro, verdadero, principal, contador (para objetos cilíndricos)"
+    "meaning": "libro, origen, verdadero, principal"
   },
   {
     "utf16": "540d",
@@ -819,7 +819,7 @@
     "strokes": "6",
     "character": "名",
     "onyomiKana": "メイ、ミョウ",
-    "onyomiRomaji": "mei, myō",
+    "onyomiRomaji": "MEI, MYŌ",
     "kunyomiKana": "な",
     "kunyomiRomaji": "na",
     "meaning": "nombre, fama"
@@ -830,7 +830,7 @@
     "strokes": "5",
     "character": "目",
     "onyomiKana": "モク",
-    "onyomiRomaji": "moku",
+    "onyomiRomaji": "MOKU",
     "kunyomiKana": "め、ま",
     "kunyomiRomaji": "me, ma",
     "meaning": "ojo, mirar, malla, sufijo ordinal"
@@ -841,7 +841,7 @@
     "strokes": "5",
     "character": "立",
     "onyomiKana": "リツ",
-    "onyomiRomaji": "ritsu",
+    "onyomiRomaji": "RITSU",
     "kunyomiKana": "た.つ／.てる",
     "kunyomiRomaji": "ta.tsu/.teru",
     "meaning": "parar, levantar, subir"
@@ -852,7 +852,7 @@
     "strokes": "2",
     "character": "力",
     "onyomiKana": "リョク、リキ",
-    "onyomiRomaji": "ryoku, riki",
+    "onyomiRomaji": "RYOKU, RIKI",
     "kunyomiKana": "ちから",
     "kunyomiRomaji": "chikara",
     "meaning": "fuerza, esfuerzo"
@@ -863,7 +863,7 @@
     "strokes": "8",
     "character": "林",
     "onyomiKana": "リン",
-    "onyomiRomaji": "rin",
+    "onyomiRomaji": "RIN",
     "kunyomiKana": "はやし",
     "kunyomiRomaji": "hayashi",
     "meaning": "bosque"
@@ -874,7 +874,7 @@
     "strokes": "4",
     "character": "六",
     "onyomiKana": "ロク",
-    "onyomiRomaji": "roku",
+    "onyomiRomaji": "ROKU",
     "kunyomiKana": "む～",
     "kunyomiRomaji": "mu～",
     "meaning": "seis"
