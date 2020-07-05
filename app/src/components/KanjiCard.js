@@ -31,8 +31,8 @@ export default function KanjiCard({data}){
 
       <div className='kanji-right'>
         <div className='kanji-reading' onClick={handleReadingClick}>
-          <div className='kanji-onyomi'>On'yomi: {data[`onyomi${displayType}`]}</div>
-          <div className='kanji-kunyomi'>Kun'yomi: {data[`kunyomi${displayType}`]}</div>
+          <div className='kanji-onyomi'>On-yomi: {data[`onyomi${displayType}`]}</div>
+          <div className='kanji-kunyomi'>Kun-yomi: {data[`kunyomi${displayType}`]}</div>
         </div>
         <br></br>
         <div className='kanji-meaning'>Significado: {meaning}</div>

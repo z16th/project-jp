@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import Icon from "./Icon";
+import './styles/KanjiAnimation.css'
 
 const noop = () => {};
 
@@ -42,10 +43,10 @@ const KanjiAnimation = ({ name, onReset, onPause }) => {
         }}
       />
       <div className="controls">
-        <div onClick={handlePause}>
-          {isPaused ? '▶' : '◼'}
+        <div className='btn noselect' onClick={handlePause}>
+          {isPaused ? '⏵' : '⏸'}
         </div>
-        <div onClick={handleReset}>⟳</div>
+        <div className='btn noselect' onClick={handleReset}>⟳</div>
       </div>
     </div>
   );

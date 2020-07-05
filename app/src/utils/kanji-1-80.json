@@ -216,7 +216,7 @@
     "onyomiKana": "ケン",
     "onyomiRomaji": "ken",
     "kunyomiKana": "み.る／.せる／.える",
-    "kunyomiRomaji": "mi.ru／.seru／.eru",
+    "kunyomiRomaji": "mi.ru/.seru/.eru",
     "meaning": "observar, ver, mostrar"
   },
   {
@@ -425,7 +425,7 @@
     "onyomiKana": "ジョウ",
     "onyomiRomaji": "jō",
     "kunyomiKana": "うえ、うわ～、かみ、あ.げる／.がる、のぼ.る",
-    "kunyomiRomaji": "ue, uwa～, kami, a.geru／.garu, nobo.ru",
+    "kunyomiRomaji": "ue, uwa～, kami, a.geru/.garu, nobo.ru",
     "meaning": "arriba, encima, sobre, subir"
   },
   {
@@ -480,7 +480,7 @@
     "onyomiKana": "セイ、ショウ",
     "onyomiRomaji": "sei, shō",
     "kunyomiKana": "い.きる／.かす、う.む／.まれる、なま",
-    "kunyomiRomaji": "i.kiru／.kasu, u.mu／.mareru, nama",
+    "kunyomiRomaji": "i.kiru/.kasu, u.mu/.mareru, nama",
     "meaning": "vida, nacimiento, crecimiento"
   },
   {
@@ -733,7 +733,7 @@
     "onyomiKana": "ニュウ",
     "onyomiRomaji": "nyū",
     "kunyomiKana": "はい.る、い.れる／.る",
-    "kunyomiRomaji": "hai.ru, i.reru／.ru",
+    "kunyomiRomaji": "hai.ru, i.reru/.ru",
     "meaning": "entrar, meter"
   },
   {
@@ -843,7 +843,7 @@
     "onyomiKana": "リツ",
     "onyomiRomaji": "ritsu",
     "kunyomiKana": "た.つ／.てる",
-    "kunyomiRomaji": "ta.tsu／.teru",
+    "kunyomiRomaji": "ta.tsu/.teru",
     "meaning": "parar, levantar, subir"
   },
   {

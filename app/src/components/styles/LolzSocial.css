@@ -1,0 +1,24 @@
+#lolz-social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lolz-social > .network{
+  padding: 8px 14px 8px 8px;
+  background: rgb(255,56,138);
+  background: linear-gradient(0deg, rgba(255,56,138,1) 16%, rgba(0,170,255,1) 84%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: none;
+}
+
+.fab{
+  font-size: 1.2rem;
+  margin: 8px;
+}
+
+.network > .text{
+  font-size: 1.2rem;
+  padding-left: 8px;
+}

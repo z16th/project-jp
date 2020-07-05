@@ -10,3 +10,15 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+p{
+  width: 66vw;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.041);
+}
+
+li{
+  width: 55vw;
+}

@@ -12,7 +12,7 @@ const fonts = [
   'Noto Serif JP',
 ]
 
-export default function Syllabaries(){
+export default function SyllabaryPage(){
   const [ currentFont, setCurrentFont ] = React.useState('Noto Serif JP')
 
   const nextFont = () => {

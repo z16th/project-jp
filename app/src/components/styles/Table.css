@@ -18,11 +18,11 @@
   gap: 12px;
 }
 
-.table-section > .tab-head{
+.tab-head{
   font-size: 2rem;
 }
 
-.table-section > .kana{
+.kana{
   background-color: #ababab;
   border-radius: 100%;
   font-size: 2rem;
