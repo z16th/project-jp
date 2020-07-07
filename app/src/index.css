@@ -8,6 +8,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)),url('./utils/texture.jpg');
+  background-size: 100px;
 }
 
 #root{
@@ -19,4 +21,160 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Format Styles */
+.content{
+  background-color: rgba(0, 0, 0, 0.082);
+  padding: 20px 16px;
+  border-radius: 24px;
+}
+
+/* Font Styles */
+
+.h1{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 93px;
+  line-height: 135px;
+  letter-spacing: -1.5px;
+}
+
+.h2{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 58px;
+  line-height: 84px;
+  letter-spacing: -0.5px;
+}
+
+h1{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 47px;
+  line-height: 68px;
+}
+
+h2{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 33px;
+  line-height: 48px;
+  letter-spacing: 0.25px;
+  }
+
+h3{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 33px;
+}
+
+h4{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+}
+
+.subtitle1{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+}
+
+.subtitle2{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+p{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.5px;
+
+  text-justify: inter-word;
+}
+
+ul{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.button{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.25px;
+}
+
+.caption{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: 0.4px;
+}
+
+.overline{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 1.5px;
+}
+
+/* Util Styles */
+
+.text-center{
+  text-align: center;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column{
+  flex-direction: column;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

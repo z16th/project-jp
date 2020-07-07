@@ -1,8 +1,8 @@
 .kanji-card{
   display: flex;
   height: 220px;
-  padding: 12px;
-  margin: 12px;
+  padding: 16px;
+  margin: 8px;
   border-radius: 24px;
   background-image: linear-gradient(rgba(63, 168, 243, 0.66),rgba(63, 168, 243, 0.66)),url('../../utils/paper.jpg');
   box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.33);
@@ -12,7 +12,7 @@
   background-color: rgba(252, 169, 54, 0.8);
 }
 
-.kanji-left{
+.kanji-card .kanji-left{
   display: flex;
   flex-direction: column;
   width: 150px;
@@ -21,13 +21,16 @@
   border-radius: 16px;
 }
 
-.kanji-char{
+.kanji-card .kanji-char{
   height: 162px;
   font-size: 6rem;
+}
+
+.kanji-card .kanji-char:hover{
   font-family: 'Noto Serif JP', serif;
 }
 
-.kanji-animation{
+.kanji-card .kanji-animation{
   height: 162px;
 }
 
@@ -39,31 +42,31 @@
   cursor: pointer;
 }
 
-.kanji-strokes:hover{
+.kanji-card .kanji-strokes:hover{
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.66);
 }
 
-.kanji-right{
+.kanji-card .kanji-right{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 24px;
+  padding-left: 16px;
   max-width: 66vw;
   word-wrap: break-word;
 }
 
-.kanji-reading{
+.kanji-card .kanji-reading{
   padding: 12px;
 }
 
-.kanji-reading:hover{
+.kanji-card .kanji-reading:hover{
   cursor: pointer;
   
   background-color: rgba(255, 255, 255, 0.66);
   border-radius: 12px;
 }
 
-.kanji-meaning{
+.kanji-card .kanji-meaning{
   padding: 12px;
 }

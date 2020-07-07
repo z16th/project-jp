@@ -3,7 +3,7 @@ import KanjiAnimation from './KanjiAnimation'
 import './styles/KanjiCard.css'
 
 export default function KanjiCard({data}){
-  const { utf16, number, strokes, character, meaning} = {...data}
+  const { character, utf16, number, strokes, meaning} = {...data}
   const [ showAnimation, setShowAnimation ] = React.useState(false)
   const [ displayType, setDisplayType ] = React.useState('Kana')
 

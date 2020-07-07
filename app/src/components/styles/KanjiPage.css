@@ -1,39 +1,6 @@
-@media (min-width: 800px){
-  #kanji-page ul{
-    padding-left: 32px;
-  }
-  .p{
-    width: 50%;
-    text-align: justify;
-  }
-}
-
-#kanji-page{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 #kanji-table{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-}
-
-.p{
-  padding: 16px;
-  border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.041);
-}
-
-@media (max-width: 416px){
-  #bibliography{
-    width: 90%;
-  }  
-}
-
-#bibliography{
-  font-size: 0.9rem;
-  margin-top: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
