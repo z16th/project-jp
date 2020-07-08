@@ -4,7 +4,7 @@
   padding: 16px;
   margin: 8px;
   border-radius: 24px;
-  background-image: linear-gradient(rgba(63, 168, 243, 0.66),rgba(63, 168, 243, 0.66)),url('../../utils/paper.jpg');
+  background-image: linear-gradient(rgba(63, 168, 243, 0.66),rgba(63, 168, 243, 0.66)),url('../../utils/images/paper.jpg');
   box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.33);
 }
 

@@ -36,7 +36,7 @@ function KanjiInfo(){
       <p>Los kanji pueden aparecer solos, pero es más común que aparezcan en grupos de dos o más kanji, o junto a terminaciones en hiragana. Existen 2,136 kanjis de "uso regular" los cuales son combinados para crear las decenas de miles de palabras del idioma Japonés. Gran parte de estos caracteres provienen del Chino. Algunos de ellos fueron inventados en Japón, y adoptados en China. A diferencia del Chino, los kanji Japoneses usualmente tienen más de una pronuncación, la cual depende del contexto en el que se encuentren.</p>
       <h3>Escritura</h3>
       <p>Reglas generales para escribir kanji:</p>
-      <section>
+      <section className='flex-center'>
         <ul>
           <li>Los trazos son escritos de izquierda a derecha.</li>
           <li>Los trazos son escritos de arriba hacia abajo.</li>
@@ -49,12 +49,14 @@ function KanjiInfo(){
       </section>
       <h2>Tipos de Kanji</h2>
       <p> Los kanji japoneses pueden ser divididos en 4 tipos básicos:</p>
-      <ul>
-        <li>Pictogramas (imágenes de objetos)　山, 田, 川</li>
-        <li>Ideogramas (imágenes de ideas)　三, 上, 中</li>
-        <li>Pictogramas compuestos (varios pictogramas que forman uno solo)　森, 町, 物</li>
-        <li>Ideogramas de sonido (una combinación de caracteres usados por su sonido y otros caracteres usados por su significado)　英, 語, 曜</li>
-      </ul>
+      <section className='flex-center'>
+        <ul>
+          <li>Pictogramas (imágenes de objetos)　山, 田, 川</li>
+          <li>Ideogramas (imágenes de ideas)　三, 上, 中</li>
+          <li>Pictogramas compuestos (varios pictogramas que forman uno solo)　森, 町, 物</li>
+          <li>Ideogramas de sonido (una combinación de caracteres usados por su sonido y otros caracteres usados por su significado)　英, 語, 曜</li>
+        </ul>
+      </section>
       <p>Aproximadamente el 90% de los kanjis son ideogramas de sonido compuestos.</p>
     </React.Fragment>
   )
@@ -83,7 +85,7 @@ function Bibliography(){
       <p className='caption text-center'>
         Parte de la información de este sitio se puede consultar en los libros de referencia:
         </p>
-        <ul className='overline'>
+        <ul className='overline flex-center column'>
           <li>Seely, C., Henshall, K. G., & Fan, J. (2016). <a href='https://www.amazon.com/-/es/Complete-Guide-Japanese-Kanji-Understanding-ebook/dp/B01DIF7RBI/'><em>The Complete Guide to Japanese Kanji: (JLPT All Levels) Remembering and Understanding the 2,136 Standard Characters</em></a> (First ed.) [E-book]. Tuttle Publishing.</li>
 
       <li>Stout, T. G., &amp; Hakone, K. (2017). <a href='https://www.amazon.com/-/es/Japanese-Kanji-Beginners-Levels-Characters/dp/4805310499'><em>Japanese Kanji for Beginners: First Steps to Learn the Basic Japanese Characters</em></a>. Tuttle Publishing.</li>

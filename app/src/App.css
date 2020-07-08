@@ -3,9 +3,13 @@
 .App{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   width: 100%;
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+ul{
+  align-items: flex-start;
 }
 
 @media (max-width: 416px){
@@ -13,12 +17,42 @@
     width: 90%;
   }
   ul{
+    width: 85%;
+  }
+}
+
+@media (min-width: 600px){
+  p{
+    width: 70%;
+  }
+  ul{
+    width: 85%;
+  }
+}
+
+@media (min-width: 768px){
+  p{
+    width: 80%;
+  }
+  ul{
     width: 80%;
   }
 }
 
-@media (min-width: 800px){
+@media (min-width: 992px){
+  p{
+    width: 70%;
+  }
+  ul{
+    width: 85%;
+  }
+}
+
+@media (min-width: 1200px){
   p{
     width: 50%;
+  }
+  ul{
+    width: 90%;
   }
 }

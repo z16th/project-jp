@@ -8,7 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)),url('./utils/texture.jpg');
+  background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)),url('./utils/images/texture.jpg');
   background-size: 100px;
 }
 
@@ -32,7 +32,7 @@ code {
 
 /* Font Styles */
 
-.h1{
+.title1{
   font-family: Noto Sans JP;
   font-style: normal;
   font-weight: 300;
@@ -41,7 +41,7 @@ code {
   letter-spacing: -1.5px;
 }
 
-.h2{
+.title2{
   font-family: Noto Sans JP;
   font-style: normal;
   font-weight: 300;
