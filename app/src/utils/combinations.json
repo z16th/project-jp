@@ -244,8 +244,8 @@
     }
   ],
   "gridStyle": {
-    "gridTemplateColumns": "repeat(6, 100px)",
-    "gridTemplateRows": "repeat(14, 100px)",
+    "gridTemplateColumns": "repeat(6, 8vw)",
+    "gridTemplateRows": "repeat(14, 8vw)",
     "gridTemplateAreas": "'. xや . xゆ . xよ' 'yk kya . kyu . kyo''ysh sha . shu . sho' 'ych cha . chu . cho''yn nya . nyu . nyo''yh hya . hyu . hyo' 'ym mya . myu . myo' 'yr rya . ryu . ryo' '. . . . . .' 'yg gya . gyu . gyo' 'yj ja . ju . jo' 'yd dya . dyu . dyo''yb bya . byu . byo' 'yp pya . pyu . pyo'"
   }
 }

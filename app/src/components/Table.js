@@ -1,16 +1,12 @@
 import React from 'react'
 import './styles/Table.css'
+import Icon from './Icon'
+import KanjiAnimation from './KanjiAnimation'
 
 const headers = {
   hiragana: 'Hiragana \nひらがな',
   katakana: 'Katakana \nカタカナ',
   romaji: 'Romaji \nローマ字'
-}
-
-const PlayAudioFromID = (audioId) => {
-  let audio = new Audio(`https://z16th-bucket.s3-us-west-1.amazonaws.com/project-jp/audios/${audioId}.mp3`)
-  if(audio) return audio.play()
-  console.log('NO AUDIO')
 }
 
 export default function Table({dataJSON, headersJSON,styleObj, label}){
@@ -23,7 +19,7 @@ export default function Table({dataJSON, headersJSON,styleObj, label}){
   }
 
   return(
-    <div className='table-section'>
+    <section className='table-section'>
       <h1 className='header'>
         {currentSyllabary && label}
       </h1>
@@ -39,23 +35,22 @@ export default function Table({dataJSON, headersJSON,styleObj, label}){
         {dataJSON.map(kana => 
           <div 
             key={kana.romaji}
-            className={`kana flex-center ${kana.romaji}`}
+            className={`kana flex-center ${kana.romaji} ${kana.class}`}
             style={{gridArea: kana.romaji}}
-            onClick={() => PlayAudioFromID(kana.romaji)}
             >
-              {kana[currentSyllabary]}
+              <KanjiAnimation name={`${kana.utf16katakana}`} />
           </div>
         ) }
         {headersJSON.map(header => (
           <div 
-            key={header.class} 
-            className={`${header.class} tab-head flex-center`}
-            style={{gridArea: header.class}}
+            key={header.coord} 
+            className={`${header.char} tab-head flex-center noselect`}
+            style={{gridArea: header.coord}}
           >
-            {header.value}
+            {header.char}
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }

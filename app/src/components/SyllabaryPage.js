@@ -4,6 +4,8 @@ import simple from '../utils/simple.json'
 import dakuten from '../utils/dakuten.json'
 import combinations from '../utils/combinations.json'
 
+import simpleAnim from '../utils/simple-anim.json'
+
 import './styles/SyllabaryPage.css'
 
 export default function SyllabaryPage(){
@@ -14,11 +16,11 @@ export default function SyllabaryPage(){
       <section id='tables'>
         <Table 
           label={'Caracteres Simples'}
-          dataJSON={simple.kana} 
-          headersJSON={simple.headers} 
-          styleObj={simple.gridStyle}
+          dataJSON={simpleAnim.kana} 
+          headersJSON={simpleAnim.headers} 
+          styleObj={simpleAnim.gridStyle}
           />
-        <Table 
+        {/* <Table 
           label={'Caracteres con Dakuten'}
           dataJSON={dakuten.kana}
           headersJSON={dakuten.headers}
@@ -29,7 +31,7 @@ export default function SyllabaryPage(){
           dataJSON={combinations.kana}
           headersJSON={combinations.headers}
           styleObj={combinations.gridStyle}
-        />
+        /> */}
       </section>
     </div>
   )
