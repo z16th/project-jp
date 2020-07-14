@@ -1,6 +1,11 @@
-#kanji-table{
+#kanji-page > #kanji-table{
   display: flex;
   flex-wrap: wrap;
+  width: 80%;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+#kanji-page > .kanji-animation{
+  padding-top: 16px;
 }

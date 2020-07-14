@@ -6,9 +6,9 @@ const Icon = React.forwardRef(({ name, ...rest }, ref) => (
   <SVG
     src={require(`../utils/svg-animations/${name}.svg`)}
     innerRef={ref}
-    path={{fill: 'white'}}
     loader={<span style={{display: 'flex', justifyContent: 'center'}}><ClimbingBoxLoader /></span>}
     {...rest}
+    preProcessor={code => code.replace(`style="padding-top: 16px;"`, "")}
   />
 ));
 

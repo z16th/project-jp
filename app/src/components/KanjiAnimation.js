@@ -5,7 +5,7 @@ import './styles/KanjiAnimation.css'
 
 const noop = () => {};
 
-const KanjiAnimation = ({ name, onReset, onPause }) => {
+const KanjiAnimation = ({ name, width, height, onReset, onPause }) => {
   const svgRef = useRef(null);
   const [isPaused, setIsPaused] = useState(true);
 
@@ -30,11 +30,10 @@ const KanjiAnimation = ({ name, onReset, onPause }) => {
   }, [isPaused]);
 
   return (
-    <div className="kanji-animation">
+    <div className="kanji-animation flex-center column">
        <Icon
         ref={svgRef}
         name={`0${name}-jlect`}
-        style={{paddingTop: '16px'}}
         onLoad={() => {
           if (svgRef.current) {
             svgRef.current.pauseAnimations();
@@ -43,10 +42,10 @@ const KanjiAnimation = ({ name, onReset, onPause }) => {
         }}
       />
       <div className="controls">
-        <div className='btn noselect' onClick={handlePause}>
+        <div className='btn button flex-center noselect' onClick={handlePause}>
           {isPaused ? '⏵' : '⏸'}
         </div>
-        <div className='btn noselect' onClick={handleReset}>⟳</div>
+        <div className='btn button flex-center noselect' onClick={handleReset}>⟳</div>
       </div>
     </div>
   );
@@ -54,6 +53,8 @@ const KanjiAnimation = ({ name, onReset, onPause }) => {
 
 KanjiAnimation.propTypes = {
   name: PropTypes.string.isRequired,
+  width: PropTypes.number,
+  height: PropTypes.number
 };
 
 KanjiAnimation.defaultProps = {

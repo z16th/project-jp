@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap');
 
-.App{
+#App{
   display: flex;
   flex-direction: column;
   justify-content: center;

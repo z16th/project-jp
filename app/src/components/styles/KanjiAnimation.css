@@ -1,11 +1,21 @@
-.btn{
-  padding: 2px 4px 2px 4px;
+.kanji-animation .controls{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.kanji-animation > .controls > .btn:hover{
+  background-color: white;
+}
+
+.kanji-animation .btn{
+  margin: 4px;
+  padding: 4px;
   border-radius: 4px;
 }
 
-.controls > .btn:hover{
-  background-color: white;
-}
+
+
 .controls > .btn:active{
   color: white;
   background-color: none;
