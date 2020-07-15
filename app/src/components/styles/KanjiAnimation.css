@@ -14,7 +14,11 @@
   border-radius: 4px;
 }
 
-
+@media (max-width: 416px){
+  .kanji-animation > .controls{
+    flex-direction: column;
+  }
+}
 
 .controls > .btn:active{
   color: white;

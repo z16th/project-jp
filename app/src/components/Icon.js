@@ -8,7 +8,6 @@ const Icon = React.forwardRef(({ name, ...rest }, ref) => (
     innerRef={ref}
     loader={<span style={{display: 'flex', justifyContent: 'center'}}><ClimbingBoxLoader /></span>}
     {...rest}
-    preProcessor={code => code.replace(`style="padding-top: 16px;"`, "")}
   />
 ));
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import KanjiAnimation from './KanjiAnimation'
 import kanas from '../utils/kana-all.json'
@@ -7,11 +7,16 @@ import './styles/Table.css'
 
 export default function Table({syllabary, type, setType}){
   const [ renderAnimations, setRenderAnimations ] = useState(false)
+  const [ romajiStyle, setRomajiStyle ] = useState('')
+
+  useEffect(() => {
+    if(syllabary === 'romaji'){
+      setRomajiStyle('romaji-style')
+    }
+  }, [syllabary]);
 
   const handleAnimButton = () => {
     setRenderAnimations(state => !state)
-    console.log(renderAnimations);
-    
   }
   
   const handleNextButton = () => {
@@ -107,7 +112,7 @@ export default function Table({syllabary, type, setType}){
       </div>
       <RenderAnimButton />
       <section 
-        className='table flex-center' 
+        className={`table flex-center ${romajiStyle}`} 
         style={grids[`${type}`].gridStyle}
       >
         <RenderTableHeaders headersArray={grids[`${type}`].headers} />

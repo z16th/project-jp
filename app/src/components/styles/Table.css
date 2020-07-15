@@ -49,13 +49,54 @@
   font-size: clamp(12px, 5vw, 36px);
 }
 
-@media (max-width: 768px){
+@media (max-width: 416px){
+  .table-section{
+    padding: 10px;
+  }
+  .table-section > .table{
+    gap: 4px;
+  }
+  .table .tab-head{
+    font-size: 0.8rem;
+    word-wrap: break-word;
+  }
   .kana > span{
     font-size: 12vw;
   }
   .table svg{
-    padding: 0;
-    width: 12vw;
-    height: auto;
+    width: 13vw;
+  }
+  .romaji-style > .kana > span{
+    font-size: 10vw;
+  }
+}
+
+@media (min-width: 416px){
+  .kana > span{
+    font-size: 10vw;
+  }
+  .table svg{
+    width: 10vw;
+  }
+  .romaji-style > .kana > span{
+    font-size: 6vw;
+  }
+}
+
+@media (min-width: 768px){
+  .romaji-style > .kana > span{
+    font-size: 7vw;
+  }
+}
+
+@media (min-width: 1200px){
+  .kana > span{
+    font-size: 6vw;
+  }
+  .table svg{
+    width: 8vw;
+  }
+  .romaji-style > .kana > span{
+    font-size: 5vw;
   }
 }
