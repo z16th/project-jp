@@ -5,11 +5,11 @@
   margin-bottom: 20px;
 }
 
-.table-section > .description{
+.table-section .description{
   border: 2px solid rebeccapurple;
   padding: 12px;
 }
-.table-section > .description:hover{
+.table-section .description:hover{
   cursor: pointer;
   background-color: rgba(102, 51, 153, 0.432);
 }

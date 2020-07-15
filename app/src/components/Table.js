@@ -1,40 +1,50 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import './styles/Table.css'
 import KanjiAnimation from './KanjiAnimation'
+import kanas from '../utils/kana-all.json'
+import grids from '../utils/grids-all.json'
+import './styles/Table.css'
 
-const headers = {
-  hiragana: 'Hiragana \nひらがな',
-  katakana: 'Katakana \nカタカナ',
-  romaji: 'Romaji \nローマ字'
-}
-
-export default function Table({dataArr, headersArr,styleObj, label}){
-  const [ currentSyllabary, setCurrentSyllabary ] = useState('hiragana')
+export default function Table({syllabary, type, setType}){
   const [ renderAnimations, setRenderAnimations ] = useState(false)
 
-  const nextSyllabary = () => {
-    if(currentSyllabary === 'hiragana') return setCurrentSyllabary('katakana')
-    if(currentSyllabary === 'katakana') return setCurrentSyllabary('romaji')
-    if(currentSyllabary === 'romaji') return setCurrentSyllabary('hiragana')
+  const handleAnimButton = () => {
+    setRenderAnimations(state => !state)
+    console.log(renderAnimations);
+    
+  }
+  
+  const handleNextButton = () => {
+    if(type === 'simple') return setType('dakuten')
+    if(type === 'dakuten') return setType('combination')
+    if(type === 'combination') return setType('simple')
+  }
+
+  const handlePrevButton = () => {
+    if(type === 'simple') return setType('combination')
+    if(type === 'combination') return setType('dakuten')
+    if(type === 'dakuten') return setType('simple')
   }
 
   const CharAsFont = ({ charObj }) =>{
     return(
       <span className='flex-center'>
-        {charObj[`${currentSyllabary}`]}
+        {charObj[`${syllabary}`]}
       </span>
     )
   }
 
   const CharAsAnim = ({ charObj }) => {
+    if(syllabary !== 'romaji')
     return(
-      <KanjiAnimation name={charObj[`utf16${currentSyllabary}`]}/>
+      charObj.utf16[`${syllabary}`].map((utf16) => (
+        <KanjiAnimation key={utf16} name={utf16}/>
+      ))
     )
   }
 
   const RenderTableChars = ({ charObj }) => {
-    if(currentSyllabary === 'romaji'){
+    if(syllabary === 'romaji'){
       return(
         <div 
         key={charObj.romaji}
@@ -42,7 +52,7 @@ export default function Table({dataArr, headersArr,styleObj, label}){
         style={{gridArea: charObj.romaji}}
         >
           <CharAsFont charObj={charObj} />
-      </div>
+        </div>
       )
     }
     return(
@@ -51,9 +61,10 @@ export default function Table({dataArr, headersArr,styleObj, label}){
       className={`kana flex-center ${charObj.romaji} ${charObj.class}`}
       style={{gridArea: charObj.romaji}}
       >
-        {renderAnimations ? <CharAsAnim charObj={charObj} /> : <CharAsFont charObj={charObj} />
-        }
-    </div>
+        {renderAnimations 
+          ? <CharAsAnim charObj={charObj} /> 
+          : <CharAsFont charObj={charObj} />}
+      </div>
     )
   }
 
@@ -73,35 +84,37 @@ export default function Table({dataArr, headersArr,styleObj, label}){
     )
   }
 
-  const AnimationsButton = () => {
-    if(currentSyllabary === 'romaji') return null
-    return(
-      <h3
-        className='button description noselect'
-        onClick={() => setRenderAnimations(state => !state)}
-      >
-        {!renderAnimations ? 'Ver Animaciones' : 'Volver a Caracteres'}
-      </h3>
+  const RenderAnimButton = () => {
+    if(syllabary === 'romaji') return null
+    return (
+    <h4 
+      className='description button noselect' 
+      onClick={handleAnimButton}
+    >
+      {!renderAnimations ? 'Ver animaciones' : 'Ver caracteres'}
+    </h4>
     )
   }
 
   return(
     <section className='table-section'>
-      <h2 className='header'>
-        {currentSyllabary && label}
-      </h2>
-      <h3 
-        className='description noselect'
-        onClick={nextSyllabary}
+      <div className='flex-center noselect'>
+        <span className='description' onClick={handlePrevButton}>{'<'}</span>
+        <p className='noselect'>
+          {type}
+        </p>
+        <span className='description' onClick={handleNextButton}>{'>'}</span>
+      </div>
+      <RenderAnimButton />
+      <section 
+        className='table flex-center' 
+        style={grids[`${type}`].gridStyle}
       >
-        {headers[currentSyllabary]}
-        {!currentSyllabary && 'Error'}
-      </h3>
-      <AnimationsButton />
-      <section className='table flex-center' style={{...styleObj}}>
-        <RenderTableHeaders headersArray={headersArr} />
-        {dataArr.map((kana) => 
-          <RenderTableChars charObj={kana} />
+        <RenderTableHeaders headersArray={grids[`${type}`].headers} />
+        {kanas
+          .filter(kana => kana.type === type)
+          .map((kana) => 
+            <RenderTableChars key={kana.romaji} charObj={kana} />
         )}
       </section>
     </section>
@@ -109,12 +122,12 @@ export default function Table({dataArr, headersArr,styleObj, label}){
 }
 
 Table.propTypes = {
-  label: PropTypes.string,
-  dataArr: PropTypes.array.isRequired,
-  headersArr: PropTypes.array.isRequired,
-  styleObj: PropTypes.object.isRequired
+  syllabary: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  setType: PropTypes.func.isRequired
 }
 
 Table.defaultProps = {
-  label: 'Set your label here'
+  syllabary: 'hiragana',
+  type: 'simple',
 }

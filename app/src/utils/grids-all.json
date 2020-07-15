@@ -1,0 +1,193 @@
+{
+  "simple": {
+    "headers":[
+      {
+        "char": "a",
+        "coord": "x1y1"
+      },
+      {
+        "char": "i",
+        "coord": "x2y1"
+      },
+      {
+        "char": "u",
+        "coord": "x3y1"
+      },
+      {
+        "char": "e",
+        "coord": "x4y1"
+      },
+      {
+        "char": "o",
+        "coord": "x5y1"
+      },
+      {
+        "char": "-",
+        "coord": "x0y1"
+      },
+      {
+        "char": "k",
+        "coord": "x0y2"
+      },
+      {
+        "char": "s",
+        "coord": "x0y3"
+      },
+      {
+        "char": "t",
+        "coord": "x0y4"
+      },
+      {
+        "char": "n",
+        "coord": "x0y5"
+      },
+      {
+        "char": "h",
+        "coord": "x0y6"
+      },
+      {
+        "char": "m",
+        "coord": "x0y7"
+      },
+      {
+        "char": "y",
+        "coord": "x0y8"
+      },
+      {
+        "char": "r",
+        "coord": "x0y9"
+      },
+      {
+        "char": "w",
+        "coord": "x0y10"
+      },
+      {
+        "char": "n",
+        "coord": "x0y11"
+      }
+    ],
+    "gridStyle":{
+      "gridTemplateColumns": "repeat(6, min-content)",
+      "gridTemplateRows": "repeat(12, min-content)",
+      "gridTemplateAreas":"'. x1y1 x2y1 x3y1 x4y1 x5y1''x0y1 a i u e o''x0y2 ka ki ku ke ko''x0y3 sa shi su se so''x0y4 ta chi tsu te to''x0y5 na ni nu ne no''x0y6 ha hi fu he ho''x0y7 ma mi mu me mo''x0y8 ya . yu . yo''x0y9 ra ri ru re ro''x0y10 wa . . . wo''x0y11 n . . . .'"
+    }
+  },
+  "dakuten":{
+    "headers":[
+      {
+        "char": "a",
+        "coord": "x1y1"
+      },
+      {
+        "char": "i",
+        "coord": "x2y1"
+      },
+      {
+        "char": "u",
+        "coord": "x3y1"
+      },
+      {
+        "char": "e",
+        "coord": "x4y1"
+      },
+      {
+        "char": "o",
+        "coord": "x5y1"
+      },
+      {
+        "char": "k→g",
+        "coord": "x0y1"
+      },
+      {
+        "char": "s→z",
+        "coord": "x0y2"
+      },
+      {
+        "char": "t→d",
+        "coord": "x0y3"
+      },
+      {
+        "char": "h→b",
+        "coord": "x0y4"
+      },
+      {
+        "char": "h→p",
+        "coord": "x0y5"
+      }
+    ],
+    "gridStyle":{
+      "gridTemplateColumns": "repeat(6, min-content)",
+      "gridTemplateRows": "repeat(6, min-content)",
+      "gridTemplateAreas":"'. x1y1 x2y1 x3y1 x4y1 x5y1''x0y1 ga gi gu ge go''x0y2 za ji zu ze zo''x0y3 da dzi dzu de do''x0y4 ba bi bu be bo''x0y5 pa pi pu pe po'"
+    }
+  },
+  "combination":{
+    "headers":[
+      {
+        "char": "ya",
+        "coord": "x1y1"
+      },
+      {
+        "char": "yu",
+        "coord": "x3y1"
+      },
+      {
+        "char": "yo",
+        "coord": "x5y1"
+      },
+      {
+        "char": "k",
+        "coord": "x0y2"
+      },
+      {
+        "char": "sh",
+        "coord": "x0y3"
+      },
+      {
+        "char": "ch",
+        "coord": "x0y4"
+      },
+      {
+        "char": "n",
+        "coord": "x0y5"
+      },
+      {
+        "char": "h",
+        "coord": "x0y6"
+      },
+      {
+        "char": "m",
+        "coord": "x0y7"
+      },
+      {
+        "char": "r",
+        "coord": "x0y8"
+      },
+      {
+        "char": "k→g",
+        "coord": "x0y9"
+      },
+      {
+        "char": "sh→j",
+        "coord": "x0y10"
+      },
+      {
+        "char": "ch→d",
+        "coord": "x0y11"
+      },
+      {
+        "char": "h→b",
+        "coord": "x0y12"
+      },
+      {
+        "char": "h→p",
+        "coord": "x0y13"
+      }
+    ],
+    "gridStyle": {
+      "gridTemplateColumns": "repeat(4, 8vw)",
+      "gridTemplateRows": "repeat(14, 8vw)",
+      "gridTemplateAreas": "'. x1y1 x3y1 x5y1' 'x0y2 kya kyu kyo''x0y3 sha shu sho' 'x0y4 cha chu cho''x0y5 nya nyu nyo''x0y6 hya hyu hyo' 'x0y7 mya myu myo' 'x0y8 rya ryu ryo' '. . . .' 'x0y9 gya gyu gyo' 'x0y10 ja ju jo' 'x0y11 dya dyu dyo''x0y12 bya byu byo' 'x0y13 pya pyu pyo'"
+    }
+  }
+}
