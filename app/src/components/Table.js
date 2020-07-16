@@ -5,6 +5,12 @@ import kanas from "../utils/kana-all.json"
 import grids from "../utils/grids-all.json"
 import "./styles/Table.css"
 
+const types = {
+  simple: "Simple",
+  dakuten: "Dakuten",
+  combination: "Combinación",
+}
+
 export default function Table({ syllabary, type, setType }) {
   const [renderAnimations, setRenderAnimations] = useState(false)
   const [romajiStyle, setRomajiStyle] = useState("")
@@ -33,19 +39,19 @@ export default function Table({ syllabary, type, setType }) {
     return null
   }
 
-  const CharAsFont = ({ charObj }) => {
+  const charAsFont = (charObj) => {
     return <span className="flex-center">{charObj[`${syllabary}`]}</span>
   }
 
-  const CharAsAnim = ({ charObj }) => {
+  const charAsAnim = (charObj) => {
     if (syllabary !== "romaji")
       return charObj.utf16[`${syllabary}`].map((utf16) => (
         <KanjiAnimation key={utf16} name={utf16} />
       ))
-    return console.warn(`animation for ${charObj} not found`)
+    return null
   }
 
-  const RenderTableChars = ({ charObj }) => {
+  const renderTableChars = (charObj) => {
     if (syllabary === "romaji") {
       return (
         <div
@@ -53,7 +59,7 @@ export default function Table({ syllabary, type, setType }) {
           className={`kana flex-center ${charObj.romaji} ${charObj.class}`}
           style={{ gridArea: charObj.romaji }}
         >
-          <CharAsFont charObj={charObj} />
+          {charAsFont(charObj)}
         </div>
       )
     }
@@ -63,16 +69,12 @@ export default function Table({ syllabary, type, setType }) {
         className={`kana flex-center ${charObj.romaji} ${charObj.class}`}
         style={{ gridArea: charObj.romaji }}
       >
-        {renderAnimations ? (
-          <CharAsAnim charObj={charObj} />
-        ) : (
-          <CharAsFont charObj={charObj} />
-        )}
+        {renderAnimations ? charAsAnim(charObj) : charAsFont(charObj)}
       </div>
     )
   }
 
-  const RenderTableHeaders = ({ headersArray }) => {
+  const renderTableHeaders = (headersArray) => {
     return (
       <>
         {headersArray.map(({ char, coord }) => (
@@ -88,37 +90,47 @@ export default function Table({ syllabary, type, setType }) {
     )
   }
 
-  const RenderAnimButton = () => {
+  const renderAnimButton = () => {
     if (syllabary === "romaji") return null
     return (
-      <h4 className="description button noselect" onClick={handleAnimButton}>
+      <button
+        className="description button noselect"
+        type="button"
+        onClick={handleAnimButton}
+      >
         {!renderAnimations ? "Ver animaciones" : "Ver caracteres"}
-      </h4>
+      </button>
     )
   }
 
   return (
     <section className="table-section">
       <div className="flex-center noselect">
-        <span className="description" onClick={handlePrevButton}>
+        <button
+          className="description"
+          type="button"
+          onClick={handlePrevButton}
+        >
           {"<"}
-        </span>
-        <p className="noselect">{type}</p>
-        <span className="description" onClick={handleNextButton}>
+        </button>
+        <p className="noselect">{types[type]}</p>
+        <button
+          className="description"
+          type="button"
+          onClick={handleNextButton}
+        >
           {">"}
-        </span>
+        </button>
       </div>
-      <RenderAnimButton />
+      {renderAnimButton()}
       <section
         className={`table flex-center ${romajiStyle}`}
         style={grids[`${type}`].gridStyle}
       >
-        <RenderTableHeaders headersArray={grids[`${type}`].headers} />
+        {renderTableHeaders(grids[`${type}`].headers)}
         {kanas
           .filter((kana) => kana.type === type)
-          .map((kana) => (
-            <RenderTableChars key={kana.romaji} charObj={kana} />
-          ))}
+          .map((kana) => renderTableChars(kana))}
       </section>
     </section>
   )
@@ -131,14 +143,5 @@ Table.propTypes = {
 }
 
 Table.defaultProps = {
-  syllabary: "hiragana",
   type: "simple",
 }
-
-charObj.propTypes = {
-  utf16: PropTypes.array.isRequired,
-  romaji: PropTypes.string.isRequired,
-  class: PropTypes.string.isRequired,
-}
-
-headersArray.propTypes = {}

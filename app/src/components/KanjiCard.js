@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import KanjiAnimation from "./KanjiAnimation"
 import "./styles/KanjiCard.css"
 
@@ -12,7 +13,9 @@ export default function KanjiCard({ data }) {
   }
 
   const handleReadingClick = () => {
-    displayType === "Romaji" ? setDisplayType("Kana") : setDisplayType("Romaji")
+    return displayType === "Romaji"
+      ? setDisplayType("Kana")
+      : setDisplayType("Romaji")
   }
 
   return (
@@ -22,23 +25,31 @@ export default function KanjiCard({ data }) {
         {showAnimation && (
           <KanjiAnimation name={utf16} width={120} height={120} />
         )}
-        <div className="kanji-strokes" onClick={handleAnimationClick}>
+        <button
+          className="kanji-strokes"
+          type="button"
+          onClick={handleAnimationClick}
+        >
           <b>Trazos:</b> {strokes}
-        </div>
+        </button>
         <div className="kanji-number">
           <b>No:</b> {number}
         </div>
       </div>
 
       <div className="kanji-right">
-        <div className="kanji-reading" onClick={handleReadingClick}>
+        <button
+          className="kanji-reading"
+          type="button"
+          onClick={handleReadingClick}
+        >
           <div className="kanji-onyomi">
             <b>On-yomi:</b> {data[`onyomi${displayType}`]}
           </div>
           <div className="kanji-kunyomi">
             <b>Kun-yomi:</b> {data[`kunyomi${displayType}`]}
           </div>
-        </div>
+        </button>
         <br />
         <div className="kanji-meaning">
           <b>Significado:</b> {meaning}
@@ -46,4 +57,8 @@ export default function KanjiCard({ data }) {
       </div>
     </div>
   )
+}
+
+KanjiCard.propTypes = {
+  data: PropTypes.objectOf(PropTypes.string).isRequired,
 }

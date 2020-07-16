@@ -12,6 +12,9 @@ export default function SyllabaryPage() {
         <Link to={`${path}/katakana`}>Katakana</Link>
         <Link to={`${path}/romaji`}>Romaji</Link>
       </nav>
+      <Route exact path={`${url}/`}>
+        Cool stuff
+      </Route>
       <Route path={`${url}/hiragana`}>
         <Table syllabary="hiragana" type={type} setType={setType} />
       </Route>

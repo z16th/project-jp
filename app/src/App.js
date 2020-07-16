@@ -17,11 +17,11 @@ function App() {
         <Route exact path="/">
           <HomePage />
         </Route>
-        <Route path="/kanji">
-          <KanjiPage />
-        </Route>
         <Route path="/silabarios">
           <SyllabaryPage />
+        </Route>
+        <Route path="/kanji">
+          <KanjiPage />
         </Route>
       </div>
       <Disclaimer />

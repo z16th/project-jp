@@ -5,8 +5,8 @@ export default function NavBar() {
   return (
     <nav className="nav-bar">
       <Link to="/">Inicio</Link>
+      <Link to="/silabarios">Silabarios</Link>
       <Link to="/kanji">Kanji</Link>
-      <Link to="/silabarios/hiragana">Silabarios</Link>
     </nav>
   )
 }

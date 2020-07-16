@@ -18,7 +18,8 @@ const KanjiAnimation = ({ name, onReset, onPause }) => {
 
   const handlePause = useCallback(() => {
     setIsPaused((state) => !state)
-  }, [])
+    onPause()
+  }, [onPause])
 
   useEffect(() => {
     if (!svgRef.current) return
@@ -42,12 +43,20 @@ const KanjiAnimation = ({ name, onReset, onPause }) => {
         }}
       />
       <div className="controls">
-        <div className="btn button flex-center noselect" onClick={handlePause}>
+        <button
+          className="btn button flex-center noselect"
+          type="button"
+          onClick={handlePause}
+        >
           {isPaused ? "⏵" : "⏸"}
-        </div>
-        <div className="btn button flex-center noselect" onClick={handleReset}>
+        </button>
+        <button
+          className="btn button flex-center noselect"
+          type="button"
+          onClick={handleReset}
+        >
           ⟳
-        </div>
+        </button>
       </div>
     </div>
   )

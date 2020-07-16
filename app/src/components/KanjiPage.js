@@ -11,8 +11,8 @@ export default function KanjiPage() {
       <h2>Kanji de Primer Grado</h2>
       <h3>1 - 80</h3>
       <div id="kanji-table" className="flex-center">
-        {kanjiData.map((e) => (
-          <KanjiCard key={e.utf16} data={e} />
+        {kanjiData.map((data) => (
+          <KanjiCard key={data.utf16} data={data} />
         ))}
       </div>
       <Bibliography />
@@ -134,7 +134,7 @@ function HowToUse() {
         reiniciar la animación del orden de los trazos.
       </p>
       <p>
-        Del lado derecho se encuentran las pronunciaciones <b>on-yomi</b> 
+        Del lado derecho se encuentran las pronunciaciones <b>on-yomi</b>{" "}
         (China) y <b>kun-yomi</b> (Japonesa) así como los posibles{" "}
         <b>significados</b>.{" "}
         <u>
@@ -150,12 +150,13 @@ function HowToUse() {
         Es posible que otras fuentes manejen un formato distinto.
       </p>
       <p>
-        Las pronunciaciones pueden contener signos como ".", "/" y "～" para
-        indicar algunos detalles de este diccionario de kanji. El punto (.)
-        indica que la pronunciación del kanji termina en ese lugar y las sílabas
-        siguentes corresponden a la formación de una palabra completa. En el
-        ejemplo, み.る (mi.ru) indica que み (mi) es la pronunciación del kanji,
-        y que みる (miru) es una palabra completa.
+        Las pronunciaciones pueden contener signos como &quot;.&quot;,
+        &quot;/&quot; y &quot;～&quot; para indicar algunos detalles de este
+        diccionario de kanji. El punto (.) indica que la pronunciación del kanji
+        termina en ese lugar y las sílabas siguentes corresponden a la formación
+        de una palabra completa. En el ejemplo, み.る (mi.ru) indica que み (mi)
+        es la pronunciación del kanji, y que みる (miru) es una palabra
+        completa.
         <br /> Sustituyendo queda 見る (miru). La diagonal (/) indica que se
         puede utilizar la misma pronunciación del kanji para generar otras
         palabras. En el ejemplo: {example.kunyomiKana} ({example.kunyomiRomaji})
