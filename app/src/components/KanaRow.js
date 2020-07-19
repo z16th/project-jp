@@ -1,0 +1,72 @@
+import React, { useState, useRef, useEffect } from "react"
+import PropTypes from "prop-types"
+import kanas from "../utils/kana-all.json"
+import "./styles/KanaRow.css"
+
+const initArray = (from, to) => {
+  let arr = []
+  for (let i = from; i <= to; i++) {
+    arr.push(i)
+  }
+  return arr
+}
+
+export default function KanaRow({
+  from,
+  to,
+  state: allActive,
+  updater: setAllActive,
+  syllabary,
+}) {
+  const indexes = initArray(from, to)
+  let status = useRef("inactive")
+  const [isActive, setIsActive] = useState(false)
+
+  const handleClick = () => {
+    if (!isActive) {
+      setIsActive(true)
+      setAllActive(false)
+    }
+    setIsActive(false)
+  }
+
+  useEffect(() => {
+    if (isActive) {
+      status.current = "active"
+    }
+    if (!isActive) {
+      status.current = "inactive"
+    }
+  }, [isActive])
+
+  useEffect(() => {
+    if (!allActive) {
+      setIsActive(true)
+    } else {
+      setIsActive(false)
+    }
+  }, [allActive, setIsActive])
+
+  return (
+    <button className={`kana-button ${status.current}`} onClick={handleClick}>
+      {indexes.map((i) => (
+        <span key={i}>{kanas[i][syllabary]}</span>
+      ))}
+    </button>
+  )
+}
+
+KanaRow.propTypes = {
+  from: PropTypes.number.isRequired,
+  to: PropTypes.number.isRequired,
+  condition: PropTypes.bool,
+  syllabary: PropTypes.string,
+}
+
+KanaRow.defaultProps = {
+  syllabary: "hiragana",
+}
+
+const charAsFont = (charObj, syllabary) => {
+  return <span className="flex-center">{charObj[`${syllabary}`]}</span>
+}

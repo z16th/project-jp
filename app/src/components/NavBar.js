@@ -7,6 +7,7 @@ export default function NavBar() {
       <Link to="/">Inicio</Link>
       <Link to="/silabarios">Silabarios</Link>
       <Link to="/kanji">Kanji</Link>
+      <Link to="/practikana">PractiKana</Link>
     </nav>
   )
 }

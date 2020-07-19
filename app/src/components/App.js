@@ -8,6 +8,7 @@ import LolzSocial from "./LolzSocial"
 import Disclaimer from "./Disclaimer"
 import HomePage from "./HomePage"
 import NavBar from "./NavBar"
+import PractiKana from "./PractiKana"
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/kanji">
           <KanjiPage />
+        </Route>
+        <Route path='/practikana'>
+          <PractiKana />
         </Route>
       </div>
       <Disclaimer />
