@@ -1,13 +1,13 @@
 import React from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
-import "./App.css"
+import "./styles/App.css"
 
-import SyllabaryPage from "./components/SyllabaryPage"
-import KanjiPage from "./components/KanjiPage"
-import LolzSocial from "./components/LolzSocial"
-import Disclaimer from "./components/Disclaimer"
-import HomePage from "./components/HomePage"
-import NavBar from "./components/NavBar"
+import SyllabaryPage from "./SyllabaryPage"
+import KanjiPage from "./KanjiPage"
+import LolzSocial from "./LolzSocial"
+import Disclaimer from "./Disclaimer"
+import HomePage from "./HomePage"
+import NavBar from "./NavBar"
 
 function App() {
   return (
