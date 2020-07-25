@@ -1,0 +1,12 @@
+#main-navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: lightblue;
+}
+
+.empty{
+  height: var(--navbar-height);
+}

@@ -4,8 +4,8 @@ import kanas from "../utils/kana-all.json"
 import "./styles/KanaRow.css"
 
 const initArray = (from, to) => {
-  let arr = []
-  for (let i = from; i <= to; i++) {
+  const arr = []
+  for (let i = from; i <= to; i + 1) {
     arr.push(i)
   }
   return arr
@@ -19,7 +19,7 @@ export default function KanaRow({
   syllabary,
 }) {
   const indexes = initArray(from, to)
-  let status = useRef("inactive")
+  const status = useRef("inactive")
   const [isActive, setIsActive] = useState(false)
 
   const handleClick = () => {

@@ -5,7 +5,7 @@ import "./styles/KanjiAnimation.css"
 
 const noop = () => {}
 
-const KanjiAnimation = ({ name, onReset, onPause }) => {
+const CharAnimation = ({ name, onReset, onPause }) => {
   const svgRef = useRef(null)
   const [isPaused, setIsPaused] = useState(true)
 
@@ -62,15 +62,15 @@ const KanjiAnimation = ({ name, onReset, onPause }) => {
   )
 }
 
-KanjiAnimation.propTypes = {
+CharAnimation.propTypes = {
   name: PropTypes.string.isRequired,
   onPause: PropTypes.func,
   onReset: PropTypes.func,
 }
 
-KanjiAnimation.defaultProps = {
+CharAnimation.defaultProps = {
   onReset: noop,
   onPause: noop,
 }
 
-export default KanjiAnimation
+export default CharAnimation

@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react"
-import PropTypes from "prop-types"
-import KanjiAnimation from "./KanjiAnimation"
+import CharAnimation from "./KanjiAnimation"
 import kanas from "../utils/kana-all.json"
 import grids from "../utils/grids-all.json"
 import "./styles/Table.css"
+import { useParams } from "react-router-dom"
 
-const types = {
-  simple: "Simple",
-  dakuten: "Dakuten",
-  combination: "Combinación",
-}
-
-export default function Table({ syllabary, type, setType }) {
+export default function Table() {
+  const { syllabary, type } = useParams()
   const [renderAnimations, setRenderAnimations] = useState(false)
   const [romajiStyle, setRomajiStyle] = useState("")
 
@@ -25,20 +20,6 @@ export default function Table({ syllabary, type, setType }) {
     setRenderAnimations((state) => !state)
   }
 
-  const handleNextButton = () => {
-    if (type === "simple") return setType("dakuten")
-    if (type === "dakuten") return setType("combination")
-    if (type === "combination") return setType("simple")
-    return null
-  }
-
-  const handlePrevButton = () => {
-    if (type === "simple") return setType("combination")
-    if (type === "combination") return setType("dakuten")
-    if (type === "dakuten") return setType("simple")
-    return null
-  }
-
   const charAsFont = (charObj) => {
     return <span className="flex-center">{charObj[`${syllabary}`]}</span>
   }
@@ -46,7 +27,7 @@ export default function Table({ syllabary, type, setType }) {
   const charAsAnim = (charObj) => {
     if (syllabary !== "romaji")
       return charObj.utf16[`${syllabary}`].map((utf16) => (
-        <KanjiAnimation key={utf16} name={utf16} />
+        <CharAnimation key={utf16} name={utf16} />
       ))
     return null
   }
@@ -105,23 +86,6 @@ export default function Table({ syllabary, type, setType }) {
 
   return (
     <section className="table-section">
-      <div className="flex-center noselect">
-        <button
-          className="description"
-          type="button"
-          onClick={handlePrevButton}
-        >
-          {"<"}
-        </button>
-        <p className="noselect">{types[type]}</p>
-        <button
-          className="description"
-          type="button"
-          onClick={handleNextButton}
-        >
-          {">"}
-        </button>
-      </div>
       {renderAnimButton()}
       <section
         className={`table flex-center ${romajiStyle}`}
@@ -134,14 +98,4 @@ export default function Table({ syllabary, type, setType }) {
       </section>
     </section>
   )
-}
-
-Table.propTypes = {
-  syllabary: PropTypes.string.isRequired,
-  type: PropTypes.string,
-  setType: PropTypes.func.isRequired,
-}
-
-Table.defaultProps = {
-  type: "simple",
 }

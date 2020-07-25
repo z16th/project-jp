@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Josefin+Slab&display=swap');
+
 #App{
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  font-family: 'Noto Sans JP', sans-serif;
 }
 
 ul{
