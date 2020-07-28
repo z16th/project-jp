@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import KanjiAnimation from "./KanjiAnimation"
-import "./styles/KanjiCard.css"
 
 export default function KanjiCard({ data }) {
   const { character, utf16, number, strokes, meaning } = { ...data }

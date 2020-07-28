@@ -1,7 +1,6 @@
 import React from "react"
 import kanjiData from "../utils/kanji-1-80.json"
 import KanjiCard from "./KanjiCard"
-import "./styles/KanjiPage.css"
 
 export default function KanjiPage() {
   return (
