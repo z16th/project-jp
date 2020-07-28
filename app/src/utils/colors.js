@@ -13,6 +13,6 @@ export const yellow = {
 export const pink = {
   regular: "#ff82b2",
   light: "#ffb4e4",
-  dark: "c95183",
+  dark: "#c95183",
   background: "#ffe2ed",
 }

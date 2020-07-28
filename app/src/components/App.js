@@ -1,34 +1,34 @@
-import React from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core"
+import { blue } from "../utils"
+import NavBar from "./NavBar"
+import HomePage from "./HomePage"
 import SyllabaryPage from "./SyllabaryPage"
 import KanjiPage from "./KanjiPage"
 import LolzSocial from "./LolzSocial"
 import Disclaimer from "./Disclaimer"
-import HomePage from "./HomePage"
-import NavBar from "./NavBar"
 
 const links = [
   {
-    name: "home",
     to: "/",
     children: (
-      <span style={{ margin: "8px" }}>
-        <span role="img" aria-label="home">
+      <span>
+        <span style={{ marginRight: "4px" }} role="img" aria-label="inicio">
           🏠
         </span>
-        Inicio
+        INICIO
       </span>
     ),
   },
   {
-    name: "syllabaries",
     to: "/silabarios",
     children: (
-      <span style={{ margin: "8px" }}>
-        <span role="img" aria-label="syllabaries">
+      <span>
+        <span style={{ marginRight: "4px" }} role="img" aria-label="silabarios">
           🎎
         </span>
-        Silabarios
+        SILABARIOS
       </span>
     ),
   },
@@ -36,24 +36,37 @@ const links = [
     name: "kanji",
     to: "/kanji",
     children: (
-      <span style={{ margin: "8px" }}>
-        <span role="img" aria-label="kanji">
+      <span>
+        <span style={{ marginRight: "4px" }} role="img" aria-label="kanji">
           🈷️
         </span>
-        Kanji
+        KANJI
       </span>
     ),
   },
 ]
 
+const appStyle = css`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 48px minmax(auto, 1fr);
+  grid-template-areas: "navbar" "content";
+`
+
 function App() {
   return (
     <Router>
-      <div id="App">
-        <NavBar id="main-navbar" links={links} />
+      <div id="App" css={appStyle}>
+        <NavBar
+          id="main-navbar"
+          links={links}
+          color={blue}
+          style={{ gridArea: "navbar" }}
+        />
         <Switch>
           <Route exact path="/">
-            <HomePage />
+            <HomePage className="content" style={{ gridArea: "content" }} />
           </Route>
           <Route path="/silabarios">
             <SyllabaryPage />
