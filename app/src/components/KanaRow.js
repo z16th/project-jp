@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import kanas from "../utils/kana-all.json"
-import "./styles/KanaRow.css"
 
 const initArray = (from, to) => {
   const arr = []
