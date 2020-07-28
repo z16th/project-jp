@@ -1,0 +1,26 @@
+.kanji-animation .controls{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.kanji-animation > .controls > .btn:hover{
+  background-color: white;
+}
+
+.kanji-animation .btn{
+  margin: 4px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 416px){
+  .kanji-animation > .controls{
+    flex-direction: column;
+  }
+}
+
+.controls > .btn:active{
+  color: white;
+  background-color: none;
+}

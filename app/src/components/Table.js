@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import CharAnimation from "./KanjiAnimation"
 import kanas from "../utils/kana-all.json"
 import grids from "../utils/grids-all.json"
+import "./styles/Table.css"
 import { useParams } from "react-router-dom"
 
 export default function Table() {

@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
+import "./styles/NavBar.css"
 
 export default function NavBar({ id, links, path, compensate, className }) {
   return (

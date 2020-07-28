@@ -1,12 +1,5 @@
-:root {
-  --main-navbar-h: 60px;
-  --navbar-h: 42px;
-  --icon-size: 28px;
-  --padding: 8px;
-}
-
-html {
-  font-size: 100%;
+:root{
+  --navbar-height: 32px;
 }
 
 body {
@@ -14,11 +7,17 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Droid Sans", "Helvetica Neue",
+  font-family:"Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("./utils/images/texture.jpg");
+  background-size: 100px;
 }
 
 #root {
@@ -41,7 +40,7 @@ code {
 
 /* Font Styles */
 
-.hl1 {
+.headline1 {
   font-family: "Josefin Slab", serif;
   font-style: normal;
   font-weight: 300;
@@ -50,7 +49,7 @@ code {
   letter-spacing: -1.5px;
 }
 
-.hl2 {
+.headline2 {
   font-family: "Josefin Slab", serif;
   font-style: normal;
   font-weight: 300;
@@ -59,7 +58,7 @@ code {
   letter-spacing: -0.5px;
 }
 
-.hl3 {
+h1 {
   font-family: "Josefin Slab", serif;
   font-style: normal;
   font-weight: normal;
@@ -68,7 +67,7 @@ code {
   letter-spacing: 0px;
 }
 
-.hl4 {
+h2 {
   font-family: "Josefin Slab", serif;
   font-style: normal;
   font-weight: normal;
@@ -77,7 +76,7 @@ code {
   letter-spacing: 0.25px;
 }
 
-.hl5 {
+h3 {
   font-family: "Josefin Slab", serif;
   font-style: normal;
   font-weight: normal;
@@ -86,7 +85,7 @@ code {
   letter-spacing: 0px;
 }
 
-.hl6 {
+h4 {
   font-family: "Josefin Slab", serif;
   font-style: normal;
   font-weight: normal;
@@ -95,7 +94,7 @@ code {
   letter-spacing: 0.15px;
 }
 
-.sub1 {
+.subtitle1 {
   font-family: "Josefin Slab", serif;
   font-style: normal;
   font-weight: normal;
@@ -104,7 +103,7 @@ code {
   letter-spacing: 0.15px;
 }
 
-.sub2 {
+.subtitle2 {
   font-family: "Josefin Slab", serif;
   font-style: normal;
   font-weight: 500;
@@ -113,7 +112,7 @@ code {
   letter-spacing: 0.1px;
 }
 
-.body1 {
+p {
   font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -124,7 +123,7 @@ code {
   text-justify: inter-word;
 }
 
-.body2 {
+ul {
   font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -160,6 +159,124 @@ code {
   letter-spacing: 1.5px;
 }
 
+/* Deprecated font styles
+.headline1{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 93px;
+  line-height: 135px;
+  letter-spacing: -1.5px;
+}
+
+.headline2{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 58px;
+  line-height: 84px;
+  letter-spacing: -0.5px;
+}
+
+h1{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 47px;
+  line-height: 68px;
+}
+
+h2{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 33px;
+  line-height: 48px;
+  letter-spacing: 0.25px;
+  }
+
+h3{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 33px;
+}
+
+h4{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+}
+
+.subtitle1{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.15px;
+}
+
+.subtitle2{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+p{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.5px;
+
+  text-justify: inter-word;
+}
+
+ul{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.button{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.25px;
+}
+
+.caption{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: 0.4px;
+}
+
+.overline{
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 1.5px;
+} */
+
 /* Util Styles */
 
 .text-center {
@@ -176,7 +293,7 @@ code {
   align-items: center;
 }
 
-.space-around {
+.space-around{
   justify-content: space-around;
 }
 

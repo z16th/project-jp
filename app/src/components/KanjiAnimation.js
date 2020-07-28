@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import Icon from "./Icon"
+import "./styles/KanjiAnimation.css"
 
 const noop = () => {}
 

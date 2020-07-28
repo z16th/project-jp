@@ -1,4 +1,5 @@
 import React from "react"
+import "./styles/LolzSocial.css"
 import logo from "../utils/images/logo.svg"
 
 export default function LolzSocial() {
