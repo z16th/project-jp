@@ -50,12 +50,7 @@ function App() {
   return (
     <Router>
       <div id="App">
-        <NavBar
-          className="flex-center text-center"
-          id="main-navbar"
-          links={links}
-          compensate={true}
-        />
+        <NavBar id="main-navbar" links={links} />
         <Switch>
           <Route exact path="/">
             <HomePage />

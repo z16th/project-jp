@@ -3,6 +3,7 @@ import { Route, useRouteMatch } from "react-router-dom"
 import NavBar from "./NavBar"
 import SyllabaryType from "./SyllabaryType"
 import Table from "./Table"
+import { pink } from '../utils'
 
 const links = [
   {
@@ -23,7 +24,7 @@ export default function SyllabaryPage() {
   const { path, url } = useRouteMatch()
   return (
     <div id="syllabary-page" className="flex-center column text-center">
-      <NavBar id="syllabary-navbar" links={links} path={path} />
+      <NavBar id="syllabary-navbar" links={links} path={path} primaryColor={pink.regular} secondaryColor={pink.light} />
       <Route exact path={`${url}/`}>
         Cool stuff
       </Route>
