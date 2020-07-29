@@ -1,6 +1,61 @@
 import React from "react"
 import PropTypes from "prop-types"
-import KanjiAnimation from "./KanjiAnimation"
+import KanjiAnimation from "./CharAnimation"
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core"
+import { pink, kanjiSansFont, kanjiSerifFont } from "../utils"
+
+const cardStyle = css`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 328px;
+  height: 220px;
+  border-radius: 8px;
+  background-color: ${pink.background};
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 106px;
+    height: 204px;
+    border-radius: 4px;
+    background-color: ${pink.regular};
+    .char {
+      font-size: 5rem;
+      font-family: ${kanjiSansFont};
+      &:hover {
+        font-family: ${kanjiSerifFont};
+      }
+    }
+    .strokes {
+      border: 0px;
+      padding: 0px;
+      color: white;
+      padding: 4px 0px;
+      margin-top: 32px;
+      background-color: ${pink.dark};
+    }
+    .number {
+      padding: 4px 0px;
+    }
+  }
+  .right {
+    display: grid;
+    width: 198px;
+    height: 204px;
+    .reading {
+      width: 198px;
+      height: 102px;
+      border: 0px;
+      padding: 0px 8px;
+      border-radius: 4px;
+      color: white;
+      background-color: ${pink.dark};
+    }
+  }
+`
 
 export default function KanjiCard({ data }) {
   const { character, utf16, number, strokes, meaning } = { ...data }
@@ -18,39 +73,34 @@ export default function KanjiCard({ data }) {
   }
 
   return (
-    <div className="kanji-card noselect">
-      <div className="kanji-left">
-        {!showAnimation && <div className="kanji-char">{character}</div>}
+    <div css={cardStyle}>
+      <div className="left">
+        {!showAnimation && <div className="char">{character}</div>}
         {showAnimation && (
           <KanjiAnimation name={utf16} width={120} height={120} />
         )}
         <button
-          className="kanji-strokes"
+          className="strokes"
           type="button"
           onClick={handleAnimationClick}
         >
           <b>Trazos:</b> {strokes}
         </button>
-        <div className="kanji-number">
+        <div className="number">
           <b>No:</b> {number}
         </div>
       </div>
 
-      <div className="kanji-right">
-        <button
-          className="kanji-reading"
-          type="button"
-          onClick={handleReadingClick}
-        >
-          <div className="kanji-onyomi">
+      <div className="right">
+        <button className="reading" type="button" onClick={handleReadingClick}>
+          <div className="onyomi">
             <b>On-yomi:</b> {data[`onyomi${displayType}`]}
           </div>
-          <div className="kanji-kunyomi">
+          <div className="kunyomi">
             <b>Kun-yomi:</b> {data[`kunyomi${displayType}`]}
           </div>
         </button>
-        <br />
-        <div className="kanji-meaning">
+        <div className="meaning">
           <b>Significado:</b> {meaning}
         </div>
       </div>

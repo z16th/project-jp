@@ -16,3 +16,10 @@ export const pink = {
   dark: "#c95183",
   background: "#ffe2ed",
 }
+
+export const gray = {
+  regular: "#545454",
+  light: "#ADADAD",
+  dark: "#5F5F5F",
+  background: "#F0F0F0"
+}

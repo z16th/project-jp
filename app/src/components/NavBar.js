@@ -23,7 +23,12 @@ const Navbar = styled.nav`
     text-decoration: none;
     color: black;
     &:hover {
-      background-color: ${(props) => props.color.dark};
+      background-color: ${(props) => props.color.background};
+    }
+    > .desc {
+      @media (max-width: 420px) {
+        display: none;
+      }
     }
   }
 `

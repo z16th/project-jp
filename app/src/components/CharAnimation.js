@@ -30,7 +30,7 @@ const CharAnimation = ({ name, onReset, onPause }) => {
   }, [isPaused])
 
   return (
-    <div className="kanji-animation flex-center column">
+    <div>
       <Icon
         ref={svgRef}
         name={`0${name}-jlect`}
@@ -42,18 +42,10 @@ const CharAnimation = ({ name, onReset, onPause }) => {
         }}
       />
       <div className="controls">
-        <button
-          className="btn button flex-center noselect"
-          type="button"
-          onClick={handlePause}
-        >
+        <button type="button" onClick={handlePause}>
           {isPaused ? "⏵" : "⏸"}
         </button>
-        <button
-          className="btn button flex-center noselect"
-          type="button"
-          onClick={handleReset}
-        >
+        <button type="button" onClick={handleReset}>
           ⟳
         </button>
       </div>

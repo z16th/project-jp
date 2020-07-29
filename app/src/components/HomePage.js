@@ -1,9 +1,26 @@
 import React from "react"
 import { H1, H2, P1 } from "../utils"
+/**@jsx jsx */
+import { jsx, css } from "@emotion/core"
 
-export default function HomePage({ style }) {
+const pageStyle = css`
+  width: 100%;
+  .content {
+    padding: 0px 20px;
+  }
+`
+
+export default function HomePage() {
   return (
-    <div id="home-page" style={style}>
+    <div id="home-page" css={pageStyle}>
+      <Content />
+    </div>
+  )
+}
+
+const Content = () => {
+  return (
+    <div className="content">
       <H1>Inicio</H1>
       <H2>Bienvenido</H2>
       <P1>

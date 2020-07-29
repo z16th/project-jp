@@ -1,7 +1,9 @@
 import React, { Fragment } from "react"
 import { Route, useRouteMatch } from "react-router-dom"
 import { pink } from "../utils"
-import { H1, H2, P1, P2 } from "../utils"
+import { H1, H2, H3, P1, P2, Callout, Example } from "../utils"
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core"
 import NavBar from "./NavBar"
 import SyllabaryType from "./SyllabaryType"
 import Table from "./Table"
@@ -21,10 +23,17 @@ const links = [
   },
 ]
 
+const pageStyle = css`
+  width: 100%;
+  .content {
+    padding: 0px 20px;
+  }
+`
+
 export default function SyllabaryPage() {
   const { path, url } = useRouteMatch()
   return (
-    <div id="syllabary-page">
+    <div id="syllabary-page" css={pageStyle}>
       <NavBar id="syllabary-navbar" links={links} path={path} color={pink} />
       <Route exact path={`${url}/`}>
         <Content />
@@ -40,7 +49,7 @@ export default function SyllabaryPage() {
 
 const Content = () => {
   return (
-    <Fragment>
+    <div className="content">
       <H1>Silabarios</H1>
       <P1>
         El <em>hiragana</em> y el <em>katakana</em> son silabarios, es decir,
@@ -53,9 +62,7 @@ const Content = () => {
         tiene usos más específicos. (No son utilizados como minúsculas y
         mayúsculas).
       </P1>
-      <H2>
-        <strong>Hiragana</strong>
-      </H2>
+      <H2>Hiragana</H2>
       <P1>
         El <strong>hiragana</strong> es el silabario que nos ayuda a leer
         palabras y frases cuando somos principiantes. También contribuye en gran
@@ -64,10 +71,10 @@ const Content = () => {
         las partes conjugadas de verbos y adjetivos, así como palabras que no
         tienen kanji.
       </P1>
-      <P2>Es el conjunto de caracteres que tienen trazos redondeados.</P2>
-      <H2>
-        <strong>Katakana</strong>
-      </H2>
+      <Callout>
+        Es el conjunto de caracteres que tienen trazos redondeados.
+      </Callout>
+      <H2>Katakana</H2>
       <P1>
         El uso más común del <strong>katakana</strong> es para transcribir
         palabras de otros idiomas. El único inconveniente es que el japonés
@@ -79,12 +86,10 @@ const Content = () => {
         Asimismo, el katakana es utilizado para escribir nombres de empresas,
         onomatopeyas, o incluso para crear énfasis.
       </P1>
-      <P2>
+      <Callout>
         Es el conjunto de caracteres que tienen trazos rectos y angulares.
-      </P2>
-      <H1>
-        <strong>Rōmaji</strong>
-      </H1>
+      </Callout>
+      <H1>Romaji</H1>
       <P1>
         Es la romanización de los caracteres japoneses, es decir, el uso del
         abecedario al que estamos acostumbrados en el español y otros idiomas, y
@@ -106,9 +111,7 @@ const Content = () => {
         aprendizaje de frases completas sin la necesidad de comprender la
         gramática ni la correcta ortografía.
       </P1>
-      <h1>
-        <strong>Escritura y pronunciación del japonés</strong>
-      </h1>
+      <H1>Escritura y pronunciación del japonés</H1>
       <P1>
         El <strong>hiragana</strong> y <strong>katakana</strong> son silabarios
         cuyos caracteres corresponden a una <strong>mora</strong> (unidad de
@@ -126,7 +129,9 @@ const Content = () => {
         excepción es ん ン (n), la cual es una consonante que puede tener sonido
         sin necesidad de combinarse con vocales.
       </P1>
-      <P1>Todos los sonidos del japonés tienen una duración similar.</P1>
+      <Callout>
+        Todos los sonidos del japonés tienen una duración similar.
+      </Callout>
       <P1>[Tabla de caracteres - falta agregar]</P1>
       <P1>
         En el japonés es común encontrar palabras homónimas, es decir, que se
@@ -135,10 +140,8 @@ const Content = () => {
         caso de la lectura y escritura, se pueden diferenciar por el kanji que
         utilizan.
       </P1>
-      <P1>(kami) 紙 [papel] ≠ 髪 [cabello]</P1>
-      <h2>
-        <strong>Vocal larga</strong>
-      </h2>
+      <Example>(kami) 紙 [papel] ≠ 髪 [cabello]</Example>
+      <H2>Vocal larga</H2>
       <P1>
         La vocal larga tiene doble duración respecto a la vocal simple. Dicho de
         otra manera, mientras que あ se considera de una mora, ああ se considera
@@ -146,13 +149,11 @@ const Content = () => {
         diferencia en el largo de la vocal implica diferencias en el
         significado:
       </P1>
-      <P1>おばさん (obasan) ≠ おばあさん (obaasan)</P1>
-      <P1>ゆき (yuki) ≠ ゆうき (yuuki)</P1>
-      <P1>え (e) ≠ ええ (ee)</P1>
-      <P1>ここ (koko) ≠ こうこう (kookoo)</P1>
-      <h3>
-        <strong>Modo de escribir las vocales largas con hiragana:</strong>
-      </h3>
+      <Example>おばさん (obasan) ≠ おばあさん (obaasan)</Example>
+      <Example>ゆき (yuki) ≠ ゆうき (yuuki)</Example>
+      <Example>え (e) ≠ ええ (ee)</Example>
+      <Example>ここ (koko) ≠ こうこう (kookoo)</Example>
+      <H3>Modo de escribir las vocales largas con hiragana:</H3>
       <ul>
         <li>Kanas de la columna あ: Se les agrega あ.</li>
         <li>Kanas de la columna い: Se les agrega い.</li>
@@ -160,24 +161,19 @@ const Content = () => {
         <li>Kanas de la columna え: Se les agrega い. (Hay excepciones)</li>
         <li>Kanas de la columna お: Se les agrega う. (Hay excepciones)</li>
       </ul>
-      <h3>
-        <strong>Modo de escribir las vocales largas con katakana:</strong>
-      </h3>
+      <H3>Modo de escribir las vocales largas con katakana:</H3>
       <ul>
         <li>Se agrega ー sin importar la vocal.</li>
       </ul>{" "}
-      <P1>カレー [curry] カー　[car]</P1>
-      <h3>
-        <strong>Modo de escribir las vocales largas con rōmaji:</strong>
-      </h3>
+      <Example>カレー [curry]</Example>
+      <Example>カー　[car]</Example>
+      <H3>Modo de escribir las vocales largas con romaji:</H3>
       <P1>
         Dependiendo del sistema rōmaji que se esté utilizando, puede ser escrito
         de diferentes maneras. Siguiendo las mismas reglas que en el caso de
         hiragana o utilizando el símbolo diacrítico: ¯ (macrón).
       </P1>
-      <h2>
-        <strong>Usos de ん ン (n)</strong>
-      </h2>
+      <H2>Usos de ん ン (n)</H2>
       <P1>
         A pesar de ser un sonido de una mora de duración, nunca se coloca ん ン
         (n) al inicio de una palabra. Mientras que algunas referencias mencionan
@@ -189,9 +185,7 @@ const Content = () => {
         En el rōmaji, estos cambios pueden notarse cuando se transcribe (m) en
         lugar de (n), dependiendo del sistema de romanización.
       </P1>
-      <h2>
-        <strong>Diacríticos</strong>
-      </h2>
+      <H2>Diacríticos</H2>
       <P1>
         Son <strong>símbolos</strong> que puede ser añadidos a algunos{" "}
         <strong>kanas</strong> para cambiar su pronunciación. Existen dos de
@@ -204,11 +198,9 @@ const Content = () => {
         rōmaji, las consonantes cambian a su respectivo sonido: k → g, s → z,
         etc.
       </P1>
-      <P1>げ　ゲ　(ge)</P1>
-      <P1>ぱ　パ　(pa)</P1>
-      <h2>
-        <strong>Combinaciones</strong>
-      </h2>
+      <Example>げ　ゲ　(ge)</Example>
+      <Example>ぱ　パ　(pa)</Example>
+      <H2>Combinaciones</H2>
       <P1>
         Se pueden combinar los kanas や ヤ (ya), ゆ ユ (yu), よ ヨ (yo) con
         algunos otros para formar nuevos sonidos de una sola mora (incluyendo
@@ -216,65 +208,58 @@ const Content = () => {
         son <strong>escritas en pequeño</strong> para hacer notar que se están
         usando como combinación.
       </P1>
-      <P1>びょ　ビョ (byo) en lugar de びよ　ビヨ (biyo)</P1>
-      <h2>
-        <strong>Uso de っ (つ pequeño)</strong>
-      </h2>
+      <Example>
+        びょ　ビョ　(byo)　
+        <br />
+        en lugar de　
+        <br />
+        びよ　ビヨ　(biyo)
+      </Example>
+      <H2>Uso de っ ッ (つ ツ (tsu) pequeño)</H2>
       <P1>
         La diferencia se encuentra en el tamaño del caracter: al igual que las
         combinaciones, se escribe en pequeño para hacer una diferencia de
         pronunciación. Su trabajo es alargar el sonido de la consonante que va
         inmediatamente después de éste.
       </P1>
-      <P1>Es un sonido que tiene duración de una mora.</P1>
-      <P1>かった　≠　かた　(katta ≠ kata)</P1>
-      <P1>ベッド (beddo)</P1>
+      <Callout>Es un sonido que tiene duración de una mora.</Callout>
+      <Example>かった　≠　かた　(katta ≠ kata)</Example>
+      <Example>ベッド (beddo)</Example>
       <P1>
         La única excepción es la doble &quot;n&quot; ya que se escribe con ん
         (n) + kana de la fila (n), no con っ<strong>.</strong>
       </P1>
-      <P1>
+      <Example>
         さん<strong>に</strong>ん (san<strong>ni</strong>n)
-      </P1>
-      <h2>
-        <strong>Vocales afónicas</strong>
-      </h2>
+      </Example>
+      <H2>Vocales afónicas</H2>
       <P1>
         En algunas palabras, el sonido de vocales como (i) o (u) se pierde, es
         decir, no se pronuncia.
       </P1>
-      <P1>
+      <Example>
         すきです　(suki desu → s<del>u</del>ki des<del>u</del>)
-      </P1>
-      <h2>
-        <strong>Acento</strong>
-      </h2>
+      </Example>
+      <H2>Acento</H2>
       <P1>
         El japonés es un idioma con acento de tono, dicho de otra forma, una
         palabra contiene moras de tono alto y moras de tono bajo. En algunos
         casos esta variación puede hacer que exista una diferencia entre
         palabras que utilizan los mismos kanas para diferenciar entre ellas.
       </P1>
-      <P1>
-        あめ (áme) [lluvia] ≠ あめ (amé) [caramelo] donde el kana subrayado
-        indica el tono alto
-      </P1>
+      <Example>あめ (áme) [lluvia] ≠ あめ (amé) [caramelo]</Example>
       <P1>
         Cada una de estas palabras tiene un kanji asignado: 雨 y 飴
         respectivamente. En cuanto a la escritura/lectura, puede ser
         diferenciado con su propio caracter, mientras que para la pronunciación
         se puede diferenciar con el tono.
       </P1>
-      <h2>
-        <strong>Detalles del katakana</strong>
-      </h2>
-      <h3>
-        <strong>Caracteres extendidos</strong>
-      </h3>
+      <H2>Detalles del katakana</H2>
+      <H3>Caracteres extendidos</H3>
       <P1>
         El katakana ofrece un rango extendido de caracteres para representar
         sonidos que no existen en el japonés, pero sí en otras lenguas.
       </P1>
-    </Fragment>
+    </div>
   )
 }

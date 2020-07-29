@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import CharAnimation from "./KanjiAnimation"
+import CharAnimation from "./CharAnimation"
 import kanas from "../utils/kana-all.json"
 import grids from "../utils/grids-all.json"
 import { useParams } from "react-router-dom"
