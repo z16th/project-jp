@@ -2,39 +2,74 @@ import styled from "@emotion/styled"
 import { blue, yellow } from "./colors"
 import { primaryFont, secondaryFont, typeScale } from "./typography"
 
-const minWidth = 400;
-const maxWidth = 800;
+const minWidth = 311
+const maxWidth = 800
 
 export const H1 = styled.h1`
-  font-family: ${primaryFont};
-  font-size: ${typeScale.header1};
-  font-size: calc(12px + (24 - 12) * ((100vw - 400px) / (800 - 400)));
   margin: 20px 0px;
+  font-family: ${primaryFont};
+  font-size: ${typeScale.header1}px;
+  @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+    font-size: calc(
+      32px + (${typeScale.header1} - 32) *
+        ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+    );
+  }
+  @media (min-width: ${maxWidth}px) {
+    font-size: ${typeScale.header1}px;
+  }
 `
 export const H2 = styled.h2`
+  margin: 18px 0px;
   font-family: ${primaryFont};
   font-size: ${typeScale.header2};
-  margin: 18px 0px;
+  @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+    font-size: calc(
+      28px + (${typeScale.header2} - 28) *
+        ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+    );
+  }
+  @media (min-width: ${maxWidth}px) {
+    font-size: ${typeScale.header2}px;
+  }
 `
 export const H3 = styled.h3`
+  margin: 16px 0px;
   font-family: ${primaryFont};
   font-size: ${typeScale.header3};
-  margin: 16px 0px;
+  @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+    font-size: calc(
+      24px + (${typeScale.header3} - 24) *
+        ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+    );
+  }
+  @media (min-width: ${maxWidth}px) {
+    font-size: ${typeScale.header3}px;
+  }
 `
 export const H4 = styled.h4`
+  margin: 14px 0px;
   font-family: ${primaryFont};
   font-size: ${typeScale.header4};
-  margin: 14px 0px;
+  @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+    font-size: calc(
+      20px + (${typeScale.header4} - 20) *
+        ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+    );
+  }
+  @media (min-width: ${maxWidth}px) {
+    font-size: ${typeScale.header4}px;
+  }
 `
 export const H5 = styled.h5`
+  margin: 12px 0px;
   font-family: ${primaryFont};
   font-size: ${typeScale.header5};
-  margin: 12px 0px;
 `
 export const H6 = styled.h6`
+  margin: 10px 0px;
   font-family: ${primaryFont};
   font-size: ${typeScale.header6};
-  margin: 10px 0px;
 `
 export const P1 = styled.p`
   font-family: ${secondaryFont};
