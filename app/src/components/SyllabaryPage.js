@@ -38,7 +38,6 @@ export default function SyllabaryPage() {
       <Route exact path={`${url}/`}>
         <Content />
       </Route>
-      <Route path={`${url}/:syllabary`}></Route>
       <Route path={`${url}/:syllabary/:type`}>
         <SyllabaryType />
         <Table />
@@ -189,12 +188,12 @@ const Content = () => {
       <P1>
         Son <strong>símbolos</strong> que puede ser añadidos a algunos{" "}
         <strong>kanas</strong> para cambiar su pronunciación. Existen dos de
-        ellos: el primero es muy parecido a las comillas (<strong>〝</strong>) y
-        es llamado <strong>dakuten</strong>; el segundo tiene la apariencia de
-        un pequeño círculo ( ゜) y es llamado <strong>handakuten</strong>.
+        ellos: el primero es muy parecido a las comillas (〝 ) y es llamado{" "}
+        <strong>dakuten</strong>; el segundo tiene la apariencia de un pequeño
+        círculo ( ゜) y es llamado <strong>handakuten</strong>.
       </P1>
       <P1>
-        Se utilizan los mismos símbolos para hiragaka y katakana. En el caso del
+        Se utilizan los mismos símbolos para hiragana y katakana. En el caso del
         rōmaji, las consonantes cambian a su respectivo sonido: k → g, s → z,
         etc.
       </P1>

@@ -16,4 +16,6 @@ export const typeScale = {
   body1: "1rem",
   body2: "0.833rem",
   example: "1.2rem",
+  tableContent: "64",
+  tableHeader: "48"
 }

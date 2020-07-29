@@ -30,7 +30,7 @@ const CharAnimation = ({ name, onReset, onPause }) => {
   }, [isPaused])
 
   return (
-    <div>
+    <div className="animation">
       <Icon
         ref={svgRef}
         name={`0${name}-jlect`}
@@ -42,10 +42,10 @@ const CharAnimation = ({ name, onReset, onPause }) => {
         }}
       />
       <div className="controls">
-        <button type="button" onClick={handlePause}>
+        <button className="play-pause" type="button" onClick={handlePause}>
           {isPaused ? "⏵" : "⏸"}
         </button>
-        <button type="button" onClick={handleReset}>
+        <button className="reset" type="button" onClick={handleReset}>
           ⟳
         </button>
       </div>

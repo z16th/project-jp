@@ -1,6 +1,12 @@
 import styled from "@emotion/styled"
 import { blue, yellow } from "./colors"
-import { primaryFont, secondaryFont, typeScale } from "./typography"
+import {
+  primaryFont,
+  secondaryFont,
+  typeScale,
+  kanjiSansFont,
+  kanjiSerifFont,
+} from "./typography"
 
 const minWidth = 311
 const maxWidth = 800
@@ -78,6 +84,35 @@ export const P1 = styled.p`
 export const P2 = styled.p`
   font-family: ${secondaryFont};
   font-size: ${typeScale.body2};
+`
+
+export const TableElement = styled.p`
+  margin: 0px 0px;
+  font-family: ${kanjiSansFont};
+  font-size: ${typeScale.tableContent};
+  @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+    font-size: calc(
+      20px + (${typeScale.tableContent} - 20) *
+        ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+    );
+  }
+  @media (min-width: ${maxWidth}px) {
+    font-size: ${typeScale.tableContent}px;
+  }
+`
+export const TableHeader = styled.p`
+  margin: 0px 0px;
+  font-family: ${kanjiSansFont};
+  font-size: ${typeScale.tableHeader};
+  @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+    font-size: calc(
+      16px + (${typeScale.tableHeader} - 16) *
+        ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+    );
+  }
+  @media (min-width: ${maxWidth}px) {
+    font-size: ${typeScale.tableHeader}px;
+  }
 `
 
 // ≣≣≣≣≣≣≣≣≣≣≣≣≣≣

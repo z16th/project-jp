@@ -4,7 +4,7 @@ import logo from "../utils/images/logo.svg"
 export default function LolzSocial() {
   return (
     <div id="lolz-social">
-      <div>
+      <div className="networks">
         <a
           id="facebook"
           className="network"

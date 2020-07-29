@@ -1,61 +1,46 @@
 import React from "react"
-import { Link, useParams, useRouteMatch } from "react-router-dom"
+import { useParams, useRouteMatch } from "react-router-dom"
+import NavBar from "./NavBar"
+import { yellow, blue } from "../utils"
 
 const linksExtended = [
   {
-    label: "Básico",
     to: "basico",
+    children: "Básico",
   },
   {
-    label: "Dakuten",
     to: "dakuten",
+    children: "Dakuten",
   },
   {
-    label: "Combinación",
+    children: "Combinación",
     to: "combinacion",
   },
   {
-    label: "Extendido",
     to: "extendido",
+    children: "Extendido",
   },
 ]
 const links = [
   {
-    label: "Básico",
     to: "basico",
+    children: "Básico",
   },
   {
-    label: "Dakuten",
     to: "dakuten",
+    children: "Dakuten",
   },
   {
-    label: "Combinación",
     to: "combinacion",
+    children: "Combinación",
   },
 ]
 
 export default function SyllabaryType() {
   const { path } = useRouteMatch()
   const { syllabary } = useParams()
-  const customUrl = path.replace(":syllabary", syllabary).replace("/:type", "")
   if (syllabary === "hiragana") {
-    return (
-      <div id="syllabary-type">
-        {links.map((link) => (
-          <Link key={link.to} to={`${customUrl}/${link.to}`}>
-            {link.label}
-          </Link>
-        ))}
-      </div>
-    )
+    return <NavBar id="syllabary-type" links={links} color={yellow} />
   }
-  return (
-    <div id="syllabary-type">
-      {linksExtended.map((link) => (
-        <Link key={link.to} to={`${customUrl}/${link.to}`}>
-          {link.label}
-        </Link>
-      ))}
-    </div>
-  )
+  return <NavBar id="syllabary-type" links={linksExtended} color={blue} />
 }

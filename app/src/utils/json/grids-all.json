@@ -67,6 +67,7 @@
       }
     ],
     "gridStyle": {
+      "display": "grid",
       "gridTemplateColumns": "repeat(6, min-content)",
       "gridTemplateRows": "repeat(12, min-content)",
       "gridTemplateAreas": "'. x1y1 x2y1 x3y1 x4y1 x5y1''x0y1 a i u e o''x0y2 ka ki ku ke ko''x0y3 sa shi su se so''x0y4 ta chi tsu te to''x0y5 na ni nu ne no''x0y6 ha hi fu he ho''x0y7 ma mi mu me mo''x0y8 ya . yu . yo''x0y9 ra ri ru re ro''x0y10 wa . . . wo''x0y11 n . . . .'"
@@ -116,6 +117,7 @@
       }
     ],
     "gridStyle": {
+      "display": "grid",
       "gridTemplateColumns": "repeat(6, min-content)",
       "gridTemplateRows": "repeat(6, min-content)",
       "gridTemplateAreas": "'. x1y1 x2y1 x3y1 x4y1 x5y1''x0y1 ga gi gu ge go''x0y2 za ji zu ze zo''x0y3 da dzi dzu de do''x0y4 ba bi bu be bo''x0y5 pa pi pu pe po'"
@@ -185,7 +187,8 @@
       }
     ],
     "gridStyle": {
-      "gridTemplateColumns": "repeat(4, max-content)",
+      "display": "grid",
+      "gridTemplateColumns": "repeat(4, mix-content)",
       "gridTemplateRows": "repeat(14, min-content)",
       "gridTemplateAreas": "'. x1y1 x3y1 x5y1' 'x0y2 kya kyu kyo''x0y3 sha shu sho' 'x0y4 cha chu cho''x0y5 nya nyu nyo''x0y6 hya hyu hyo' 'x0y7 mya myu myo' 'x0y8 rya ryu ryo' '. . . .' 'x0y9 gya gyu gyo' 'x0y10 ja ju jo' 'x0y11 dya dyu dyo''x0y12 bya byu byo' 'x0y13 pya pyu pyo'"
     }
@@ -262,6 +265,7 @@
       }
     ],
     "gridStyle": {
+      "display": "grid",
       "gridTemplateColumns": "repeat(6, max-content)",
       "gridTemplateRows": "repeat(14, min-content)",
       "gridTemplateAreas": "'. x1y1 x2y1 x3y1 x4y1 x5y1''x0y1 . wi . we wo''x0y2 va vi vu ve vo''x0y3 . . . she .''x0y4 . . . che .''x0y5 tsa tsi . tse tso''x0y6 . ti tu . .''x0y7 fa fi . fe fo''x0y8 . . . je .''x0y9 . di du . .''x0y10 . . . ye .''x0y11 vya . vyu . vyo''x0y12 . . fyu . .'"

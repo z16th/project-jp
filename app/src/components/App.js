@@ -38,7 +38,6 @@ const links = [
     ),
   },
   {
-    name: "kanji",
     to: "/kanji",
     children: (
       <React.Fragment>
@@ -57,7 +56,7 @@ const appStyle = css`
   width: 100%;
 `
 
-function App() {
+export default function App() {
   return (
     <Router>
       <div id="App" css={appStyle}>
@@ -69,7 +68,7 @@ function App() {
         />
         <Switch>
           <Route exact path="/">
-            <HomePage className="content"/>
+            <HomePage className="content" />
           </Route>
           <Route path="/silabarios">
             <SyllabaryPage />
@@ -87,5 +86,3 @@ function App() {
     </Router>
   )
 }
-
-export default App

@@ -1,55 +1,65 @@
-import React, { useState, useEffect } from "react"
-import CharAnimation from "./CharAnimation"
-import kanas from "../utils/kana-all.json"
-import grids from "../utils/grids-all.json"
+/** @jsxFrag React.Fragment */
+import React, { useState, Fragment } from "react"
+import styled from "@emotion/styled"
 import { useParams } from "react-router-dom"
+import CharAnimation from "./CharAnimation"
+import {
+  TableElement,
+  TableHeader,
+  kanjiSerifFont,
+  gray,
+  yellow,
+  blue,
+  pink
+} from "../utils"
+import kanas from "../utils/json/kana-all.json"
+import grids from "../utils/json/grids-all.json"
+import { useRef } from "react"
+
+const StyledTable = styled.section`
+  display: flex;
+  justify-content: center;
+  grid-gap: 12px;
+  .tab-head {
+    color: ${gray.light};
+  }
+  .kana {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: ${(props) => props.color.regular};
+  }
+  .char {
+    &:hover {
+      font-family: ${kanjiSerifFont};
+    }
+  }
+`
 
 export default function Table() {
   const { syllabary, type } = useParams()
   const [renderAnimations, setRenderAnimations] = useState(false)
-  const [romajiStyle, setRomajiStyle] = useState("")
+  const color = useRef(gray.regular)
 
-  useEffect(() => {
-    if (syllabary === "romaji") {
-      setRomajiStyle("romaji-style")
-    }
-  }, [syllabary])
+  if (syllabary === "hiragana") color.current = yellow
+  if (syllabary === "katakana") color.current = blue
+  if (syllabary === "romaji") color.current = pink
 
   const handleAnimButton = () => {
     setRenderAnimations((state) => !state)
   }
 
-  const charAsFont = (charObj) => {
-    return <span className="flex-center">{charObj[`${syllabary}`]}</span>
-  }
-
-  const charAsAnim = (charObj) => {
-    if (syllabary !== "romaji")
-      return charObj.utf16[`${syllabary}`].map((utf16) => (
-        <CharAnimation key={utf16} name={utf16} />
-      ))
-    return null
-  }
-
   const renderTableChars = (charObj) => {
-    if (syllabary === "romaji") {
-      return (
-        <div
-          key={charObj.romaji}
-          className={`kana flex-center ${charObj.romaji} ${charObj.class}`}
-          style={{ gridArea: charObj.romaji }}
-        >
-          {charAsFont(charObj)}
-        </div>
-      )
-    }
     return (
       <div
         key={charObj.romaji}
         className={`kana flex-center ${charObj.romaji} ${charObj.class}`}
         style={{ gridArea: charObj.romaji }}
       >
-        {renderAnimations ? charAsAnim(charObj) : charAsFont(charObj)}
+        {renderAnimations && syllabary !== "romaji" ? (
+          <CharAsAnim charObj={charObj} syllabary={syllabary} />
+        ) : (
+          <CharAsFont charObj={charObj} syllabary={syllabary} />
+        )}
       </div>
     )
   }
@@ -58,43 +68,58 @@ export default function Table() {
     return (
       <>
         {headersArray.map(({ char, coord }) => (
-          <div
+          <TableHeader
             key={coord}
             className={`${char} tab-head flex-center noselect`}
             style={{ gridArea: coord }}
           >
             {char}
-          </div>
+          </TableHeader>
         ))}
       </>
     )
   }
 
   const renderAnimButton = () => {
-    if (syllabary === "romaji") return null
-    return (
-      <button
-        className="description button noselect"
-        type="button"
-        onClick={handleAnimButton}
-      >
-        {!renderAnimations ? "Ver animaciones" : "Ver caracteres"}
-      </button>
-    )
+    if (syllabary !== "romaji") {
+      return (
+        <button className="anim-btn" onClick={handleAnimButton}>
+          {!renderAnimations ? "Ver animaciones" : "Ver caracteres"}
+        </button>
+      )
+    }
+    return null
   }
 
   return (
-    <section className="table-section">
+    <Fragment>
       {renderAnimButton()}
-      <section
-        className={`table flex-center ${romajiStyle}`}
+      <StyledTable
+        className={`table`}
         style={grids[`${type}`].gridStyle}
+        color={color.current}
       >
         {renderTableHeaders(grids[`${type}`].headers)}
         {kanas
           .filter((kana) => kana.type === type)
           .map((kana) => renderTableChars(kana))}
-      </section>
-    </section>
+      </StyledTable>
+    </Fragment>
   )
+}
+
+const CharAsFont = ({ charObj, syllabary }) => {
+  return (
+    <TableElement className="char flex-center">
+      {charObj[`${syllabary}`]}
+    </TableElement>
+  )
+}
+
+const CharAsAnim = ({ charObj, syllabary }) => {
+  if (syllabary !== "romaji")
+    return charObj.utf16[`${syllabary}`].map((utf16) => (
+      <CharAnimation key={utf16} name={utf16} />
+    ))
+  return null
 }

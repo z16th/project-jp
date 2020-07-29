@@ -1,5 +1,5 @@
 import React, { Fragment } from "react"
-import kanjiData from "../utils/kanji-1-80.json"
+import kanjiData from "../utils/json/kanji-1-80.json"
 import KanjiCard from "./KanjiCard"
 import { H1, H2, H3, P1 } from "../utils"
 
