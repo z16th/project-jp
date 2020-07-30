@@ -188,7 +188,7 @@
     ],
     "gridStyle": {
       "display": "grid",
-      "gridTemplateColumns": "repeat(4, mix-content)",
+      "gridTemplateColumns": "repeat(4, max-content)",
       "gridTemplateRows": "repeat(14, min-content)",
       "gridTemplateAreas": "'. x1y1 x3y1 x5y1' 'x0y2 kya kyu kyo''x0y3 sha shu sho' 'x0y4 cha chu cho''x0y5 nya nyu nyo''x0y6 hya hyu hyo' 'x0y7 mya myu myo' 'x0y8 rya ryu ryo' '. . . .' 'x0y9 gya gyu gyo' 'x0y10 ja ju jo' 'x0y11 dya dyu dyo''x0y12 bya byu byo' 'x0y13 pya pyu pyo'"
     }

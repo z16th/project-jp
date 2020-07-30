@@ -8,7 +8,7 @@ import {
   kanjiSerifFont,
 } from "./typography"
 
-const minWidth = 311
+const minWidth = 280
 const maxWidth = 800
 
 export const H1 = styled.h1`

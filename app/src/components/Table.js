@@ -10,7 +10,7 @@ import {
   gray,
   yellow,
   blue,
-  pink
+  pink,
 } from "../utils"
 import kanas from "../utils/json/kana-all.json"
 import grids from "../utils/json/grids-all.json"
@@ -26,9 +26,19 @@ const StyledTable = styled.section`
   .kana {
     padding: 8px;
     border-radius: 8px;
-    background-color: ${(props) => props.color.regular};
+    background-color: ${(props) => props.color.light};
+    &:hover {
+      background-color: ${(props) => props.color.regular};
+      font-family: ${kanjiSerifFont};
+    }
   }
-  .char {
+  .exception {
+    background-color: ${gray.dark};
+  }
+  .special{
+    border: 2px solid black;
+  }
+  .on-hover {
     &:hover {
       font-family: ${kanjiSerifFont};
     }
@@ -109,8 +119,15 @@ export default function Table() {
 }
 
 const CharAsFont = ({ charObj, syllabary }) => {
+  if (syllabary === "romaji") {
+    return (
+      <TableElement className="char flex-center">
+        {charObj[`${syllabary}`]}
+      </TableElement>
+    )
+  }
   return (
-    <TableElement className="char flex-center">
+    <TableElement className="char flex-center on-hover">
       {charObj[`${syllabary}`]}
     </TableElement>
   )

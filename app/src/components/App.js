@@ -10,7 +10,7 @@ import KanjiPage from "./KanjiPage"
 import LolzSocial from "./LolzSocial"
 import Disclaimer from "./Disclaimer"
 
-const links = [
+const links = [ 
   {
     to: "/",
     children: (
