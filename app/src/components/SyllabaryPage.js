@@ -1,48 +1,44 @@
-import React, { Fragment } from "react"
-import { Route, useRouteMatch } from "react-router-dom"
-import { pink } from "../utils"
-import { H1, H2, H3, P1, P2, Callout, Example } from "../utils"
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core"
-import NavBar from "./NavBar"
-import SyllabaryType from "./SyllabaryType"
+import React from "react"
+import { Route, useRouteMatch, useParams } from "react-router-dom"
+import { H1, H2, H3, P1, Callout, Example, PageStyled } from "../utils"
+import styled from "@emotion/styled"
 import Table from "./Table"
+import Sidebar from "./Sidebar"
 
-const links = [
-  {
-    to: `/hiragana/basico`,
-    children: <span>Hiragana</span>,
-  },
-  {
-    to: `/katakana/basico`,
-    children: <span>Katakana</span>,
-  },
-  {
-    to: `/romaji/basico`,
-    children: <span>Romaji</span>,
-  },
-]
+const syllabaries = ["hiragana", "katakana", "romaji"]
 
-const pageStyle = css`
-  width: 100%;
-  .content {
-    padding: 0px 20px;
-  }
-`
+const types = ["basico", "dakuten", "combinacion"]
+const typesExtended = ["basico", "dakuten", "combinacion", "extendido"]
+
+const PageHeader = () => {
+  const { syllabary } = useParams()
+  return <H1 className="flex-center">{syllabary.toUpperCase()}</H1>
+}
+
+const Tables = () => {
+  const { syllabary } = useParams()
+  if (syllabary === "hiragana")
+    return types.map((type) => <Table key={type} type={type} />)
+  if (syllabary === "katakana" || syllabary === "romaji")
+    return typesExtended.map((type) => <Table key={type} type={type} />)
+  return <p>Selecciona un silabario</p>
+}
 
 export default function SyllabaryPage() {
-  const { path, url } = useRouteMatch()
+  const { url } = useRouteMatch()
   return (
-    <div id="syllabary-page" css={pageStyle}>
-      <NavBar id="syllabary-navbar" links={links} path={path} color={pink} />
-      <Route exact path={`${url}/`}>
-        <Content />
-      </Route>
-      <Route path={`${url}/:syllabary/:type`}>
-        <SyllabaryType />
-        <Table />
-      </Route>
-    </div>
+    <PageStyled id="syllabary-page">
+      <Sidebar title="Tablas" links={syllabaries} />
+      <div className="main-content">
+        <Route exact path={`${url}/`}>
+          <Content />
+        </Route>
+        <Route path={`${url}/:syllabary`}>
+          <PageHeader />
+          <Tables />
+        </Route>
+      </div>
+    </PageStyled>
   )
 }
 
@@ -50,6 +46,7 @@ const Content = () => {
   return (
     <div className="content">
       <H1>Silabarios</H1>
+      <hr></hr>
       <P1>
         El <em>hiragana</em> y el <em>katakana</em> son silabarios, es decir,
         conjuntos de caracteres que representan sílabas llamadas{" "}

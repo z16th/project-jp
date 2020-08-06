@@ -10,10 +10,22 @@ const cardStyle = css`
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  font-family: ${kanjiSansFont};
   width: 328px;
   height: 220px;
+  margin: 20px;
   border-radius: 8px;
   background-color: ${pink.background};
+  @media (max-width: 320px) {
+    margin: 20px 0px;
+    width: 300px;
+    height: 204px;
+  }
+  @media (max-width: 280px) {
+    margin: 20px 0px;
+    width: 280px;
+    height: 204px;
+  }
   .left {
     display: flex;
     flex-direction: column;
@@ -24,7 +36,6 @@ const cardStyle = css`
     background-color: ${pink.regular};
     .char {
       font-size: 5rem;
-      font-family: ${kanjiSansFont};
       &:hover {
         font-family: ${kanjiSerifFont};
       }
@@ -57,10 +68,10 @@ const cardStyle = css`
   }
 `
 
-export default function KanjiCard({ data }) {
+export default function KanjiCard({ data, readingMode }) {
   const { character, utf16, number, strokes, meaning } = { ...data }
   const [showAnimation, setShowAnimation] = React.useState(false)
-  const [displayType, setDisplayType] = React.useState("Kana")
+  const [displayType, setDisplayType] = React.useState(readingMode)
 
   const handleAnimationClick = () => {
     setShowAnimation((state) => !state)
@@ -110,4 +121,9 @@ export default function KanjiCard({ data }) {
 
 KanjiCard.propTypes = {
   data: PropTypes.objectOf(PropTypes.string).isRequired,
+  mode: PropTypes.string,
+}
+
+KanjiCard.defaultProps = {
+  readingMode: "Romaji",
 }

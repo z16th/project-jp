@@ -10,13 +10,13 @@ import KanjiPage from "./KanjiPage"
 import LolzSocial from "./LolzSocial"
 import Disclaimer from "./Disclaimer"
 
-const links = [ 
+const links = [
   {
     to: "/",
     children: (
       <React.Fragment>
-        <span role="img" aria-label="inicio">
-          🏠
+        <span>
+        <img src="https://img.icons8.com/emoji/20/000000/house-emoji.png"/>
         </span>
         <span className="desc" style={{ marginLeft: "4px" }}>
           INICIO
@@ -28,9 +28,7 @@ const links = [
     to: "/silabarios",
     children: (
       <React.Fragment>
-        <span role="img" aria-label="silabarios">
-          🎎
-        </span>
+        <span><img src="https://img.icons8.com/emoji/20/000000/japanese-symbol-for-beginner-emoji.png"/></span>
         <span className="desc" style={{ marginLeft: "4px" }}>
           SILABARIOS
         </span>
@@ -41,9 +39,7 @@ const links = [
     to: "/kanji",
     children: (
       <React.Fragment>
-        <span role="img" aria-label="kanji">
-          🈷️
-        </span>
+        <span><img src="https://img.icons8.com/emoji/20/000000/japanese-passing-grade-button-emoji.png"/></span>
         <span className="desc" style={{ marginLeft: "4px" }}>
           KANJI
         </span>
@@ -60,12 +56,7 @@ export default function App() {
   return (
     <Router>
       <div id="App" css={appStyle}>
-        <NavBar
-          id="main-navbar"
-          links={links}
-          color={gray}
-          style={{ gridArea: "navbar" }}
-        />
+        <NavBar id="main-navbar" links={links} color={gray} />
         <Switch>
           <Route exact path="/">
             <HomePage className="content" />

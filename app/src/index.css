@@ -50,6 +50,13 @@ code {
 
 /* Util Styles */
 
+.display-flex{
+  display: flex;
+}
+.display-none{
+  display: none;
+}
+
 .text-center {
   text-align: center;
 }
@@ -71,6 +78,10 @@ code {
 .column {
   flex-direction: column;
 }
+
+/* ≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣ */
+/* ≣≣≣≣≣ Cool code from other sources ≣≣≣≣ */
+/* ≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣ */
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */

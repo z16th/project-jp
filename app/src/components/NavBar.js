@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
 import styled from "@emotion/styled"
@@ -6,7 +6,9 @@ import { secondaryFont } from "../utils"
 
 const Navbar = styled.nav`
   display: flex;
-  justify-content: space-around;
+  position: fixed;
+  top: 0px;
+  justify-content: center;
   align-items: center;
   height: 48px;
   width: 100%;
@@ -16,7 +18,8 @@ const Navbar = styled.nav`
     justify-content: inherit;
     align-items: inherit;
     height: 28px;
-    padding: 0px 8px 0px;
+    margin: 0px 16px;
+    padding: 2px 8px 0px;
     border-radius: 4px;
     font-family: ${secondaryFont};
     background-color: ${(props) => props.color.light};
@@ -26,22 +29,29 @@ const Navbar = styled.nav`
       background-color: ${(props) => props.color.background};
     }
     > .desc {
-      @media (max-width: 420px) {
+      @media (max-width: 540px) {
         display: none;
       }
     }
   }
 `
 
+const Empty = styled.div`
+  height: 48px;
+`
+
 export default function NavBar({ id, links, path, color, style }) {
   return (
-    <Navbar id={id} color={color} style={style}>
-      {links.map(({ to, children }) => (
-        <Link className="link" key={`${id}-${to}`} to={`${path}${to}`}>
-          {children}
-        </Link>
-      ))}
-    </Navbar>
+    <Fragment>
+      <Empty />
+      <Navbar id={id} color={color} style={style}>
+        {links.map(({ to, children }) => (
+          <Link className="link noselect" key={`${id}-${to}`} to={`${path}${to}`}>
+            {children}
+          </Link>
+        ))}
+      </Navbar>
+    </Fragment>
   )
 }
 

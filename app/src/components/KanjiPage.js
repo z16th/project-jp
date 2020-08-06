@@ -1,31 +1,27 @@
-import React, { Fragment } from "react"
+import React, { useState } from "react"
 import kanjiData from "../utils/json/kanji-1-80.json"
 import KanjiCard from "./KanjiCard"
-import { H1, H2, H3, P1 } from "../utils"
+import { H1, H2, H3, P1, PageStyled } from "../utils"
+import styled from "@emotion/styled"
 
 export default function KanjiPage() {
   return (
-    <div id="kanji-page">
-      <Content />
-      <HowToUse />
-      <h2>Kanji de Primer Grado</h2>
-      <h3>1 - 80</h3>
-      <div id="kanji-table">
-        {kanjiData.map((data) => (
-          <KanjiCard key={data.utf16} data={data} />
-        ))}
+    <PageStyled>
+      <div className="main-content">
+        <Content />
+        <HowToUse />
+        <KanjiTable />
+        <Bibliography />
       </div>
-      <Bibliography />
-    </div>
+    </PageStyled>
   )
 }
 
 function Content() {
   return (
-    <Fragment>
-      <H1>
-        <strong>Kanji</strong>
-      </H1>
+    <div className="content">
+      <H1>Kanji</H1>
+      <hr></hr>
       <P1>
         El sistema de escritura japonés hace uso extenso de los caracteres
         llamados <strong>kanji</strong>. Son caracteres que fueron creados en
@@ -145,22 +141,22 @@ function Content() {
         Dependiendo de la tipografía, es probable que los trazos luzcan de una
         manera distinta a como lucen escritos a mano.
       </P1>
-    </Fragment>
+    </div>
   )
 }
 
 function HowToUse() {
   const example = kanjiData[19]
   return (
-    <Fragment>
-      <h2>Cómo usar esta página</h2>
-      <p>
+    <div className="content">
+      <H2>Cómo usar esta página</H2>
+      <P1>
         En esta sección encontrarás diferentes grupos de cartas divididas por
         grados, correspondientes al orden en que se enseñan en las escuelas de
         Japón. Cada tarjeta contiene información sobre un kanji específico.
-      </p>
+      </P1>
       <KanjiCard data={example} />
-      <p>
+      <P1>
         Del lado izquierdo se encuentra el <b>caracter</b>, el número de{" "}
         <b>trazos</b> que se necesitan para escribirlo y el <b>número</b> según
         el orden encontrado en el libro The Complete Guide To Japanese Kanji.{" "}
@@ -169,8 +165,8 @@ function HowToUse() {
         </u>
         . Aparecerán nuevos botones, con los que podrás reproducir, pausar y
         reiniciar la animación del orden de los trazos.
-      </p>
-      <p>
+      </P1>
+      <P1>
         Del lado derecho se encuentran las pronunciaciones <b>on-yomi</b>{" "}
         (China) y <b>kun-yomi</b> (Japonesa) así como los posibles{" "}
         <b>significados</b>.{" "}
@@ -178,15 +174,15 @@ function HowToUse() {
           Al dar click en las <b>pronunciaciones</b> cambiará su visualización
         </u>
         , de kana a rōmaji y vice versa.
-      </p>
-      <p>
+      </P1>
+      <P1>
         <b>Nota: </b>En el estudio de los kanji usualmente se hace uso del
         katakana o del rōmaji en mayúsculas para indicar la pronunciación
         on-yomi. Mientras que el hiragana o el rōmaji en minúsculas se usa para
         indicar la pronuncación kun-yomi. Esta página hace uso de ese formato.
         Es posible que otras fuentes manejen un formato distinto.
-      </p>
-      <p>
+      </P1>
+      <P1>
         Las pronunciaciones pueden contener signos como &quot;.&quot;,
         &quot;/&quot; y &quot;～&quot; para indicar algunos detalles de este
         diccionario de kanji. El punto (.) indica que la pronunciación del kanji
@@ -200,28 +196,57 @@ function HowToUse() {
         se divide en tres palabras: la ya mencionada, み.せる (mi.seru) y
         み.える (mi.eru). Las últimas dos pasan a ser 見せる (miseru) y 見える
         (mieru) respectivamente.
-      </p>
-      <p>
+      </P1>
+      <P1>
         <b>Nota: </b>Estos signos pueden ser encontrados en algunos diccionarios
         para dividir entre los kanjis y el vocabulario en el que son usados, al
         igual que en esta página. Es posible que otras fuentes utilicen un
         formato distinto.
-      </p>
-    </Fragment>
+      </P1>
+    </div>
+  )
+}
+
+const KanjiTableStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  .table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+`
+
+function KanjiTable() {
+  return (
+    <KanjiTableStyled>
+      <H2>Kanji de Primer Grado</H2>
+      <H3>1 - 80</H3>
+      <section className="table">
+        {kanjiData.map((data) => (
+          <KanjiCard
+            key={data.utf16}
+            data={data}
+          />
+        ))}
+      </section>
+    </KanjiTableStyled>
   )
 }
 
 function Bibliography() {
   return (
-    <div id="bibliography">
-      <p>
+    <div id="bibliography" className="content">
+      <P1>
         Las animaciones de trazado están basadas en datos proporcionados por{" "}
         <a href="http://kanjivg.tagaini.net/">KanjiVG</a>.
-      </p>
-      <p>
+      </P1>
+      <P1>
         Parte de la información de este sitio se puede consultar en los libros
         de referencia:
-      </p>
+      </P1>
       <ul>
         <li>
           Seely, C., Henshall, K. G., & Fan, J. (2016).{" "}

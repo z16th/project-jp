@@ -4,13 +4,15 @@ import styled from "@emotion/styled"
 import { useParams } from "react-router-dom"
 import CharAnimation from "./CharAnimation"
 import {
-  TableElement,
+  TableElement1,
+  TableElement2,
   TableHeader,
   kanjiSerifFont,
   gray,
   yellow,
   blue,
   pink,
+  H2,
 } from "../utils"
 import kanas from "../utils/json/kana-all.json"
 import grids from "../utils/json/grids-all.json"
@@ -19,7 +21,8 @@ import { useRef } from "react"
 const StyledTable = styled.section`
   display: flex;
   justify-content: center;
-  grid-gap: 12px;
+  grid-gap: 8px;
+  margin: 20px 0px 40px 0px;
   .tab-head {
     color: ${gray.light};
   }
@@ -35,8 +38,9 @@ const StyledTable = styled.section`
   .exception {
     background-color: ${gray.dark};
   }
-  .special{
+  .special {
     border: 2px solid black;
+    margin-top: 20px;
   }
   .on-hover {
     &:hover {
@@ -45,8 +49,8 @@ const StyledTable = styled.section`
   }
 `
 
-export default function Table() {
-  const { syllabary, type } = useParams()
+export default function Table({ type }) {
+  const { syllabary } = useParams()
   const [renderAnimations, setRenderAnimations] = useState(false)
   const color = useRef(gray.regular)
 
@@ -62,7 +66,7 @@ export default function Table() {
     return (
       <div
         key={charObj.romaji}
-        className={`kana flex-center ${charObj.romaji} ${charObj.class}`}
+        className={`kana flex-center char-${charObj.romaji} ${charObj.class}`}
         style={{ gridArea: charObj.romaji }}
       >
         {renderAnimations && syllabary !== "romaji" ? (
@@ -102,7 +106,8 @@ export default function Table() {
   }
 
   return (
-    <Fragment>
+    <div className='flex-center column'>
+      <H2>{type.toUpperCase()}</H2>
       {renderAnimButton()}
       <StyledTable
         className={`table`}
@@ -114,22 +119,22 @@ export default function Table() {
           .filter((kana) => kana.type === type)
           .map((kana) => renderTableChars(kana))}
       </StyledTable>
-    </Fragment>
+    </div>
   )
 }
 
 const CharAsFont = ({ charObj, syllabary }) => {
-  if (syllabary === "romaji") {
+  if (syllabary === "romaji" || charObj.type === "extendido") {
     return (
-      <TableElement className="char flex-center">
+      <TableElement2 className="char flex-center">
         {charObj[`${syllabary}`]}
-      </TableElement>
+      </TableElement2>
     )
   }
   return (
-    <TableElement className="char flex-center on-hover">
+    <TableElement1 className="char flex-center on-hover">
       {charObj[`${syllabary}`]}
-    </TableElement>
+    </TableElement1>
   )
 }
 

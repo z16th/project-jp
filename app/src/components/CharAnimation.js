@@ -1,8 +1,36 @@
 import React, { useCallback, useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import Icon from "./Icon"
+import styled from "@emotion/styled"
 
 const noop = () => {}
+
+const minWidth = 280
+const maxWidth = 800
+
+const AnimationStyled = styled.div`
+  svg {
+    width: 100px;
+    height: 100px;
+    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+      width: calc(
+        80px + (100 - 100) *
+          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+      );
+      height: calc(
+        80px + (100 - 100) *
+          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+      );
+    }
+    @media (min-width: ${maxWidth}px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  button {
+    display: none;
+  }
+`
 
 const CharAnimation = ({ name, onReset, onPause }) => {
   const svgRef = useRef(null)
@@ -30,7 +58,7 @@ const CharAnimation = ({ name, onReset, onPause }) => {
   }, [isPaused])
 
   return (
-    <div className="animation">
+    <AnimationStyled className="animation">
       <Icon
         ref={svgRef}
         name={`0${name}-jlect`}
@@ -49,7 +77,7 @@ const CharAnimation = ({ name, onReset, onPause }) => {
           ⟳
         </button>
       </div>
-    </div>
+    </AnimationStyled>
   )
 }
 

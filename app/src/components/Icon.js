@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import SVG from "react-inlinesvg"
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader"
+import SyncLoader from "react-spinners/SyncLoader"
 
 const Icon = React.forwardRef(({ name, ...rest }, ref) => (
   <SVG
@@ -9,8 +9,8 @@ const Icon = React.forwardRef(({ name, ...rest }, ref) => (
     src={require(`../utils/svg-animations/${name}.svg`)} // no-global-require
     innerRef={ref}
     loader={
-      <span style={{ display: "flex", justifyContent: "center" }}>
-        <ClimbingBoxLoader />
+      <span style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <SyncLoader />
       </span>
     }
     {...rest} // eslint-disable-line react/jsx-props-no-spreading
