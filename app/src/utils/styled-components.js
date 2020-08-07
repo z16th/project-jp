@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
 import { blue, yellow, gray } from "./colors"
@@ -249,3 +250,7 @@ export const Layout = ({ children }) => (
     <main id="layout">{children}</main>
   </>
 )
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}

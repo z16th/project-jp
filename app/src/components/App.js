@@ -13,40 +13,49 @@ const links = [
   {
     to: "/",
     children: (
-      <React.Fragment>
+      <>
         <span>
-          <img src="https://img.icons8.com/emoji/20/000000/house-emoji.png" alt="botón - inicio"/>
+          <img
+            src="https://img.icons8.com/emoji/20/000000/house-emoji.png"
+            alt="botón - inicio"
+          />
         </span>
         <span className="desc" style={{ marginLeft: "4px" }}>
           INICIO
         </span>
-      </React.Fragment>
+      </>
     ),
   },
   {
     to: "/silabarios",
     children: (
-      <React.Fragment>
+      <>
         <span>
-          <img src="https://img.icons8.com/emoji/20/000000/japanese-symbol-for-beginner-emoji.png" alt="botón - página de silabarios"/>
+          <img
+            src="https://img.icons8.com/emoji/20/000000/japanese-symbol-for-beginner-emoji.png"
+            alt="botón - página de silabarios"
+          />
         </span>
         <span className="desc" style={{ marginLeft: "4px" }}>
           SILABARIOS
         </span>
-      </React.Fragment>
+      </>
     ),
   },
   {
     to: "/kanji",
     children: (
-      <React.Fragment>
+      <>
         <span>
-          <img src="https://img.icons8.com/emoji/20/000000/japanese-passing-grade-button-emoji.png" alt="botón - página de kanji"/>
+          <img
+            src="https://img.icons8.com/emoji/20/000000/japanese-passing-grade-button-emoji.png"
+            alt="botón - página de kanji"
+          />
         </span>
         <span className="desc" style={{ marginLeft: "4px" }}>
           KANJI
         </span>
-      </React.Fragment>
+      </>
     ),
   },
 ]

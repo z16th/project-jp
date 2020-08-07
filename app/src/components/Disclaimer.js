@@ -4,7 +4,7 @@ import { Footer } from "../utils"
 export default function Disclaimer() {
   return (
     <Footer id="disclaimer">
-      <hr></hr>
+      <hr />
       <p>
         La información que se encuentra en este sitio no es creada ni revisada
         por expertos, algunos elementos han sido traducidos de fuentes en

@@ -6,7 +6,7 @@ export const kanjiSansFont = "'Noto Sans JP', sans-serif"
 
 export const kanjiSerifFont = "'Noto Serif JP', serif"
 
-//Most type scales use no units to use the flexible size formula in styles.js
+// Most type scales use no units to use the flexible size formula in styles.js
 export const typeScale = {
   header1: "67.34",
   header2: "39.06",

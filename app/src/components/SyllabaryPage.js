@@ -51,7 +51,7 @@ const Content = () => {
   return (
     <div className="content">
       <h1>Silabarios</h1>
-      <hr></hr>
+      <hr />
       <p>
         El <em>hiragana</em> y el <em>katakana</em> son silabarios, es decir,
         conjuntos de caracteres que representan sílabas llamadas{" "}
@@ -210,11 +210,11 @@ const Content = () => {
         usando como combinación.
       </p>
       <Example>
-        びょ　ビョ　(byo)　
+        びょ ビョ (byo)
         <br />
-        en lugar de　
+        en lugar de
         <br />
-        びよ　ビヨ　(biyo)
+        びよ ビヨ (biyo)
       </Example>
       <h2>Uso de っ ッ (つ ツ (tsu) pequeño)</h2>
       <p>
@@ -239,7 +239,7 @@ const Content = () => {
         decir, no se pronuncia.
       </p>
       <Example>
-        すきです　(suki desu → s<del>u</del>ki des<del>u</del>)
+        すきです (suki desu → s<del>u</del>ki des<del>u</del>)
       </Example>
       <h2>Acento</h2>
       <p>

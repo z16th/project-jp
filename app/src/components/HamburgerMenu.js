@@ -1,5 +1,6 @@
-/**@jsx jsx */
+/** @jsx jsx */
 import { useState } from "react"
+import PropTypes from "prop-types"
 import { useRouteMatch, useLocation } from "react-router-dom"
 import { jsx } from "@emotion/core"
 import CustomLink from "./CustomLink"
@@ -20,15 +21,22 @@ export default function HamburgerMenu({ title, links }) {
 
   return (
     <div id="hamburger-menu" css={hamburgerMenu}>
-      <button className="hamburger" onClick={handleClick}>
+      <button type="button" className="hamburger" onClick={handleClick}>
         {isActive ? (
-          <img src="https://img.icons8.com/emoji/20/000000/minus-emoji.png" alt="botón - abrir menú" />
+          <img
+            src="https://img.icons8.com/emoji/20/000000/minus-emoji.png"
+            alt="botón - abrir menú"
+          />
         ) : (
-          <img src="https://img.icons8.com/emoji/20/000000/plus-emoji.png" alt="botón - cerrar menú"/>
+          <img
+            src="https://img.icons8.com/emoji/20/000000/plus-emoji.png"
+            alt="botón - cerrar menú"
+          />
         )}
       </button>
-      <div
-        className={`menu`}
+      <button
+        type="button"
+        className="menu"
         onClick={deactivate}
         style={isActive ? { display: "inherit" } : { display: "none" }}
       >
@@ -46,7 +54,12 @@ export default function HamburgerMenu({ title, links }) {
             </CustomLink>
           ))}
         </ul>
-      </div>
+      </button>
     </div>
   )
+}
+
+HamburgerMenu.propTypes = {
+  title: PropTypes.string.isRequired,
+  links: PropTypes.arrayOf(PropTypes.string).isRequired,
 }

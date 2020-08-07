@@ -1,8 +1,8 @@
-/**@jsx jsx */
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
 import kanjiData from "../utils/json/kanji-1-80.json"
 import KanjiCard from "./KanjiCard"
 import { PageStyled, kanjiTable } from "../utils"
-import { jsx } from "@emotion/core"
 
 export default function KanjiPage() {
   return (
@@ -35,7 +35,7 @@ function Content() {
   return (
     <div className="content">
       <h1>Kanji</h1>
-      <hr></hr>
+      <hr />
       <p>
         El sistema de escritura japonés hace uso extenso de los caracteres
         llamados <strong>kanji</strong>. Son caracteres que fueron creados en

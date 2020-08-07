@@ -51,6 +51,7 @@ export const hamburgerMenu = css`
     z-index: 10;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: fixed;
     /* Navbar height */
     top: 48px;

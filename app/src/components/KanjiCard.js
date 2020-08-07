@@ -60,7 +60,7 @@ export default function KanjiCard({ data, readingMode }) {
 
 KanjiCard.propTypes = {
   data: PropTypes.objectOf(PropTypes.string).isRequired,
-  mode: PropTypes.string,
+  readingMode: PropTypes.string,
 }
 
 KanjiCard.defaultProps = {

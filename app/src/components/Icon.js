@@ -9,7 +9,13 @@ const Icon = React.forwardRef(({ name, ...rest }, ref) => (
     src={require(`../utils/svg-animations/${name}.svg`)} // no-global-require
     innerRef={ref}
     loader={
-      <span style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
+      <span
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <SyncLoader />
       </span>
     }

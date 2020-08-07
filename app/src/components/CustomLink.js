@@ -1,4 +1,5 @@
-/**@jsx jsx */
+/** @jsx jsx */
+import PropTypes from "prop-types"
 import { Link, useRouteMatch } from "react-router-dom"
 import { jsx } from "@emotion/core"
 import { linkActive, linkUnactive } from "../utils"
@@ -10,4 +11,9 @@ export default function CustomLink({ to, children }) {
       {children}
     </Link>
   )
+}
+
+CustomLink.propTypes = {
+  to: PropTypes.objectOf(PropTypes.string).isRequired,
+  children: PropTypes.node.isRequired,
 }

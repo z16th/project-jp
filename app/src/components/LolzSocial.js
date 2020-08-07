@@ -1,4 +1,4 @@
-/**@jsx jsx */
+/** @jsx jsx */
 import { jsx } from "@emotion/core"
 import logo from "../utils/images/logo.svg"
 import { social } from "../utils"

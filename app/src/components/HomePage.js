@@ -1,5 +1,5 @@
 import React from "react"
-import { PageStyled } from '../utils'
+import { PageStyled } from "../utils"
 
 export default function HomePage() {
   return (
@@ -15,7 +15,7 @@ const Content = () => {
       <h1>Inicio</h1>
       <h2>Bienvenido</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet  
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet
         dolorum, a nostrum fugiat iusto perferendis voluptatem obcaecati
         cupiditate ab ad officiis sunt asperiores odio maiores tenetur id quam
         pariatur.
