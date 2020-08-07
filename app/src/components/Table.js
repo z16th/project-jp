@@ -1,57 +1,24 @@
 /** @jsxFrag React.Fragment */
-import React, { useState, Fragment } from "react"
-import styled from "@emotion/styled"
+import React, { useState, useRef } from "react"
 import { useParams } from "react-router-dom"
 import CharAnimation from "./CharAnimation"
+import kanas from "../utils/json/kana-all.json"
+import grids from "../utils/json/grids-all.json"
 import {
   TableElement1,
   TableElement2,
   TableHeader,
-  kanjiSerifFont,
+  KanaTable,
   gray,
   yellow,
   blue,
   pink,
-  H2,
 } from "../utils"
-import kanas from "../utils/json/kana-all.json"
-import grids from "../utils/json/grids-all.json"
-import { useRef } from "react"
-
-const StyledTable = styled.section`
-  display: flex;
-  justify-content: center;
-  grid-gap: 8px;
-  margin: 20px 0px 40px 0px;
-  .tab-head {
-    color: ${gray.light};
-  }
-  .kana {
-    padding: 8px;
-    border-radius: 8px;
-    background-color: ${(props) => props.color.light};
-    &:hover {
-      background-color: ${(props) => props.color.regular};
-      font-family: ${kanjiSerifFont};
-    }
-  }
-  .exception {
-    background-color: ${gray.dark};
-  }
-  .special {
-    border: 2px solid black;
-    margin-top: 20px;
-  }
-  .on-hover {
-    &:hover {
-      font-family: ${kanjiSerifFont};
-    }
-  }
-`
 
 export default function Table({ type }) {
   const { syllabary } = useParams()
   const [renderAnimations, setRenderAnimations] = useState(false)
+  const canRenderAnimations = renderAnimations && syllabary !== "romaji"
   const color = useRef(gray.regular)
 
   if (syllabary === "hiragana") color.current = yellow
@@ -62,63 +29,58 @@ export default function Table({ type }) {
     setRenderAnimations((state) => !state)
   }
 
-  const renderTableChars = (charObj) => {
-    return (
-      <div
-        key={charObj.romaji}
-        className={`kana flex-center char-${charObj.romaji} ${charObj.class}`}
-        style={{ gridArea: charObj.romaji }}
-      >
-        {renderAnimations && syllabary !== "romaji" ? (
-          <CharAsAnim charObj={charObj} syllabary={syllabary} />
-        ) : (
-          <CharAsFont charObj={charObj} syllabary={syllabary} />
-        )}
-      </div>
-    )
-  }
+  return (
+    <div className="flex-center column">
+      <h2>{type.toUpperCase()}</h2>
 
-  const renderTableHeaders = (headersArray) => {
-    return (
-      <>
-        {headersArray.map(({ char, coord }) => (
-          <TableHeader
-            key={coord}
-            className={`${char} tab-head flex-center noselect`}
-            style={{ gridArea: coord }}
-          >
-            {char}
-          </TableHeader>
-        ))}
-      </>
-    )
-  }
-
-  const renderAnimButton = () => {
-    if (syllabary !== "romaji") {
-      return (
+      {syllabary !== "romaji" ? (
         <button className="anim-btn" onClick={handleAnimButton}>
           {!renderAnimations ? "Ver animaciones" : "Ver caracteres"}
         </button>
-      )
-    }
-    return null
-  }
+      ) : null}
 
-  return (
-    <div className='flex-center column'>
-      <H2>{type.toUpperCase()}</H2>
-      {renderAnimButton()}
-      <StyledTable
+      <KanaTable
         className={`table`}
         style={grids[`${type}`].gridStyle}
         color={color.current}
       >
-        {renderTableHeaders(grids[`${type}`].headers)}
+        {RenderTableHeaders(grids[`${type}`].headers)}
         {kanas
           .filter((kana) => kana.type === type)
-          .map((kana) => renderTableChars(kana))}
-      </StyledTable>
+          .map((kana) => RenderTableChars(kana, syllabary, canRenderAnimations))}
+      </KanaTable>
+    </div>
+  )
+}
+
+const RenderTableHeaders = (headersArray) => {
+  return (
+    <>
+      {headersArray.map(({ char, coord }) => (
+        <TableHeader
+          key={coord}
+          className={`${char} tab-head flex-center noselect`}
+          style={{ gridArea: coord }}
+        >
+          {char}
+        </TableHeader>
+      ))}
+    </>
+  )
+}
+
+const RenderTableChars = (charObj, syllabary, condition) => {
+  return (
+    <div
+      key={charObj.romaji}
+      className={`kana flex-center char-${charObj.romaji} ${charObj.class}`}
+      style={{ gridArea: charObj.romaji }}
+    >
+      {condition ? (
+        <CharAsAnim charObj={charObj} syllabary={syllabary} />
+      ) : (
+        <CharAsFont charObj={charObj} syllabary={syllabary} />
+      )}
     </div>
   )
 }

@@ -1,72 +1,9 @@
+/** @jsx jsx */
 import React from "react"
 import PropTypes from "prop-types"
+import { jsx } from "@emotion/core"
 import KanjiAnimation from "./CharAnimation"
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core"
-import { pink, kanjiSansFont, kanjiSerifFont } from "../utils"
-
-const cardStyle = css`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  font-family: ${kanjiSansFont};
-  width: 328px;
-  height: 220px;
-  margin: 20px;
-  border-radius: 8px;
-  background-color: ${pink.background};
-  @media (max-width: 320px) {
-    margin: 20px 0px;
-    width: 300px;
-    height: 204px;
-  }
-  @media (max-width: 280px) {
-    margin: 20px 0px;
-    width: 280px;
-    height: 204px;
-  }
-  .left {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 106px;
-    height: 204px;
-    border-radius: 4px;
-    background-color: ${pink.regular};
-    .char {
-      font-size: 5rem;
-      &:hover {
-        font-family: ${kanjiSerifFont};
-      }
-    }
-    .strokes {
-      border: 0px;
-      padding: 0px;
-      color: white;
-      padding: 4px 0px;
-      margin-top: 32px;
-      background-color: ${pink.dark};
-    }
-    .number {
-      padding: 4px 0px;
-    }
-  }
-  .right {
-    display: grid;
-    width: 198px;
-    height: 204px;
-    .reading {
-      width: 198px;
-      height: 102px;
-      border: 0px;
-      padding: 0px 8px;
-      border-radius: 4px;
-      color: white;
-      background-color: ${pink.dark};
-    }
-  }
-`
+import { kanjiCard } from "../utils"
 
 export default function KanjiCard({ data, readingMode }) {
   const { character, utf16, number, strokes, meaning } = { ...data }
@@ -84,7 +21,7 @@ export default function KanjiCard({ data, readingMode }) {
   }
 
   return (
-    <div css={cardStyle}>
+    <div css={kanjiCard}>
       <div className="left">
         {!showAnimation && <div className="char">{character}</div>}
         {showAnimation && (
@@ -105,10 +42,12 @@ export default function KanjiCard({ data, readingMode }) {
       <div className="right">
         <button className="reading" type="button" onClick={handleReadingClick}>
           <div className="onyomi">
-            <b>On-yomi:</b> {data[`onyomi${displayType}`]}
+            <b>{displayType !== "Romaji" ? "音読み" : "Onyomi"}: </b>{" "}
+            {data[`onyomi${displayType}`]}
           </div>
           <div className="kunyomi">
-            <b>Kun-yomi:</b> {data[`kunyomi${displayType}`]}
+            <b>{displayType !== "Romaji" ? "訓読み" : "Kunyomi"}: </b>{" "}
+            {data[`kunyomi${displayType}`]}
           </div>
         </button>
         <div className="meaning">

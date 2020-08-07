@@ -1,51 +1,12 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { H4 } from "../utils"
+/**@jsx jsx */
+import { jsx } from "@emotion/core"
 import logo from "../utils/images/logo.svg"
-
-const SocialStyled = styled.div`
-  position: relative;
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @media (min-width: 411px) {
-      flex-direction: row;
-    }
-  }
-  .network {
-    display: inline-block;
-    padding: 8px 8px 6px;
-    margin: 6px 0px;
-    text-decoration: none;
-    color: #545454;
-    font-size: 1.16rem;
-    &:hover {
-      color: white;
-      background-color: #545454;
-      border-radius: 2px;
-    }
-    i {
-      margin-right: 8px;
-    }
-  }
-  .logo {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    @media (max-width: 450px) {
-      position: static;
-      display: block;
-      margin: 4px auto;
-    }
-  }
-`
+import { social } from "../utils"
 
 export default function LolzSocial() {
   return (
-    <SocialStyled id="lolz-social">
-      <div className="wrapper">
+    <div id="lolz-social" css={social}>
+      <nav>
         <a
           id="facebook"
           className="network"
@@ -64,8 +25,8 @@ export default function LolzSocial() {
           <i className="fab fa-github-alt" />
           <span>GitHub</span>
         </a>
-      </div>
+      </nav>
       <img className="logo" src={logo} alt="logo" />
-    </SocialStyled>
+    </div>
   )
 }

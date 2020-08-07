@@ -21,5 +21,5 @@ export const gray = {
   regular: "#545454",
   light: "#ADADAD",
   dark: "#5F5F5F",
-  background: "#F0F0F0"
+  background: "#F0F0F0",
 }

@@ -1,14 +1,13 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core"
-import { gray } from "../utils"
+import { Layout } from "../utils"
 import NavBar from "./NavBar"
 import HomePage from "./HomePage"
 import SyllabaryPage from "./SyllabaryPage"
 import KanjiPage from "./KanjiPage"
-import LolzSocial from "./LolzSocial"
 import Disclaimer from "./Disclaimer"
+import LolzSocial from "./LolzSocial"
+import FourOhFour from "./FourOhFour"
 
 const links = [
   {
@@ -16,7 +15,7 @@ const links = [
     children: (
       <React.Fragment>
         <span>
-        <img src="https://img.icons8.com/emoji/20/000000/house-emoji.png"/>
+          <img src="https://img.icons8.com/emoji/20/000000/house-emoji.png" alt="botón - inicio"/>
         </span>
         <span className="desc" style={{ marginLeft: "4px" }}>
           INICIO
@@ -28,7 +27,9 @@ const links = [
     to: "/silabarios",
     children: (
       <React.Fragment>
-        <span><img src="https://img.icons8.com/emoji/20/000000/japanese-symbol-for-beginner-emoji.png"/></span>
+        <span>
+          <img src="https://img.icons8.com/emoji/20/000000/japanese-symbol-for-beginner-emoji.png" alt="botón - página de silabarios"/>
+        </span>
         <span className="desc" style={{ marginLeft: "4px" }}>
           SILABARIOS
         </span>
@@ -39,7 +40,9 @@ const links = [
     to: "/kanji",
     children: (
       <React.Fragment>
-        <span><img src="https://img.icons8.com/emoji/20/000000/japanese-passing-grade-button-emoji.png"/></span>
+        <span>
+          <img src="https://img.icons8.com/emoji/20/000000/japanese-passing-grade-button-emoji.png" alt="botón - página de kanji"/>
+        </span>
         <span className="desc" style={{ marginLeft: "4px" }}>
           KANJI
         </span>
@@ -48,18 +51,15 @@ const links = [
   },
 ]
 
-const appStyle = css`
-  width: 100%;
-`
-
 export default function App() {
   return (
     <Router>
-      <div id="App" css={appStyle}>
-        <NavBar id="main-navbar" links={links} color={gray} />
+      <Layout id="App">
+        <NavBar id="main-navbar" links={links} />
+
         <Switch>
           <Route exact path="/">
-            <HomePage className="content" />
+            <HomePage />
           </Route>
           <Route path="/silabarios">
             <SyllabaryPage />
@@ -68,12 +68,13 @@ export default function App() {
             <KanjiPage />
           </Route>
           <Route path="*">
-            <h1 className="text-center">404</h1>
+            <FourOhFour />
           </Route>
         </Switch>
+
         <Disclaimer />
         <LolzSocial />
-      </div>
+      </Layout>
     </Router>
   )
 }

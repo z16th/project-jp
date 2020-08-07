@@ -1,18 +1,13 @@
-import React from "react";
-import { Link, useRouteMatch } from "react-router-dom";
-import styled from "@emotion/styled";
+/**@jsx jsx */
+import { Link, useRouteMatch } from "react-router-dom"
+import { jsx } from "@emotion/core"
+import { linkActive, linkUnactive } from "../utils"
 
-const ListItemStyled = styled.li`
-  font-weight: bold;
-  text-decoration: none;
-`;
-export function CustomLink({ to, children }) {
-  const match = useRouteMatch(to.pathname);
-  if (match)
-    return (<ListItemStyled>
-      <Link to={to}>{children}</Link>
-    </ListItemStyled>);
-  return (<li>
-    <Link to={to}>{children}</Link>
-  </li>);
+export default function CustomLink({ to, children }) {
+  const match = useRouteMatch({ path: to.pathname, exact: true })
+  return (
+    <Link to={to} css={match ? linkActive : linkUnactive}>
+      {children}
+    </Link>
+  )
 }

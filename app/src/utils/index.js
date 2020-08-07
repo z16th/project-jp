@@ -1,3 +1,4 @@
 export * from "./colors"
 export * from "./typography"
-export * from "./primitives"
+export * from "./styled-components"
+export * from "./styles"

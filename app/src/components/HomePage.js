@@ -1,58 +1,49 @@
 import React from "react"
-import { H1, H2, P1 } from "../utils"
-/**@jsx jsx */
-import { jsx, css } from "@emotion/core"
-
-const pageStyle = css`
-  width: 100%;
-  .content {
-    padding: 0px 20px;
-  }
-`
+import { PageStyled } from '../utils'
 
 export default function HomePage() {
   return (
-    <div id="home-page" css={pageStyle}>
+    <PageStyled id="home-page">
       <Content />
-    </div>
+    </PageStyled>
   )
 }
 
 const Content = () => {
   return (
-    <div className="content">
-      <H1>Inicio</H1>
-      <H2>Bienvenido</H2>
-      <P1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet
+    <div className="main-content">
+      <h1>Inicio</h1>
+      <h2>Bienvenido</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet  
         dolorum, a nostrum fugiat iusto perferendis voluptatem obcaecati
         cupiditate ab ad officiis sunt asperiores odio maiores tenetur id quam
         pariatur.
-      </P1>
-      <P1>
+      </p>
+      <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quaerat
         ex voluptates cupiditate eius ratione facilis incidunt veniam sint
         doloremque molestias laborum, suscipit excepturi, aspernatur id natus
         consectetur corrupti quibusdam!
-      </P1>
-      <P1>
+      </p>
+      <p>
         Perferendis maiores dicta sunt rem! Officiis enim voluptas dolores eum
         dolorum possimus nesciunt. Sequi et perspiciatis quidem architecto
         veniam? Porro id assumenda repudiandae corrupti sunt eligendi laboriosam
         reprehenderit, nobis dolor!
-      </P1>
-      <P1>
+      </p>
+      <p>
         Ratione, cumque unde esse quod blanditiis placeat sunt perspiciatis
         dolorem fugit vel pariatur mollitia ipsam. Nobis quam necessitatibus ex,
         impedit laborum dignissimos illo itaque porro alias vel. Vero, eaque
         sit.
-      </P1>
-      <P1>
+      </p>
+      <p>
         Magni similique consequatur laborum iste quas quidem, ipsum
         exercitationem dolore recusandae sint quo quisquam atque iusto, facere
         tenetur perferendis officia veniam sequi itaque vero velit minus error
         vitae quasi. Hic!
-      </P1>
+      </p>
     </div>
   )
 }
