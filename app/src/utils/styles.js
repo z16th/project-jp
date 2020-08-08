@@ -1,9 +1,25 @@
 import { css } from "@emotion/core"
 import { pink } from "./colors"
-import { kanjiSansFont, kanjiSerifFont } from "./typography"
+import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
 
 const minWidth = 280
 const maxWidth = 800
+
+// ===========================SIDEBAR
+
+export const sidebar = css`
+  grid-area: sidebar;
+  position: sticky;
+  align-self: flex-start;
+  z-index: -10;
+  top: 48px;
+  height: 100vh;
+  grid-area: sidebar;
+  background-color: #ababab;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+`
 
 // ===========================NAVBAR
 export const navbar = css`
@@ -13,8 +29,28 @@ export const navbar = css`
   justify-content: center;
   align-items: center;
   height: 48px;
-  width: 100%;
-  background-color: rebeccapurple;
+  width: 100vw;
+  background-color: #545454;
+  a {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    img {
+      margin-right: 8px;
+    }
+    span {
+      margin-top: 2px;
+    }
+    @media (max-width: 600px) {
+      img {
+        margin: 0px;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
 `
 
 export const navbarEmpty = css`
@@ -22,14 +58,17 @@ export const navbarEmpty = css`
 `
 
 // =============================CUSTOM LINK
+export const linkUnactive = css`
+  text-decoration: none;
+  font-size: ${typeScale.header5}px;
+  color: white;
+  text-shadow: 0px 0px 1px white;
+`
 
 export const linkActive = css`
+  font-size: ${typeScale.header4}px;
   font-weight: bold;
-  text-decoration: none;
-  background-color: red;
-`
-export const linkUnactive = css`
-  background-color: forestgreen;
+  border-bottom: 2px solid black;
 `
 
 // =================================HAMBURGER MENU
@@ -38,7 +77,6 @@ export const hamburgerMenu = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   align-items: center;
   position: relative;
   .hamburger {
@@ -50,7 +88,6 @@ export const hamburgerMenu = css`
   .menu {
     z-index: 10;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     position: fixed;
     /* Navbar height */
@@ -60,15 +97,18 @@ export const hamburgerMenu = css`
     text-align: center;
     background-color: white;
     .links {
-      display: inherit;
-      flex-direction: inherit;
-      padding: 0px;
+      display: flex;
+      flex-direction: column;
       a {
         text-decoration: none;
-        padding: 40px;
+        background-color: #373737;
         margin: 20px;
+        padding: 40px;
       }
     }
+  }
+  @media (min-width: 1024px) {
+    display: none;
   }
 `
 
@@ -83,45 +123,42 @@ export const kanjiTable = css`
 
 export const kanjiCard = css`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   text-align: center;
   font-family: ${kanjiSansFont};
-  width: 328px;
-  height: 220px;
+  min-width: 280px;
+  max-width: 324px;
+  min-height: 192px;
   margin: 10px;
   border-radius: 8px;
   background-color: ${pink.background};
   @media (max-width: 320px) {
-    margin: 10px 0px;
-    width: 300px;
-    height: 204px;
-  }
-  @media (max-width: 280px) {
-    margin: 10px 0px;
-    width: 280px;
-    height: 204px;
+    min-width: 75vw;
+    max-width: 80vw;
   }
   .left {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    width: 106px;
-    height: 204px;
+    justify-content: space-between;
+    min-width: 110px;
     border-radius: 4px;
     background-color: ${pink.regular};
     .char {
+      padding-top: 12px;
       font-size: 5rem;
       &:hover {
         font-family: ${kanjiSerifFont};
       }
     }
+    .animation {
+      padding-top: 16px;
+    }
     .strokes {
+      width: 100%;
       border: 0px;
       padding: 0px;
       color: white;
       padding: 4px 0px;
-      margin-top: 32px;
+      margin-top: 8px;
       background-color: ${pink.dark};
       &:hover {
         cursor: pointer;
@@ -133,19 +170,27 @@ export const kanjiCard = css`
   }
   .right {
     display: grid;
-    width: 198px;
-    height: 204px;
+    grid-template: "reading" 1fr "meaning" 1fr / 1fr;
+    width: 66%;
     .reading {
-      width: 198px;
-      height: 102px;
+      grid-area: reading;
+      width: 100%;
+      height: 100%;
       border: 0px;
       padding: 0px 8px;
+      margin: auto;
       border-radius: 4px;
       color: white;
       background-color: ${pink.dark};
       &:hover {
         cursor: pointer;
       }
+    }
+    .meaning {
+      grid-area: meaning;
+      margin: auto;
+      border: 0px;
+      padding: 0px 8px;
     }
   }
 `
@@ -158,12 +203,12 @@ export const charAnimation = css`
     height: 100px;
     @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
       width: calc(
-        80px + (100 - 100) *
-          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+        60px + (120 - 60) *
+          ((120vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
       );
       height: calc(
-        80px + (100 - 100) *
-          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+        60px + (120 - 60) *
+          ((120vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
       );
     }
     @media (min-width: ${maxWidth}px) {

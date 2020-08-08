@@ -12,51 +12,26 @@ import FourOhFour from "./FourOhFour"
 const links = [
   {
     to: "/",
-    children: (
-      <>
-        <span>
-          <img
-            src="https://img.icons8.com/emoji/20/000000/house-emoji.png"
-            alt="botón - inicio"
-          />
-        </span>
-        <span className="desc" style={{ marginLeft: "4px" }}>
-          INICIO
-        </span>
-      </>
-    ),
+    exact: true,
+    icon: "https://img.icons8.com/emoji/32/000000/house-emoji.png",
+    alt: "botón - inicio",
+    label: "INICIO",
   },
   {
     to: "/silabarios",
-    children: (
-      <>
-        <span>
-          <img
-            src="https://img.icons8.com/emoji/20/000000/japanese-symbol-for-beginner-emoji.png"
-            alt="botón - página de silabarios"
-          />
-        </span>
-        <span className="desc" style={{ marginLeft: "4px" }}>
-          SILABARIOS
-        </span>
-      </>
-    ),
+    exact: false,
+    icon:
+      "https://img.icons8.com/emoji/32/000000/japanese-symbol-for-beginner-emoji.png",
+    alt: "botón - página de silabarios",
+    label: "SILABARIOS",
   },
   {
     to: "/kanji",
-    children: (
-      <>
-        <span>
-          <img
-            src="https://img.icons8.com/emoji/20/000000/japanese-passing-grade-button-emoji.png"
-            alt="botón - página de kanji"
-          />
-        </span>
-        <span className="desc" style={{ marginLeft: "4px" }}>
-          KANJI
-        </span>
-      </>
-    ),
+    exact: false,
+    icon:
+      "https://img.icons8.com/emoji/32/000000/japanese-passing-grade-button-emoji.png",
+    alt: "botón - página de kanji",
+    label: "KANJI",
   },
 ]
 

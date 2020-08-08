@@ -33,7 +33,7 @@ const CharAnimation = ({ name, onReset, onPause }) => {
   }, [isPaused])
 
   return (
-    <div className="char-animation" css={charAnimation}>
+    <div className="char animation" css={charAnimation}>
       <Icon
         ref={svgRef}
         name={`0${name}-jlect`}

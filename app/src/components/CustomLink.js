@@ -5,9 +5,9 @@ import { jsx } from "@emotion/core"
 import { linkActive, linkUnactive } from "../utils"
 
 export default function CustomLink({ to, children }) {
-  const match = useRouteMatch({ path: to.pathname, exact: true })
+  const match = useRouteMatch({ path: to.pathname, exact: to.exact })
   return (
-    <Link to={to} css={match ? linkActive : linkUnactive}>
+    <Link to={to} css={match ? [linkUnactive, linkActive] : linkUnactive}>
       {children}
     </Link>
   )

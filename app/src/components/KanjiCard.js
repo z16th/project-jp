@@ -24,18 +24,18 @@ export default function KanjiCard({ data, readingMode }) {
     <div css={kanjiCard}>
       <div className="left">
         {!showAnimation && <div className="char">{character}</div>}
-        {showAnimation && (
-          <KanjiAnimation name={utf16} width={120} height={120} />
-        )}
-        <button
-          className="strokes"
-          type="button"
-          onClick={handleAnimationClick}
-        >
-          <b>Trazos:</b> {strokes}
-        </button>
-        <div className="number">
-          <b>No:</b> {number}
+        {showAnimation && <KanjiAnimation name={utf16} />}
+        <div className="info">
+          <button
+            className="strokes"
+            type="button"
+            onClick={handleAnimationClick}
+          >
+            <b>Trazos:</b> {strokes}
+          </button>
+          <div className="number">
+            <b>No:</b> {number}
+          </div>
         </div>
       </div>
 

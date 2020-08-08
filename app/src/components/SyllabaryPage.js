@@ -3,6 +3,8 @@ import { Route, useRouteMatch, useParams } from "react-router-dom"
 import { Callout, Example, PageStyled } from "../utils"
 import Table from "./Table"
 import HamburgerMenu from "./HamburgerMenu"
+import Sidebar from "./Sidebar"
+import CustomLink from "./CustomLink"
 
 const syllabaries = ["hiragana", "katakana", "romaji"]
 const types = ["basico", "dakuten", "combinacion"]
@@ -13,6 +15,7 @@ export default function SyllabaryPage() {
   return (
     <PageStyled id="syllabary-page">
       <HamburgerMenu title="tablas" links={syllabaries} />
+      <Sidebar />
       <div className="main-content">
         <Route exact path={`${url}/`}>
           <Content />
@@ -36,11 +39,15 @@ const Tables = () => {
 
   return (
     <div className="content">
-      <h1 className="text-center">
-        {syllabaries.some((e) => e === syllabary)
-          ? syllabary.toUpperCase()
-          : "Selecciona un silabario"}
-      </h1>
+      {syllabaries.some((e) => e === syllabary) ? (
+        <h1 className="text-center">{syllabary.toUpperCase()}</h1>
+      ) : (
+        <div className="flex-center column">
+          <h1>Selecciona un silabario</h1>
+          <CustomLink to="/silabarios">Volver</CustomLink>
+        </div>
+      )}
+
       {syllabary === "hiragana" ? hiraganaTable() : null}
       {(syllabary === "katakana" || syllabary === "romaji") && restOfTables()}
     </div>

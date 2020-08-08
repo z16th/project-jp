@@ -41,7 +41,7 @@ export default function HamburgerMenu({ title, links }) {
         style={isActive ? { display: "inherit" } : { display: "none" }}
       >
         <h1 className="header">{title.toUpperCase()}</h1>
-        <ul className="links">
+        <nav className="links">
           {links.map((link) => (
             <CustomLink
               key={link}
@@ -53,7 +53,7 @@ export default function HamburgerMenu({ title, links }) {
               {link.toUpperCase()}
             </CustomLink>
           ))}
-        </ul>
+        </nav>
       </button>
     </div>
   )

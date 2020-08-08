@@ -29,6 +29,7 @@ export const Footer = styled.div`
   align-items: center;
   width: 100%;
   p {
+    font-size: ${typeScale.body2};
     width: 65%;
     margin: 8px 0px;
     @media (max-width: 411px) {
@@ -149,13 +150,19 @@ export const PageStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   width: 100%;
+  margin-bottom: 16px;
   .content {
     padding: 0px 20px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
   }
   @media (min-width: 1025px) {
+    display: grid;
+    grid-template: ". content sidebar" 1fr / 1fr 50% 3fr;
     .main-content {
-      width: 50%;
+      grid-area: content;
     }
   }
   @media (max-width: 280px) {
@@ -244,6 +251,10 @@ export const Layout = ({ children }) => (
         p {
           font-family: ${secondaryFont};
           font-size: ${typeScale.body1};
+        }
+        a {
+          font-family: ${secondaryFont};
+          font-size: ${typeScale.header1};
         }
       `}
     />

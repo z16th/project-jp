@@ -4,14 +4,16 @@ import { PageStyled } from "../utils"
 export default function HomePage() {
   return (
     <PageStyled id="home-page">
-      <Content />
+      <div className="main-content">
+        <Content />
+      </div>
     </PageStyled>
   )
 }
 
 const Content = () => {
   return (
-    <div className="main-content">
+    <div className="content">
       <h1>Inicio</h1>
       <h2>Bienvenido</h2>
       <p>
