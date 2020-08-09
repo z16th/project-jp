@@ -1,10 +1,11 @@
 import React from "react"
-import { Route, useRouteMatch, useParams } from "react-router-dom"
+import { Route, useRouteMatch, useParams, Link } from "react-router-dom"
 import { Callout, Example, PageStyled } from "../utils"
 import Table from "./Table"
 import HamburgerMenu from "./HamburgerMenu"
 import Sidebar from "./Sidebar"
 import CustomLink from "./CustomLink"
+import useContent from "../hooks/useContent"
 
 const syllabaries = ["hiragana", "katakana", "romaji"]
 const types = ["basico", "dakuten", "combinacion"]
@@ -12,15 +13,17 @@ const typesExtended = ["basico", "dakuten", "combinacion", "extendido"]
 
 export default function SyllabaryPage() {
   const { url } = useRouteMatch()
+  const content = useContent()
+
   return (
     <PageStyled id="syllabary-page">
       <HamburgerMenu title="tablas" links={syllabaries} />
-      <Sidebar />
+      {content !== null ? <Sidebar content={content} /> : null}
       <div className="main-content">
         <Route exact path={`${url}/`}>
           <Content />
         </Route>
-        <Route path={`${url}/:syllabary`}>
+        <Route exact path={`${url}/:syllabary`}>
           <Tables />
         </Route>
       </div>
@@ -97,7 +100,7 @@ const Content = () => {
       <Callout>
         Es el conjunto de caracteres que tienen trazos rectos y angulares.
       </Callout>
-      <h1>Romaji</h1>
+      <h2>Romaji</h2>
       <p>
         Es la romanización de los caracteres japoneses, es decir, el uso del
         abecedario al que estamos acostumbrados en el español y otros idiomas, y

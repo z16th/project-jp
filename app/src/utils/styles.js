@@ -11,11 +11,33 @@ export const sidebar = css`
   grid-area: sidebar;
   position: sticky;
   align-self: flex-start;
-  z-index: -10;
   top: 48px;
   height: 100vh;
   grid-area: sidebar;
   background-color: #ababab;
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 40px 20px;
+    .scroll-link {
+      text-align: left;
+      width: fit-content;
+      border: 0;
+      &:hover {
+        background-color: ${pink.regular};
+      }
+    }
+    .link-H1 {
+      margin-left: 0px;
+    }
+    .link-H2 {
+      margin-left: 32px;
+    }
+    .link-H3 {
+      margin-left: 64px;
+    }
+  }
   @media (max-width: 1024px) {
     display: none;
   }
@@ -23,6 +45,7 @@ export const sidebar = css`
 
 // ===========================NAVBAR
 export const navbar = css`
+  z-index: 10;
   display: flex;
   position: fixed;
   top: 0px;
@@ -74,6 +97,7 @@ export const linkActive = css`
 // =================================HAMBURGER MENU
 
 export const hamburgerMenu = css`
+  z-index: 20;
   display: flex;
   flex-direction: column;
   justify-content: center;

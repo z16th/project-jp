@@ -160,7 +160,7 @@ export const PageStyled = styled.div`
   }
   @media (min-width: 1025px) {
     display: grid;
-    grid-template: ". content sidebar" 1fr / 1fr 50% 3fr;
+    grid-template: ". content sidebar" 1fr / 1fr minmax(50%, 5fr) 3fr;
     .main-content {
       grid-area: content;
     }
