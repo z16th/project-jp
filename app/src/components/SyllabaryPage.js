@@ -5,7 +5,6 @@ import Table from "./Table"
 import HamburgerMenu from "./HamburgerMenu"
 import Sidebar from "./Sidebar"
 import CustomLink from "./CustomLink"
-import useContent from "../hooks/useContent"
 
 const syllabaries = ["hiragana", "katakana", "romaji"]
 const types = ["basico", "dakuten", "combinacion"]
@@ -13,21 +12,33 @@ const typesExtended = ["basico", "dakuten", "combinacion", "extendido"]
 
 export default function SyllabaryPage() {
   const { url } = useRouteMatch()
-  const content = useContent()
 
   return (
     <PageStyled id="syllabary-page">
       <HamburgerMenu title="tablas" links={syllabaries} />
-      {content !== null ? <Sidebar content={content} /> : null}
+      <Sidebar>
+        <Extra />
+      </Sidebar>
       <div className="main-content">
         <Route exact path={`${url}/`}>
           <Content />
         </Route>
-        <Route exact path={`${url}/:syllabary`}>
+        <Route path={`${url}/:syllabary`}>
           <Tables />
         </Route>
       </div>
     </PageStyled>
+  )
+}
+
+const Extra = () => {
+  return (
+    <div>
+      <h4>Tablas</h4>
+      <Link to="/silabarios/hiragana">Hiragana</Link>
+      <Link to="/silabarios/katakana">Katakana</Link>
+      <Link to="/silabarios/romaji">Romaji</Link>
+    </div>
   )
 }
 

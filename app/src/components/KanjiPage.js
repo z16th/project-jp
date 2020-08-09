@@ -3,10 +3,12 @@ import { jsx } from "@emotion/core"
 import kanjiData from "../utils/json/kanji-1-80.json"
 import KanjiCard from "./KanjiCard"
 import { PageStyled, kanjiTable } from "../utils"
+import Sidebar from "./Sidebar"
 
 export default function KanjiPage() {
   return (
     <PageStyled id="kanji-page">
+      <Sidebar />
       <div className="main-content">
         <Content />
         <KanjiTable />
@@ -57,9 +59,7 @@ function Content() {
         son combinados para crear las decenas de miles de palabras del idioma
         japonés.
       </p>
-      <h2>
-        <strong>Los radicales</strong>
-      </h2>
+      <h2>Los radicales</h2>
       <p>
         Los kanji están compuestos de una serie de trazos predefinidos llamados{" "}
         <strong>radicales</strong>. En japonés cada uno de estos trazos tienen
@@ -68,9 +68,7 @@ function Content() {
         todos los kanji son en realidad una combinación de dos o más radicales,
         puede ser de gran utilidad aprenderlos.
       </p>
-      <h2>
-        <strong>Las pronunciaciones</strong>
-      </h2>
+      <h2>Las pronunciaciones</h2>
       <p>
         Hay dos formas básicas en las que los kanjis pueden ser leídos: la
         pronunciación <strong>on-yomi</strong> o china, y la pronunciación{" "}
@@ -83,9 +81,7 @@ function Content() {
         pronunciación japonesa aunque otras fuentes pueden llegar a utilizar un
         formato distinto.
       </p>
-      <h2>
-        <strong>Tipos de Kanji</strong>
-      </h2>
+      <h2>Los tipos de kanji</h2>
       <p>Los kanji japoneses pueden ser divididos en 4 tipos básicos:</p>
       <ul>
         <li>Pictogramas (imágenes de objetos):　山, 田, 川</li>
@@ -102,12 +98,8 @@ function Content() {
       <p>
         Alrededor del 80% de los kanjis son ideogramas de sonido compuestos.
       </p>
-      <h2>
-        <strong>Escritura</strong>
-      </h2>
-      <h3>
-        <strong>Reglas generales</strong>
-      </h3>
+      <h2>Escritura</h2>
+      <h3>Reglas generales</h3>
       <ul>
         <li>Los trazos son escritos de izquierda a derecha.</li>
         <li>Los trazos son escritos de arriba hacia abajo.</li>
@@ -136,9 +128,7 @@ function Content() {
         Dependiendo de la referencia que se consulte se pueden encontrar más
         reglas o menos reglas.
       </p>
-      <h3>
-        <strong>Tipos de trazos</strong>
-      </h3>
+      <h3>Tipos de trazos</h3>
       <ul>
         <li>Línea doblada</li>
         <li>Línea horizontal</li>

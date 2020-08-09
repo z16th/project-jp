@@ -20,8 +20,10 @@ export default function NavBar({ id, links, path }) {
             to={{ pathname: path + to, exact }}
             exact
           >
-            <img src={icon} alt={alt} />
-            <span>{label}</span>
+            {icon !== null && alt !== null ? (
+              <img src={icon} alt={alt} />
+            ) : null}
+            {label !== null ? <span>{label}</span> : null}
           </CustomLink>
         ))}
       </nav>

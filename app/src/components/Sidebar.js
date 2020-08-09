@@ -1,23 +1,32 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core"
-import { sidebar } from "../utils"
 import { useEffect } from "react"
+import PropTypes from "prop-types"
+import { jsx } from "@emotion/core"
+import useContent from "../hooks/useContent"
+import { scrollTo } from "../utils/vanilla"
+import { sidebar } from "../utils"
 
-export default function Sidebar({ content, extra }) {
+export default function Sidebar({ from, select, children }) {
+  const content = useContent(from, select)
+
   useEffect(() => {
-    content.forEach((header, i) => {
-      header.id = `jump-to-${i}`
-    })
+    if (content !== null) {
+      content.forEach((element, i) => {
+        const header = element
+        header.id = `jump-to-${i}`
+      })
+    }
   }, [content])
 
   if (content === null) return null
   return (
     <div id="sidebar" css={sidebar}>
       <div className="nav-buttons">
+        {children}
         <h4>En esta página</h4>
         {content.map((header, i) => (
           <button
-            key={i}
+            key={header.innerHTML}
             type="button"
             className={`scroll-link link-${header.tagName}`}
             onClick={() => scrollTo(i)}
@@ -25,17 +34,18 @@ export default function Sidebar({ content, extra }) {
             {header.innerHTML}
           </button>
         ))}
-        {extra}
       </div>
     </div>
   )
 }
 
-const scrollTo = (elementId) => {
-  const element = document.getElementById(`jump-to-${elementId}`)
-  if (element !== null) {
-    window.scrollTo({
-      top: element.offsetTop - 60,
-    })
-  }
+Sidebar.propTypes = {
+  from: PropTypes.string,
+  select: PropTypes.string,
+  children: PropTypes.node,
+}
+Sidebar.defaultProps = {
+  from: ".content",
+  select: "h1,h2,h3,h4,h5,h6",
+  children: null,
 }

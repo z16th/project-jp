@@ -14,6 +14,7 @@ export default function CustomLink({ to, children }) {
 }
 
 CustomLink.propTypes = {
-  to: PropTypes.shape({pathname: PropTypes.string, exact: PropTypes.bool}).isRequired,
+  to: PropTypes.shape({ pathname: PropTypes.string, exact: PropTypes.bool })
+    .isRequired,
   children: PropTypes.node.isRequired,
 }

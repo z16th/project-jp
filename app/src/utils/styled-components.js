@@ -150,13 +150,10 @@ export const PageStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   width: 100%;
-  margin-bottom: 16px;
   .content {
-    padding: 0px 20px;
-    margin-bottom: 40px;
-    box-sizing: border-box;
+    padding: 20px 20px;
+    background-color: goldenrod;
   }
   @media (min-width: 1025px) {
     display: grid;
@@ -177,7 +174,7 @@ export const Layout = ({ children }) => (
     <Global
       styles={css`
         h1 {
-          margin: 20px 0px;
+          margin: 0px;
           font-family: ${primaryFont};
           font-size: ${typeScale.header1}px;
           @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {

@@ -14,7 +14,6 @@ export const sidebar = css`
   top: 48px;
   height: 100vh;
   grid-area: sidebar;
-  background-color: #ababab;
   .nav-buttons {
     display: flex;
     flex-direction: column;
