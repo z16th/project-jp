@@ -1,8 +1,7 @@
 import React from "react"
 import { Route, useRouteMatch, useParams, Link } from "react-router-dom"
-import { Callout, Example, PageStyled } from "../utils"
+import { Callout, Example, PageStyled } from "../styling"
 import Table from "./Table"
-import HamburgerMenu from "./HamburgerMenu"
 import Sidebar from "./Sidebar"
 import CustomLink from "./CustomLink"
 
@@ -15,7 +14,6 @@ export default function SyllabaryPage() {
 
   return (
     <PageStyled id="syllabary-page">
-      <HamburgerMenu title="tablas" links={syllabaries} />
       <Sidebar>
         <Extra />
       </Sidebar>

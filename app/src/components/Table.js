@@ -1,11 +1,10 @@
-/** @jsxFrag React.Fragment */
 import React, { useState, useRef } from "react"
 import PropTypes from "prop-types"
 import { useParams } from "react-router-dom"
 import kanas from "../utils/json/kana-all.json"
 import grids from "../utils/json/grids-all.json"
 import { TableHeaders, TableChars } from "./TableUtils"
-import { KanaTable, gray, yellow, blue, pink } from "../utils"
+import { KanaTable, gray, yellow, blue, pink } from "../styling"
 
 export default function Table({ type }) {
   const { syllabary } = useParams()

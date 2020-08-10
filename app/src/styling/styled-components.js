@@ -153,9 +153,8 @@ export const PageStyled = styled.div`
   width: 100%;
   .content {
     padding: 20px 20px;
-    background-color: goldenrod;
   }
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     display: grid;
     grid-template: ". content sidebar" 1fr / 1fr minmax(50%, 5fr) 3fr;
     .main-content {
@@ -164,7 +163,7 @@ export const PageStyled = styled.div`
   }
   @media (max-width: 280px) {
     .content {
-      padding: 0px 10px;
+      padding: 20px 10px;
     }
   }
 `

@@ -1,13 +1,17 @@
 /** @jsx jsx */
-import { useEffect } from "react"
+/** @jsxFrag React.Fragment */
+// eslint-disable-next-line  no-unused-vars
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
+import PageNav from "./PageNav"
 import useContent from "../hooks/useContent"
-import { scrollTo } from "../utils/vanilla"
-import { sidebar } from "../utils"
+import HamburgerMenu from "./HamburgerMenu"
+import { sidebar } from "../styling"
 
 export default function Sidebar({ from, select, children }) {
   const content = useContent(from, select)
+  const [state, setState] = useState(false)
 
   useEffect(() => {
     if (content !== null) {
@@ -18,24 +22,16 @@ export default function Sidebar({ from, select, children }) {
     }
   }, [content])
 
-  if (content === null) return null
   return (
-    <div id="sidebar" css={sidebar}>
-      <div className="nav-buttons">
-        {children}
-        <h4>En esta página</h4>
-        {content.map((header, i) => (
-          <button
-            key={header.innerHTML}
-            type="button"
-            className={`scroll-link link-${header.tagName}`}
-            onClick={() => scrollTo(i)}
-          >
-            {header.innerHTML}
-          </button>
-        ))}
+    <>
+      <HamburgerMenu controller={{ state, setState }}>
+        <PageNav content={content}>{children}</PageNav>
+      </HamburgerMenu>
+
+      <div id="sidebar" css={sidebar}>
+        <PageNav content={content}>{children}</PageNav>
       </div>
-    </div>
+    </>
   )
 }
 

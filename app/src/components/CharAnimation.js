@@ -2,7 +2,7 @@
 import { useCallback, useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
-import { charAnimation } from "../utils"
+import { charAnimation } from "../styling"
 import Icon from "./Icon"
 
 const noop = () => {}

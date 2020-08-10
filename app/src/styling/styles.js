@@ -8,6 +8,8 @@ const maxWidth = 800
 // ===========================SIDEBAR
 
 export const sidebar = css`
+  display: none;
+  z-index: 10;
   grid-area: sidebar;
   position: sticky;
   align-self: flex-start;
@@ -37,14 +39,14 @@ export const sidebar = css`
       margin-left: 64px;
     }
   }
-  @media (max-width: 1024px) {
-    display: none;
+  @media (min-width: 1024px) {
+    display: initial;
   }
 `
 
 // ===========================NAVBAR
 export const navbar = css`
-  z-index: 10;
+  z-index: 15;
   display: flex;
   position: fixed;
   top: 0px;
@@ -96,16 +98,19 @@ export const linkActive = css`
 // =================================HAMBURGER MENU
 
 export const hamburgerMenu = css`
-  z-index: 20;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   .hamburger {
+    z-index: 20;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
     position: fixed;
-    top: 10px;
-    right: 10px;
+    bottom: 24px;
+    right: 24px;
     cursor: pointer;
   }
   .menu {

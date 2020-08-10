@@ -5,7 +5,7 @@ import React from "react"
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 import CustomLink from "./CustomLink"
-import { navbar, navbarEmpty } from "../utils"
+import { navbar, navbarEmpty } from "../styling"
 
 export default function NavBar({ id, links, path }) {
   return (

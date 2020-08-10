@@ -1,28 +1,35 @@
 /** @jsx jsx */
-import { useState } from "react"
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import PropTypes from "prop-types"
-import { useRouteMatch, useLocation } from "react-router-dom"
 import { jsx } from "@emotion/core"
-import CustomLink from "./CustomLink"
-import { hamburgerMenu } from "../utils"
+import { hamburgerMenu } from "../styling"
 
-export default function HamburgerMenu({ title, links }) {
-  const { url } = useRouteMatch()
-  const location = useLocation()
-  const [isActive, setIsActive] = useState(false)
+export default function HamburgerMenu({ controller, children }) {
+  const { state, setState } = controller
 
-  const handleClick = () => {
-    setIsActive((state) => setIsActive(!state))
+  const toggle = () => {
+    setState((value) => !value)
   }
 
   const deactivate = () => {
-    setIsActive(false)
+    setState(false)
+  }
+
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 27) {
+      deactivate()
+    }
   }
 
   return (
     <div id="hamburger-menu" css={hamburgerMenu}>
-      <button type="button" className="hamburger" onClick={handleClick}>
-        {isActive ? (
+      <button
+        type="button"
+        className="hamburger"
+        onClick={toggle}
+        onKeyDown={handleKeyDown}
+      >
+        {state ? (
           <img
             src="https://img.icons8.com/emoji/20/000000/minus-emoji.png"
             alt="botón - abrir menú"
@@ -34,32 +41,27 @@ export default function HamburgerMenu({ title, links }) {
           />
         )}
       </button>
-      <button
-        type="button"
+      <div
+        tabIndex="-1"
+        role="button"
         className="menu"
         onClick={deactivate}
-        style={isActive ? { display: "inherit" } : { display: "none" }}
+        style={state ? { display: "inherit" } : { display: "none" }}
       >
-        <h1 className="header">{title.toUpperCase()}</h1>
-        <nav className="links">
-          {links.map((link) => (
-            <CustomLink
-              key={link}
-              to={{
-                pathname: `${url}/${link}`,
-                search: location.search,
-              }}
-            >
-              {link.toUpperCase()}
-            </CustomLink>
-          ))}
-        </nav>
-      </button>
+        {children}
+      </div>
     </div>
   )
 }
 
 HamburgerMenu.propTypes = {
-  title: PropTypes.string.isRequired,
-  links: PropTypes.arrayOf(PropTypes.string).isRequired,
+  controller: PropTypes.shape({
+    state: PropTypes.bool,
+    setState: PropTypes.func,
+  }).isRequired,
+  children: PropTypes.node,
+}
+
+HamburgerMenu.defaultProps = {
+  children: null,
 }

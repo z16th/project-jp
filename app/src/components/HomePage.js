@@ -1,5 +1,5 @@
 import React from "react"
-import { PageStyled } from "../utils"
+import { PageStyled } from "../styling"
 
 export default function HomePage() {
   return (

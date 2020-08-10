@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import kanjiData from "../utils/json/kanji-1-80.json"
 import KanjiCard from "./KanjiCard"
-import { PageStyled, kanjiTable } from "../utils"
+import { PageStyled, kanjiTable } from "../styling"
 import Sidebar from "./Sidebar"
 
 export default function KanjiPage() {

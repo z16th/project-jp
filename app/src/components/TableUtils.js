@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import CharAnimation from "./CharAnimation"
-import { TableHeader, TableElement1, TableElement2 } from "../utils"
+import { TableHeader, TableElement1, TableElement2 } from "../styling"
 
 export const TableHeaders = (headers) => {
   return (

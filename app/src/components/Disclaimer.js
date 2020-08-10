@@ -1,5 +1,5 @@
 import React from "react"
-import { Footer } from "../utils"
+import { Footer } from "../styling"
 
 export default function Disclaimer() {
   return (

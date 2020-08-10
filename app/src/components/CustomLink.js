@@ -2,7 +2,7 @@
 import PropTypes from "prop-types"
 import { Link, useRouteMatch } from "react-router-dom"
 import { jsx } from "@emotion/core"
-import { linkActive, linkUnactive } from "../utils"
+import { linkActive, linkUnactive } from "../styling"
 
 export default function CustomLink({ to, children }) {
   const match = useRouteMatch({ path: to.pathname, exact: to.exact })

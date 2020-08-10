@@ -3,7 +3,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
 import KanjiAnimation from "./CharAnimation"
-import { kanjiCard } from "../utils"
+import { kanjiCard } from "../styling"
 
 export default function KanjiCard({ data, readingMode }) {
   const { character, utf16, number, strokes, meaning } = { ...data }
