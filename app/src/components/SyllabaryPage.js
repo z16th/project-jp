@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link, Route, useRouteMatch } from "react-router-dom"
 import Sidebar from "./Sidebar"
 import { Tables } from "./TableUtils"
@@ -6,6 +6,10 @@ import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
 
 export default function SyllabaryPage() {
   const { url } = useRouteMatch()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <PageStyled id="syllabary-page">
@@ -26,13 +30,12 @@ export default function SyllabaryPage() {
 
 const ExtraLinks = () => {
   return (
-    <div>
-      <h4>Ir a</h4>
-      <h5>Tablas</h5>
+    <>
+      <h4>Tablas</h4>
       <Link to="/silabarios/hiragana">Hiragana</Link>
       <Link to="/silabarios/katakana">Katakana</Link>
       <Link to="/silabarios/romaji">Romaji</Link>
-    </div>
+    </>
   )
 }
 
@@ -40,7 +43,6 @@ const Content = () => {
   return (
     <div className="content">
       <h1>Introducción</h1>
-      <hr />
       <p>
         El <b>hiragana</b> (<H>ひらがな</H>) y el <b>katakana</b> (
         <K>カタカナ</K>) son silabarios, es decir, conjuntos de caracteres que
@@ -51,30 +53,30 @@ const Content = () => {
       </p>
       <h2>Hiragana</h2>
       <p>
-        El <b></b> es el silabario que nos ayuda a leer palabras y frases cuando
-        somos principiantes. También contribuye en gran medida a aprender el 3er
+        Es el silabario que nos ayuda a leer palabras y frases cuando somos
+        principiantes. También contribuye en gran medida a aprender el 3er
         sistema de escritura: el <em>kanji</em> (<Kj>漢字</Kj>). En la
         gramática, el hiragana es usado para escribir las distintas partículas,
         las partes conjugadas de verbos y adjetivos, así como palabras que no
         tienen kanji.
       </p>
       <Callout>
-        Es el conjunto de caracteres que tienen trazos redondeados.
+        Es el conjunto de caracteres que tiene trazos redondeados.
       </Callout>
       <h2>Katakana</h2>
       <p>
-        El uso más común del katakana es para transcribir palabras de otros
-        idiomas. El único inconveniente es que el japonés tiene un rango de
-        sonidos limitado y algunas de las palabras transcritas pueden tener una
-        pronunciación diferente a la de la lengua original. Por ejemplo, la
-        palabra <K>ホテル</K> contiene tres caracteres del katakana:
-        &quot;ho&quot;, &quot;te&quot;, y &quot;ru&quot;, formando la palabra
-        &quot;hoteru&quot;, la cual es tomada del inglés &quot;hotel&quot;.
-        Asimismo, el katakana es utilizado para escribir nombres de empresas,
-        onomatopeyas, o incluso para crear énfasis en una palabra u oración.
+        El uso más común del katakana es transcribir palabras de otros idiomas.
+        Ya que el japonés tiene un rango de sonidos limitado, algunas de las
+        palabras transcritas pueden tener una pronunciación diferente a la de la
+        lengua original. Por ejemplo, la palabra <K>ホテル</K> contiene tres
+        caracteres del katakana: &quot;ho&quot;, &quot;te&quot;, y
+        &quot;ru&quot;, formando la palabra &quot;hoteru&quot;, la cual es
+        tomada del inglés &quot;hotel&quot;. Asimismo, el katakana es utilizado
+        para escribir nombres de empresas, onomatopeyas, o incluso para crear
+        énfasis en una palabra u oración.
       </p>
       <Callout>
-        Es el conjunto de caracteres que tienen trazos rectos y angulares.
+        Es el conjunto de caracteres que tiene trazos rectos y angulares.
       </Callout>
       <h2>Romaji</h2>
       <p>
@@ -104,17 +106,19 @@ const Content = () => {
         caracteres corresponden a una <b>mora</b> (unidad de sonido), y que por
         sí solos no tienen un significado. Por otro lado, el <b>kanji</b> es
         formado por caracteres que representan tanto sonido como significado y
-        pueden tener pronunciaciones de una o más moras. Las oraciones del
-        japonés se expresan empleando tanto kanji como kana.
+        pueden tener pronunciaciones de una o más moras.
       </p>
-      <Callout>Todos los sonidos tienen una duración similar.</Callout>
+      <Callout>
+        Las oraciones del japonés se expresan empleando tanto kanji como kana.
+      </Callout>
       <p>
         El sonido del japonés se basa en cinco vocales: <H>あいうえお</H> -{" "}
         <K>アイウエオ</K> - <R>aiueo</R>. Todos los sonidos hablados provienen
         de estas cinco vocales, mismas que pueden ser utilizadas solas, junto
         con una consonante, o consonante más la semivocal &quot;y&quot;. La
-        única excepción es ん ン (n), la cual es una consonante que puede tener
-        sonido sin necesidad de combinarse con vocales.
+        única excepción es <H>ん</H> <K>ン</K> <R>n</R>, la cual es una
+        consonante que puede tener sonido sin necesidad de combinarse con
+        vocales.
       </p>
       <Callout>El orden de las vocales es diferente: aiueo</Callout>
       <b>
@@ -124,7 +128,7 @@ const Content = () => {
         En el japonés es común encontrar palabras homónimas, es decir, que se
         escriben y pronuncian igual pero que tienen significados diferentes.
         Para diferenciar entre ellas, muchas veces se recurre al contexto; en el
-        caso de la lectura y escritura, se pueden diferenciar por el kanji que
+        caso de la lectura/escritura, se pueden diferenciar por el kanji que
         utilizan.
       </p>
       <Example>
@@ -133,22 +137,24 @@ const Content = () => {
       <h2>Vocal larga</h2>
       <p>
         La vocal larga tiene doble duración respecto a la vocal simple. Dicho de
-        otra manera, mientras que <H>あ</H> se considera de una mora,{" "}
-        <H>ああ</H> se considera de dos moras a pesar de que se pronuncien las
-        dos de manera sucesiva. La diferencia en el largo de la vocal implica
-        diferencias en el significado:
+        otra manera, mientras que <R>a</R> se considera de una mora, <R>ā</R> se
+        considera de dos moras a pesar de que se pronuncien las dos de manera
+        sucesiva. La diferencia en el largo de la vocal implica diferencias en
+        el significado:
       </p>
       <Example>
-        <H>おばさん</H> <R>obasan</R> ≠ <H>おばあさん</H> <R>obaasan</R>
+        <H>おばさん</H> <R>obasan</R> [tía] ≠ <H>おばあさん</H> <R>obāsan</R>{" "}
+        [abuela]
       </Example>
       <Example>
-        <H>ゆき</H> <R>yuki</R> ≠ <H>ゆうき</H> <R>yuuki</R>
+        <H>ゆき</H> <R>yuki</R> [nieve] ≠ <H>ゆうき</H> <R>yuuki</R> [valentía]
       </Example>
       <Example>
-        <H>え</H> <R>e</R> ≠ <H>ええ</H> <R>ee</R>
+        <H>え</H> <R>e</R> [pintura] ≠ <H>ええ</H> <R>ee</R> [sí]
       </Example>
       <Example>
-        <H>ここ</H> <R>koko</R> ≠ <H>こうこう</H> <R>kookoo</R>
+        <H>ここ</H> <R>koko</R> [aquí] ≠ <H>こうこう</H> <R>kookoo</R>{" "}
+        [preparatoria]
       </Example>
       <h3>Vocales largas en hiragana:</h3>
       <ul>

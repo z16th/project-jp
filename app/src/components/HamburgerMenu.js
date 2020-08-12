@@ -31,12 +31,12 @@ export default function HamburgerMenu({ controller, children }) {
       >
         {state ? (
           <img
-            src="https://img.icons8.com/emoji/20/000000/minus-emoji.png"
+            src="https://img.icons8.com/ios-filled/20/000000/minus-math.png"
             alt="botón - abrir menú"
           />
         ) : (
           <img
-            src="https://img.icons8.com/emoji/20/000000/plus-emoji.png"
+            src="https://img.icons8.com/ios-filled/20/000000/plus-math.png"
             alt="botón - cerrar menú"
           />
         )}

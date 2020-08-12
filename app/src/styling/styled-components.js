@@ -132,15 +132,16 @@ export const Example = styled.p`
   display: block;
   width: fit-content;
   font-family: ${secondaryFont};
-  font-size: ${typeScale.example};
+  font-size: ${typeScale.body1};
   margin: 16px 8px;
   padding: 16px;
   border-radius: 8px;
-  border: 2px dashed ${blue.regular};
+  border: 4px dotted ${blue.regular};
 `
 export const Note = styled.p`
   font-family: ${secondaryFont};
   font-size: ${typeScale.body2};
+  line-height: 1rem;
 `
 
 //---------------------------------------------------PAGE
@@ -149,18 +150,20 @@ export const PageStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-image: url(${texture});
+  background-image: linear-gradient(${gray.background}, ${gray.background}),
+    url(${texture});
   background-size: 64px;
   .main-content {
-    .content {
-    }
+    background-color: white;
+    border-radius: 16px 0px 0px 16px;
   }
   @media (min-width: 1024px) {
     display: grid;
-    grid-template: ". content sidebar ." 1fr / 10vw minmax(50%, 5fr) 3fr 5vw;
+    grid-template:
+      ". content sidebar ." 1fr / minmax(0px, 8vw) minmax(50%, 5fr)
+      2fr 1fr;
     .main-content {
       grid-area: content;
       .content {

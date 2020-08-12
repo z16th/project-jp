@@ -3,7 +3,7 @@ import words from "../utils/json/words.json"
 import { Japanify } from "./Japanify"
 import { dictionaryTypes } from "../utils/vanilla"
 import { jsx } from "@emotion/core"
-import { wotd } from "../styling"
+import { wotd, R } from "../styling"
 
 export default function WordOfTheDay() {
   const wordIndex = words.length - 1
@@ -12,17 +12,16 @@ export default function WordOfTheDay() {
 
   return (
     <div id="wotd" css={wotd}>
-      <h1 className="title">Palabra del día</h1>
-      <h2 className="word">
+      <div className="word">
         <Japanify word={current.word} furigana={current.furigana} />
-      </h2>
-      <h1>{current.romaji}</h1>
-      <h4 className="type">
+      </div>
+      <div className="romaji">{current.romaji}</div>
+      <div className="type">
         {dictionaryTypes[`${defaultLanguage}`][`${current.type}`]}
-      </h4>
-      <h3 className="meaning">
+      </div>
+      <div className="meaning">
         {current.meaning[`${defaultLanguage}`].join(", ")}
-      </h3>
+      </div>
     </div>
   )
 }

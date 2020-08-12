@@ -1,59 +1,29 @@
 import { css } from "@emotion/core"
-import { pink, yellow, blue, gray, brands } from "./colors"
+import { pink, yellow, blue, green, gray, brands } from "./colors"
 import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
 
 const minWidth = 280
 const maxWidth = 800
 
-export const japaneseChar = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
-  margin: 0px;
-  .furigana {
-    text-align: center;
-    font-family: ${kanjiSansFont};
-    font-size: ${typeScale.header2}px;
-    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
-      font-size: calc(
-        20px + (${typeScale.header2} - 20) *
-          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
-      );
-    }
-    @media (min-width: ${maxWidth}px) {
-      font-size: ${typeScale.header2}px;
-    }
-  }
-  .char {
-    padding-top: 4px;
-
-    font-family: ${kanjiSansFont};
-    font-size: ${typeScale.big}px;
-    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
-      font-size: calc(
-        50px + (${typeScale.big} - 50) *
-          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
-      );
-    }
-    @media (min-width: ${maxWidth}px) {
-      font-size: ${typeScale.big}px;
-    }
-  }
-`
-
 // ============================ WOTD
 
 export const wotd = css`
-  display: inline-block;
+  display: block;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: ${gray.background};
   .word {
     display: flex;
     flex-direction: row;
-    .furigana {
-      text-shadow: none;
-    }
+    margin-bottom: 12px;
     .jp-char {
+      flex-direction: column;
+      align-items: center;
       text-shadow: 1px 1px 2px black;
+      .furigana {
+        text-shadow: none;
+        border-bottom: 2px solid ${gray.light};
+      }
       .char {
         &:hover {
           font-family: ${kanjiSerifFont};
@@ -70,48 +40,199 @@ export const wotd = css`
       }
     }
   }
+  .romaji {
+    font-family: ${kanjiSansFont};
+    font-size: ${typeScale.header3}px;
+    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+      font-size: calc(
+        18px + (${typeScale.header3} - 18) *
+          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+      );
+    }
+    @media (min-width: ${maxWidth}px) {
+      font-size: ${typeScale.header3}px;
+    }
+  }
+  .type {
+    margin: 12px 0px;
+    font-size: ${typeScale.header5}px;
+    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+      font-size: calc(
+        10px + (${typeScale.header5} - 10) *
+          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+      );
+    }
+    @media (min-width: ${maxWidth}px) {
+      font-size: ${typeScale.header5}px;
+    }
+  }
+  .meaning {
+    font-family: ${kanjiSansFont};
+    font-size: ${typeScale.header3}px;
+    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+      font-size: calc(
+        18px + (${typeScale.header3} - 18) *
+          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+      );
+    }
+    @media (min-width: ${maxWidth}px) {
+      font-size: ${typeScale.header3}px;
+    }
+  }
+`
+
+export const japaneseChar = css`
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px;
+  .furigana {
+    text-align: center;
+    font-family: ${kanjiSansFont};
+    font-size: ${typeScale.header3}px;
+    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+      font-size: calc(
+        18px + (${typeScale.header3} - 18) *
+          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+      );
+    }
+    @media (min-width: ${maxWidth}px) {
+      font-size: ${typeScale.header3}px;
+    }
+  }
+  .char {
+    font-family: ${kanjiSansFont};
+    font-size: ${typeScale.big}px;
+    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+      font-size: calc(
+        50px + (${typeScale.big} - 50) *
+          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+      );
+    }
+    @media (min-width: ${maxWidth}px) {
+      font-size: ${typeScale.big}px;
+    }
+  }
 `
 
 // ===========================SIDEBAR
 
-export const sidebar = css`
-  display: none;
-  z-index: 10;
-  grid-area: sidebar;
-  position: sticky;
-  align-self: flex-start;
-  top: 48px;
-  height: 100vh;
-  grid-area: sidebar;
-  .nav-buttons {
+export const navSidebar = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 40px 20px;
+  .children {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin: 40px 20px;
-    .scroll-link {
-      text-align: left;
-      width: fit-content;
-      border: 0;
+    a {
+      padding: 8px;
+      margin: 4px 0px;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid black;
       &:hover {
-        background-color: ${pink.regular};
+        color: white;
+        background-color: ${gray.regular};
+        text-shadow: 1px 1px 0px black, 0px 0px 2px black;
       }
     }
-    .link-H1 {
-      margin-left: 0px;
-    }
-    .link-H2 {
-      margin-left: 32px;
-    }
-    .link-H3 {
-      margin-left: 64px;
+  }
+  .scroll-link {
+    text-align: left;
+    border: 0;
+    margin: 2px 0px;
+    padding: 6px;
+    border: 1px dashed black;
+    background-color: transparent;
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: ${gray.regular};
+      text-shadow: 1px 1px 0px black, 0px 0px 2px black;
     }
   }
+  .link-H1 {
+    margin-left: 0px;
+    padding: 6px;
+  }
+  .link-H2 {
+    margin-left: 28px;
+    padding: 4px 6px;
+  }
+  .link-H3 {
+    margin-left: 56px;
+    padding: 3px 6px;
+  }
+`
+
+export const sidebar = css`
+  z-index: 10;
+  display: none;
+  grid-area: sidebar;
+  position: sticky;
+  top: 48px;
+  height: 100vh;
+  border-left: 1px solid ${gray.light};
   @media (min-width: 1024px) {
     display: initial;
   }
 `
 
+export const hamburgerMenu = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .hamburger {
+    z-index: 20;
+    cursor: pointer;
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    right: 24px;
+    bottom: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: ${gray.background};
+    box-shadow: 2px 2px 4px black;
+    &:active {
+      background-color: ${gray.dark};
+      box-shadow: 2px 2px 4px white;
+    }
+  }
+  .menu {
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 48px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 48px);
+    overflow-y: scroll;
+    background-color: ${gray.background};
+    .links {
+      z-index: 11;
+      display: flex;
+      flex-direction: column;
+      a {
+        text-decoration: none;
+        margin: 20px;
+        padding: 40px;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    display: none;
+  }
+`
+
 // ===========================NAVBAR
+
 export const navbar = css`
   z-index: 15;
   display: flex;
@@ -121,12 +242,13 @@ export const navbar = css`
   align-items: center;
   height: 48px;
   width: 100vw;
-  background-color: #545454;
+  border-bottom: 2px solid black;
+  background-color: ${gray.regular};
   a {
     display: inherit;
-    justify-content: center;
     align-items: center;
     margin: 20px;
+    padding: 2px;
     img {
       margin-right: 8px;
     }
@@ -153,58 +275,14 @@ export const linkUnactive = css`
   text-decoration: none;
   font-size: ${typeScale.header5}px;
   color: white;
-  text-shadow: 0px 0px 1px white;
+  &:hover {
+  }
 `
 
 export const linkActive = css`
   font-size: ${typeScale.header4}px;
   font-weight: bold;
-  border-bottom: 2px solid black;
-`
-
-// =================================HAMBURGER MENU
-
-export const hamburgerMenu = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  .hamburger {
-    z-index: 20;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 48px;
-    right: 24px;
-    cursor: pointer;
-  }
-  .menu {
-    z-index: 10;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    /* Navbar height */
-    top: 48px;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    background-color: white;
-    .links {
-      display: flex;
-      flex-direction: column;
-      a {
-        text-decoration: none;
-        background-color: #373737;
-        margin: 20px;
-        padding: 40px;
-      }
-    }
-  }
-  @media (min-width: 1024px) {
-    display: none;
-  }
+  border-bottom: 2px solid white;
 `
 
 // =============================================KANJI
@@ -316,19 +394,19 @@ export const charAnimation = css`
   }
 `
 
-// ===================================================SOCIAL
+// ===================================================FOOTER
 
 export const footer = css`
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 100%;
+  padding-top: 16px;
   color: white;
   background-color: ${gray.regular};
   p {
-    font-size: ${typeScale.body2};
     width: 65%;
     margin: 8px 0px;
     @media (max-width: 411px) {
@@ -357,7 +435,7 @@ export const social = css`
       flex-direction: row;
     }
     &:hover {
-      text-shadow: 0 0 2px black, 1px 1px 0px black;
+      text-shadow: 0 0 1px black, 1px 1px 0px black;
     }
     #facebook:hover {
       color: ${brands.facebook};

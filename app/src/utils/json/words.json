@@ -7,7 +7,8 @@
     "meaning": {
       "en": ["family room", "living room"],
       "es": ["sala de estar", "estancia"]
-    }
+    },
+    "date": "2020-08-10"
   },
   {
     "word": "飽きる",
@@ -17,6 +18,18 @@
     "meaning": {
       "en": ["get tired of", "lose interest in"],
       "es": ["cansarse de", "perder interés en"]
-    }
+    },
+    "date": "2020-08-11"
+  },
+  {
+    "word": "帳面",
+    "furigana": ["ちょう", "めん"],
+    "romaji": "chо̄men",
+    "type": "n",
+    "meaning": {
+      "en": ["notebook", "account book"],
+      "es": ["cuaderno", "libro de cuentas"]
+    },
+    "date": "2020-08-12"
   }
 ]

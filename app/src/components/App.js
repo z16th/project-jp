@@ -12,23 +12,21 @@ const links = [
   {
     to: "/",
     exact: true,
-    icon: "https://img.icons8.com/emoji/32/000000/japanese-castle.png",
+    icon: "https://img.icons8.com/ios-filled/32/ffffff/torii.png",
     alt: "botón - inicio",
     label: "INICIO",
   },
   {
     to: "/silabarios",
     exact: false,
-    icon:
-      "https://img.icons8.com/emoji/32/000000/japanese-symbol-for-beginner-emoji.png",
+    icon: "https://img.icons8.com/ios-filled/32/ffffff/koi-fish.png",
     alt: "botón - página de silabarios",
     label: "SILABARIOS",
   },
   {
     to: "/kanji",
     exact: false,
-    icon:
-      "https://img.icons8.com/emoji/32/000000/japanese-passing-grade-button-emoji.png",
+    icon: "https://img.icons8.com/ios-filled/28/ffffff/origami.png",
     alt: "botón - página de kanji",
     label: "KANJI",
   },

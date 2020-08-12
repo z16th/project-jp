@@ -3,7 +3,7 @@
 // eslint-disable-next-line  no-unused-vars
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import PageNav from "./PageNav"
+import NavSidebar from "./NavSidebar"
 import useNodes from "../hooks/useNodes"
 import HamburgerMenu from "./HamburgerMenu"
 import { slug } from "../utils/vanilla"
@@ -28,11 +28,11 @@ export default function Sidebar({ from, select, children }) {
   return (
     <>
       <HamburgerMenu controller={{ state, setState }}>
-        <PageNav content={content}>{children}</PageNav>
+        <NavSidebar content={content}>{children}</NavSidebar>
       </HamburgerMenu>
 
       <div id="sidebar" css={sidebar}>
-        <PageNav content={content}>{children}</PageNav>
+        <NavSidebar content={content}>{children}</NavSidebar>
       </div>
     </>
   )

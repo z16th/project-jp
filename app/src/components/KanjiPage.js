@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import { useEffect } from "react"
 import { jsx } from "@emotion/core"
 import kanjiData from "../utils/json/kanji-1-80.json"
 import KanjiCard from "./KanjiCard"
@@ -16,6 +17,10 @@ import {
 import Sidebar from "./Sidebar"
 
 export default function KanjiPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <PageStyled id="kanji-page">
       <Sidebar />
@@ -47,7 +52,6 @@ function Content() {
   return (
     <div className="content">
       <h1>Introducción</h1>
-      <hr />
       <p>
         El sistema de escritura japonés hace uso extenso de los caracteres
         llamados <b>kanji</b>. Son caracteres que fueron creados en China hace

@@ -1,11 +1,13 @@
-import React from "react"
+/**@jsx jsx */
 import PropTypes from "prop-types"
 import { scrollTo, slug } from "../utils/vanilla"
+import { jsx } from "@emotion/core"
+import { navSidebar } from "../styling"
 
-export default function PageNav({ content, children }) {
+export default function NavSidebar({ content, children }) {
   return (
-    <div className="nav-buttons">
-      {children}
+    <div className="nav-sidebar" css={navSidebar}>
+      <div className="children">{children}</div>
       <h4>En esta página</h4>
       {content !== null
         ? content.map((header, i) => (
@@ -23,11 +25,11 @@ export default function PageNav({ content, children }) {
   )
 }
 
-PageNav.propTypes = {
+NavSidebar.propTypes = {
   content: PropTypes.arrayOf(PropTypes.node).isRequired,
   children: PropTypes.node,
 }
 
-PageNav.defaultProps = {
+NavSidebar.defaultProps = {
   children: null,
 }

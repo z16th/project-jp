@@ -29,7 +29,6 @@ export const Tables = () => {
           <CustomLink to="/silabarios">Volver</CustomLink>
         </div>
       )}
-      <hr />
       {syllabary === "hiragana" ? hiraganaTable() : null}
       {(syllabary === "katakana" || syllabary === "romaji") && restOfTables()}
     </div>
