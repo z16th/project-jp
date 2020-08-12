@@ -5,15 +5,14 @@ import NavBar from "./NavBar"
 import HomePage from "./HomePage"
 import SyllabaryPage from "./SyllabaryPage"
 import KanjiPage from "./KanjiPage"
-import Disclaimer from "./Disclaimer"
-import LolzSocial from "./LolzSocial"
+import Footer from "./Footer"
 import FourOhFour from "./FourOhFour"
 
 const links = [
   {
     to: "/",
     exact: true,
-    icon: "https://img.icons8.com/emoji/32/000000/house-emoji.png",
+    icon: "https://img.icons8.com/emoji/32/000000/japanese-castle.png",
     alt: "botón - inicio",
     label: "INICIO",
   },
@@ -56,8 +55,7 @@ export default function App() {
           </Route>
         </Switch>
 
-        <Disclaimer />
-        <LolzSocial />
+        <Footer />
       </Layout>
     </Router>
   )

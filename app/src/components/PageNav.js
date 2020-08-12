@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { scrollTo } from "../utils/vanilla"
+import { scrollTo, slug } from "../utils/vanilla"
 
 export default function PageNav({ content, children }) {
   return (
@@ -13,7 +13,7 @@ export default function PageNav({ content, children }) {
               key={header.innerHTML}
               type="button"
               className={`scroll-link link-${header.tagName}`}
-              onClick={() => scrollTo(i)}
+              onClick={() => scrollTo(slug(header.innerHTML))}
             >
               {header.innerHTML}
             </button>

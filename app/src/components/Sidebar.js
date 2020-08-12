@@ -3,24 +3,27 @@
 // eslint-disable-next-line  no-unused-vars
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import { jsx } from "@emotion/core"
 import PageNav from "./PageNav"
-import useContent from "../hooks/useContent"
+import useNodes from "../hooks/useNodes"
 import HamburgerMenu from "./HamburgerMenu"
+import { slug } from "../utils/vanilla"
+import { jsx } from "@emotion/core"
 import { sidebar } from "../styling"
 
 export default function Sidebar({ from, select, children }) {
-  const content = useContent(from, select)
+  const content = useNodes(from, select)
   const [state, setState] = useState(false)
 
   useEffect(() => {
     if (content !== null) {
       content.forEach((element, i) => {
         const header = element
-        header.id = `jump-to-${i}`
+        header.id = `${slug(header.innerHTML)}`
       })
     }
   }, [content])
+
+  if (content === null) return null
 
   return (
     <>

@@ -8,7 +8,7 @@ export default function useContent(
 ) {
   const location = useLocation()
   const query = useRef(null)
-  const [content, setContent] = useState(null)
+  const [content, setContent] = useState([])
 
   useEffect(() => {
     query.current = document.querySelector(from).querySelectorAll(select)

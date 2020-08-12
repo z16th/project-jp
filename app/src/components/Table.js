@@ -23,7 +23,6 @@ export default function Table({ type }) {
   return (
     <div className="flex-center column">
       <h2>{type.toUpperCase()}</h2>
-
       {syllabary !== "romaji" ? (
         <button type="button" className="anim-btn" onClick={handleAnimButton}>
           {!renderAnimations ? "Ver animaciones" : "Ver caracteres"}

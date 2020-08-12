@@ -1,0 +1,22 @@
+[
+  {
+    "word": "居間",
+    "furigana": ["い", "ま"],
+    "romaji": "ima",
+    "type": "n",
+    "meaning": {
+      "en": ["family room", "living room"],
+      "es": ["sala de estar", "estancia"]
+    }
+  },
+  {
+    "word": "飽きる",
+    "furigana": ["あ", "き", "る"],
+    "romaji": "akiru",
+    "type": "vb",
+    "meaning": {
+      "en": ["get tired of", "lose interest in"],
+      "es": ["cansarse de", "perder interés en"]
+    }
+  }
+]

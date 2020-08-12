@@ -10,6 +10,14 @@ export const yellow = {
   dark: "#ca9e54",
   background: "#fff4e1",
 }
+
+export const green = {
+  regular: "#82F0FF",
+  light: "#B8FFFF",
+  dark: "#4ABDCC",
+  background: "#E2FBFF",
+}
+
 export const pink = {
   regular: "#ff82b2",
   light: "#ffb4e4",
@@ -22,4 +30,10 @@ export const gray = {
   light: "#ADADAD",
   dark: "#5F5F5F",
   background: "#F0F0F0",
+}
+
+export const brands = {
+  facebook: "#4267b2",
+  twitter: "#1da1f2",
+  github: "#6e5494",
 }

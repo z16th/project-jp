@@ -1,9 +1,11 @@
-import React from "react"
-import { Footer } from "../styling"
+/**@jsx jsx */
+import LolzSocial from "./LolzSocial"
+import { jsx } from "@emotion/core"
+import { footer } from "../styling"
 
-export default function Disclaimer() {
+export default function Footer() {
   return (
-    <Footer id="disclaimer">
+    <div id="footer" css={footer}>
       <hr />
       <p>
         La información que se encuentra en este sitio no es creada ni revisada
@@ -15,6 +17,7 @@ export default function Disclaimer() {
         Para comentarios sobre correcciones en la información accesibilidad de
         la página, contribuciones u otros asuntos no dudes en contactarme.
       </p>
-    </Footer>
+      <LolzSocial />
+    </div>
   )
 }

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
-import { blue, yellow, gray } from "./colors"
+import { blue, yellow, gray, pink, green } from "./colors"
 import {
   primaryFont,
   secondaryFont,
@@ -10,45 +10,35 @@ import {
   kanjiSansFont,
   kanjiSerifFont,
 } from "./typography"
+import texture from "../utils/images/paper.jpg"
 
 const minWidth = 280
 const maxWidth = 800
 
-// ---------------------------------------------PLAIN TEXT
-
-export const P2 = styled.p`
-  font-family: ${secondaryFont};
-  font-size: ${typeScale.body2};
+export const H = styled.span`
+  background-color: ${yellow.background};
+  padding: 2px 3px;
+  border-radius: 4px;
 `
-
-export const Footer = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  p {
-    font-size: ${typeScale.body2};
-    width: 65%;
-    margin: 8px 0px;
-    @media (max-width: 411px) {
-      width: 85%;
-    }
-  }
-  hr {
-    border: 0;
-    clear: both;
-    display: block;
-    width: 96%;
-    background-color: #000;
-    height: 1px;
-  }
+export const K = styled.span`
+  background-color: ${blue.background};
+  padding: 2px 3px;
+  border-radius: 4px;
+`
+export const Kj = styled.span`
+  background-color: ${pink.background};
+  padding: 2px 3px;
+  border-radius: 4px;
+`
+export const R = styled.span`
+  background-color: ${green.background};
+  padding: 2px 3px;
+  border-radius: 4px;
 `
 
 // ---------------------------------------------TABLES
 
-export const TableElement1 = styled.p`
+export const TableElement1 = styled.span`
   margin: 0px 0px;
   font-family: ${kanjiSansFont};
   font-size: ${typeScale.tableContent};
@@ -62,7 +52,7 @@ export const TableElement1 = styled.p`
     font-size: ${typeScale.tableContent}px;
   }
 `
-export const TableElement2 = styled.p`
+export const TableElement2 = styled.span`
   margin: 0px 0px;
   font-family: ${kanjiSansFont};
   font-size: ${typeScale.tableContent};
@@ -77,7 +67,7 @@ export const TableElement2 = styled.p`
   }
 `
 
-export const TableHeader = styled.p`
+export const TableHeader = styled.span`
   margin: 0px 0px;
   font-family: ${kanjiSansFont};
   font-size: ${typeScale.tableHeader};
@@ -104,6 +94,9 @@ export const KanaTable = styled.section`
     padding: 8px;
     border-radius: 8px;
     background-color: ${(props) => props.color.light};
+    .char {
+      line-height: initial;
+    }
     &:hover {
       background-color: ${(props) => props.color.regular};
       font-family: ${kanjiSerifFont};
@@ -123,47 +116,66 @@ export const KanaTable = styled.section`
   }
 `
 
-// -----------------------------------------------------COLORFUL
+// ----------------------------------------------COLORFUL
 
 export const Callout = styled.p`
-  display: inline-block;
+  display: block;
+  width: fit-content;
   font-family: ${secondaryFont};
   font-size: ${typeScale.body1};
-  margin: 4px;
+  margin: 8px;
   padding: 16px;
   border-radius: 8px;
-  background-color: ${yellow.background};
+  border: 2px dashed ${yellow.regular};
 `
 export const Example = styled.p`
-  display: inline-block;
+  display: block;
+  width: fit-content;
   font-family: ${secondaryFont};
   font-size: ${typeScale.example};
-  margin: 4px;
+  margin: 16px 8px;
   padding: 16px;
   border-radius: 8px;
-  background-color: ${blue.background};
+  border: 2px dashed ${blue.regular};
 `
-// ---------------------------------------------------PAGE
+export const Note = styled.p`
+  font-family: ${secondaryFont};
+  font-size: ${typeScale.body2};
+`
+
+//---------------------------------------------------PAGE
 
 export const PageStyled = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  .content {
-    padding: 20px 20px;
+  min-height: 100vh;
+  background-image: url(${texture});
+  background-size: 64px;
+  .main-content {
+    .content {
+    }
   }
   @media (min-width: 1024px) {
     display: grid;
-    grid-template: ". content sidebar" 1fr / 1fr minmax(50%, 5fr) 3fr;
+    grid-template: ". content sidebar ." 1fr / 10vw minmax(50%, 5fr) 3fr 5vw;
     .main-content {
       grid-area: content;
+      .content {
+        padding: 20px 40px;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .content {
+      padding: 20px 12px;
     }
   }
   @media (max-width: 280px) {
     .content {
-      padding: 20px 10px;
+      padding: 20px 12px;
     }
   }
 `
@@ -235,22 +247,26 @@ export const Layout = ({ children }) => (
         h5 {
           margin: 12px 0px;
           font-family: ${primaryFont};
-          font-size: ${typeScale.header5};
+          font-size: ${typeScale.header5}px;
         }
 
         h6 {
           margin: 10px 0px;
           font-family: ${primaryFont};
-          font-size: ${typeScale.header6};
+          font-size: ${typeScale.header6}px;
         }
 
         p {
           font-family: ${secondaryFont};
           font-size: ${typeScale.body1};
+          line-height: 1.5rem;
         }
         a {
           font-family: ${secondaryFont};
           font-size: ${typeScale.header1};
+        }
+        ul {
+          line-height: 1.25rem;
         }
       `}
     />
