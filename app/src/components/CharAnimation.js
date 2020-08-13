@@ -11,6 +11,11 @@ const CharAnimation = ({ name, onReset, onPause }) => {
   const svgRef = useRef(null)
   const [isPaused, setIsPaused] = useState(true)
 
+  useEffect(() => {
+    const timer = setTimeout(() => setIsPaused(false), 800)
+    return () => clearTimeout(timer)
+  }, [])
+
   const handleReset = useCallback(() => {
     if (svgRef.current) {
       svgRef.current.setCurrentTime(0)
@@ -34,24 +39,18 @@ const CharAnimation = ({ name, onReset, onPause }) => {
 
   return (
     <div className="char animation" css={charAnimation}>
-      <Icon
-        ref={svgRef}
-        name={`0${name}-jlect`}
-        onLoad={() => {
-          if (svgRef.current) {
-            svgRef.current.pauseAnimations()
-            svgRef.current.setCurrentTime(0)
-          }
-        }}
-      />
-      <div className="controls">
-        <button className="play-pause" type="button" onClick={handlePause}>
-          {isPaused ? "⏵" : "⏸"}
-        </button>
-        <button className="reset" type="button" onClick={handleReset}>
-          ⟳
-        </button>
-      </div>
+      <button className="reset" type="button" onClick={handleReset}>
+        <Icon
+          ref={svgRef}
+          name={`0${name}-jlect`}
+          onLoad={() => {
+            if (svgRef.current) {
+              svgRef.current.pauseAnimations()
+              svgRef.current.setCurrentTime(0)
+            }
+          }}
+        />
+      </button>
     </div>
   )
 }

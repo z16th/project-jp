@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Link, Route, useRouteMatch } from "react-router-dom"
+import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
 import Sidebar from "./Sidebar"
 import { Tables } from "./TableUtils"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
@@ -17,24 +17,31 @@ export default function SyllabaryPage() {
         <ExtraLinks />
       </Sidebar>
       <div className="main-content">
-        <Route exact path={`${url}/`}>
-          <Content />
-        </Route>
-        <Route path={`${url}/:syllabary`}>
-          <Tables />
-        </Route>
+        <Switch>
+          <Route exact path={`${url}/`}>
+            <Content />
+          </Route>
+          <Route path={`${url}/tablas`}>
+            <div className="content">
+              <Tables />
+            </div>
+          </Route>
+          <Route path="*">
+            <div className="content">
+              <h1>Página no encontrada</h1>
+            </div>
+          </Route>
+        </Switch>
       </div>
     </PageStyled>
   )
 }
 
 const ExtraLinks = () => {
+  const { url } = useRouteMatch()
   return (
     <>
-      <h4>Tablas</h4>
-      <Link to="/silabarios/hiragana">Hiragana</Link>
-      <Link to="/silabarios/katakana">Katakana</Link>
-      <Link to="/silabarios/romaji">Romaji</Link>
+      <Link to={`${url}/tablas`}>Tablas</Link>
     </>
   )
 }

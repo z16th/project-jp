@@ -31,5 +31,16 @@
       "es": ["cuaderno", "libro de cuentas"]
     },
     "date": "2020-08-12"
+  },
+  {
+    "word": "一人当たり",
+    "furigana": ["ひと", "り","あ","た","り"],
+    "romaji": "hitoriatari",
+    "type": "adv",
+    "meaning": {
+      "en": ["per person", "per capita"],
+      "es": ["por persona", "per cápita"]
+    },
+    "date": "2020-08-12"
   }
 ]

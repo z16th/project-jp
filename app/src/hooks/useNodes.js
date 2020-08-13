@@ -8,8 +8,8 @@ export default function useContent(from, select) {
   const [content, setContent] = useState([])
 
   useEffect(() => {
-    query.current = document.querySelector(from).querySelectorAll(select)
     if (query.current !== null) {
+      query.current = document.querySelector(from).querySelectorAll(select)
       setContent([...query.current])
     }
   }, [location, from, select])

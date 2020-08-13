@@ -5,7 +5,57 @@ import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
 const minWidth = 280
 const maxWidth = 800
 
-// ============================ WOTD
+// =============================================ANIMATIONS
+
+export const charAnimation = css`
+  button {
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  svg {
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+      width: calc(
+        60px + (120 - 60) *
+          ((120vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+      );
+      height: calc(
+        60px + (120 - 60) *
+          ((120vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+      );
+    }
+    @media (min-width: ${maxWidth}px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+`
+
+// =============================CUSTOM LINK
+export const linkUnactive = css`
+  text-decoration: none;
+  font-size: ${typeScale.header5}px;
+  color: white;
+  &:hover {
+  }
+`
+
+export const linkActive = css`
+  font-size: ${typeScale.header4}px;
+  font-weight: bold;
+  border-bottom: 2px solid white;
+`
+
+// ============================ Word Of The Day
 
 export const wotd = css`
   display: block;
@@ -270,21 +320,6 @@ export const navbarEmpty = css`
   height: 48px;
 `
 
-// =============================CUSTOM LINK
-export const linkUnactive = css`
-  text-decoration: none;
-  font-size: ${typeScale.header5}px;
-  color: white;
-  &:hover {
-  }
-`
-
-export const linkActive = css`
-  font-size: ${typeScale.header4}px;
-  font-weight: bold;
-  border-bottom: 2px solid white;
-`
-
 // =============================================KANJI
 
 export const kanjiTable = css`
@@ -302,8 +337,8 @@ export const kanjiCard = css`
   max-width: 324px;
   min-height: 192px;
   margin: 10px;
+  border: 2px solid ${pink.regular};
   border-radius: 8px;
-  background-color: ${pink.background};
   @media (max-width: 320px) {
     min-width: 75vw;
     max-width: 80vw;
@@ -313,8 +348,8 @@ export const kanjiCard = css`
     flex-direction: column;
     justify-content: space-between;
     min-width: 110px;
+    border-right: 1px solid ${pink.regular};
     border-radius: 4px 0 0 4px;
-    background-color: ${pink.regular};
     .char {
       padding-top: 12px;
       font-size: 5rem;
@@ -323,18 +358,33 @@ export const kanjiCard = css`
       }
     }
     .animation {
-      padding-top: 16px;
+      .reset {
+        color: white;
+        border: 1px dashed ${pink.regular};
+        background-color: ${pink.background};
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          background-color: ${pink.dark};
+        }
+        &:focus {
+          border: 1px solid ${pink.regular};
+        }
+      }
     }
     .strokes {
       width: 100%;
-      border: 0px;
-      padding: 0px;
-      color: white;
       padding: 4px 0px;
       margin-top: 8px;
-      background-color: ${pink.dark};
+      border: 0px;
+      color: white;
+      background-color: ${pink.regular};
       &:hover {
         cursor: pointer;
+      }
+      &:active {
+        background-color: ${pink.dark};
       }
     }
     .number {
@@ -352,45 +402,22 @@ export const kanjiCard = css`
       border: 0px;
       padding: 0px 8px;
       margin: auto;
-      border-radius: 0 4px 0 0;
+      border-radius: 0 5px 0 0;
       color: white;
-      background-color: ${pink.dark};
+      background-color: ${pink.regular};
       &:hover {
         cursor: pointer;
+      }
+      &:active {
+        background-color: ${pink.dark};
       }
     }
     .meaning {
       grid-area: meaning;
+      padding: 0px 8px;
       margin: auto;
       border: 0px;
-      padding: 0px 8px;
     }
-  }
-`
-
-// =============================================ANIMATIONS
-
-export const charAnimation = css`
-  svg {
-    width: 100px;
-    height: 100px;
-    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
-      width: calc(
-        60px + (120 - 60) *
-          ((120vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
-      );
-      height: calc(
-        60px + (120 - 60) *
-          ((120vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
-      );
-    }
-    @media (min-width: ${maxWidth}px) {
-      width: 100px;
-      height: 100px;
-    }
-  }
-  button {
-    display: none;
   }
 `
 

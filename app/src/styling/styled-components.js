@@ -83,9 +83,10 @@ export const TableHeader = styled.span`
 `
 
 export const KanaTable = styled.section`
-  display: flex;
-  justify-content: center;
-  grid-gap: 8px;
+  display: grid;
+  grid-template-rows: repeat(${(props) => props.rows}, 20px);
+  grid-template-columns: repeat(${(props) => props.columns}, 20px);
+
   margin: 20px 0px 40px 0px;
   .tab-head {
     color: ${gray.light};
@@ -93,12 +94,10 @@ export const KanaTable = styled.section`
   .kana {
     padding: 8px;
     border-radius: 8px;
-    background-color: ${(props) => props.color.light};
     .char {
       line-height: initial;
     }
     &:hover {
-      background-color: ${(props) => props.color.regular};
       font-family: ${kanjiSerifFont};
     }
   }
@@ -270,6 +269,17 @@ export const Layout = ({ children }) => (
         }
         ul {
           line-height: 1.25rem;
+        }
+      `}
+    />
+    <Global
+      styles={css`
+        .fade-appear {
+          opacity: 0;
+        }
+        .fade-appear-active {
+          opacity: 1;
+          transition: opacity 250ms ease-in;
         }
       `}
     />

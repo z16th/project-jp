@@ -1,7 +1,7 @@
 /**@jsx jsx */
 import words from "../utils/json/words.json"
 import { Japanify } from "./Japanify"
-import { dictionaryTypes } from "../utils/vanilla"
+import { grammaticalTypes } from "../utils/vanilla"
 import { jsx } from "@emotion/core"
 import { wotd, R } from "../styling"
 
@@ -17,7 +17,7 @@ export default function WordOfTheDay() {
       </div>
       <div className="romaji">{current.romaji}</div>
       <div className="type">
-        {dictionaryTypes[`${defaultLanguage}`][`${current.type}`]}
+        {grammaticalTypes[`${defaultLanguage}`][`${current.type}`]}
       </div>
       <div className="meaning">
         {current.meaning[`${defaultLanguage}`].join(", ")}

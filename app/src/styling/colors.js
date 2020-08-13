@@ -32,6 +32,10 @@ export const gray = {
   background: "#F0F0F0",
 }
 
+export const white = {
+  regular: "#fffddd",
+}
+
 export const brands = {
   facebook: "#4267b2",
   twitter: "#1da1f2",

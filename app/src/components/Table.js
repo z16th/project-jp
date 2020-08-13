@@ -4,17 +4,13 @@ import { useParams } from "react-router-dom"
 import kanas from "../utils/json/kana-all.json"
 import grids from "../utils/json/grids-all.json"
 import { TableHeaders, TableChars } from "./TableUtils"
-import { KanaTable, gray, yellow, blue, pink } from "../styling"
+import { KanaTable } from "../styling"
+import { generateGridAreas } from "../utils/vanilla"
 
 export default function Table({ type }) {
   const { syllabary } = useParams()
   const [renderAnimations, setRenderAnimations] = useState(false)
   const canRenderAnimations = renderAnimations && syllabary !== "romaji"
-  const color = useRef(gray.regular)
-
-  if (syllabary === "hiragana") color.current = yellow
-  if (syllabary === "katakana") color.current = blue
-  if (syllabary === "romaji") color.current = pink
 
   const handleAnimButton = () => {
     setRenderAnimations((state) => !state)
@@ -30,9 +26,9 @@ export default function Table({ type }) {
       ) : null}
 
       <KanaTable
-        className="table"
-        style={grids[`${type}`].gridStyle}
-        color={color.current}
+        rows={10}
+        columns={6}
+        style={{ gridTemplateAreas: generateGridAreas(10, 6) }}
       >
         {TableHeaders(grids[`${type}`].headers)}
         {kanas

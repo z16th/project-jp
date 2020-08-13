@@ -1,4 +1,4 @@
-export const dictionaryTypes = {
+export const grammaticalTypes = {
   es: {
     adj: "adjetivo",
     adv: "adverbio",
@@ -25,6 +25,18 @@ export const dictionaryTypes = {
     pron: "pronoun",
     vb: "verb",
   },
+}
+
+export const generateGridAreas = (rows, columns) => {
+  let areas = []
+  for (let i = 0; i < columns; i++) {
+    let row = []
+    for (let j = 0; j < rows; j++) {
+      row.push(`${j}-${i}`)
+    }
+    areas.push("'" + row.join(" ") + "'")
+  }
+  return areas.join(" ")
 }
 
 export const scrollTo = (elementId) => {

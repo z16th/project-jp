@@ -55,8 +55,8 @@ export const TableChars = (char, syllabary, condition) => {
   return (
     <div
       key={char.romaji}
-      className={`kana flex-center char-${char.romaji} ${char.class}`}
-      style={{ gridArea: char.romaji }}
+      className={`kana char-${char.romaji} ${char.class}`}
+      style={{ gridArea: `${char.row}-${char.column}` }}
     >
       {condition ? (
         <CharAsAnim char={char} syllabary={syllabary} />
@@ -70,13 +70,13 @@ export const TableChars = (char, syllabary, condition) => {
 export const CharAsFont = ({ char, syllabary }) => {
   if (syllabary === "romaji" || char.type === "extendido") {
     return (
-      <TableElement2 className="char flex-center">
+      <TableElement2 className="char">
         {char[`${syllabary}`]}
       </TableElement2>
     )
   }
   return (
-    <TableElement1 className="char flex-center on-hover">
+    <TableElement1 className="char">
       {char[`${syllabary}`]}
     </TableElement1>
   )
