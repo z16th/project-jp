@@ -1,62 +1,15 @@
 import React from "react"
-import { useParams } from "react-router-dom"
-import CustomLink from "./CustomLink"
 import PropTypes from "prop-types"
 import CharAnimation from "./CharAnimation"
-import Table from "./Table"
 import { TableHeader, TableElement1, TableElement2 } from "../styling"
 
-const syllabaries = ["hiragana", "katakana", "romaji"]
-const types = ["basico", "dakuten", "combinacion"]
-const typesExtended = ["basico", "dakuten", "combinacion", "extendido"]
-
-export const Tables = () => {
-  const { syllabary } = useParams()
-  const hiraganaTable = () => {
-    return types.map((type) => <Table key={type} type={type} />)
-  }
-  const restOfTables = () => {
-    return typesExtended.map((type) => <Table key={type} type={type} />)
-  }
-
-  return (
-    <div className="content">
-      {syllabaries.some((e) => e === syllabary) ? (
-        <h1 className="text-center">{syllabary.toUpperCase()}</h1>
-      ) : (
-        <div className="flex-center column">
-          <h1>Selecciona un silabario</h1>
-          <CustomLink to="/silabarios">Volver</CustomLink>
-        </div>
-      )}
-      {syllabary === "hiragana" ? hiraganaTable() : null}
-      {(syllabary === "katakana" || syllabary === "romaji") && restOfTables()}
-    </div>
-  )
-}
-
-export const TableHeaders = (headers) => {
-  return (
-    <>
-      {headers.map(({ char, coord }) => (
-        <TableHeader
-          key={coord}
-          className={`${char} tab-head flex-center noselect`}
-          style={{ gridArea: coord }}
-        >
-          {char}
-        </TableHeader>
-      ))}
-    </>
-  )
-}
-
 export const TableChars = (char, syllabary, condition) => {
+  const { romaji, hiragana, katakana, row, column, attributes } = char
   return (
     <div
-      key={char.romaji}
-      className={`kana char-${char.romaji} ${char.class}`}
-      style={{ gridArea: `${char.row}-${char.column}` }}
+      key={`${romaji}-${hiragana}-${katakana}`}
+      className={`kana kana-${romaji} ${attributes}`}
+      style={{ gridArea: `x${column}-y${row}` }}
     >
       {condition ? (
         <CharAsAnim char={char} syllabary={syllabary} />
@@ -68,18 +21,10 @@ export const TableChars = (char, syllabary, condition) => {
 }
 
 export const CharAsFont = ({ char, syllabary }) => {
-  if (syllabary === "romaji" || char.type === "extendido") {
-    return (
-      <TableElement2 className="char">
-        {char[`${syllabary}`]}
-      </TableElement2>
-    )
+  if (syllabary === "romaji" || char.type === "extended") {
+    return <TableElement2>{char[`${syllabary}`]}</TableElement2>
   }
-  return (
-    <TableElement1 className="char">
-      {char[`${syllabary}`]}
-    </TableElement1>
-  )
+  return <TableElement1>{char[`${syllabary}`]}</TableElement1>
 }
 
 CharAsFont.propTypes = {

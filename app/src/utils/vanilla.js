@@ -32,11 +32,15 @@ export const generateGridAreas = (rows, columns) => {
   for (let i = 0; i < columns; i++) {
     let row = []
     for (let j = 0; j < rows; j++) {
-      row.push(`${j}-${i}`)
+      row.push(`x${j}-y${i}`)
     }
     areas.push("'" + row.join(" ") + "'")
   }
   return areas.join(" ")
+}
+
+export const capitalize = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
 export const scrollTo = (elementId) => {

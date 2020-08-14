@@ -84,9 +84,12 @@ export const TableHeader = styled.span`
 
 export const KanaTable = styled.section`
   display: grid;
-  grid-template-rows: repeat(${(props) => props.rows}, 20px);
-  grid-template-columns: repeat(${(props) => props.columns}, 20px);
-
+  grid-template-rows: repeat(${(props) => props.rows}, min-content);
+  grid-template-columns: repeat(
+    ${(props) => props.columns},
+    ${(props) => [props.columnSize]}
+  );
+  grid-template-areas: ${(props) => props.areas};
   margin: 20px 0px 40px 0px;
   .tab-head {
     color: ${gray.light};

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
 import Sidebar from "./Sidebar"
-import { Tables } from "./TableUtils"
+import TablesSubpage from "./TablesSubpage"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
 
 export default function SyllabaryPage() {
@@ -22,9 +22,7 @@ export default function SyllabaryPage() {
             <Content />
           </Route>
           <Route path={`${url}/tablas`}>
-            <div className="content">
-              <Tables />
-            </div>
+            <TablesSubpage />
           </Route>
           <Route path="*">
             <div className="content">
