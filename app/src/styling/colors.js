@@ -28,7 +28,7 @@ export const pink = {
 export const gray = {
   regular: "#545454",
   light: "#ADADAD",
-  dark: "#5F5F5F",
+  dark: "#3b3b3b",
   background: "#F0F0F0",
 }
 

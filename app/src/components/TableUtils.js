@@ -22,9 +22,17 @@ export const TableChars = (char, syllabary, condition) => {
 
 export const CharAsFont = ({ char, syllabary }) => {
   if (syllabary === "romaji" || char.type === "extended") {
-    return <TableElement2>{char[`${syllabary}`]}</TableElement2>
+    return (
+      <TableElement2 className="char-as-font">
+        {char[`${syllabary}`]}
+      </TableElement2>
+    )
   }
-  return <TableElement1>{char[`${syllabary}`]}</TableElement1>
+  return (
+    <TableElement1 className="char-as-font">
+      {char[`${syllabary}`]}
+    </TableElement1>
+  )
 }
 
 CharAsFont.propTypes = {

@@ -34,7 +34,7 @@
   },
   {
     "word": "一人当たり",
-    "furigana": ["ひと", "り","あ","た","り"],
+    "furigana": ["ひと", "り", "あ", "た", "り"],
     "romaji": "hitoriatari",
     "type": "adv",
     "meaning": {
@@ -42,5 +42,16 @@
       "es": ["por persona", "per cápita"]
     },
     "date": "2020-08-12"
+  },
+  {
+    "word": "豚カツ",
+    "furigana": ["とん", "カ", "ツ"],
+    "romaji": "tonkatsu",
+    "type": "n",
+    "meaning": {
+      "en": ["breaded pork cutlet"],
+      "es": ["chuleta de cerdo empanizada"]
+    },
+    "date": "2020-08-13"
   }
 ]

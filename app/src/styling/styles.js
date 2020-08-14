@@ -1,9 +1,44 @@
 import { css } from "@emotion/core"
 import { pink, yellow, blue, green, gray, brands } from "./colors"
 import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
+import texture from "../utils/images/paper.jpg"
 
 const minWidth = 280
 const maxWidth = 800
+
+// =============================================TOGGLE
+export const toggleTables = css`
+  .buttons {
+    width: fit-content;
+    margin: 8px 0;
+    border: 1px solid black;
+  }
+  button {
+    padding: 8px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    &:hover {
+      color: white;
+      background-color: ${gray.light};
+      text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+    }
+    &:active {
+      color: white;
+      background-color: ${gray.regular};
+      text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+    }
+  }
+  .active {
+    color: white;
+    background-color: ${gray.regular};
+    text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+    &:hover {
+      background-color: ${gray.regular};
+    }
+  }
+`
 
 // =============================================ANIMATIONS
 
@@ -62,6 +97,9 @@ export const wotd = css`
   padding: 16px;
   border-radius: 16px;
   background-color: ${gray.background};
+  background-image: url(${texture});
+  background-size: 100px;
+  box-shadow: 4px 4px 4px ${gray.light};
   .word {
     display: flex;
     flex-direction: row;
@@ -69,7 +107,6 @@ export const wotd = css`
     .jp-char {
       flex-direction: column;
       align-items: center;
-      text-shadow: 1px 1px 2px black;
       .furigana {
         text-shadow: none;
         border-bottom: 2px solid ${gray.light};
@@ -81,12 +118,15 @@ export const wotd = css`
       }
       .hiragana {
         color: ${yellow.regular};
+        text-shadow: 1px 1px 2px ${yellow.dark};
       }
       .katakana {
         color: ${blue.regular};
+        text-shadow: 1px 1px 2px ${blue.dark};
       }
       .kanji {
         color: ${pink.regular};
+        text-shadow: 1px 1px 2px ${pink.dark};
       }
     }
   }
@@ -183,6 +223,11 @@ export const navSidebar = css`
       border: 1px solid black;
       &:hover {
         color: white;
+        background-color: ${gray.light};
+        text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+      }
+      &:active {
+        color: white;
         background-color: ${gray.regular};
         text-shadow: 1px 1px 0px black, 0px 0px 2px black;
       }
@@ -196,6 +241,12 @@ export const navSidebar = css`
     border: 1px dashed black;
     background-color: transparent;
     &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: ${gray.light};
+      text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+    }
+    &:active {
       cursor: pointer;
       color: white;
       background-color: ${gray.regular};
@@ -223,7 +274,7 @@ export const sidebar = css`
   position: sticky;
   top: 48px;
   height: 100vh;
-  border-left: 1px solid ${gray.light};
+  border-left: 1px solid ${blue.background};
   @media (min-width: 1024px) {
     display: initial;
   }
@@ -292,7 +343,7 @@ export const navbar = css`
   align-items: center;
   height: 48px;
   width: 100vw;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid ${pink.background};
   background-color: ${gray.regular};
   a {
     display: inherit;

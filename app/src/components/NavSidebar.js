@@ -12,10 +12,10 @@ export default function NavSidebar({ content, children }) {
       {content !== null
         ? content.map((header, i) => (
             <button
-              key={header.innerHTML}
+              key={header.innerHTML + i}
               type="button"
               className={`scroll-link link-${header.tagName}`}
-              onClick={() => scrollTo(slug(header.innerHTML))}
+              onClick={() => scrollTo(`${slug(header.innerHTML)}-${i}`)}
             >
               {header.innerHTML}
             </button>

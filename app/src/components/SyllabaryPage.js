@@ -14,8 +14,11 @@ export default function SyllabaryPage() {
   return (
     <PageStyled id="syllabary-page">
       <Sidebar>
-        <ExtraLinks />
+        <Route exact path={`${url}/`}>
+          <Link to={`${url}/tablas`}>Tablas</Link>
+        </Route>
       </Sidebar>
+
       <div className="main-content">
         <Switch>
           <Route exact path={`${url}/`}>
@@ -32,15 +35,6 @@ export default function SyllabaryPage() {
         </Switch>
       </div>
     </PageStyled>
-  )
-}
-
-const ExtraLinks = () => {
-  const { url } = useRouteMatch()
-  return (
-    <>
-      <Link to={`${url}/tablas`}>Tablas</Link>
-    </>
   )
 }
 

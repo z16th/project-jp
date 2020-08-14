@@ -55,15 +55,15 @@ export const TableElement1 = styled.span`
 export const TableElement2 = styled.span`
   margin: 0px 0px;
   font-family: ${kanjiSansFont};
-  font-size: ${typeScale.tableContent};
+  color: red;
   @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
     font-size: calc(
-      12px + (${typeScale.tableContent} - 16) *
+      12px + (${typeScale.tableContent - 18} - 16) *
         ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
     );
   }
   @media (min-width: ${maxWidth}px) {
-    font-size: ${typeScale.tableContent}px;
+    font-size: ${typeScale.tableContent - 24}px;
   }
 `
 
@@ -91,15 +91,15 @@ export const KanaTable = styled.section`
   );
   grid-template-areas: ${(props) => props.areas};
   margin: 20px 0px 40px 0px;
-  .tab-head {
+  .tab-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: ${gray.light};
   }
   .kana {
     padding: 8px;
     border-radius: 8px;
-    .char {
-      line-height: initial;
-    }
     &:hover {
       font-family: ${kanjiSerifFont};
     }
@@ -146,6 +146,15 @@ export const Note = styled.p`
   line-height: 1rem;
 `
 
+export const Highlight = styled.div`
+  display: block;
+  /* width: fit-content; */
+  margin: 0 0 8px 0;
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px dashed ${gray.dark};
+`
+
 //---------------------------------------------------PAGE
 
 export const PageStyled = styled.div`
@@ -159,7 +168,6 @@ export const PageStyled = styled.div`
   background-size: 64px;
   .main-content {
     background-color: white;
-    border-radius: 16px 0px 0px 16px;
   }
   @media (min-width: 1024px) {
     display: grid;

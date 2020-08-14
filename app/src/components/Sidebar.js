@@ -18,7 +18,7 @@ export default function Sidebar({ from, select, children }) {
     if (content !== null) {
       content.forEach((element, i) => {
         const header = element
-        header.id = `${slug(header.innerHTML)}`
+        header.id = `${slug(header.innerHTML)}-${i}`
       })
     }
   }, [content])

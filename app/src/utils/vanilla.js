@@ -39,6 +39,10 @@ export const generateGridAreas = (rows, columns) => {
   return areas.join(" ")
 }
 
+export const lookFor = (string, array) => {
+  return array.some((e) => e === string)
+}
+
 export const capitalize = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
