@@ -53,5 +53,16 @@
       "es": ["chuleta de cerdo empanizada"]
     },
     "date": "2020-08-13"
+  },
+  {
+    "word": "えっ",
+    "furigana": [],
+    "romaji": "ē",
+    "type": "interj",
+    "meaning": {
+      "en": ["Eh?","What?","Well..."],
+      "es": ["¿Eh?","¿Qué?"]
+    },
+    "date": "2020-08-14"
   }
 ]

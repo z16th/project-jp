@@ -78,7 +78,7 @@ export const TableHeader = styled.span`
     );
   }
   @media (min-width: ${maxWidth}px) {
-    font-size: ${typeScale.tableHeader}px;
+    font-size: ${typeScale.tableHeader -10}px;
   }
 `
 

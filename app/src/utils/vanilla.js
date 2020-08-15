@@ -165,6 +165,7 @@ export const kanaOrKanji = (char) => {
     "ぴゃ",
     "ぴゅ",
     "ぴょ",
+    "っ",
   ]
   const katakana = [
     "ア",

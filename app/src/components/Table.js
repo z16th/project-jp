@@ -1,10 +1,9 @@
 import React, { useState } from "react"
-import PropTypes from "prop-types"
-import kanas from "../utils/json/kana-all.json"
-import headers from "../utils/json/grids-all.json"
-import { TableHeaders, TableChars } from "./TableUtils"
-import { KanaTable, TableHeader } from "../styling"
+import { TableChars } from "./TableUtils"
 import { generateGridAreas } from "../utils/vanilla"
+import kanas from "../utils/json/kana-all.json"
+import headers from "../utils/json/headers-all.json"
+import { KanaTable, TableHeader } from "../styling"
 
 const gridAreas = {
   basic: {
@@ -29,14 +28,7 @@ const gridAreas = {
   },
 }
 
-const title = {
-  basic: "Básico",
-  diacritic: "Diacrítico",
-  combination: "Combinación",
-  extended: "Extendido",
-}
-
-export default function Table({ syllabary, types }) {
+export default function Table({ syllabary, type }) {
   const [renderAnimations, setRenderAnimations] = useState(false)
   const canRenderAnimations = renderAnimations && syllabary !== "romaji"
 
@@ -45,7 +37,7 @@ export default function Table({ syllabary, types }) {
   }
 
   return (
-    <div className="kana-table">
+    <div>
       {syllabary !== "romaji" ? (
         <button
           className="animations-button"
@@ -55,37 +47,30 @@ export default function Table({ syllabary, types }) {
           {!renderAnimations ? "Ver animaciones" : "Ver caracteres"}
         </button>
       ) : null}
-
-      {types.map((type, i) => (
-        <div className={`type ${type}`} key={type}>
-          <h2 key={i}>{title[`${type}`]}</h2>
-          <KanaTable
-            key={type}
-            rows={gridAreas[`${type}`].rows}
-            columns={gridAreas[`${type}`].columns}
-            columnSize={gridAreas[`${type}`].columnSize}
-            areas={generateGridAreas(
-              gridAreas[`${type}`].columns,
-              gridAreas[`${type}`].rows
-            )}
+      <KanaTable
+        rows={gridAreas[`${type}`].rows}
+        columns={gridAreas[`${type}`].columns}
+        columnSize={gridAreas[`${type}`].columnSize}
+        areas={generateGridAreas(
+          gridAreas[`${type}`].columns,
+          gridAreas[`${type}`].rows
+        )}
+      >
+        {headers[`${type}`].map((header) => (
+          <TableHeader
+            key={`${header.char}-${header.row}-${header.column}`}
+            className={`tab-header header-${header.char}`}
+            style={{
+              gridArea: `x${header.column}-y${header.row}`,
+            }}
           >
-            {headers[`${type}`].map((header) => (
-              <TableHeader
-                key={`${header.char}-${header.row}-${header.column}`}
-                className={`tab-header header-${header.char}`}
-                style={{
-                  gridArea: `x${header.column}-y${header.row}`,
-                }}
-              >
-                {header.char}
-              </TableHeader>
-            ))}
-            {kanas
-              .filter((kana) => kana.type === type)
-              .map((kana) => TableChars(kana, syllabary, canRenderAnimations))}
-          </KanaTable>
-        </div>
-      ))}
+            {header.char}
+          </TableHeader>
+        ))}
+        {kanas
+          .filter((kana) => kana.type === type)
+          .map((kana) => TableChars(kana, syllabary, canRenderAnimations))}
+      </KanaTable>
     </div>
   )
 }

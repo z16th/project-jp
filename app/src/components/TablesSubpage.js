@@ -2,9 +2,9 @@ import React from "react"
 import { useLocation } from "react-router-dom"
 import queryString from "query-string"
 import ToggleTables from "./ToggleTables"
-import Table from "./Table"
 import { capitalize } from "../utils/vanilla"
 import { Highlight } from "../styling"
+import Table from "./Table"
 
 const defaultSyllabaries = ["hiragana", "katakana", "romaji"]
 
@@ -15,6 +15,13 @@ const translate = {
   diacritico: "diacritic",
   combinacion: "combination",
   extendido: "extended",
+}
+
+const title = {
+  basic: "Básico",
+  diacritic: "Diacrítico",
+  combination: "Combinación",
+  extended: "Extendido",
 }
 
 export default function TablesSubpage() {
@@ -42,21 +49,19 @@ export default function TablesSubpage() {
       <Highlight>
         <ToggleTables />
       </Highlight>
-      {search === "?silabario=hiragana&tipo=extendido" && (
-        <h4>Hiragana no contiene caracteres extendidos</h4>
-      )}
-      {filteredSelection.map((syllabary) => (
+      {syllabarySelection.map((syllabary) => (
         <div className={`syllabary ${syllabary}`} key={syllabary}>
           <h1 className="title">{capitalize(syllabary)}</h1>
-          <Table
-            key={syllabary}
-            syllabary={syllabary}
-            types={
-              syllabary === "hiragana"
-                ? translatedTypeSelection.filter((e) => e !== "extended")
-                : translatedTypeSelection
-            }
-          />
+          {translatedTypeSelection.map((type) => {
+            return syllabary === "hiragana" && type === "extended" ? (
+              <h2 key={type}>No contiene caracteres extendidos</h2>
+            ) : (
+              <div key={type}>
+                <h2>{title[`${type}`]}</h2>
+                <Table syllabary={syllabary} type={type} />
+              </div>
+            )
+          })}
         </div>
       ))}
     </div>
