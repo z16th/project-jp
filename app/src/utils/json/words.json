@@ -86,5 +86,16 @@
       "en": ["to chop off", "to cut off"],
       "es": ["cortar", "interrumpir"]
     }
+  },
+  {
+    "date": "2020-08-18",
+    "word": "対応",
+    "furigana": ["たい","おう"],
+    "romaji": "taiō",
+    "type": "n",
+    "meaning": {
+      "en": ["handling", "treatment"],
+      "es": ["manejo", "trato"]
+    }
   }
 ]

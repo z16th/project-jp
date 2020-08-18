@@ -31,30 +31,35 @@ export default function TablesSubpage() {
     silabario !== undefined
       ? defaultSyllabaries.filter((e) => silabario.includes(e))
       : [...defaultSyllabaries]
-  const typeSelection = (tipo !== undefined
-    ? defaultSpanishTypes.filter((e) => tipo.includes(e))
-    : [...defaultSpanishTypes]
-  ).map((type) => translateToEnglish[`${type}`])
+  const typeSelection =
+    tipo !== undefined
+      ? defaultSpanishTypes.filter((e) => tipo.includes(e))
+      : [...defaultSpanishTypes]
 
   return (
     <div className="content">
       <h1>Selección</h1>
       <Highlight>
-        <ToggleTables />
+        <ToggleTables syllabary={syllabarySelection} type={typeSelection} />
       </Highlight>
       {syllabarySelection.map((syllabary) => (
-        <div key={syllabary} className={`syllabary ${syllabary} flex-center column`}>
+        <div
+          key={syllabary}
+          className={`syllabary ${syllabary} flex-center column`}
+        >
           <h1 className="title">{capitalize(syllabary)}</h1>
-          {typeSelection.map((type) => {
-            return syllabary === "hiragana" && type === "extended" ? (
-              <h2 key={type}>No contiene caracteres extendidos</h2>
-            ) : (
-              <div key={type} className={`type ${type} flex-center column`}>
-                <h2>{title[`${type}`]}</h2>
-                <Table syllabary={syllabary} type={type} />
-              </div>
-            )
-          })}
+          {typeSelection
+            .map((type) => translateToEnglish[`${type}`])
+            .map((type) => {
+              return syllabary === "hiragana" && type === "extended" ? (
+                <h2 key={type}>No contiene caracteres extendidos</h2>
+              ) : (
+                <div key={type} className={`type ${type} flex-center column`}>
+                  <h2>{title[`${type}`]}</h2>
+                  <Table syllabary={syllabary} type={type} />
+                </div>
+              )
+            })}
         </div>
       ))}
     </div>

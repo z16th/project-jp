@@ -1,14 +1,15 @@
 /** @jsx jsx */
 import { useEffect, useState, useReducer } from "react"
-import { Redirect, useHistory } from "react-router-dom"
+import { useHistory, useLocation } from "react-router-dom"
 import queryString from "query-string"
 import { jsx } from "@emotion/core"
 import { toggleTables } from "../styling"
 import { lookFor } from "../utils/vanilla"
 
 function tablesReducer(state, action) {
-  if (action.type === "silabario" || action.type === "tipo")
-    return { ...state, [`${action.type}`]: [] }
+  if (action.type === "merge") {
+    return { ...state, ...action.payload }
+  }
   if (
     action.type === "hiragana" ||
     action.type === "katakana" ||
@@ -33,35 +34,31 @@ function tablesReducer(state, action) {
   return state
 }
 
-export default function ToggleTables() {
+export default function ToggleTables({ syllabary: silabario, type: tipo }) {
   const history = useHistory()
   const [query, setQuery] = useState(null)
   const [state, dispatch] = useReducer(tablesReducer, {
-    silabario: [],
-    tipo: [],
+    silabario: [...silabario],
+    tipo: [...tipo],
   })
 
   useEffect(() => {
-    if (state.silabario.length === 3) state.silabario = []
-    if (state.tipo.length === 4) state.tipo = []
-    const queryState = queryString.stringify(state)
-    setQuery(queryState)
+    setQuery(queryString.stringify(state))
   }, [state])
+
+  useEffect(() => {
+    if (query !== null) history.push(`/silabarios/tablas?${query}`)
+  }, [query, history])
 
   const handleClick = (actionType) => {
     dispatch({ type: actionType })
-    history.push(`/silabarios/tablas?${query}`)
   }
 
   return (
     <div className="toggle-tables" css={toggleTables}>
       <div className="syllabary-buttons buttons">
-        <button
-          type="button"
-          className={state.silabario.length === 0 ? "active" : ""}
-          onClick={() => handleClick("silabario")}
-        >
-          Todos los silabarios
+        <button type="button" disabled>
+          Silabarios
         </button>
         <button
           type="button"
@@ -97,12 +94,8 @@ export default function ToggleTables() {
       </div>
 
       <div className="type-buttons buttons">
-        <button
-          type="button"
-          className={state.tipo.length === 0 ? "active" : ""}
-          onClick={() => handleClick("tipo")}
-        >
-          Todos los tipos
+        <button type="button" disabled>
+          Tipos
         </button>
         <button
           type="button"
