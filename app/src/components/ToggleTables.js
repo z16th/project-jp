@@ -1,99 +1,10 @@
-/**@jsx jsx*/
+/** @jsx jsx */
 import { useEffect, useState, useReducer } from "react"
-import { Redirect } from "react-router-dom"
+import { Redirect, useHistory } from "react-router-dom"
 import queryString from "query-string"
 import { jsx } from "@emotion/core"
 import { toggleTables } from "../styling"
 import { lookFor } from "../utils/vanilla"
-
-export default function ToggleTables() {
-  const [query, setQuery] = useState(null)
-  const [state, dispatch] = useReducer(tablesReducer, {
-    silabario: [],
-    tipo: [],
-  })
-
-  useEffect(() => {
-    if (state.silabario.length === 3) state.silabario = []
-    if (state.tipo.length === 4) state.tipo = []
-    const queryState = queryString.stringify(state)
-    setQuery(queryState)
-  }, [state])
-
-  return (
-    <div className="toggle-tables" css={toggleTables}>
-      {query !== null ? <Redirect to={`/silabarios/tablas?${query}`} /> : null}
-      <div className="syllabary-buttons buttons">
-        <button
-          type="button"
-          className={state.silabario.length === 0 ? "active" : ""}
-          onClick={() => dispatch({ type: "silabario" })}
-        >
-          Todos los silabarios
-        </button>
-        <button
-          type="button"
-          className={lookFor("hiragana", state.silabario) ? "active" : ""}
-          onClick={() => dispatch({ type: "hiragana" })}
-        >
-          Hiragana
-        </button>
-        <button
-          type="button"
-          className={lookFor("katakana", state.silabario) ? "active" : ""}
-          onClick={() => dispatch({ type: "katakana" })}
-        >
-          Katakana
-        </button>
-        <button
-          type="button"
-          className={lookFor("romaji", state.silabario) ? "active" : ""}
-          onClick={() => dispatch({ type: "romaji" })}
-        >
-          Romaji
-        </button>
-      </div>
-
-      <div className="type-buttons buttons">
-        <button
-          type="button"
-          className={state.tipo.length === 0 ? "active" : ""}
-          onClick={() => dispatch({ type: "tipo" })}
-        >
-          Todos los tipos
-        </button>
-        <button
-          type="button"
-          className={lookFor("basico", state.tipo) ? "active" : ""}
-          onClick={() => dispatch({ type: "basico" })}
-        >
-          Básico
-        </button>
-        <button
-          type="button"
-          className={lookFor("diacritico", state.tipo) ? "active" : ""}
-          onClick={() => dispatch({ type: "diacritico" })}
-        >
-          Diacrítico
-        </button>
-        <button
-          type="button"
-          className={lookFor("combinacion", state.tipo) ? "active" : ""}
-          onClick={() => dispatch({ type: "combinacion" })}
-        >
-          Combinación
-        </button>
-        <button
-          type="button"
-          className={lookFor("extendido", state.tipo) ? "active" : ""}
-          onClick={() => dispatch({ type: "extendido" })}
-        >
-          Extendido
-        </button>
-      </div>
-    </div>
-  )
-}
 
 function tablesReducer(state, action) {
   if (action.type === "silabario" || action.type === "tipo")
@@ -119,4 +30,117 @@ function tablesReducer(state, action) {
       : { tipo: [...state.tipo, `${action.type}`] }
     return { ...state, ...newState }
   }
+  return state
+}
+
+export default function ToggleTables() {
+  const history = useHistory()
+  const [query, setQuery] = useState(null)
+  const [state, dispatch] = useReducer(tablesReducer, {
+    silabario: [],
+    tipo: [],
+  })
+
+  useEffect(() => {
+    if (state.silabario.length === 3) state.silabario = []
+    if (state.tipo.length === 4) state.tipo = []
+    const queryState = queryString.stringify(state)
+    setQuery(queryState)
+  }, [state])
+
+  const handleClick = (actionType) => {
+    dispatch({ type: actionType })
+    history.push(`/silabarios/tablas?${query}`)
+  }
+
+  return (
+    <div className="toggle-tables" css={toggleTables}>
+      <div className="syllabary-buttons buttons">
+        <button
+          type="button"
+          className={state.silabario.length === 0 ? "active" : ""}
+          onClick={() => handleClick("silabario")}
+        >
+          Todos los silabarios
+        </button>
+        <button
+          type="button"
+          className={
+            lookFor("hiragana", state.silabario)
+              ? "hiragana active"
+              : "hiragana"
+          }
+          onClick={() => handleClick("hiragana")}
+        >
+          Hiragana
+        </button>
+        <button
+          type="button"
+          className={
+            lookFor("katakana", state.silabario)
+              ? "katakana active"
+              : "katakana"
+          }
+          onClick={() => handleClick("katakana")}
+        >
+          Katakana
+        </button>
+        <button
+          type="button"
+          className={
+            lookFor("romaji", state.silabario) ? "romaji active" : "romaji"
+          }
+          onClick={() => handleClick("romaji")}
+        >
+          Romaji
+        </button>
+      </div>
+
+      <div className="type-buttons buttons">
+        <button
+          type="button"
+          className={state.tipo.length === 0 ? "active" : ""}
+          onClick={() => handleClick("tipo")}
+        >
+          Todos los tipos
+        </button>
+        <button
+          type="button"
+          className={lookFor("basico", state.tipo) ? "basic active" : "basic"}
+          onClick={() => handleClick("basico")}
+        >
+          Básico
+        </button>
+        <button
+          type="button"
+          className={
+            lookFor("diacritico", state.tipo) ? "diacritic active" : "diacritic"
+          }
+          onClick={() => handleClick("diacritico")}
+        >
+          Diacrítico
+        </button>
+        <button
+          type="button"
+          className={
+            lookFor("combinacion", state.tipo)
+              ? "combination active"
+              : "combination"
+          }
+          onClick={() => handleClick("combinacion")}
+        >
+          Combinación
+        </button>
+        <button
+          type="button"
+          className={
+            lookFor("extendido", state.tipo) ? "extended active" : "extended"
+          }
+          onClick={() => handleClick("extendido")}
+        >
+          Extendido
+        </button>
+      </div>
+    </div>
+  )
 }

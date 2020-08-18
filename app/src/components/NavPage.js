@@ -1,10 +1,10 @@
-/**@jsx jsx */
+/** @jsx jsx */
 import PropTypes from "prop-types"
-import { scrollTo, slug } from "../utils/vanilla"
 import { jsx } from "@emotion/core"
+import { scrollTo, slug } from "../utils/vanilla"
 import { navSidebar } from "../styling"
 
-export default function NavSidebar({ content, children }) {
+export default function PageNav({ content, children }) {
   return (
     <div className="nav-sidebar" css={navSidebar}>
       <div className="children">{children}</div>
@@ -12,12 +12,12 @@ export default function NavSidebar({ content, children }) {
       {content !== null
         ? content.map((header, i) => (
             <button
-              key={header.innerHTML + i}
+              key={`${i}-${header.textContent}`}
               type="button"
               className={`scroll-link link-${header.tagName}`}
-              onClick={() => scrollTo(`${slug(header.innerHTML)}-${i}`)}
+              onClick={() => scrollTo(`${i}-${slug(header.textContent)}`)}
             >
-              {header.innerHTML}
+              {header.textContent}
             </button>
           ))
         : null}
@@ -25,11 +25,11 @@ export default function NavSidebar({ content, children }) {
   )
 }
 
-NavSidebar.propTypes = {
+PageNav.propTypes = {
   content: PropTypes.arrayOf(PropTypes.node).isRequired,
   children: PropTypes.node,
 }
 
-NavSidebar.defaultProps = {
+PageNav.defaultProps = {
   children: null,
 }

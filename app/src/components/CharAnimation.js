@@ -7,26 +7,25 @@ import Icon from "./Icon"
 
 const noop = () => {}
 
-const CharAnimation = ({ name, onReset, onPause }) => {
+const CharAnimation = ({ name, playOnLoad, onReset, onPause }) => {
   const svgRef = useRef(null)
   const [isPaused, setIsPaused] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsPaused(false), 800)
-    return () => clearTimeout(timer)
-  }, [])
-
+  
   const handleReset = useCallback(() => {
     if (svgRef.current) {
       svgRef.current.setCurrentTime(0)
+      setIsPaused(false)
     }
     onReset()
   }, [onReset])
 
-  const handlePause = useCallback(() => {
-    setIsPaused((state) => !state)
-    onPause()
-  }, [onPause])
+  useEffect(() => {
+    if (playOnLoad) {
+      const timer = setTimeout(() => setIsPaused(false), 800)
+      return () => clearTimeout(timer)
+    }
+  }, [playOnLoad])
+
 
   useEffect(() => {
     if (!svgRef.current) return
@@ -57,11 +56,13 @@ const CharAnimation = ({ name, onReset, onPause }) => {
 
 CharAnimation.propTypes = {
   name: PropTypes.string.isRequired,
+  playOnLoad: PropTypes.bool,
   onPause: PropTypes.func,
   onReset: PropTypes.func,
 }
 
 CharAnimation.defaultProps = {
+  playOnLoad: false,
   onReset: noop,
   onPause: noop,
 }

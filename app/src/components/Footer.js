@@ -1,6 +1,6 @@
-/**@jsx jsx */
-import LolzSocial from "./LolzSocial"
+/** @jsx jsx */
 import { jsx } from "@emotion/core"
+import LolzSocial from "./LolzSocial"
 import { footer, Note } from "../styling"
 
 export default function Footer() {

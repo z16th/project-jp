@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { TableChars } from "./TableUtils"
+import PropTypes from "prop-types"
+import TableChars from "./TableChars"
 import { generateGridAreas } from "../utils/vanilla"
 import kanas from "../utils/json/kana-all.json"
 import headers from "../utils/json/headers-all.json"
@@ -37,10 +38,10 @@ export default function Table({ syllabary, type }) {
   }
 
   return (
-    <div>
+    <>
       {syllabary !== "romaji" ? (
         <button
-          className="animations-button"
+          className="toggle-anim"
           type="button"
           onClick={toggleAnimations}
         >
@@ -48,7 +49,7 @@ export default function Table({ syllabary, type }) {
         </button>
       ) : null}
       <KanaTable
-        rows={gridAreas[`${type}`].rows}
+        className={`table ${syllabary}`}
         columns={gridAreas[`${type}`].columns}
         columnSize={gridAreas[`${type}`].columnSize}
         areas={generateGridAreas(
@@ -69,8 +70,20 @@ export default function Table({ syllabary, type }) {
         ))}
         {kanas
           .filter((kana) => kana.type === type)
-          .map((kana) => TableChars(kana, syllabary, canRenderAnimations))}
+          .map((kana) => (
+            <TableChars
+              key={`${kana.romaji}-${kana.row}-${kana.column}`}
+              char={kana}
+              syllabary={syllabary}
+              condition={canRenderAnimations}
+            />
+          ))}
       </KanaTable>
-    </div>
+    </>
   )
+}
+
+Table.propTypes = {
+  syllabary: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
 }

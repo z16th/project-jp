@@ -1,5 +1,11 @@
 import React, { useEffect } from "react"
-import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
+import {
+  Link,
+  Route,
+  Switch,
+  useRouteMatch,
+  useLocation,
+} from "react-router-dom"
 import Sidebar from "./Sidebar"
 import TablesSubpage from "./TablesSubpage"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
@@ -39,6 +45,8 @@ export default function SyllabaryPage() {
 }
 
 const Content = () => {
+  const { url } = useRouteMatch()
+
   return (
     <div className="content">
       <h1>Introducción</h1>
@@ -49,6 +57,13 @@ const Content = () => {
         hiragana que representa el sonido o sílaba &quot;ma&quot;, mientras que{" "}
         <K>マ</K> es el katakana que representa el mismo sonido. Ambos
         silabarios contienen casi los mismos sonidos.
+      </p>
+      <p>
+        El hiragana y el katakana están basados en el kanji. Fueron
+        desarrollados entre el siglo VIII y el siglo X con el propósito de hacer
+        más rápida y fácil la escritura de palabras en japonés. Mientras que el
+        hiragana es resultado de la simplificación de trazos usados en los
+        kanji, el katakana surgió de tomar algunas secciones de los mismos.
       </p>
       <h2>Hiragana</h2>
       <p>
@@ -79,12 +94,13 @@ const Content = () => {
       </Callout>
       <h2>Romaji</h2>
       <p>
-        El <R>rōmaji</R> es la romanización de los caracteres japoneses, es
-        decir, el uso del abecedario al que estamos acostumbrados en el español
-        y otros idiomas, y funciona para que los extranjeros podamos leer
-        fácilmente el japonés. Existen diferentes sistemas de rōmaji, siendo el{" "}
-        <b>Hepburn</b> el más común. Puede encontrarse en señales y letreros,
-        nombres de empresas, productos, libros de texto, etc.
+        El <R>rōmaji</R> (<K>ローマ</K>
+        <Kj>字</Kj>) es la romanización de los caracteres japoneses, es decir,
+        el uso del abecedario al que estamos acostumbrados en el español y otros
+        idiomas, y funciona para que los extranjeros podamos leer fácilmente el
+        japonés. Existen diferentes sistemas de rōmaji, siendo el <b>Hepburn</b>{" "}
+        el más común. Puede encontrarse en señales y letreros, nombres de
+        empresas, productos, libros de texto, etc.
       </p>
       <p>
         A pesar de utilizar los mismos caracteres que el español, la
@@ -119,10 +135,13 @@ const Content = () => {
         consonante que puede tener sonido sin necesidad de combinarse con
         vocales.
       </p>
+      <Link
+        className="link-to"
+        to={`${url}/tablas?silabario=hiragana&tipo=basico`}
+      >
+        Ir a Tablas
+      </Link>
       <Callout>El orden de las vocales es diferente: aiueo</Callout>
-      <b>
-        <s>[Tabla de caracteres - falta agregar]</s>
-      </b>
       <p>
         En el japonés es común encontrar palabras homónimas, es decir, que se
         escriben y pronuncian igual pero que tienen significados diferentes.

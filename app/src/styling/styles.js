@@ -6,12 +6,11 @@ import texture from "../utils/images/paper.jpg"
 const minWidth = 280
 const maxWidth = 800
 
-// =============================================TOGGLE
+// =============================================TABLES
 export const toggleTables = css`
   .buttons {
     width: fit-content;
     margin: 8px 0;
-    border: 1px solid black;
   }
   button {
     padding: 8px;
@@ -38,6 +37,10 @@ export const toggleTables = css`
       background-color: ${gray.regular};
     }
   }
+`
+
+export const syllabaryTable = css`
+  background-color: red;
 `
 
 // =============================================ANIMATIONS
@@ -94,7 +97,9 @@ export const linkActive = css`
 
 export const wotd = css`
   display: block;
-  padding: 16px;
+  max-width: 600px;
+  padding: 32px;
+  margin: 20px 0;
   border-radius: 16px;
   background-color: ${gray.background};
   background-image: url(${texture});

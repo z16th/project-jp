@@ -1,7 +1,7 @@
 import React from "react"
 import JapaneseChar from "./JapaneseChar"
 
-export const Japanify = ({ word, furigana }) => {
+export default function Japanify({ word, furigana }) {
   const chars = [...word]
   const element = []
   chars.forEach((char, i) => {

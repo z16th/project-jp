@@ -3,11 +3,11 @@
 // eslint-disable-next-line  no-unused-vars
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import NavSidebar from "./NavSidebar"
+import { jsx } from "@emotion/core"
+import NavPage from "./NavPage"
 import useNodes from "../hooks/useNodes"
 import HamburgerMenu from "./HamburgerMenu"
 import { slug } from "../utils/vanilla"
-import { jsx } from "@emotion/core"
 import { sidebar } from "../styling"
 
 export default function Sidebar({ from, select, children }) {
@@ -18,7 +18,7 @@ export default function Sidebar({ from, select, children }) {
     if (content !== null) {
       content.forEach((element, i) => {
         const header = element
-        header.id = `${slug(header.innerHTML)}-${i}`
+        header.id = `${i}-${slug(header.textContent)}`
       })
     }
   }, [content])
@@ -28,11 +28,11 @@ export default function Sidebar({ from, select, children }) {
   return (
     <>
       <HamburgerMenu controller={{ state, setState }}>
-        <NavSidebar content={content}>{children}</NavSidebar>
+        <NavPage content={content}>{children}</NavPage>
       </HamburgerMenu>
 
       <div id="sidebar" css={sidebar}>
-        <NavSidebar content={content}>{children}</NavSidebar>
+        <NavPage content={content}>{children}</NavPage>
       </div>
     </>
   )

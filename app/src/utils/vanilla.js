@@ -28,13 +28,13 @@ export const grammaticalTypes = {
 }
 
 export const generateGridAreas = (rows, columns) => {
-  let areas = []
-  for (let i = 0; i < columns; i++) {
-    let row = []
-    for (let j = 0; j < rows; j++) {
+  const areas = []
+  for (let i = 0; i < columns; i += 1) {
+    const row = []
+    for (let j = 0; j < rows; j += 1) {
       row.push(`x${j}-y${i}`)
     }
-    areas.push("'" + row.join(" ") + "'")
+    areas.push(`'${row.join(" ")}'`)
   }
   return areas.join(" ")
 }
@@ -129,42 +129,9 @@ export const kanaOrKanji = (char) => {
     "ぷ",
     "ぺ",
     "ぽ",
-    "きゃ",
-    "きゅ",
-    "きょ",
-    "しゃ",
-    "しゅ",
-    "しょ",
-    "ちゃ",
-    "ちゅ",
-    "ちょ",
-    "にゃ",
-    "にゅ",
-    "にょ",
-    "ひゃ",
-    "ひゅ",
-    "ひょ",
-    "みゃ",
-    "みゅ",
-    "みょ",
-    "りゃ",
-    "りゅ",
-    "りょ",
-    "ぎゃ",
-    "ぎゅ",
-    "ぎょ",
-    "じゃ",
-    "じゅ",
-    "じょ",
-    "ぢゃ",
-    "ぢゅ",
-    "ぢょ",
-    "びゃ",
-    "びゅ",
-    "びょ",
-    "ぴゃ",
-    "ぴゅ",
-    "ぴょ",
+    "ゃ",
+    "ゅ",
+    "ょ",
     "っ",
   ]
   const katakana = [
@@ -239,70 +206,15 @@ export const kanaOrKanji = (char) => {
     "プ",
     "ペ",
     "ポ",
-    "キャ",
-    "キュ",
-    "キョ",
-    "シャ",
-    "シュ",
-    "ショ",
-    "チャ",
-    "チュ",
-    "チョ",
-    "ニャ",
-    "ニュ",
-    "ニョ",
-    "ヒャ",
-    "ヒュ",
-    "ヒョ",
-    "ミャ",
-    "ミュ",
-    "ミョ",
-    "リャ",
-    "リュ",
-    "リョ",
-    "ギャ",
-    "ギュ",
-    "ギョ",
-    "ジャ",
-    "ジュ",
-    "ジョ",
-    "ヂャ",
-    "ヂュ",
-    "ヂョ",
-    "ビャ",
-    "ビュ",
-    "ビョ",
-    "ピャ",
-    "ピュ",
-    "ピョ",
-    "イェ",
-    "ウィ",
-    "ウェ",
-    "ウォ",
-    "ヴァ",
-    "ヴィ",
+    "ャ",
+    "ュ",
+    "ョ",
+    "ァ",
+    "ィ",
+    "ゥ",
+    "ェ",
+    "ォ",
     "ヴ",
-    "ヴェ",
-    "ヴォ",
-    "シェ",
-    "ジェ",
-    "チェ",
-    "ティ",
-    "トゥ",
-    "ディ",
-    "ドゥ",
-    "ツァ",
-    "ツィ",
-    "ツェ",
-    "ツォ",
-    "ファ",
-    "フィ",
-    "フェ",
-    "フォ",
-    "ヴャ",
-    "ヴュ",
-    "ヴョ",
-    "フュ",
   ]
   if (hiragana.some((e) => e === char)) return "hiragana"
   if (katakana.some((e) => e === char)) return "katakana"
@@ -311,22 +223,21 @@ export const kanaOrKanji = (char) => {
 
 export const noOp = () => {}
 
-//https://stackoverflow.com/questions/1053902/how-to-convert-a-title-to-a-url-slug-in-jquery
 export const slug = (str) => {
-  str = str.replace(/^\s+|\s+$/g, "") // trim
-  str = str.toLowerCase()
+  let newStr = str
+  const from = "ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;"
+  const to = "aaaaaeeeeeiiiiooooouuuunc------"
 
-  // remove accents, swap ñ for n, etc
-  var from = "ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;"
-  var to = "aaaaaeeeeeiiiiooooouuuunc------"
-  for (var i = 0, l = from.length; i < l; i++) {
-    str = str.replace(new RegExp(from.charAt(i), "g"), to.charAt(i))
+  newStr = newStr.replace(/^\s+|\s+$/g, "").toLowerCase()
+
+  for (let i = 0, l = from.length; i < l; i += 1) {
+    newStr = newStr.replace(new RegExp(from.charAt(i), "g"), to.charAt(i))
   }
 
-  str = str
+  newStr = newStr
     .replace(/[^a-z0-9 -]/g, "") // remove invalid chars
     .replace(/\s+/g, "-") // collapse whitespace and replace by -
-    .replace(/-+/g, "-") // collapse dashes
+    .replace(/-+/g, "-") // coll  apse dashes
 
-  return str
+  return newStr
 }

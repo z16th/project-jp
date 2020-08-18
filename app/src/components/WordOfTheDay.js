@@ -1,9 +1,9 @@
-/**@jsx jsx */
-import words from "../utils/json/words.json"
-import { Japanify } from "./Japanify"
-import { grammaticalTypes } from "../utils/vanilla"
+/** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { wotd, R } from "../styling"
+import words from "../utils/json/words.json"
+import Japanify from "./Japanify"
+import { grammaticalTypes } from "../utils/vanilla"
+import { wotd } from "../styling"
 
 export default function WordOfTheDay() {
   const wordIndex = words.length - 1

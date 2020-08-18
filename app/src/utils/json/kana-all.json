@@ -1395,7 +1395,7 @@
     "hiragana": "",
     "katakana": "イェ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "10",
     "column": "4",
     "utf16": {
@@ -1408,7 +1408,7 @@
     "hiragana": "",
     "katakana": "ウィ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "1",
     "column": "2",
     "utf16": {
@@ -1421,7 +1421,7 @@
     "hiragana": "",
     "katakana": "ウェ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "4",
     "column": "1",
     "utf16": {
@@ -1434,7 +1434,7 @@
     "hiragana": "",
     "katakana": "ウォ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "1",
     "column": "5",
     "utf16": {
@@ -1447,7 +1447,7 @@
     "hiragana": "",
     "katakana": "ヴァ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "2",
     "column": "1",
     "utf16": {
@@ -1460,7 +1460,7 @@
     "hiragana": "",
     "katakana": "ヴィ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "2",
     "column": "2",
     "utf16": {
@@ -1473,7 +1473,7 @@
     "hiragana": "",
     "katakana": "ヴ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "2",
     "column": "3",
     "utf16": {
@@ -1486,7 +1486,7 @@
     "hiragana": "",
     "katakana": "ヴェ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "2",
     "column": "4",
     "utf16": {
@@ -1499,7 +1499,7 @@
     "hiragana": "",
     "katakana": "ヴォ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "2",
     "column": "5",
     "utf16": {
@@ -1512,7 +1512,7 @@
     "hiragana": "",
     "katakana": "シェ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "3",
     "column": "4",
     "utf16": {
@@ -1525,7 +1525,7 @@
     "hiragana": "",
     "katakana": "ジェ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "8",
     "column": "4",
     "utf16": {
@@ -1538,7 +1538,7 @@
     "hiragana": "",
     "katakana": "チェ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "4",
     "column": "4",
     "utf16": {
@@ -1551,7 +1551,7 @@
     "hiragana": "",
     "katakana": "ティ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "6",
     "column": "2",
     "utf16": {
@@ -1564,7 +1564,7 @@
     "hiragana": "",
     "katakana": "トゥ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "6",
     "column": "3",
     "utf16": {
@@ -1577,7 +1577,7 @@
     "hiragana": "",
     "katakana": "ディ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "9",
     "column": "2",
     "utf16": {
@@ -1590,7 +1590,7 @@
     "hiragana": "",
     "katakana": "ドゥ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "9",
     "column": "3",
     "utf16": {
@@ -1603,7 +1603,7 @@
     "hiragana": "",
     "katakana": "ツァ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "5",
     "column": "1",
     "utf16": {
@@ -1616,7 +1616,7 @@
     "hiragana": "",
     "katakana": "ツィ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "5",
     "column": "2",
     "utf16": {
@@ -1629,7 +1629,7 @@
     "hiragana": "",
     "katakana": "ツェ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "5",
     "column": "4",
     "utf16": {
@@ -1642,7 +1642,7 @@
     "hiragana": "",
     "katakana": "ツォ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "5",
     "column": "5",
     "utf16": {
@@ -1655,7 +1655,7 @@
     "hiragana": "",
     "katakana": "ファ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "7",
     "column": "1",
     "utf16": {
@@ -1668,7 +1668,7 @@
     "hiragana": "",
     "katakana": "フィ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "7",
     "column": "2",
     "utf16": {
@@ -1681,7 +1681,7 @@
     "hiragana": "",
     "katakana": "フェ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "7",
     "column": "4",
     "utf16": {
@@ -1694,7 +1694,7 @@
     "hiragana": "",
     "katakana": "フォ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "7",
     "column": "5",
     "utf16": {
@@ -1707,7 +1707,7 @@
     "hiragana": "",
     "katakana": "ヴャ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "11",
     "column": "1",
     "utf16": {
@@ -1720,7 +1720,7 @@
     "hiragana": "",
     "katakana": "ヴュ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "11",
     "column": "3",
     "utf16": {
@@ -1733,7 +1733,7 @@
     "hiragana": "",
     "katakana": "ヴョ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "11",
     "column": "5",
     "utf16": {
@@ -1746,7 +1746,7 @@
     "hiragana": "",
     "katakana": "フュ",
     "type": "extended",
-    "attributes": "",
+    "attributes": "extended",
     "row": "12",
     "column": "3",
     "utf16": {

@@ -2,15 +2,15 @@ import React from "react"
 import { useLocation } from "react-router-dom"
 import queryString from "query-string"
 import ToggleTables from "./ToggleTables"
+import Table from "./Table"
 import { capitalize } from "../utils/vanilla"
 import { Highlight } from "../styling"
-import Table from "./Table"
 
 const defaultSyllabaries = ["hiragana", "katakana", "romaji"]
 
-const defaultTypes = ["basico", "diacritico", "combinacion", "extendido"]
+const defaultSpanishTypes = ["basico", "diacritico", "combinacion", "extendido"]
 
-const translate = {
+const translateToEnglish = {
   basico: "basic",
   diacritico: "diacritic",
   combinacion: "combination",
@@ -31,17 +31,10 @@ export default function TablesSubpage() {
     silabario !== undefined
       ? defaultSyllabaries.filter((e) => silabario.includes(e))
       : [...defaultSyllabaries]
-  const typeSelection =
-    tipo !== undefined
-      ? defaultTypes.filter((e) => tipo.includes(e))
-      : [...defaultTypes]
-  const translatedTypeSelection = typeSelection.map(
-    (type) => (type = translate[`${type}`])
-  )
-  const filteredSelection =
-    translatedTypeSelection[0] === "extended"
-      ? syllabarySelection.filter((e) => e !== "hiragana")
-      : [...syllabarySelection]
+  const typeSelection = (tipo !== undefined
+    ? defaultSpanishTypes.filter((e) => tipo.includes(e))
+    : [...defaultSpanishTypes]
+  ).map((type) => translateToEnglish[`${type}`])
 
   return (
     <div className="content">
@@ -50,13 +43,13 @@ export default function TablesSubpage() {
         <ToggleTables />
       </Highlight>
       {syllabarySelection.map((syllabary) => (
-        <div className={`syllabary ${syllabary}`} key={syllabary}>
+        <div key={syllabary} className={`syllabary ${syllabary} flex-center column`}>
           <h1 className="title">{capitalize(syllabary)}</h1>
-          {translatedTypeSelection.map((type) => {
+          {typeSelection.map((type) => {
             return syllabary === "hiragana" && type === "extended" ? (
               <h2 key={type}>No contiene caracteres extendidos</h2>
             ) : (
-              <div key={type}>
+              <div key={type} className={`type ${type} flex-center column`}>
                 <h2>{title[`${type}`]}</h2>
                 <Table syllabary={syllabary} type={type} />
               </div>

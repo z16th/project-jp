@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { useEffect } from "react"
 import { jsx } from "@emotion/core"
-import kanjiData from "../utils/json/kanji-1-80.json"
+import Sidebar from "./Sidebar"
 import KanjiCard from "./KanjiCard"
+import CiteSource from "./Bibliography"
+import kanjiData from "../utils/json/kanji-1-80.json"
 import {
   PageStyled,
   H,
@@ -14,7 +16,7 @@ import {
   Note,
   kanjiTable,
 } from "../styling"
-import Sidebar from "./Sidebar"
+import CharAnimation from "./CharAnimation"
 
 export default function KanjiPage() {
   useEffect(() => {
@@ -58,17 +60,6 @@ function Content() {
         más de 3,000 años. Fueron introducidos en Japón junto con el budismo en
         el siglo III. Antes de eso Japón no tenía un sistema de escritura.
       </p>
-      <Callout>
-        {" "}
-        Cada kanji posee su propia forma, sonido y significado.
-      </Callout>
-      <p>
-        El hiragana y el katakana están basados en el kanji. Fueron
-        desarrollados entre el siglo VIII y el siglo X con el propósito de hacer
-        más rápida y fácil la escritura de palabras en japonés. Mientras que el
-        hiragana es resultado de la simplificación de trazos usados en los
-        kanji, el katakana surgió de tomar algunas secciones de los mismos.
-      </p>
       <p>
         A diferencia del chino, los kanji japoneses usualmente tienen más de una
         pronunciación, la cual depende del contexto en el que se encuentre en
@@ -76,6 +67,9 @@ function Content() {
         son combinados para crear las decenas de miles de palabras del idioma
         japonés.
       </p>
+      <Callout>
+        Cada kanji posee su propia forma, sonido(s) y significado(s).
+      </Callout>
       <h2>Radicales</h2>
       <p>
         Los kanji están compuestos de una serie de trazos predefinidos llamados{" "}
@@ -84,7 +78,7 @@ function Content() {
         arbitrarios para facilitar su memorización.
       </p>
       <Callout>
-        Casi todos los kanji son en realidad una combinación de dos o más
+        Casi todos los kanji en realidad son una combinación de dos o más
         radicales.
       </Callout>
       <h2>Pronunciaciones</h2>
@@ -100,16 +94,14 @@ function Content() {
       <p>
         En gran cantidad de diccionarios por convención se utiliza katakana o
         rōmaji en mayúsculas para indicar la pronunciación china y hiragana o
-        rōmaji en minúsculas para indicar la pronunciación japonesa.
+        rōmaji en minúsculas para indicar la pronunciación japonesa. En otro
+        tipo de textos se utiliza exclusivamente el hiragana para indicar las
+        pronuniciaciones.
       </p>
       <Note>
         <b>Nota: </b>Dependiendo de la fuente que sea consultada se puede
         encontrar el mismo o un formato distinto.
       </Note>{" "}
-      <p>
-        En otro tipo de textos como mangas se utiliza exclusivamente el hiragana
-        para indicar las pronuniciaciones.
-      </p>
       <h2>Furigana</h2>
       <p>
         Es el acompañamiento del hiragana para indicar la pronunciación de un
@@ -126,63 +118,76 @@ function Content() {
         <li>
           Pictogramas (imágenes de objetos):　
           <Example>
-            <Kj>山</Kj>, <Kj>田</Kj>, <Kj>川</Kj>
+            <Kj>山</Kj> [montaña], <Kj>田</Kj> [campo] de [arroz], <Kj>川</Kj>{" "}
+            [río]
           </Example>
         </li>
         <li>
           Ideogramas simples (imágenes de ideas):　
           <Example>
-            <Kj>三</Kj>, <Kj>上</Kj>, <Kj>中</Kj>
+            <Kj>三</Kj> [tres], <Kj>上</Kj> [arriba], <Kj>中</Kj> [en medio]
           </Example>
         </li>
         <li>
           Ideogramas compuestos (varios pictogramas que forman uno solo):　
           <Example>
-            <Kj>森</Kj>,<Kj>町</Kj>, <Kj>物</Kj>
+            <Kj>森</Kj> [bosque]: formado por tres <Kj>木</Kj> [árbol]
           </Example>
         </li>
         <li>
           Ideogramas de sonido (una combinación de caracteres: unos usados por
-          su sonido y otros usados por su significado):　
+          su significado y otros por su sonido):　
           <Example>
-            <Kj>英</Kj>, <Kj>語</Kj>, <Kj>曜</Kj>
+            <Kj>語</Kj> <R>go</R> [lenguaje]: formado por <Kj>言</Kj> [palabra],{" "}
+            <Kj>口</Kj> [boca] y <Kj>五</Kj> <R>go</R>
           </Example>
         </li>
       </ul>
       <Callout>
         Alrededor del 80% de los kanjis son ideogramas de sonido compuestos.
       </Callout>
-      <h2>Escritura</h2>
-      <h3>Reglas generales</h3>
+      <h1>Escritura</h1>
+      <h2>Reglas generales</h2>
       <ul>
         <li>Los trazos son escritos de izquierda a derecha.</li>
+        <CharAnimation name="5ddd" />
         <li>Los trazos son escritos de arriba hacia abajo.</li>
+        <CharAnimation name="4e09" />
         <li>
           Cuando una línea horizontal y una vertical se cruzan, la horizontal se
           dibuja primero.
         </li>
+        <CharAnimation name="5341" />
+        <li>
+          Cuando una línea horizontal está unida a una vertical, la vertical se
+          dibuja primero
+        </li>
+        <CharAnimation name="4e0a" />
         <li>
           Cuando hay un arreglo de tres trazos izquierda-en medio-derecha y el
-          trazo de en medio es el más largo, se dibuja primero.
+          trazo central se dibuja primero si es el más largo.
         </li>
+        <CharAnimation name="5c0f" />
         <li>
-          Cuando hay líneas que rodean un caracter, las líneas de fuera son
-          dibujadas primero.
+          Cuando las partes izquierda y derecha tienen trazos inclinados, la
+          parte izquierda se dibuja primero.
         </li>
+        <CharAnimation name="4eba" />
+        <li>Cuando hay líneas exteriores, estas son dibujadas primero.</li>
+        <CharAnimation name="6708" />
         <li>
           Cuando el centro de un kanji es rodeado por una caja, el centro es
           dibujado primero antes de la línea inferior de la caja.
         </li>
-        <li>
-          Líneas que cubren el exterior, sin cubrir la parte superior, son
-          escritas al final.
-        </li>
+        <CharAnimation name="7530" />
+        <li>Cuando una línea atraviesa el centro, es dibujada al final.</li>
+        <CharAnimation name="4e2d" />
       </ul>
       <Note>
         <b>Nota: </b>Dependiendo de la referencia que se consulte se pueden
         encontrar más reglas o menos reglas.
       </Note>
-      <h3>Tipos de trazos</h3>
+      <h2>Tipos de trazos</h2>
       <ul>
         <li>Línea doblada</li>
         <li>Línea horizontal</li>
@@ -196,10 +201,10 @@ function Content() {
         <li>Línea vertical</li>
       </ul>
       <Callout>
-        Dependiendo de la tipografía, puede que los trazos luzcan de distintos a
+        Dependiendo de la tipografía, puede que los trazos luzcan distintos a
         como lucen escritos a mano.
       </Callout>
-      <h2>Cómo usar esta página</h2>
+      <h1>Cómo usar esta página</h1>
       <p>
         En esta sección encontrarás diferentes grupos de cartas divididas por
         grados, correspondientes al orden en que se enseñan en las escuelas de
@@ -259,39 +264,16 @@ function Content() {
   )
 }
 
-function Bibliography() {
+const Bibliography = () => {
   return (
     <div id="bibliography" className="content">
-      <p>
-        Las animaciones de trazado están basadas en datos proporcionados por{" "}
-        <a href="http://kanjivg.tagaini.net/">KanjiVG</a>.
-      </p>
+      <CiteSource source="kanjiVG" />
       <p>
         Parte de la información de este sitio se puede consultar en las
         siguientes referencias:
       </p>
       <ul>
-        <li>
-          Seely, C., Henshall, K. G., & Fan, J. (2016).{" "}
-          <a href="https://www.amazon.com/-/es/Complete-Guide-Japanese-Kanji-Understanding-ebook/dp/B01DIF7RBI/">
-            <em>
-              The Complete Guide to Japanese Kanji: (JLPT All Levels)
-              Remembering and Understanding the 2,136 Standard Characters
-            </em>
-          </a>{" "}
-          (First ed.) [E-book]. Tuttle Publishing.
-        </li>
-
-        <li>
-          Stout, T. G., &amp; Hakone, K. (2017).{" "}
-          <a href="https://www.amazon.com/-/es/Japanese-Kanji-Beginners-Levels-Characters/dp/4805310499">
-            <em>
-              Japanese Kanji for Beginners: First Steps to Learn the Basic
-              Japanese Characters
-            </em>
-          </a>
-          . Tuttle Publishing.
-        </li>
+        <CiteSource source="practicalKanji" />
       </ul>
     </div>
   )

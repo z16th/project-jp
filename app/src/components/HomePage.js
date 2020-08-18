@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import Sidebar from "./Sidebar"
 import WordOfTheDay from "./WordOfTheDay"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
+import CiteSource from "./Bibliography"
 
 export default function HomePage() {
   useEffect(() => {
@@ -44,13 +45,8 @@ const Content = () => {
         <li>Significado(s): Acepciones correspondientes a la palabra.</li>
       </ul>
       <Note>
-        <b>Nota: </b>Información obtenida y traducida del diccionario; Nakao, S.
-        (1997).{" "}
-        <em>
-          Japanese-English English-Japanese Dictionary (English and Japanese
-          Edition)
-        </em>{" "}
-        (1st ed.). Random House Reference.
+        <b>Nota: </b>Información obtenida y traducida del diccionario{" "}
+        <CiteSource source="randomHouseDictionary" />
       </Note>
 
       <h1>Convenciones utilizadas en este proyecto</h1>
@@ -78,11 +74,10 @@ const Content = () => {
         Texto encerrado de esta forma es un dato que puede ser útil recordar.
       </Callout>
       <Example>Texto encerrado de esta manera es un ejemplo</Example>
-      <Note>
-        <b>Nota:</b> Es evidente que esto es una nota.
-      </Note>
       <h2>Romanización</h2>
-      <p>Se utiliza la romanización Hepburn</p>
+      <p>
+        Se utiliza la <CiteSource source="romanization" />
+      </p>
     </div>
   )
 }

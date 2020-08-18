@@ -1,5 +1,6 @@
 [
   {
+    "date": "2020-08-10",
     "word": "居間",
     "furigana": ["い", "ま"],
     "romaji": "ima",
@@ -7,10 +8,10 @@
     "meaning": {
       "en": ["family room", "living room"],
       "es": ["sala de estar", "estancia"]
-    },
-    "date": "2020-08-10"
+    }
   },
   {
+    "date": "2020-08-11",
     "word": "飽きる",
     "furigana": ["あ", "き", "る"],
     "romaji": "akiru",
@@ -18,10 +19,10 @@
     "meaning": {
       "en": ["get tired of", "lose interest in"],
       "es": ["cansarse de", "perder interés en"]
-    },
-    "date": "2020-08-11"
+    }
   },
   {
+    "date": "2020-08-12",
     "word": "帳面",
     "furigana": ["ちょう", "めん"],
     "romaji": "chо̄men",
@@ -29,10 +30,10 @@
     "meaning": {
       "en": ["notebook", "account book"],
       "es": ["cuaderno", "libro de cuentas"]
-    },
-    "date": "2020-08-12"
+    }
   },
   {
+    "date": "2020-08-13",
     "word": "一人当たり",
     "furigana": ["ひと", "り", "あ", "た", "り"],
     "romaji": "hitoriatari",
@@ -40,10 +41,10 @@
     "meaning": {
       "en": ["per person", "per capita"],
       "es": ["por persona", "per cápita"]
-    },
-    "date": "2020-08-12"
+    }
   },
   {
+    "date": "2020-08-14",
     "word": "豚カツ",
     "furigana": ["とん", "カ", "ツ"],
     "romaji": "tonkatsu",
@@ -51,18 +52,39 @@
     "meaning": {
       "en": ["breaded pork cutlet"],
       "es": ["chuleta de cerdo empanizada"]
-    },
-    "date": "2020-08-13"
+    }
   },
   {
+    "date": "2020-08-15",
     "word": "えっ",
     "furigana": [],
     "romaji": "ē",
     "type": "interj",
     "meaning": {
-      "en": ["Eh?","What?","Well..."],
-      "es": ["¿Eh?","¿Qué?"]
-    },
-    "date": "2020-08-14"
+      "en": ["Eh?", "What?", "Well..."],
+      "es": ["¿Eh?", "¿Qué?"]
+    }
+  },
+  {
+    "date": "2020-08-16",
+    "word": "窃盗",
+    "furigana": ["せっ", "とう"],
+    "romaji": "settō",
+    "type": "n",
+    "meaning": {
+      "en": ["theft", "stealing"],
+      "es": ["robo", "hurto"]
+    }
+  },
+  {
+    "date": "2020-08-17",
+    "word": "ちょん切る",
+    "furigana": ["ち","ょ", "ん", "ぎ", "る"],
+    "romaji": "chongiru",
+    "type": "vb",
+    "meaning": {
+      "en": ["to chop off", "to cut off"],
+      "es": ["cortar", "interrumpir"]
+    }
   }
 ]

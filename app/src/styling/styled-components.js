@@ -55,7 +55,6 @@ export const TableElement1 = styled.span`
 export const TableElement2 = styled.span`
   margin: 0px 0px;
   font-family: ${kanjiSansFont};
-  color: red;
   @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
     font-size: calc(
       12px + (${typeScale.tableContent - 18} - 16) *
@@ -78,13 +77,12 @@ export const TableHeader = styled.span`
     );
   }
   @media (min-width: ${maxWidth}px) {
-    font-size: ${typeScale.tableHeader -10}px;
+    font-size: ${typeScale.tableHeader - 10}px;
   }
 `
 
 export const KanaTable = styled.section`
   display: grid;
-  grid-template-rows: repeat(${(props) => props.rows}, min-content);
   grid-template-columns: repeat(
     ${(props) => props.columns},
     ${(props) => [props.columnSize]}
@@ -98,23 +96,62 @@ export const KanaTable = styled.section`
     color: ${gray.light};
   }
   .kana {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 8px;
+    margin: 8px;
     border-radius: 8px;
-    &:hover {
-      font-family: ${kanjiSerifFont};
+    svg {
+      width: 64px;
+      height: auto;
+      @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+        width: calc(
+          18px + (${typeScale.tableContent} - 12) *
+            ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+        );
+      }
+      @media (min-width: ${maxWidth}px) {
+        width: ${typeScale.tableContent}px;
+      }
     }
   }
+  .kana.hiragana {
+    background-color: ${yellow.background};
+  }
+  .kana.katakana {
+    background-color: ${blue.background};
+  }
+  .kana.romaji {
+    background-color: ${green.background};
+  }
   .exception {
-    background-color: ${gray.dark};
+    border: 2px dotted ${gray.regular};
   }
   .special {
     border: 2px solid black;
     margin-top: 20px;
   }
-  .on-hover {
-    &:hover {
-      font-family: ${kanjiSerifFont};
+  .kana.extended {
+    padding: 4px;
+    margin: 4px;
+    svg {
+      width: 42px;
+      height: auto;
+      font-family: ${kanjiSansFont};
+      @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+        font-size: calc(
+          12px + (${typeScale.tableContent - 18} - 16) *
+            ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+        );
+      }
+      @media (min-width: ${maxWidth}px) {
+        font-size: ${typeScale.tableContent - 24}px;
+      }
     }
+  }
+  span:hover {
+    font-family: ${kanjiSerifFont};
   }
 `
 
@@ -155,7 +192,7 @@ export const Highlight = styled.div`
   border: 2px dashed ${gray.dark};
 `
 
-//---------------------------------------------------PAGE
+// ---------------------------------------------------PAGE
 
 export const PageStyled = styled.div`
   display: flex;
@@ -281,10 +318,39 @@ export const Layout = ({ children }) => (
         ul {
           line-height: 1.25rem;
         }
+        button {
+          padding: 8px;
+          color: black;
+          text-align: center;
+          text-decoration: none;
+          border: none;
+          &:hover {
+            color: white;
+            background-color: ${gray.light};
+            text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+          }
+          &:active {
+            color: white;
+            background-color: ${gray.regular};
+            text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+          }
+        }
       `}
     />
     <Global
       styles={css`
+        .bibliography {
+          a {
+            text-decoration: none;
+            color: ${blue.dark};
+            border-bottom: 1px dashed ${gray.dark};
+          }
+        }
+        .link-to{
+          text-decoration: none;
+            color: ${pink.dark};
+            border-bottom: 1px dashed ${gray.dark};
+        }
         .fade-appear {
           opacity: 0;
         }
