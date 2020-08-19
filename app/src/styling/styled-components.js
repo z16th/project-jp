@@ -235,7 +235,7 @@ export const Layout = ({ children }) => (
     <Global
       styles={css`
         h1 {
-          margin: 0px;
+          margin: 20px 0px;
           font-family: ${primaryFont};
           font-size: ${typeScale.header1}px;
           @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
@@ -340,16 +340,19 @@ export const Layout = ({ children }) => (
     <Global
       styles={css`
         .bibliography {
-          a {
+          a,
+          span {
             text-decoration: none;
             color: ${blue.dark};
-            border-bottom: 1px dashed ${gray.dark};
+            border-bottom: 1px dotted ${gray.dark};
+            width: fit-content;
           }
         }
-        .link-to{
+        .link-to {
           text-decoration: none;
-            color: ${pink.dark};
-            border-bottom: 1px dashed ${gray.dark};
+          color: ${pink.dark};
+          border-bottom: 1px dashed ${gray.dark};
+          width: fit-content;
         }
         .fade-appear {
           opacity: 0;

@@ -58,13 +58,6 @@ const Content = () => {
         <K>マ</K> es el katakana que representa el mismo sonido. Ambos
         silabarios contienen casi los mismos sonidos.
       </p>
-      <p>
-        El hiragana y el katakana están basados en el kanji. Fueron
-        desarrollados entre el siglo VIII y el siglo X con el propósito de hacer
-        más rápida y fácil la escritura de palabras en japonés. Mientras que el
-        hiragana es resultado de la simplificación de trazos usados en los
-        kanji, el katakana surgió de tomar algunas secciones de los mismos.
-      </p>
       <h2>Hiragana</h2>
       <p>
         Es el silabario que nos ayuda a leer palabras y frases cuando somos
@@ -83,11 +76,10 @@ const Content = () => {
         Ya que el japonés tiene un rango de sonidos limitado, algunas de las
         palabras transcritas pueden tener una pronunciación diferente a la de la
         lengua original. Por ejemplo, la palabra <K>ホテル</K> contiene tres
-        caracteres del katakana: &quot;ho&quot;, &quot;te&quot;, y
-        &quot;ru&quot;, formando la palabra &quot;hoteru&quot;, la cual es
-        tomada del inglés &quot;hotel&quot;. Asimismo, el katakana es utilizado
-        para escribir nombres de empresas, onomatopeyas, o incluso para crear
-        énfasis en una palabra u oración.
+        caracteres del katakana: <R>ho</R>, <R>te</R>, <R>ru</R>, formando la
+        palabra <R>hoteru</R>, la cual es tomada del inglés &quot;hotel&quot;.
+        Asimismo, el katakana es utilizado para escribir nombres de empresas,
+        onomatopeyas, o incluso para crear énfasis en una palabra u oración.
       </p>
       <Callout>
         Es el conjunto de caracteres que tiene trazos rectos y angulares.
@@ -135,12 +127,14 @@ const Content = () => {
         consonante que puede tener sonido sin necesidad de combinarse con
         vocales.
       </p>
-      <Link
-        className="link-to"
-        to={`${url}/tablas?silabario=hiragana&tipo=basico`}
-      >
-        Ir a Tablas
-      </Link>
+      <p>
+        <Link
+          className="link-to"
+          to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=basico`}
+        >
+          Ir a Tablas de caracteres básicos.
+        </Link>
+      </p>
       <Callout>El orden de las vocales es diferente: aiueo</Callout>
       <p>
         En el japonés es común encontrar palabras homónimas, es decir, que se
@@ -150,79 +144,135 @@ const Content = () => {
         utilizan.
       </p>
       <Example>
-        <R>kami</R> <Kj>紙</Kj> [papel] ≠ <Kj>髪</Kj> [cabello]
+        <R>kami</R> <H>かみ</H> [papel] y <H>かみ</H> [cabello] cuando son
+        escritos en hiragana
+      </Example>
+      <Example>
+        <Kj>紙</Kj> y <Kj>髪</Kj> cuando son escritos en kanji.
       </Example>
       <h2>Vocal larga</h2>
       <p>
         La vocal larga tiene doble duración respecto a la vocal simple. Dicho de
         otra manera, mientras que <R>a</R> se considera de una mora, <R>ā</R> se
         considera de dos moras a pesar de que se pronuncien las dos de manera
-        sucesiva. La diferencia en el largo de la vocal implica diferencias en
-        el significado:
+        sucesiva.
       </p>
-      <Example>
-        <H>おばさん</H> <R>obasan</R> [tía] ≠ <H>おばあさん</H> <R>obāsan</R>{" "}
-        [abuela]
-      </Example>
-      <Example>
-        <H>ゆき</H> <R>yuki</R> [nieve] ≠ <H>ゆうき</H> <R>yuuki</R> [valentía]
-      </Example>
-      <Example>
-        <H>え</H> <R>e</R> [pintura] ≠ <H>ええ</H> <R>ee</R> [sí]
-      </Example>
-      <Example>
-        <H>ここ</H> <R>koko</R> [aquí] ≠ <H>こうこう</H> <R>kookoo</R>{" "}
-        [preparatoria]
-      </Example>
-      <h3>Vocales largas en hiragana:</h3>
+      <h3>Vocales largas en hiragana</h3>
       <ul>
         <li>
-          Kanas de la columna <H>あ</H>: Se les agrega <H>あ</H>.
+          Kanas de la columna <H>あ</H>: se les agrega <H>あ</H>.
+          <Example>
+            <H>おかあさん</H> <R>okāsan</R> [madre]
+          </Example>
         </li>
         <li>
-          Kanas de la columna <H>い</H>: Se les agrega <H>い</H>.
+          Kanas de la columna <H>い</H>: se les agrega <H>い</H>.
+          <Example>
+            <H>おにいさん</H> <R>oniisan</R> [hermano mayor]
+          </Example>
         </li>
         <li>
-          Kanas de la columna <H>う</H>: Se les agrega <H>う</H>.
+          Kanas de la columna <H>う</H>: se les agrega <H>う</H>.
+          <Example>
+            <H>じゅう</H> <R>jū</R> [diez]
+          </Example>
         </li>
         <li>
-          Kanas de la columna <H>え</H>: Se les agrega <H>い</H>. (Hay
+          Kanas de la columna <H>え</H>: se les agrega <H>い</H>. (Hay
           excepciones)
+          <Example>
+            <H>せんせい</H> <R>sensei</R>
+          </Example>
+          <Example>
+            <b>Excepción: </b>
+            <H>おねえさん</H> <R>onēsan</R> [hermana mayor]
+          </Example>
         </li>
         <li>
-          Kanas de la columna <H>お</H>: Se les agrega <H>う</H>. (Hay
+          Kanas de la columna <H>お</H>: se les agrega <H>う</H>. (Hay
           excepciones)
+          <Example>
+            <H>おとうさん</H> <R>otōsan</R> [padre]
+          </Example>
+          <Example>
+            <b>Excepción:</b> <H>おおきい</H> <R>ōkii</R> [grande]
+          </Example>
         </li>
       </ul>
-      <h3>Vocales largas en katakana:</h3>
+      <Callout>
+        La duración de la vocal puede implicar diferencias en el significado o
+        pronunciación/ortografía equivocadas
+      </Callout>
+      <Example>
+        <H>おばさん</H> <R>obasan</R> [tía] es diferente a <H>おばあさん</H>{" "}
+        <R>obāsan</R> [abuela]
+      </Example>
+      <Example>
+        <H>ゆき</H> <R>yuki</R> [nieve] es diferente a <H>ゆうき</H> <R>yūki</R>{" "}
+        [valentía]
+      </Example>
+      <Example>
+        <H>え</H> <R>e</R> [pintura] es diferente a <H>ええ</H> <R>ē</R> [sí]
+      </Example>
+      <Example>
+        <H>ここ</H> <R>koko</R> [aquí] es diferente a <H>こうこう</H>{" "}
+        <R>kōkō</R> [preparatoria]
+      </Example>
+      <h3>Vocales largas en katakana</h3>
       <ul>
         <li>Se agrega ー sin importar la vocal.</li>
       </ul>{" "}
       <Example>
-        <K>カレー</K> <R>karee</R> [curry]
+        <K>カレー</K> <R>karē</R> [curry]
       </Example>
       <Example>
-        <K>カー</K> <R>kaa</R> [car]
+        <K>カー</K> <R>kā</R> [car]
       </Example>
-      <h3>Vocales largas en romaji:</h3>
+      <h3>Vocales largas en romaji</h3>
       <p>
-        Dependiendo del sistema rōmaji que se esté utilizando, puede ser escrito
-        de diferentes maneras. Siguiendo las mismas reglas que en el caso de
-        hiragana o utilizando el símbolo diacrítico: ¯ (macrón) sobre la vocal
-        que se quiera alargar.
+        Dependiendo del sistema rōmaji que se utilice, puede ser escrito de
+        diferentes maneras: siguiendo las mismas reglas que en el caso de
+        hiragana, utilizar el símbolo diacrítico <R>¯</R> (macrón) sobre la
+        vocal que se quiera alargar o una combinación de ambos, guiados por
+        reglas específicas.
       </p>
       <h2>Uso de ん ン n</h2>
       <p>
-        A pesar de ser un sonido de una mora de duración, nunca se coloca ん ン
-        (n) al inicio de una palabra. Mientras que algunas referencias mencionan
-        que la pronunciación de este caracter puede variar dependiendo de los
-        sonidos que le siguen, esta diferencia no es lo suficientemente notable
-        para respetarla en un inicio, sino sólo para tenerla en cuenta.
+        Mientras que algunas referencias mencionan que la pronunciación de este
+        caracter puede variar dependiendo de los sonidos que le siguen, esta
+        diferencia no es lo suficientemente notable para respetarla en un
+        inicio, sino sólo para tenerla en cuenta.
       </p>
       <p>
-        En el rōmaji, estos cambios pueden notarse cuando se transcribe (m) en
-        lugar de (n), dependiendo del sistema de romanización.
+        En el rōmaji, estos cambios pueden notarse cuando se transcribe <R>m</R>{" "}
+        en lugar de <R>n</R> dependiendo del sistema de romanización.
       </p>
+      <Callout>
+        A pesar de ser un sonido de una mora de duración, nunca se coloca{" "}
+        <H>ん</H> <K>ン</K> <R>n</R> al inicio de una palabra.{" "}
+      </Callout>
+      <h2>Uso de っ ッ (つ ツ tsu pequeño)</h2>
+      <p>
+        La diferencia se encuentra en el tamaño del caracter:{" "}
+        <b>se escribe en pequeño</b> para hacer una diferencia de pronunciación.
+        Su trabajo es alargar el sonido de la consonante que va inmediatamente
+        después de éste.
+      </p>
+      <Callout>Es un sonido que tiene duración de una mora.</Callout>
+      <Example>
+        <H>かった</H> <R>katta</R>
+      </Example>
+      <Example>
+        <K>ベッド</K> <R>beddo</R>
+      </Example>
+      <p>
+        La única excepción es la doble &quot;n&quot; ya que se escribe con{" "}
+        <H>ん</H> <R>n</R> + kana de la fila (n), no con <H>っ</H>
+        <b>.</b>
+      </p>
+      <Example>
+        <H>さんにん</H> <R>sannin</R>
+      </Example>
       <h2>Diacríticos</h2>
       <p>
         Son <em>símbolos</em> que puede ser añadidos a algunos <em>kanas</em>{" "}
@@ -243,11 +293,19 @@ const Content = () => {
         Handakuten: <H>は</H> <K>ハ</K> <R>ha</R> → <H>ぱ</H> <K>パ</K>{" "}
         <R>pa</R>
       </Example>
+      <p>
+        <Link
+          className="link-to"
+          to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=diacritico`}
+        >
+          Ir a Tablas de caracteres con diacríticos.
+        </Link>
+      </p>
       <h2>Combinaciones</h2>
       <p>
-        Se pueden combinar los kanas <H>や ゆ よ</H> - <K>ヤ ユ ヨ</K> -{" "}
-        <R>ya yu yo</R> con algunos otros para formar nuevos sonidos de una sola
-        mora (incluyendo los que utilizan dakuten). Cuando esto ocurre, los
+        Se pueden combinar los kanas <H>や, ゆ, よ</H> - <K>ヤ, ユ, ヨ</K> -{" "}
+        <R>ya, yu, yo</R> con algunos otros para formar nuevos sonidos de una
+        sola mora (incluyendo los que utilizan dakuten). Cuando esto ocurre, los
         kanas de la fila (y) son <b>escritas en pequeño</b> para hacer notar que
         se están usando como combinación.
       </p>
@@ -255,28 +313,14 @@ const Content = () => {
         <H>びょ</H> <K>ビョ</K> <R>byo</R> es diferente a <H>びよ</H>{" "}
         <K>ビヨ</K> <R>biyo</R>
       </Example>
-      <h2>Uso de っ ッ (つ ツ tsu pequeño)</h2>
       <p>
-        La diferencia se encuentra en el tamaño del caracter: al igual que las
-        combinaciones, se escribe en pequeño para hacer una diferencia de
-        pronunciación. Su trabajo es alargar el sonido de la consonante que va
-        inmediatamente después de éste.
+        <Link
+          className="link-to"
+          to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=combinacion`}
+        >
+          Ir a Tablas de caracteres combinados.
+        </Link>
       </p>
-      <Callout>Es un sonido que tiene duración de una mora.</Callout>
-      <Example>
-        <H>かった</H> <R>katta</R>　≠　<H>かた</H> <R>kata</R>
-      </Example>
-      <Example>
-        <K>ベッド</K> <R>beddo</R>
-      </Example>
-      <p>
-        La única excepción es la doble &quot;n&quot; ya que se escribe con{" "}
-        <H>ん</H> <R>n</R> + kana de la fila (n), no con <H>っ</H>
-        <b>.</b>
-      </p>
-      <Example>
-        <H>さんにん</H> <R>sannin</R>
-      </Example>
       <h2>Vocales afónicas</h2>
       <p>
         En algunas palabras, el sonido de vocales como (i) o (u) se pierde, es
@@ -301,10 +345,9 @@ const Content = () => {
         signo diacrítico.
       </Note>
       <p>
-        Esta diferencia es más notable cuando son escritas en kanji: 雨 y 飴
-        respectivamente. En cuanto a la escritura/lectura, puede ser
-        diferenciado con su propio caracter, mientras que para la pronunciación
-        se puede diferenciar con el tono.
+        En cuanto a la escritura/lectura, estas palabras pueden ser
+        diferenciadas con su propio kanji: 雨 y 飴 respectivamente, mientras que
+        en la pronunciación se puede diferenciar con el tono.
       </p>
       <h2>Detalles del katakana</h2>
       <h3>Caracteres extendidos</h3>
@@ -312,7 +355,14 @@ const Content = () => {
         El katakana ofrece un rango extendido de caracteres para representar
         sonidos que no existen en el japonés, pero sí en otras lenguas.
       </p>
-      <a href="/silabarios/katakana">Ir a tabla</a>
+      <p>
+        <Link
+          className="link-to"
+          to={`${url}/tablas?silabario=katakana&silabario=romaji&tipo=extendido`}
+        >
+          Ir a Tablas de caracteres extendidos.
+        </Link>
+      </p>
     </div>
   )
 }

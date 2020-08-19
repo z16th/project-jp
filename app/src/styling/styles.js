@@ -383,6 +383,7 @@ export const kanjiTable = css`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 20px 0 40px 0;
 `
 
 export const kanjiCard = css`

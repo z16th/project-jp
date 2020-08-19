@@ -74,6 +74,15 @@ const Content = () => {
         Texto encerrado de esta forma es un dato que puede ser útil recordar.
       </Callout>
       <Example>Texto encerrado de esta manera es un ejemplo</Example>
+
+      <p className="link-to">
+        Texto con esta apariencia es un link a una ubicación dentro de este
+        sitio
+      </p>
+      <p className="bibliography">
+        <span>Texto con esta apariencia es un link a una página externa</span>
+      </p>
+
       <h2>Romanización</h2>
       <p>
         Se utiliza la <CiteSource source="romanization" />

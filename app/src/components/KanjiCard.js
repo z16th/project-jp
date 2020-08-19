@@ -42,12 +42,10 @@ export default function KanjiCard({ data, readingMode }) {
       <div className="right">
         <button className="reading" type="button" onClick={handleReadingClick}>
           <div className="onyomi">
-            <b>{displayType !== "Romaji" ? "音読み：" : "Onyomi： "}</b>{" "}
-            {data[`onyomi${displayType}`]}
+            <b>Onyomi: </b> {data[`onyomi${displayType}`]}
           </div>
           <div className="kunyomi">
-            <b>{displayType !== "Romaji" ? "訓読み：" : "Kunyomi： "}</b>{" "}
-            {data[`kunyomi${displayType}`]}
+            <b>Kunyomi: </b> {data[`kunyomi${displayType}`]}
           </div>
         </button>
         <div className="meaning">

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useEffect } from "react"
+import { Fragment, useEffect } from "react"
 import { jsx } from "@emotion/core"
 import Sidebar from "./Sidebar"
 import KanjiCard from "./KanjiCard"
@@ -27,9 +27,11 @@ export default function KanjiPage() {
     <PageStyled id="kanji-page">
       <Sidebar />
       <div className="main-content">
-        <Content />
-        <KanjiTable />
-        <Bibliography />
+        <div className="content">
+          <Content />
+          <KanjiTable />
+          <Bibliography />
+        </div>
       </div>
     </PageStyled>
   )
@@ -37,28 +39,34 @@ export default function KanjiPage() {
 
 function KanjiTable() {
   return (
-    <div>
-      <h2 className="text-center">Kanji de Primer Grado</h2>
-      <h3 className="text-center">1 - 80</h3>
+    <Fragment>
+      <h2 className="text-center">1 - 80</h2>
       <section className="table" css={kanjiTable}>
         {kanjiData.map((data) => (
           <KanjiCard key={data.utf16} data={data} />
         ))}
       </section>
-    </div>
+    </Fragment>
   )
 }
 
 function Content() {
   const example = kanjiData[19]
   return (
-    <div className="content">
+    <Fragment>
       <h1>Introducción</h1>
       <p>
         El sistema de escritura japonés hace uso extenso de los caracteres
         llamados <b>kanji</b>. Son caracteres que fueron creados en China hace
         más de 3,000 años. Fueron introducidos en Japón junto con el budismo en
         el siglo III. Antes de eso Japón no tenía un sistema de escritura.
+      </p>
+      <p>
+        El hiragana y el katakana están basados en el kanji. Fueron
+        desarrollados entre el siglo VIII y el siglo X con el propósito de hacer
+        más rápida y fácil la escritura de palabras en japonés. Mientras que el
+        hiragana es resultado de la simplificación de trazos usados en los
+        kanji, el katakana surgió de tomar algunas secciones de los mismos.
       </p>
       <p>
         A diferencia del chino, los kanji japoneses usualmente tienen más de una
@@ -118,7 +126,7 @@ function Content() {
         <li>
           Pictogramas (imágenes de objetos):　
           <Example>
-            <Kj>山</Kj> [montaña], <Kj>田</Kj> [campo] de [arroz], <Kj>川</Kj>{" "}
+            <Kj>山</Kj> [montaña], <Kj>田</Kj> [campo de arroz], <Kj>川</Kj>{" "}
             [río]
           </Example>
         </li>
@@ -204,7 +212,7 @@ function Content() {
         Dependiendo de la tipografía, puede que los trazos luzcan distintos a
         como lucen escritos a mano.
       </Callout>
-      <h1>Cómo usar esta página</h1>
+      <h1>Tablas de kanji</h1>
       <p>
         En esta sección encontrarás diferentes grupos de cartas divididas por
         grados, correspondientes al orden en que se enseñan en las escuelas de
@@ -260,13 +268,13 @@ function Content() {
         igual que en esta página. Es posible que otras fuentes utilicen un
         formato distinto.
       </Note>
-    </div>
+    </Fragment>
   )
 }
 
 const Bibliography = () => {
   return (
-    <div id="bibliography" className="content">
+    <Fragment>
       <CiteSource source="kanjiVG" />
       <p>
         Parte de la información de este sitio se puede consultar en las
@@ -275,6 +283,6 @@ const Bibliography = () => {
       <ul>
         <CiteSource source="practicalKanji" />
       </ul>
-    </div>
+    </Fragment>
   )
 }

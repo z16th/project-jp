@@ -79,7 +79,7 @@
   {
     "date": "2020-08-17",
     "word": "ちょん切る",
-    "furigana": ["ち","ょ", "ん", "ぎ", "る"],
+    "furigana": ["ち", "ょ", "ん", "ぎ", "る"],
     "romaji": "chongiru",
     "type": "vb",
     "meaning": {
@@ -90,12 +90,23 @@
   {
     "date": "2020-08-18",
     "word": "対応",
-    "furigana": ["たい","おう"],
+    "furigana": ["たい", "おう"],
     "romaji": "taiō",
     "type": "n",
     "meaning": {
       "en": ["handling", "treatment"],
       "es": ["manejo", "trato"]
+    }
+  },
+  {
+    "date": "2020-08-19",
+    "word": "見習い",
+    "furigana": ["み", "なら", "い"],
+    "romaji": "minarai",
+    "type": "n",
+    "meaning": {
+      "en": ["apprentice", "apprenticeship"],
+      "es": ["aprendiz", "aprendizaje"]
     }
   }
 ]
