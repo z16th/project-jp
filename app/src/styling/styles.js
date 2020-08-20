@@ -90,7 +90,7 @@ export const linkUnactive = css`
 export const linkActive = css`
   font-size: ${typeScale.header4}px;
   font-weight: bold;
-  border-bottom: 2px solid white;
+  border-bottom: 2px dashed white;
 `
 
 // ============================ Word Of The Day
@@ -355,14 +355,15 @@ export const navbar = css`
     align-items: center;
     margin: 20px;
     padding: 2px;
-    img {
+    svg {
       margin-right: 8px;
+      fill: white;
     }
     span {
       margin-top: 2px;
     }
     @media (max-width: 600px) {
-      img {
+      svg {
         margin: 0px;
       }
       span {

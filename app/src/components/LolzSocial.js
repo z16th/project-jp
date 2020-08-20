@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import logo from "../utils/images/logo.svg"
+import logo from "../utils/icons/logo.svg"
 import { social } from "../styling"
 
 export default function LolzSocial() {

@@ -9,26 +9,27 @@ import KanjiPage from "./KanjiPage"
 import Footer from "./Footer"
 import FourOhFour from "./FourOhFour"
 
+import { ReactComponent as torii } from "../utils/icons/icons8-torii.svg"
+import { ReactComponent as koi } from "../utils/icons/icons8-koi-fish.svg"
+import { ReactComponent as origami } from "../utils/icons/icons8-origami.svg"
+
 const links = [
   {
     to: "/",
     exact: true,
-    icon: "https://img.icons8.com/ios-filled/32/ffffff/torii.png",
-    alt: "botón - inicio",
+    icon: torii,
     label: "INICIO",
   },
   {
     to: "/silabarios",
     exact: false,
-    icon: "https://img.icons8.com/ios-filled/32/ffffff/koi-fish.png",
-    alt: "botón - página de silabarios",
+    icon: koi,
     label: "SILABARIOS",
   },
   {
     to: "/kanji",
     exact: false,
-    icon: "https://img.icons8.com/ios-filled/28/ffffff/origami.png",
-    alt: "botón - página de kanji",
+    icon: origami,
     label: "KANJI",
   },
 ]
