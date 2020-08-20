@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Fragment, useEffect } from "react"
+/** @jsxFrag React.Fragment */
+import { useEffect } from "react"
 import { jsx } from "@emotion/core"
 import Sidebar from "./Sidebar"
 import KanjiCard from "./KanjiCard"
@@ -39,21 +40,21 @@ export default function KanjiPage() {
 
 function KanjiTable() {
   return (
-    <Fragment>
+    <>
       <h2 className="text-center">1 - 80</h2>
       <section className="table" css={kanjiTable}>
         {kanjiData.map((data) => (
           <KanjiCard key={data.utf16} data={data} />
         ))}
       </section>
-    </Fragment>
+    </>
   )
 }
 
 function Content() {
   const example = kanjiData[19]
   return (
-    <Fragment>
+    <>
       <h1>Introducción</h1>
       <p>
         El sistema de escritura japonés hace uso extenso de los caracteres
@@ -268,13 +269,13 @@ function Content() {
         igual que en esta página. Es posible que otras fuentes utilicen un
         formato distinto.
       </Note>
-    </Fragment>
+    </>
   )
 }
 
 const Bibliography = () => {
   return (
-    <Fragment>
+    <>
       <CiteSource source="kanjiVG" />
       <p>
         Parte de la información de este sitio se puede consultar en las
@@ -283,6 +284,6 @@ const Bibliography = () => {
       <ul>
         <CiteSource source="practicalKanji" />
       </ul>
-    </Fragment>
+    </>
   )
 }

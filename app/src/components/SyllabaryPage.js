@@ -1,11 +1,5 @@
 import React, { useEffect } from "react"
-import {
-  Link,
-  Route,
-  Switch,
-  useRouteMatch,
-  useLocation,
-} from "react-router-dom"
+import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
 import Sidebar from "./Sidebar"
 import TablesSubpage from "./TablesSubpage"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
@@ -118,6 +112,7 @@ const Content = () => {
       <Callout>
         Las oraciones del japonés se expresan empleando tanto kanji como kana.
       </Callout>
+      <h2>Caracteres básicos</h2>
       <p>
         El sonido del japonés se basa en cinco vocales: <H>あいうえお</H> -{" "}
         <K>アイウエオ</K> - <R>aiueo</R>. Todos los sonidos hablados provienen
@@ -135,7 +130,69 @@ const Content = () => {
           Ir a Tablas de caracteres básicos.
         </Link>
       </p>
+      <h2>Caracteres con diacríticos</h2>
+      <p>
+        Son <em>símbolos</em> que puede ser añadidos a algunos <em>kanas</em>{" "}
+        para cambiar su pronunciación. Existen dos de ellos: el primero es muy
+        parecido a las comillas (〝 ) y es llamado <b>dakuten</b>; el segundo
+        tiene la apariencia de un pequeño círculo ( ゜) y es llamado{" "}
+        <b>handakuten</b>.
+      </p>
+      <p>
+        Se utilizan los mismos símbolos para hiragana y katakana. En el caso del
+        rōmaji, las consonantes cambian a su respectivo sonido: k → g, s → z,
+        etc.
+      </p>
+      <Example>
+        Dakuten: <H>け</H> <K>ケ</K> <R>ke</R> → <H>げ</H> <K>ゲ</K> <R>ge</R>
+      </Example>
+      <Example>
+        Handakuten: <H>は</H> <K>ハ</K> <R>ha</R> → <H>ぱ</H> <K>パ</K>{" "}
+        <R>pa</R>
+      </Example>
+      <p>
+        <Link
+          className="link-to"
+          to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=diacritico`}
+        >
+          Ir a Tablas de caracteres con diacríticos.
+        </Link>
+      </p>
+      <h2>Caracteres combinados</h2>
+      <p>
+        Se pueden combinar los kanas <H>や, ゆ, よ</H> - <K>ヤ, ユ, ヨ</K> -{" "}
+        <R>ya, yu, yo</R> con algunos otros para formar nuevos sonidos de una
+        sola mora (incluyendo los que utilizan dakuten). Cuando esto ocurre, los
+        kanas de la fila (y) son <b>escritas en pequeño</b> para hacer notar que
+        se están usando como combinación.
+      </p>
+      <Example>
+        <H>びょ</H> <K>ビョ</K> <R>byo</R> es diferente a <H>びよ</H>{" "}
+        <K>ビヨ</K> <R>biyo</R>
+      </Example>
+      <p>
+        <Link
+          className="link-to"
+          to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=combinacion`}
+        >
+          Ir a Tablas de caracteres combinados.
+        </Link>
+      </p>
+      <h2>Caracteres extendidos</h2>
+      <p>
+        El katakana ofrece un rango extendido de caracteres para representar
+        sonidos que no existen en el japonés, pero sí en otras lenguas.
+      </p>
+      <p>
+        <Link
+          className="link-to"
+          to={`${url}/tablas?silabario=katakana&silabario=romaji&tipo=extendido`}
+        >
+          Ir a Tablas de caracteres extendidos.
+        </Link>
+      </p>
       <Callout>El orden de las vocales es diferente: aiueo</Callout>
+      <h2>Homónimos</h2>
       <p>
         En el japonés es común encontrar palabras homónimas, es decir, que se
         escriben y pronuncian igual pero que tienen significados diferentes.
@@ -201,7 +258,7 @@ const Content = () => {
       </ul>
       <Callout>
         La duración de la vocal puede implicar diferencias en el significado o
-        pronunciación/ortografía equivocadas
+        errores en la pronunciación/ortografía
       </Callout>
       <Example>
         <H>おばさん</H> <R>obasan</R> [tía] es diferente a <H>おばあさん</H>{" "}
@@ -273,54 +330,6 @@ const Content = () => {
       <Example>
         <H>さんにん</H> <R>sannin</R>
       </Example>
-      <h2>Diacríticos</h2>
-      <p>
-        Son <em>símbolos</em> que puede ser añadidos a algunos <em>kanas</em>{" "}
-        para cambiar su pronunciación. Existen dos de ellos: el primero es muy
-        parecido a las comillas (〝 ) y es llamado <b>dakuten</b>; el segundo
-        tiene la apariencia de un pequeño círculo ( ゜) y es llamado{" "}
-        <b>handakuten</b>.
-      </p>
-      <p>
-        Se utilizan los mismos símbolos para hiragana y katakana. En el caso del
-        rōmaji, las consonantes cambian a su respectivo sonido: k → g, s → z,
-        etc.
-      </p>
-      <Example>
-        Dakuten: <H>け</H> <K>ケ</K> <R>ke</R> → <H>げ</H> <K>ゲ</K> <R>ge</R>
-      </Example>
-      <Example>
-        Handakuten: <H>は</H> <K>ハ</K> <R>ha</R> → <H>ぱ</H> <K>パ</K>{" "}
-        <R>pa</R>
-      </Example>
-      <p>
-        <Link
-          className="link-to"
-          to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=diacritico`}
-        >
-          Ir a Tablas de caracteres con diacríticos.
-        </Link>
-      </p>
-      <h2>Combinaciones</h2>
-      <p>
-        Se pueden combinar los kanas <H>や, ゆ, よ</H> - <K>ヤ, ユ, ヨ</K> -{" "}
-        <R>ya, yu, yo</R> con algunos otros para formar nuevos sonidos de una
-        sola mora (incluyendo los que utilizan dakuten). Cuando esto ocurre, los
-        kanas de la fila (y) son <b>escritas en pequeño</b> para hacer notar que
-        se están usando como combinación.
-      </p>
-      <Example>
-        <H>びょ</H> <K>ビョ</K> <R>byo</R> es diferente a <H>びよ</H>{" "}
-        <K>ビヨ</K> <R>biyo</R>
-      </Example>
-      <p>
-        <Link
-          className="link-to"
-          to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=combinacion`}
-        >
-          Ir a Tablas de caracteres combinados.
-        </Link>
-      </p>
       <h2>Vocales afónicas</h2>
       <p>
         En algunas palabras, el sonido de vocales como (i) o (u) se pierde, es
@@ -346,22 +355,9 @@ const Content = () => {
       </Note>
       <p>
         En cuanto a la escritura/lectura, estas palabras pueden ser
-        diferenciadas con su propio kanji: 雨 y 飴 respectivamente, mientras que
-        en la pronunciación se puede diferenciar con el tono.
-      </p>
-      <h2>Detalles del katakana</h2>
-      <h3>Caracteres extendidos</h3>
-      <p>
-        El katakana ofrece un rango extendido de caracteres para representar
-        sonidos que no existen en el japonés, pero sí en otras lenguas.
-      </p>
-      <p>
-        <Link
-          className="link-to"
-          to={`${url}/tablas?silabario=katakana&silabario=romaji&tipo=extendido`}
-        >
-          Ir a Tablas de caracteres extendidos.
-        </Link>
+        diferenciadas con su propio kanji: <Kj>雨</Kj> y <Kj>飴</Kj>{" "}
+        respectivamente, mientras que en la pronunciación se puede diferenciar
+        con el tono.
       </p>
     </div>
   )

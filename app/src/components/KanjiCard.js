@@ -24,7 +24,7 @@ export default function KanjiCard({ data, readingMode }) {
     <div css={kanjiCard}>
       <div className="left">
         {!showAnimation && <div className="char">{character}</div>}
-        {showAnimation && <KanjiAnimation name={utf16} playOnLoad={true} />}
+        {showAnimation && <KanjiAnimation name={utf16} playOnLoad />}
         <div className="info">
           <button
             className="strokes"

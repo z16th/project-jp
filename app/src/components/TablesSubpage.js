@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import queryString from "query-string"
 import ToggleTables from "./ToggleTables"
@@ -35,6 +35,10 @@ export default function TablesSubpage() {
     tipo !== undefined
       ? defaultSpanishTypes.filter((e) => tipo.includes(e))
       : [...defaultSpanishTypes]
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="content">

@@ -17,23 +17,22 @@ export default function TableChars({ char, syllabary, condition }) {
         ))}
       </div>
     )
-  else
-    return (
-      <div
-        className={`${syllabary} kana kana-${romaji} ${attributes}`}
-        style={{ gridArea: `x${column}-y${row}` }}
-      >
-        {syllabary === "romaji" || char.type === "extended" ? (
-          <TableElement2 className="char-as-font">
-            {char[`${syllabary}`]}
-          </TableElement2>
-        ) : (
-          <TableElement1 className="char-as-font">
-            {char[`${syllabary}`]}
-          </TableElement1>
-        )}
-      </div>
-    )
+  return (
+    <div
+      className={`${syllabary} kana kana-${romaji} ${attributes}`}
+      style={{ gridArea: `x${column}-y${row}` }}
+    >
+      {syllabary === "romaji" || char.type === "extended" ? (
+        <TableElement2 className="char-as-font">
+          {char[`${syllabary}`]}
+        </TableElement2>
+      ) : (
+        <TableElement1 className="char-as-font">
+          {char[`${syllabary}`]}
+        </TableElement1>
+      )}
+    </div>
+  )
 }
 
 TableChars.propTypes = {

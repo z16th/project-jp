@@ -1,6 +1,7 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { Layout } from "../styling"
+
 import NavBar from "./NavBar"
 import HomePage from "./HomePage"
 import SyllabaryPage from "./SyllabaryPage"

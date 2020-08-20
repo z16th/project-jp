@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { useEffect, useState, useReducer } from "react"
-import { useHistory, useLocation } from "react-router-dom"
+import PropTypes from "prop-types"
+import { useHistory } from "react-router-dom"
 import queryString from "query-string"
 import { jsx } from "@emotion/core"
 import { toggleTables } from "../styling"
@@ -136,4 +137,9 @@ export default function ToggleTables({ syllabary: silabario, type: tipo }) {
       </div>
     </div>
   )
+}
+
+ToggleTables.propTypes = {
+  syllabary: PropTypes.arrayOf(PropTypes.string).isRequired,
+  type: PropTypes.arrayOf(PropTypes.string).isRequired,
 }

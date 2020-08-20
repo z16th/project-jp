@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/* eslint react/no-array-index-key: 0 */
 import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
 import { scrollTo, slug } from "../utils/vanilla"

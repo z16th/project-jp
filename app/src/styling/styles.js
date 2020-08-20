@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { pink, yellow, blue, green, gray, brands } from "./colors"
+import { pink, yellow, blue, gray, brands } from "./colors"
 import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
 import texture from "../utils/images/paper.jpg"
 
