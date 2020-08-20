@@ -27,10 +27,13 @@ export default function PageNav({ content, children }) {
 }
 
 PageNav.propTypes = {
-  content: PropTypes.arrayOf(PropTypes.node).isRequired,
+  content: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.node, PropTypes.shape([])])
+  ),
   children: PropTypes.node,
 }
 
 PageNav.defaultProps = {
+  content: [],
   children: null,
 }
