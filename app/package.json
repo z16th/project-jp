@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "babel-plugin-emotion": "^10.0.33"
+    "babel-plugin-emotion": "^10.0.33",
+    "netlify-cli": "^2.59.1"
   }
 }
