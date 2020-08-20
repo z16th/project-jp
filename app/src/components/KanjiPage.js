@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /** @jsxFrag React.Fragment */
-import { useEffect } from "react"
+import React, { useEffect } from "react"
 import { jsx } from "@emotion/core"
 import Sidebar from "./Sidebar"
 import KanjiCard from "./KanjiCard"
