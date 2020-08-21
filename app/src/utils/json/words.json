@@ -119,5 +119,16 @@
       "en": ["entirely", "never", "not at all"],
       "es": ["totalmente", "nunca", "en absoluto"]
     }
+  },
+  {
+    "date": "2020-08-21",
+    "word": "博覧会",
+    "furigana": ["はく", "らん", "かい"],
+    "romaji": "hakurankai",
+    "type": "n",
+    "meaning": {
+      "en": ["exposition", "exhibition"],
+      "es": ["totalmente", "nunca", "en absoluto"]
+    }
   }
 ]
