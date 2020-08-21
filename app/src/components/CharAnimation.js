@@ -24,7 +24,7 @@ const CharAnimation = ({ name, playOnLoad, onReset }) => {
     if (playOnLoad) {
       timer = setTimeout(() => setIsPaused(false), 800)
     }
-    return timer ? () => clearTimeout(timer) : null
+    return () => clearTimeout(timer)
   }, [playOnLoad])
 
   useEffect(() => {

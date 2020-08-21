@@ -108,5 +108,16 @@
       "en": ["apprentice", "apprenticeship"],
       "es": ["aprendiz", "aprendizaje"]
     }
+  },
+  {
+    "date": "2020-08-20",
+    "word": "ぜんぜん",
+    "furigana": [],
+    "romaji": "zenzen",
+    "type": "adv",
+    "meaning": {
+      "en": ["entirely", "never", "not at all"],
+      "es": ["totalmente", "nunca", "en absoluto"]
+    }
   }
 ]
