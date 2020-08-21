@@ -17,20 +17,20 @@ const links = [
   {
     to: "/",
     exact: true,
-    icon: torii,
     label: "INICIO",
+    Icon: torii,
   },
   {
     to: "/silabarios",
     exact: false,
-    icon: koi,
     label: "SILABARIOS",
+    Icon: koi,
   },
   {
     to: "/kanji",
     exact: false,
-    icon: origami,
     label: "KANJI",
+    Icon: origami,
   },
 ]
 
