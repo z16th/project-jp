@@ -130,5 +130,16 @@
       "en": ["exposition", "exhibition"],
       "es": ["exposición", "exhibición"]
     }
+  },
+  {
+    "date": "2020-08-22",
+    "word": "共著",
+    "furigana": ["きょう", "ちょ"],
+    "romaji": "kyōcho",
+    "type": "n",
+    "meaning": {
+      "en": ["co-authorship"],
+      "es": ["coautoría"]
+    }
   }
 ]
