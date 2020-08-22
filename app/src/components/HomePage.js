@@ -62,7 +62,7 @@ const Content = () => {
         Texto en <b>kanji</b> está remarcado en rosa: <Kj>十六番目</Kj>
       </p>
       <p>
-        Texto en <b>rōmaji</b> está remarcado en verde claro: <R>desu</R>
+        Texto en <b>rōmaji</b> está remarcado en morado: <R>desu</R>
       </p>
       <Note>
         <b>Nota: </b>La sección Furigana y Romaji de la Palabra del día son las

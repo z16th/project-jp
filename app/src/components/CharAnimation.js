@@ -7,7 +7,7 @@ import Icon from "./Icon"
 
 const noop = () => {}
 
-const CharAnimation = ({ name, playOnLoad, onReset }) => {
+const CharAnimation = ({ name, isKanji, playOnLoad, onReset }) => {
   const svgRef = useRef(null)
   const [isPaused, setIsPaused] = useState(true)
 
@@ -41,7 +41,7 @@ const CharAnimation = ({ name, playOnLoad, onReset }) => {
       <button className="reset" type="button" onClick={handleReset}>
         <Icon
           ref={svgRef}
-          name={`0${name}-jlect`}
+          name={isKanji ? `0${name}-jlect` : name}
           onLoad={() => {
             if (svgRef.current) {
               svgRef.current.pauseAnimations()
@@ -56,11 +56,13 @@ const CharAnimation = ({ name, playOnLoad, onReset }) => {
 
 CharAnimation.propTypes = {
   name: PropTypes.string.isRequired,
+  isKanji: PropTypes.bool,
   playOnLoad: PropTypes.bool,
   onReset: PropTypes.func,
 }
 
 CharAnimation.defaultProps = {
+  isKanji: true,
   playOnLoad: false,
   onReset: noop,
 }

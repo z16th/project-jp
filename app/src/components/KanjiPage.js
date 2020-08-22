@@ -3,9 +3,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react"
 import { jsx } from "@emotion/core"
-import Sidebar from "./Sidebar"
-import KanjiCard from "./KanjiCard"
-import CiteSource from "./Bibliography"
 import kanjiData from "../utils/json/kanji-1-80.json"
 import {
   PageStyled,
@@ -18,6 +15,10 @@ import {
   Note,
   kanjiTable,
 } from "../styling"
+
+import Sidebar from "./Sidebar"
+import KanjiCard from "./KanjiCard"
+import CiteSource from "./Bibliography"
 import CharAnimation from "./CharAnimation"
 
 export default function KanjiPage() {
@@ -115,14 +116,63 @@ function Content() {
       <h2>Furigana</h2>
       <p>
         Es el acompañamiento del hiragana para indicar la pronunciación de un
-        kanji.
+        kanji. Suelen ser utilizados cuando el kanji escrito es poco común. Los
+        libros de texto para aprender japonés incluyen furigana con más
+        frecuencia que cualquier otro tipo de fuente.
       </p>
+      <Example>
+        <span
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "flex-end",
+          }}
+        >
+          <span style={{ display: "flex", flexDirection: "column" }}>
+            <span
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                fontSize: "0.6rem",
+              }}
+            >
+              たけ
+            </span>
+            <Kj>竹</Kj>
+          </span>
+          <span
+            style={{
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <H>の</H>
+          </span>
+          <span style={{ display: "flex", flexDirection: "column" }}>
+            <span
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                fontSize: "0.6rem",
+              }}
+            >
+              こ
+            </span>
+            <Kj>子</Kj>
+          </span>
+        </span>{" "}
+        [brote de bambú]
+      </Example>
       <h2>Okurigana</h2>
       <p>
         Es el uso de hiragana en combinación con el kanji para formar una
-        palabra distinta. Usualmente son las conjugaciones de los verbos.
+        palabra distinta. Usualmente son conjugaciones de verbos.
       </p>
-      <h2>Los tipos de kanji</h2>
+      <Example>
+        <Kj>勉強</Kj> [estudio] → <Kj>勉強</Kj>
+        <H>しましょう</H> [estudiemos]
+      </Example>
+      <h2>Tipos de kanji</h2>
       <p>Los kanji japoneses pueden ser divididos en 4 tipos básicos:</p>
       <ul>
         <li>
@@ -157,6 +207,18 @@ function Content() {
         Alrededor del 80% de los kanjis son ideogramas de sonido compuestos.
       </Callout>
       <h1>Escritura</h1>
+      <p>
+        En la lengua japonesa el orden, número y tipo de trazos utilizados al
+        escribir un caracter tienen una gran importancia en para la estética y
+        correcta escritura del mismo.
+      </p>
+      <p>
+        Existe una serie de reglas que pueden ayudarnos a escribir correctamente
+        los caracteres sin necesidad de estudiar cada uno de ellos, aunque no
+        siempre se siguen las mismas reglas. Existen caracteres que pueden
+        diferir en el orden de los trazos a pesar de que se usen aparentemente
+        la misma estructura que otros.
+      </p>
       <h2>Reglas generales</h2>
       <ul>
         <li>Los trazos son escritos de izquierda a derecha.</li>
@@ -200,15 +262,23 @@ function Content() {
       <h2>Tipos de trazos</h2>
       <ul>
         <li>Línea doblada</li>
+        <CharAnimation name="bent-line" isKanji={false} />
         <li>Línea horizontal</li>
+        <CharAnimation name="horizontal-line+stop" isKanji={false} />
         <li>Línea vertical + paro</li>
+        <CharAnimation name="vertical-line+stop" isKanji={false} />
         <li>Línea vertical + giro hacia arriba</li>
+        <CharAnimation name="vertical-line+upward-turn" isKanji={false} />
         <li>Línea doblada + trazo barrido</li>
+        <CharAnimation name="bent-line+sweep" isKanji={false} />
         <li>Barrido a la izquierda</li>
+        <CharAnimation name="left-sweep" isKanji={false} />
         <li>Barrido a la derecha</li>
+        <CharAnimation name="right-sweep" isKanji={false} />
         <li>Punto</li>
+        <CharAnimation name="dot" isKanji={false} />
         <li>Curva + giro hacia arriba</li>
-        <li>Línea vertical</li>
+        <CharAnimation name="curve-upward" isKanji={false} />
       </ul>
       <Callout>
         Dependiendo de la tipografía, puede que los trazos luzcan distintos a

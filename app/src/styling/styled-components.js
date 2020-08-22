@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
-import { blue, yellow, gray, pink, green } from "./colors"
+import { blue, yellow, gray, pink, purple } from "./colors"
 import {
   primaryFont,
   secondaryFont,
@@ -31,7 +31,7 @@ export const Kj = styled.span`
   border-radius: 4px;
 `
 export const R = styled.span`
-  background-color: ${green.background};
+  background-color: ${purple.background};
   padding: 2px 3px;
   border-radius: 4px;
 `
@@ -123,7 +123,7 @@ export const KanaTable = styled.section`
     background-color: ${blue.background};
   }
   .kana.romaji {
-    background-color: ${green.background};
+    background-color: ${purple.background};
   }
   .exception {
     border: 2px dotted ${gray.regular};
@@ -140,13 +140,13 @@ export const KanaTable = styled.section`
       height: auto;
       font-family: ${kanjiSansFont};
       @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
-        font-size: calc(
-          12px + (${typeScale.tableContent - 18} - 16) *
+        width: calc(
+          24px + (42 - 38) *
             ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
         );
       }
       @media (min-width: ${maxWidth}px) {
-        font-size: ${typeScale.tableContent - 24}px;
+        width: 42px;
       }
     }
   }
@@ -346,6 +346,9 @@ export const Layout = ({ children }) => (
             color: ${blue.dark};
             border-bottom: 1px dotted ${gray.dark};
             width: fit-content;
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
         .link-to {
@@ -353,6 +356,9 @@ export const Layout = ({ children }) => (
           color: ${pink.dark};
           border-bottom: 1px dashed ${gray.dark};
           width: fit-content;
+          &:hover {
+            cursor: pointer;
+          }
         }
         .fade-appear {
           opacity: 0;
