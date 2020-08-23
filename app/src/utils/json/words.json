@@ -141,5 +141,16 @@
       "en": ["co-authorship"],
       "es": ["coautoría"]
     }
+  },
+  {
+    "date": "2020-08-22",
+    "word": "解雇する",
+    "furigana": ["かい", "こ", "す", "る"],
+    "romaji": "kaikosuru",
+    "type": "vb",
+    "meaning": {
+      "en": ["dismiss"],
+      "es": ["descartar", "despedir"]
+    }
   }
 ]
