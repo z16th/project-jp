@@ -211,11 +211,12 @@ export const japaneseChar = css`
 
 // ===========================SIDEBAR
 
-export const navSidebar = css`
+export const pageNav = css`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin: 40px 20px;
+  width: 240px;
   .children {
     display: flex;
     flex-direction: column;
@@ -241,7 +242,7 @@ export const navSidebar = css`
   .scroll-link {
     text-align: left;
     border: 0;
-    margin: 2px 0px;
+    margin: 2.4px 0px;
     padding: 6px;
     border: 1px dashed black;
     background-color: transparent;
@@ -259,15 +260,15 @@ export const navSidebar = css`
     }
   }
   .link-H1 {
-    margin-left: 0px;
+    margin-right: 0px;
     padding: 6px;
   }
   .link-H2 {
-    margin-left: 28px;
+    margin-right: 28px;
     padding: 4px 6px;
   }
   .link-H3 {
-    margin-left: 56px;
+    margin-right: 56px;
     padding: 3px 6px;
   }
 `
@@ -279,7 +280,8 @@ export const sidebar = css`
   position: sticky;
   top: 48px;
   height: 100vh;
-  border-left: 1px solid ${blue.background};
+  border-left: 1px solid ${gray.dark};
+  background-color: white;
   @media (min-width: 1024px) {
     display: initial;
   }

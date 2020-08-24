@@ -3,11 +3,11 @@
 import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
 import { scrollTo, slug } from "../utils/vanilla"
-import { navSidebar } from "../styling"
+import { pageNav } from "../styling"
 
 export default function PageNav({ content, children }) {
   return (
-    <div className="nav-sidebar" css={navSidebar}>
+    <div className="nav-sidebar" css={pageNav}>
       <div className="children">{children}</div>
       <h4>En esta página</h4>
       {content !== null

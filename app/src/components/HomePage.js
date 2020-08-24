@@ -70,13 +70,13 @@ const Content = () => {
         hiragana y el segundo en romaji a pesar de no ser remarcados con
         colores.
       </Note>
+
       <h2>Tipos de texto</h2>
       <Callout>
         Texto encerrado de esta forma es un dato que puede ser útil recordar.
       </Callout>
       <Example>Texto encerrado de esta manera es un ejemplo</Example>
-
-      <p className="link-to">
+      <p className="link-to" style={{ margin: "0" }}>
         Texto con esta apariencia es un link a una ubicación dentro de este
         sitio
       </p>

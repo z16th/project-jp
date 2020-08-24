@@ -209,8 +209,8 @@ export const PageStyled = styled.div`
   @media (min-width: 1024px) {
     display: grid;
     grid-template:
-      ". content sidebar ." 1fr / minmax(0px, 8vw) minmax(50%, 5fr)
-      2fr 1fr;
+      ". content sidebar ." 1fr / minmax(0px, 15%) minmax(50%, 768px)
+      max-content 15%;
     .main-content {
       grid-area: content;
       .content {
@@ -352,12 +352,31 @@ export const Layout = ({ children }) => (
           }
         }
         .link-to {
+          display: inline-block;
+          margin: 8px 0;
           text-decoration: none;
           color: ${pink.dark};
           border-bottom: 1px dashed ${gray.dark};
           width: fit-content;
           &:hover {
             cursor: pointer;
+          }
+        }
+        .anim-example {
+          margin: 12px 4px;
+          .reset {
+            color: white;
+            border: 1px dashed ${gray.regular};
+            background-color: ${gray.background};
+            &:hover {
+              cursor: pointer;
+            }
+            &:active {
+              background-color: ${gray.dark};
+            }
+            &:focus {
+              border: 1px solid ${gray.regular};
+            }
           }
         }
         .fade-appear {
