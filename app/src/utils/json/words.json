@@ -152,5 +152,16 @@
       "en": ["dismiss"],
       "es": ["descartar", "despedir"]
     }
+  },
+  {
+    "date": "2020-08-23",
+    "word": "若芽",
+    "furigana": ["わか", "め"],
+    "romaji": "wakame",
+    "type": "n",
+    "meaning": {
+      "en": ["bud", "sprout"],
+      "es": ["brote", "retoño"]
+    }
   }
 ]
