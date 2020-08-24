@@ -3,6 +3,7 @@ import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
 import Sidebar from "./Sidebar"
 import TablesSubpage from "./TablesSubpage"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
+import CiteSource from "./Bibliography"
 
 export default function SyllabaryPage() {
   const { url } = useRouteMatch()
@@ -64,6 +65,9 @@ const Content = () => {
       <Callout>
         Es el conjunto de caracteres que tiene trazos redondeados.
       </Callout>
+      <Link className="link-to" to={`${url}/tablas?silabario=hiragana`}>
+        Ir a Tablas de Hiragana.
+      </Link>
       <h2>Katakana</h2>
       <p>
         El uso más común del katakana es transcribir palabras de otros idiomas.
@@ -78,6 +82,9 @@ const Content = () => {
       <Callout>
         Es el conjunto de caracteres que tiene trazos rectos y angulares.
       </Callout>
+      <Link className="link-to" to={`${url}/tablas?silabario=katakana`}>
+        Ir a Tablas de Katakana.
+      </Link>
       <h2>Romaji</h2>
       <p>
         El <R>rōmaji</R> (<K>ローマ</K>
@@ -94,6 +101,9 @@ const Content = () => {
         fieles al español, mientras que los sonidos consonantes son más
         parecidos al inglés.
       </p>
+      <Link className="link-to" to={`${url}/tablas?silabario=romaji`}>
+        Ir a Tablas de Romaji.
+      </Link>
       <p>
         En el estudio serio de la lengua japonesa, usar rōmaji por completo
         puede ser contraproducente y es recomendado únicamente para aprender los
@@ -122,14 +132,13 @@ const Content = () => {
         consonante que puede tener sonido sin necesidad de combinarse con
         vocales.
       </p>
-      <p>
-        <Link
-          className="link-to"
-          to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=basico`}
-        >
-          Ir a Tablas de caracteres básicos.
-        </Link>
-      </p>
+      <Link
+        className="link-to"
+        to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=basico`}
+      >
+        Ir a Tablas de caracteres básicos.
+      </Link>
+      <Callout>El orden de las vocales es diferente: aiueo</Callout>
       <h2>Caracteres con diacríticos</h2>
       <p>
         Son <em>símbolos</em> que puede ser añadidos a algunos <em>kanas</em>{" "}
@@ -150,14 +159,12 @@ const Content = () => {
         Handakuten: <H>は</H> <K>ハ</K> <R>ha</R> → <H>ぱ</H> <K>パ</K>{" "}
         <R>pa</R>
       </Example>
-      <p>
-        <Link
-          className="link-to"
-          to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=diacritico`}
-        >
-          Ir a Tablas de caracteres con diacríticos.
-        </Link>
-      </p>
+      <Link
+        className="link-to"
+        to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=diacritico`}
+      >
+        Ir a Tablas de caracteres con diacríticos.
+      </Link>
       <h2>Caracteres combinados</h2>
       <p>
         Se pueden combinar los kanas <H>や, ゆ, よ</H> - <K>ヤ, ユ, ヨ</K> -{" "}
@@ -170,28 +177,23 @@ const Content = () => {
         <H>びょ</H> <K>ビョ</K> <R>byo</R> es diferente a <H>びよ</H>{" "}
         <K>ビヨ</K> <R>biyo</R>
       </Example>
-      <p>
-        <Link
-          className="link-to"
-          to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=combinacion`}
-        >
-          Ir a Tablas de caracteres combinados.
-        </Link>
-      </p>
+      <Link
+        className="link-to"
+        to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=combinacion`}
+      >
+        Ir a Tablas de caracteres combinados.
+      </Link>
       <h2>Caracteres extendidos</h2>
       <p>
         El katakana ofrece un rango extendido de caracteres para representar
         sonidos que no existen en el japonés, pero sí en otras lenguas.
       </p>
-      <p>
-        <Link
-          className="link-to"
-          to={`${url}/tablas?silabario=katakana&silabario=romaji&tipo=extendido`}
-        >
-          Ir a Tablas de caracteres extendidos.
-        </Link>
-      </p>
-      <Callout>El orden de las vocales es diferente: aiueo</Callout>
+      <Link
+        className="link-to"
+        to={`${url}/tablas?silabario=katakana&silabario=romaji&tipo=extendido`}
+      >
+        Ir a Tablas de caracteres extendidos.
+      </Link>
       <h2>Homónimos</h2>
       <p>
         En el japonés es común encontrar palabras homónimas, es decir, que se
@@ -288,11 +290,16 @@ const Content = () => {
       <h3>Vocales largas en romaji</h3>
       <p>
         Dependiendo del sistema rōmaji que se utilice, puede ser escrito de
-        diferentes maneras: siguiendo las mismas reglas que en el caso de
-        hiragana, utilizar el símbolo diacrítico <R>¯</R> (macrón) sobre la
-        vocal que se quiera alargar o una combinación de ambos, guiados por
-        reglas específicas.
+        diferentes maneras:
       </p>
+      <ul>
+        <li>Siguiendo las mismas reglas que en el caso de hiragana</li>
+        <li>
+          Utilizando el símbolo diacrítico <R>¯</R> (macrón) sobre la vocal que
+          se quiera alargar
+        </li>
+        <li>Una combinación de ambos, guiados por reglas específicas</li>
+      </ul>
       <h2>Uso de ん ン n</h2>
       <p>
         Mientras que algunas referencias mencionan que la pronunciación de este
@@ -336,7 +343,11 @@ const Content = () => {
         decir, no se pronuncia.
       </p>
       <Example>
-        <H>すきです</H> (suki desu → s<s>u</s>ki des<s>u</s>)
+        <H>すきです</H> (<R>suki desu</R> →{" "}
+        <R>
+          s<s>u</s>ki des<s>u</s>
+        </R>
+        )
       </Example>
       <h2>Acento</h2>
       <p>
@@ -359,6 +370,19 @@ const Content = () => {
         respectivamente, mientras que en la pronunciación se puede diferenciar
         con el tono.
       </p>
+      <br />
+      <p>
+        Parte de la información encontrada esta página se puede consultar en las
+        siguientes referencias:
+      </p>
+      <ul>
+        <li>
+          <CiteSource source="minnaNoNihongo" />
+        </li>
+        <li>
+          <CiteSource source="genki" />
+        </li>
+      </ul>
     </div>
   )
 }

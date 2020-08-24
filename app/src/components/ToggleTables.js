@@ -48,7 +48,7 @@ export default function ToggleTables({ syllabary: silabario, type: tipo }) {
   }, [state])
 
   useEffect(() => {
-    if (query !== null) history.push(`/silabarios/tablas?${query}`)
+    if (query !== null) history.replace(`/silabarios/tablas?${query}`)
   }, [query, history])
 
   const handleClick = (actionType) => {

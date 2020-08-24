@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
-import NavPage from "./NavPage"
+import NavPage from "./PageNav"
 import useNodes from "../hooks/useNodes"
 import HamburgerMenu from "./HamburgerMenu"
 import { slug } from "../utils/vanilla"

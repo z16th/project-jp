@@ -13,7 +13,7 @@ export default function NavBar({ id, links, path }) {
       <div id="navbar-empty" css={navbarEmpty} />
 
       <nav id={id} css={navbar}>
-        {links.map(({ to, exact, Icon, label }) => (
+        {links.map(({ to, exact, label, Icon }) => (
           <CustomLink
             className="nav-button noselect"
             key={`${id}-${to}`}
@@ -35,9 +35,8 @@ NavBar.propTypes = {
     PropTypes.shape({
       to: PropTypes.string,
       exact: PropTypes.bool,
-      icon: PropTypes.element,
-      alt: PropTypes.string,
       label: PropTypes.string,
+      Icon: PropTypes.object,
     })
   ).isRequired,
   path: PropTypes.string,

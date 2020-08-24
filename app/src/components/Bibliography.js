@@ -15,6 +15,23 @@ const sources = {
       <a href="http://kanjivg.tagaini.net/">KanjiVG</a>.
     </>
   ),
+  minnaNoNihongo: (
+    <>
+      3A Corporation. (2012).{" "}
+      <a href="https://www.amazon.com/dp/4883196046">Minna No Nihongo</a>{" "}
+      (Second ed.). 3A Corporation.
+    </>
+  ),
+  genki: (
+    <>
+      Banno, E., Ikeda, Y., & Ohno, Y. (2011).{" "}
+      <a href="https://www.amazon.com/-/es/GENKI-Integrated-Elementary-Japanese-English/dp/4789014401">
+        GENKI I: An Integrated Course in Elementary Japanese (English and
+        Japanese Edition)
+      </a>{" "}
+      (2nd edition ed.). Japan Times/Tsai Fong Books.
+    </>
+  ),
   randomHouseDictionary: (
     <>
       Nakao, S. (1996).{" "}

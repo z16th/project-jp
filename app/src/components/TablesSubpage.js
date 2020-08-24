@@ -4,7 +4,7 @@ import queryString from "query-string"
 import ToggleTables from "./ToggleTables"
 import Table from "./Table"
 import { capitalize } from "../utils/vanilla"
-import { Highlight } from "../styling"
+import { Highlight, Note, Callout } from "../styling"
 
 const defaultSyllabaries = ["hiragana", "katakana", "romaji"]
 
@@ -42,7 +42,48 @@ export default function TablesSubpage() {
 
   return (
     <div className="content">
-      <h1>Selección</h1>
+      <h1>Tablas</h1>
+      <p>
+        Las tablas de caracteres son una referencia útil en el aprendizaje de la
+        lectura y escritura de los silabarios japoneses. Entre tipografías
+        existen diferencias que pueden confundirnos fácilmente. Dependiendo de
+        ella, los trazos que utiliza cada caracter pueden ser más fáciles o más
+        difíciles de reconocer. Hay algunos caracteres que pueden ser escritos
+        correctamente con distinto número de trazos.
+      </p>
+      <Callout>
+        En el japonés la manera y el orden en que están escritos los trazos es
+        muy importante
+      </Callout>
+      <p>
+        En esta sección encontrarás tablas de los silabarios hiragana y
+        katakana, así como las tablas de romanización.
+      </p>
+      <h2>Cómo usar</h2>
+      <ul>
+        <li>
+          Utiliza la <b>Selección</b> para cambiar entre los silabarios y los
+          tipos de caracteres que quieras visualizar. Por defecto, todas las
+          tablas están habilitadas.
+        </li>
+        <li>
+          Coloca el <b>cursor encima</b> de un caracter para cambiar a su
+          visualización de tipografía con serifa.
+          <Note>
+            <b>Nota: </b>En dispositivos móviles deberás{" "}
+            <b>pulsar sobre el caracter</b> para activar esta visualización.
+          </Note>
+        </li>
+        <li>
+          Pulsa en el botón <b>Ver animaciones</b> para cargar las animaciones
+          de trazado.
+        </li>
+        <li>
+          Para reproducir una animación o reiniciarla,{" "}
+          <b>pulsa en el caracter</b> que desees visualizar.
+        </li>
+      </ul>
+      <h2>Selección</h2>
       <Highlight>
         <ToggleTables syllabary={syllabarySelection} type={typeSelection} />
       </Highlight>

@@ -1,0 +1,19 @@
+<svg class="kanjivg" id="curve-upward" viewBox="0 0 106 106" width="106" height="106"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" baseProfile="full">
+	<defs>
+		<style type="text/css">path.black{fill:none;stroke:black;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}path.grey{fill:none;stroke:#ddd;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}path.stroke{fill:none;stroke:black;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}text{font-size:16px;font-family:Segoe UI Symbol,Cambria Math,DejaVu Sans,Symbola,Quivira,STIX,Code2000;-webkit-touch-callout:none;cursor:pointer;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select: none;}text:hover{color:#777;}#reset{font-weight:bold;}</style>
+		<marker id="markerStart" markerWidth="8" markerHeight="8" style="overflow: visible;">
+			<circle cx="0" cy="0" r="1.5" style="stroke: none; fill: red; fill-opacity: 0.5;"></circle>
+		</marker>
+		<marker id="markerEnd" style="overflow: visible;">
+			<circle cx="0" cy="0" r="0.8" style="stroke: none; fill: blue; fill-opacity: 0.5;">
+				<animate attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite"></animate>
+			</circle>
+		</marker>
+	</defs>
+	<path class="grey" d="M43,20c1.38,1.38,2.15,3.25,2.15,5.26C45.15,29.5,45,71.84,45,76c0,10.5,2.25,12.25,20.25,12.25c18.75,0,20-3.75,20-12.31"></path>
+	<path class="stroke" d="M43,20c1.38,1.38,2.15,3.25,2.15,5.26C45.15,29.5,45,71.84,45,76c0,10.5,2.25,12.25,20.25,12.25c18.75,0,20-3.75,20-12.31" stroke-dasharray="150">
+		<animate attributeName="stroke-dashoffset" from="150" to="0" dur="1.8s" begin="0.0s" fill="freeze"></animate>
+	</path>
+</svg>

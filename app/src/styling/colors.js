@@ -25,6 +25,13 @@ export const pink = {
   background: "#ffe2ed",
 }
 
+export const purple = {
+  regular: "#9182FF",
+  light: "#C6B2FF",
+  dark: "#5C55CB",
+  background: "#EDEAFF",
+}
+
 export const gray = {
   regular: "#545454",
   light: "#ADADAD",
