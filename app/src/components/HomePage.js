@@ -11,7 +11,7 @@ export default function HomePage() {
 
   return (
     <PageStyled id="home-page">
-      <Sidebar from=".content" />
+      <Sidebar />
       <div className="main-content">
         <Content />
       </div>

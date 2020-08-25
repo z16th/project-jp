@@ -1,9 +1,10 @@
 import React, { useEffect } from "react"
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
 import Sidebar from "./Sidebar"
-import TablesSubpage from "./TablesSubpage"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
 import CiteSource from "./CiteSource"
+
+const TablesSubpage = React.lazy(() => import("./TablesSubpage"))
 
 export default function SyllabaryPage() {
   const { url } = useRouteMatch()
@@ -26,7 +27,15 @@ export default function SyllabaryPage() {
             <Content />
           </Route>
           <Route path={`${url}/tablas`}>
-            <TablesSubpage />
+            <React.Suspense
+              fallback={
+                <div className="content" style={{ height: "100vh" }}>
+                  <h1>Cargando</h1>
+                </div>
+              }
+            >
+              <TablesSubpage />
+            </React.Suspense>
           </Route>
           <Route path="*">
             <div className="content">

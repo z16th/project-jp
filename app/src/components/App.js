@@ -3,15 +3,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { Layout } from "../styling"
 
 import NavBar from "./NavBar"
-import HomePage from "./HomePage"
-import SyllabaryPage from "./SyllabaryPage"
-import KanjiPage from "./KanjiPage"
 import Footer from "./Footer"
-import FourOhFour from "./FourOhFour"
 
 import { ReactComponent as torii } from "../utils/icons/icons8-torii.svg"
 import { ReactComponent as koi } from "../utils/icons/icons8-koi-fish.svg"
 import { ReactComponent as origami } from "../utils/icons/icons8-origami.svg"
+
+const HomePage = React.lazy(() => import("./HomePage"))
+const SyllabaryPage = React.lazy(() => import("./SyllabaryPage"))
+const KanjiPage = React.lazy(() => import("./KanjiPage"))
+const FourOhFour = React.lazy(() => import("./FourOhFour"))
 
 const links = [
   {
@@ -40,20 +41,22 @@ export default function App() {
       <Layout id="App">
         <NavBar id="main-navbar" links={links} />
 
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route path="/silabarios">
-            <SyllabaryPage />
-          </Route>
-          <Route path="/kanji">
-            <KanjiPage />
-          </Route>
-          <Route path="*">
-            <FourOhFour />
-          </Route>
-        </Switch>
+        <React.Suspense fallback={<div style={{ height: "100vh" }} />}>
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route path="/silabarios">
+              <SyllabaryPage />
+            </Route>
+            <Route path="/kanji">
+              <KanjiPage />
+            </Route>
+            <Route path="*">
+              <FourOhFour />
+            </Route>
+          </Switch>
+        </React.Suspense>
 
         <Footer />
       </Layout>
