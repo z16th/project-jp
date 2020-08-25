@@ -18,7 +18,7 @@ import {
 
 import Sidebar from "./Sidebar"
 import KanjiCard from "./KanjiCard"
-import CiteSource from "./Bibliography"
+import CiteSource from "./CiteSource"
 import CharAnimation from "./CharAnimation"
 
 export default function KanjiPage() {
@@ -125,46 +125,48 @@ function Content() {
         frecuencia que cualquier otro tipo de fuente.
       </p>
       <Example>
-        <span
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "flex-end",
-          }}
-        >
-          <span style={{ display: "flex", flexDirection: "column" }}>
-            <span
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                fontSize: "0.6rem",
-              }}
-            >
-              たけ
-            </span>
-            <Kj>竹</Kj>
-          </span>
+        <div style={{ display: "inline-block", verticalAlign: "bottom" }}>
           <span
             style={{
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "row",
+              alignItems: "flex-end",
             }}
           >
-            <H>の</H>
-          </span>
-          <span style={{ display: "flex", flexDirection: "column" }}>
+            <span style={{ display: "flex", flexDirection: "column" }}>
+              <span
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  fontSize: "0.6rem",
+                }}
+              >
+                たけ
+              </span>
+              <Kj>竹</Kj>
+            </span>
             <span
               style={{
                 display: "flex",
-                justifyContent: "center",
-                fontSize: "0.6rem",
+                flexDirection: "column",
               }}
             >
-              こ
+              <H>の</H>
             </span>
-            <Kj>子</Kj>
+            <span style={{ display: "flex", flexDirection: "column" }}>
+              <span
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  fontSize: "0.6rem",
+                }}
+              >
+                こ
+              </span>
+              <Kj>子</Kj>
+            </span>
           </span>
-        </span>{" "}
+        </div>{" "}
         [brote de bambú]
       </Example>
       <h2>Okurigana</h2>
@@ -394,12 +396,15 @@ const Bibliography = () => {
     <>
       <CiteSource source="kanjiVG" />
       <p>
-        Parte de la información encontrada esta página se puede consultar en las
+        Parte de la información encontrada esta página puede consultarse en las
         siguientes referencias:
       </p>
       <ul>
         <li>
           <CiteSource source="practicalKanji" />
+        </li>
+        <li>
+          <CiteSource source="kanjiForBeginners" />
         </li>
       </ul>
     </>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import Sidebar from "./Sidebar"
 import WordOfTheDay from "./WordOfTheDay"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
-import CiteSource from "./Bibliography"
+import CiteSource from "./CiteSource"
 
 export default function HomePage() {
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function HomePage() {
 
   return (
     <PageStyled id="home-page">
-      <Sidebar from=".content" />
+      <Sidebar />
       <div className="main-content">
         <Content />
       </div>
@@ -73,15 +73,19 @@ const Content = () => {
 
       <h2>Tipos de texto</h2>
       <Callout>
-        Texto encerrado de esta forma es un dato que puede ser útil recordar.
+        Texto encerrado de esta forma es un dato que puede ser útil recordar
       </Callout>
       <Example>Texto encerrado de esta manera es un ejemplo</Example>
-      <p className="link-to" style={{ margin: "0" }}>
-        Texto con esta apariencia es un link a una ubicación dentro de este
-        sitio
+      <p>
+        [Texto entre corchetes es el significado la palabra usada que le
+        precede]
       </p>
       <p className="bibliography">
         <span>Texto con esta apariencia es un link a una página externa</span>
+      </p>
+      <p className="link-to" style={{ margin: "0" }}>
+        Texto con esta apariencia es un link a una ubicación dentro de este
+        sitio
       </p>
 
       <h2>Romanización</h2>

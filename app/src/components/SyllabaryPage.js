@@ -1,9 +1,10 @@
 import React, { useEffect } from "react"
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
 import Sidebar from "./Sidebar"
-import TablesSubpage from "./TablesSubpage"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
-import CiteSource from "./Bibliography"
+import CiteSource from "./CiteSource"
+
+const TablesSubpage = React.lazy(() => import("./TablesSubpage"))
 
 export default function SyllabaryPage() {
   const { url } = useRouteMatch()
@@ -26,7 +27,15 @@ export default function SyllabaryPage() {
             <Content />
           </Route>
           <Route path={`${url}/tablas`}>
-            <TablesSubpage />
+            <React.Suspense
+              fallback={
+                <div className="content" style={{ height: "100vh" }}>
+                  <h1>Cargando</h1>
+                </div>
+              }
+            >
+              <TablesSubpage />
+            </React.Suspense>
           </Route>
           <Route path="*">
             <div className="content">
@@ -109,7 +118,7 @@ const Content = () => {
         puede ser contraproducente y es recomendado únicamente para aprender los
         silabarios. Para turismo, su uso es mucho más común ya que facilita el
         aprendizaje de frases completas sin la necesidad de comprender la
-        gramática ni la correcta ortografía.
+        gramática ni la correcta pronunciación/ortografía.
       </p>
       <h1>Escritura y pronunciación del japonés</h1>
       <p>
@@ -132,13 +141,13 @@ const Content = () => {
         consonante que puede tener sonido sin necesidad de combinarse con
         vocales.
       </p>
+      <Callout>El orden de las vocales es diferente: aiueo</Callout>
       <Link
         className="link-to"
         to={`${url}/tablas?silabario=hiragana&silabario=katakana&silabario=romaji&tipo=basico`}
       >
         Ir a Tablas de caracteres básicos.
       </Link>
-      <Callout>El orden de las vocales es diferente: aiueo</Callout>
       <h2>Caracteres con diacríticos</h2>
       <p>
         Son <em>símbolos</em> que puede ser añadidos a algunos <em>kanas</em>{" "}
@@ -188,6 +197,10 @@ const Content = () => {
         El katakana ofrece un rango extendido de caracteres para representar
         sonidos que no existen en el japonés, pero sí en otras lenguas.
       </p>
+      <p>
+        Otras referencias pueden contener un número distinto de caracteres
+        extendidos. Incluso pueden llegar usar sus equivalentes en hiragana.
+      </p>
       <Link
         className="link-to"
         to={`${url}/tablas?silabario=katakana&silabario=romaji&tipo=extendido`}
@@ -212,9 +225,9 @@ const Content = () => {
       <h2>Vocal larga</h2>
       <p>
         La vocal larga tiene doble duración respecto a la vocal simple. Dicho de
-        otra manera, mientras que <R>a</R> se considera de una mora, <R>ā</R> se
-        considera de dos moras a pesar de que se pronuncien las dos de manera
-        sucesiva.
+        otra manera, mientras que <H>あ</H> - <K>ア</K> - <R>a</R> se considera
+        de una mora, <H>ああ</H> - <K>アー</K> - <R>ā</R> se considera de dos
+        moras a pesar de que se pronuncien las dos de manera sucesiva.
       </p>
       <h3>Vocales largas en hiragana</h3>
       <ul>
@@ -279,13 +292,15 @@ const Content = () => {
       </Example>
       <h3>Vocales largas en katakana</h3>
       <ul>
-        <li>Se agrega ー sin importar la vocal.</li>
+        <li>
+          Se agrega <K>ー</K> sin importar la vocal.
+        </li>
       </ul>{" "}
       <Example>
         <K>カレー</K> <R>karē</R> [curry]
       </Example>
       <Example>
-        <K>カー</K> <R>kā</R> [car]
+        <K>カー</K> <R>kā</R> [car (carro)]
       </Example>
       <h3>Vocales largas en romaji</h3>
       <p>
@@ -304,8 +319,9 @@ const Content = () => {
       <p>
         Mientras que algunas referencias mencionan que la pronunciación de este
         caracter puede variar dependiendo de los sonidos que le siguen, esta
-        diferencia no es lo suficientemente notable para respetarla en un
-        inicio, sino sólo para tenerla en cuenta.
+        diferencia no es lo suficientemente notable para ser respetada como
+        principiante, sólo para tenerla en cuenta a la hora de perfeccionar la
+        pronunciación para sonar como un nativo .
       </p>
       <p>
         En el rōmaji, estos cambios pueden notarse cuando se transcribe <R>m</R>{" "}
@@ -315,19 +331,20 @@ const Content = () => {
         A pesar de ser un sonido de una mora de duración, nunca se coloca{" "}
         <H>ん</H> <K>ン</K> <R>n</R> al inicio de una palabra.{" "}
       </Callout>
-      <h2>Uso de っ ッ (つ ツ tsu pequeño)</h2>
+      <h2>Uso de っ ッ</h2>
       <p>
-        La diferencia se encuentra en el tamaño del caracter:{" "}
-        <b>se escribe en pequeño</b> para hacer una diferencia de pronunciación.
+        La diferencia se encuentra en el tamaño del caracter: en lugar de{" "}
+        <H>つ</H> <K>ツ</K>, se utiliza <H>っ</H> <K>ッ</K>.{" "}
+        <b>Se escribe en pequeño</b> para hacer una diferencia de pronunciación.
         Su trabajo es alargar el sonido de la consonante que va inmediatamente
         después de éste.
       </p>
       <Callout>Es un sonido que tiene duración de una mora.</Callout>
       <Example>
-        <H>かった</H> <R>katta</R>
+        <H>きっぷ</H> <R>kippu</R> [boleto]
       </Example>
       <Example>
-        <K>ベッド</K> <R>beddo</R>
+        <K>ベッド</K> <R>beddo</R> [bed (cama)]
       </Example>
       <p>
         La única excepción es la doble &quot;n&quot; ya que se escribe con{" "}
@@ -335,7 +352,7 @@ const Content = () => {
         <b>.</b>
       </p>
       <Example>
-        <H>さんにん</H> <R>sannin</R>
+        <H>さんにん</H> <R>sannin</R> [tres personas]
       </Example>
       <h2>Vocales afónicas</h2>
       <p>
@@ -343,11 +360,11 @@ const Content = () => {
         decir, no se pronuncia.
       </p>
       <Example>
-        <H>すきです</H> (<R>suki desu</R> →{" "}
+        <H>すきです</H> <R>suki desu</R> →{" "}
         <R>
           s<s>u</s>ki des<s>u</s>
-        </R>
-        )
+        </R>{" "}
+        [me gusta]
       </Example>
       <h2>Acento</h2>
       <p>
@@ -372,7 +389,7 @@ const Content = () => {
       </p>
       <br />
       <p>
-        Parte de la información encontrada esta página se puede consultar en las
+        Parte de la información encontrada esta página puede consultarse en las
         siguientes referencias:
       </p>
       <ul>

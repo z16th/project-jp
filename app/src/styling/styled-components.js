@@ -157,7 +157,7 @@ export const KanaTable = styled.section`
 
 // ----------------------------------------------COLORFUL
 
-export const Callout = styled.p`
+export const Callout = styled.div`
   display: block;
   width: fit-content;
   font-family: ${secondaryFont};
@@ -167,7 +167,7 @@ export const Callout = styled.p`
   border-radius: 8px;
   border: 2px dashed ${yellow.regular};
 `
-export const Example = styled.p`
+export const Example = styled.div`
   display: block;
   width: fit-content;
   font-family: ${secondaryFont};
@@ -177,7 +177,7 @@ export const Example = styled.p`
   border-radius: 8px;
   border: 4px dotted ${blue.regular};
 `
-export const Note = styled.p`
+export const Note = styled.div`
   font-family: ${secondaryFont};
   font-size: ${typeScale.body2};
   line-height: 1rem;
