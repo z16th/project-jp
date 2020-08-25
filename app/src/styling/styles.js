@@ -260,15 +260,15 @@ export const pageNav = css`
     }
   }
   .link-H1 {
-    margin-right: 0px;
+    margin-left: 0px;
     padding: 6px;
   }
   .link-H2 {
-    margin-right: 28px;
+    margin-left: 28px;
     padding: 4px 6px;
   }
   .link-H3 {
-    margin-right: 56px;
+    margin-left: 56px;
     padding: 3px 6px;
   }
 `
@@ -493,7 +493,7 @@ export const footer = css`
   padding-top: 16px;
   color: white;
   background-color: ${gray.regular};
-  p {
+  div {
     width: 65%;
     margin: 8px 0px;
     @media (max-width: 411px) {
