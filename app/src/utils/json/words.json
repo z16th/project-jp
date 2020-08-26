@@ -163,5 +163,16 @@
       "en": ["bud", "sprout"],
       "es": ["brote", "retoño"]
     }
+  },
+  {
+    "date": "2020-08-24",
+    "word": "絆",
+    "furigana": ["きずな"],
+    "romaji": "kizuna",
+    "type": "n",
+    "meaning": {
+      "en": ["bond", "tie"],
+      "es": ["vínculo", "lazo"]
+    }
   }
 ]

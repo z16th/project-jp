@@ -5,7 +5,7 @@ import { social } from "../styling"
 
 export default function LolzSocial() {
   return (
-    <div id="lolz-social" css={social}>
+    <section id="lolz-social" css={social}>
       <nav>
         <a
           id="facebook"
@@ -27,6 +27,6 @@ export default function LolzSocial() {
         </a>
       </nav>
       <img className="logo" src={logo} alt="logo" />
-    </div>
+    </section>
   )
 }
