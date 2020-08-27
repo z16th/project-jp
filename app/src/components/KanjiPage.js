@@ -2,37 +2,38 @@
 /** @jsxFrag React.Fragment */
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react"
+import { Link, Route, useRouteMatch } from "react-router-dom"
 import { jsx } from "@emotion/core"
-import kanjiData from "../utils/json/kanji-1-80.json"
-import {
-  PageStyled,
-  H,
-  K,
-  Kj,
-  R,
-  Callout,
-  Example,
-  Note,
-  kanjiTable,
-} from "../styling"
+import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
 
 import Sidebar from "./Sidebar"
-import KanjiCard from "./KanjiCard"
 import CiteSource from "./CiteSource"
 import CharAnimation from "./CharAnimation"
+import { KanjiSubpage } from "./KanjiSubpage"
 
 export default function KanjiPage() {
+  const { url } = useRouteMatch()
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   return (
     <PageStyled id="kanji-page">
-      <Sidebar />
+      <Sidebar>
+        <Route exact path={`${url}/`}>d
+          <Link to={`${url}/cartas/1-80`}>Cartas de kanji</Link>
+        </Route>
+      </Sidebar>
+
       <div className="main-content">
         <div className="content">
-          <Content />
-          <KanjiTable />
+          <Route exact path={`${url}`}>
+            <Content />
+          </Route>
+          <Route exact path={`${url}/cartas/1-80`}>
+            <KanjiSubpage />
+          </Route>
           <Bibliography />
         </div>
       </div>
@@ -40,21 +41,7 @@ export default function KanjiPage() {
   )
 }
 
-function KanjiTable() {
-  return (
-    <>
-      <h2 className="text-center">1 - 80</h2>
-      <section className="table" css={kanjiTable}>
-        {kanjiData.map((data) => (
-          <KanjiCard key={data.utf16} data={data} />
-        ))}
-      </section>
-    </>
-  )
-}
-
 function Content() {
-  const example = kanjiData[19]
   return (
     <>
       <h1>Introducción</h1>
@@ -122,7 +109,7 @@ function Content() {
         Es el acompañamiento del hiragana para indicar la pronunciación de un
         kanji. Suelen ser utilizados cuando el kanji escrito es poco común. Los
         libros de texto para aprender japonés incluyen furigana con más
-        frecuencia que cualquier otro tipo de fuente.
+        frecuencia que cualquier otro tipo de textos.
       </p>
       <Example>
         <div style={{ display: "inline-block", verticalAlign: "bottom" }}>
@@ -331,62 +318,6 @@ function Content() {
         <b>Nota: </b>Dependiendo de la referencia que se consulte se pueden
         encontrar más reglas o menos reglas.
       </Note>
-      <h1>Tablas de kanji</h1>
-      <p>
-        En esta sección encontrarás diferentes grupos de cartas divididas por
-        grados, correspondientes al orden en que se enseñan en las escuelas de
-        Japón. Cada tarjeta contiene información sobre un kanji específico.
-      </p>
-      <div css={kanjiTable}>
-        <KanjiCard data={example} />
-      </div>
-      <p>
-        Del lado izquierdo se encuentra el <b>caracter</b>, el número de{" "}
-        <b>trazos</b> que se necesitan para escribirlo y el <b>número</b> según
-        el orden encontrado en el libro The Complete Guide To Japanese Kanji.{" "}
-        <u>
-          Al dar click en <b>Trazos</b> cambiará la visualización del caracter
-        </u>
-        . Aparecerán nuevos botones, con los que podrás reproducir, pausar y
-        reiniciar la animación del orden de los trazos.
-      </p>
-      <p>
-        Del lado derecho se encuentran las pronunciaciones <b>on-yomi</b>{" "}
-        (China) y <b>kun-yomi</b> (Japonesa) así como los posibles{" "}
-        <b>significados</b>.{" "}
-        <u>
-          Al dar click en las <b>pronunciaciones</b> cambiará su visualización
-        </u>
-        , de kana a rōmaji y vice versa.
-      </p>
-      <Note>
-        <b>Nota: </b>En el estudio de los kanji usualmente se hace uso del
-        katakana o del rōmaji en mayúsculas para indicar la pronunciación
-        on-yomi. Mientras que el hiragana o el rōmaji en minúsculas se usa para
-        indicar la pronuncación kun-yomi. Esta página hace uso de ese formato.
-        Es posible que otras fuentes manejen un formato distinto.
-      </Note>
-      <p>
-        Las pronunciaciones pueden contener signos como &quot;.&quot;,
-        &quot;/&quot; y &quot;～&quot; para indicar algunos detalles de este
-        diccionario de kanji. El punto (.) indica que la pronunciación del kanji
-        termina en ese lugar y las sílabas siguentes corresponden a la formación
-        de una palabra completa. En el ejemplo, み.る (mi.ru) indica que み (mi)
-        es la pronunciación del kanji, y que みる (miru) es una palabra
-        completa.
-        <br /> Sustituyendo queda 見る (miru). La diagonal (/) indica que se
-        puede utilizar la misma pronunciación del kanji para generar otras
-        palabras. En el ejemplo: {example.kunyomiKana} ({example.kunyomiRomaji})
-        se divide en tres palabras: la ya mencionada, み.せる (mi.seru) y
-        み.える (mi.eru). Las últimas dos pasan a ser 見せる (miseru) y 見える
-        (mieru) respectivamente.
-      </p>
-      <Note>
-        <b>Nota: </b>Estos signos pueden ser encontrados en algunos diccionarios
-        para dividir entre los kanjis y el vocabulario en el que son usados, al
-        igual que en esta página. Es posible que otras fuentes utilicen un
-        formato distinto.
-      </Note>
     </>
   )
 }
@@ -405,6 +336,9 @@ const Bibliography = () => {
         </li>
         <li>
           <CiteSource source="kanjiForBeginners" />
+        </li>
+        <li>
+          <CiteSource source="guideToJapaneseKanji" />
         </li>
       </ul>
     </>

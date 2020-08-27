@@ -17,7 +17,7 @@ export default function SyllabaryPage() {
     <PageStyled id="syllabary-page">
       <Sidebar>
         <Route exact path={`${url}/`}>
-          <Link to={`${url}/tablas`}>Tablas</Link>
+          <Link to={`${url}/tablas`}>Tablas de silabarios</Link>
         </Route>
       </Sidebar>
 

@@ -49,7 +49,7 @@ export default function KanjiCard({ data, readingMode }) {
           </div>
         </button>
         <div className="meaning">
-          <b>Significado:</b> {meaning}
+          <b>Significado(s):</b> {meaning}
         </div>
       </div>
     </div>

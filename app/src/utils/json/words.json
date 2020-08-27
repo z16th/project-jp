@@ -185,5 +185,16 @@
       "en": ["common sense", "conventonal wisdom"],
       "es": ["sentido común", "conocimiento general"]
     }
+  },
+  {
+    "date": "2020-08-27",
+    "word": "入る",
+    "furigana": ["はい", "る"],
+    "romaji": "hairu",
+    "type": "vb",
+    "meaning": {
+      "en": ["enter", "come in"],
+      "es": ["entrar", "pasar"]
+    }
   }
 ]

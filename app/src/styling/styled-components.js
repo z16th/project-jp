@@ -351,6 +351,9 @@ export const Layout = ({ children }) => (
             }
           }
         }
+        .small {
+          font-size: ${typeScale.body2};
+        }
         .link-to {
           display: inline-block;
           margin: 8px 0;
