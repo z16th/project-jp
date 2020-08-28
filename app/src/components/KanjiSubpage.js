@@ -1,9 +1,10 @@
 /** @jsx jsx */
 /** @jsxFrag React.Fragment */
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react"
-import kanjiData from "../utils/json/kanji-1-80.json"
 import { jsx } from "@emotion/core"
-import { H, K, R, Kj, Note, Callout, Example, kanjiTable } from "../styling"
+import kanjiData from "../utils/json/kanji-1-80.json"
+import { H, R, Kj, Note, Callout, Example, kanjiTable } from "../styling"
 
 import KanjiCard from "./KanjiCard"
 
@@ -101,9 +102,9 @@ export default function KanjiSubpage() {
           </Example>
         </li>
         <li>
-          El símbolo "～" indica que se pueden generar palabras añadiendo otros
-          caracteres, sin mencionar explícitamente qué palabras pueden ser
-          formadas.
+          El símbolo &quot;～&quot; indica que se pueden generar palabras
+          añadiendo otros caracteres, sin mencionar explícitamente qué palabras
+          pueden ser formadas.
         </li>
       </ul>
 

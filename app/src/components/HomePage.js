@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar"
 import WordOfTheDay from "./WordOfTheDay"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
 
-import CiteSource, { CiteAll } from "./CiteSource"
+import CiteSource from "./CiteSource"
 
 export default function HomePage() {
   useEffect(() => {
