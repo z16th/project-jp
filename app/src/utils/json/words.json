@@ -196,5 +196,16 @@
       "en": ["enter", "come in"],
       "es": ["entrar", "pasar"]
     }
+  },
+  {
+    "date": "2020-08-28",
+    "word": "始め",
+    "furigana": ["はじ", "め"],
+    "romaji": "hajime",
+    "type": "n",
+    "meaning": {
+      "en": ["start", "beginning"],
+      "es": ["inicio", "comienzo"]
+    }
   }
 ]
