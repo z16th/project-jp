@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import logo from "../utils/icons/logo.svg"
+import { ReactComponent as Logo } from "../utils/icons/logo.svg"
 import { social } from "../styling"
 
 export default function LolzSocial() {
@@ -26,7 +26,7 @@ export default function LolzSocial() {
           <span>GitHub</span>
         </a>
       </nav>
-      <img className="logo" src={logo} alt="logo" />
+      <Logo className="logo" />
     </section>
   )
 }

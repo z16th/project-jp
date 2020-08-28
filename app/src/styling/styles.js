@@ -18,14 +18,20 @@ export const toggleTables = css`
     text-align: center;
     text-decoration: none;
     border: none;
-    &:hover {
+    &:hover:enabled {
+      cursor: pointer;
       color: white;
-      background-color: ${gray.light};
+      background-color: ${gray.dark};
       text-shadow: 1px 1px 0px black, 0px 0px 2px black;
     }
     &:active {
       color: white;
       background-color: ${gray.regular};
+      text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+    }
+    &:disabled {
+      color: white;
+      background-color: ${gray.light};
       text-shadow: 1px 1px 0px black, 0px 0px 2px black;
     }
   }
@@ -37,10 +43,6 @@ export const toggleTables = css`
       background-color: ${gray.regular};
     }
   }
-`
-
-export const syllabaryTable = css`
-  background-color: red;
 `
 
 // =============================================ANIMATIONS
@@ -228,8 +230,9 @@ export const pageNav = css`
       text-decoration: none;
       border: 1px solid black;
       &:hover {
+        cursor: pointer;
         color: white;
-        background-color: ${gray.light};
+        background-color: ${gray.regular};
         text-shadow: 1px 1px 0px black, 0px 0px 2px black;
       }
       &:active {
@@ -246,10 +249,10 @@ export const pageNav = css`
     padding: 6px;
     border: 1px dashed black;
     background-color: transparent;
-    &:hover {
+    &:hover:enabled {
       cursor: pointer;
       color: white;
-      background-color: ${gray.light};
+      background-color: ${gray.regular};
       text-shadow: 1px 1px 0px black, 0px 0px 2px black;
     }
     &:active {
@@ -500,19 +503,25 @@ export const footer = css`
       width: 85%;
     }
   }
-  hr {
-    border: 0;
-    clear: both;
-    display: block;
-    width: 96%;
-    background-color: #000;
-    height: 1px;
-  }
 `
 
 export const social = css`
   position: relative;
   width: 100%;
+  svg {
+    fill: white;
+    position: absolute;
+    right: 10px;
+    bottom: 50%;
+    width: 64px;
+    transform: translateY(50%);
+    @media (max-width: 450px) {
+      position: static;
+      display: block;
+      margin: 4px auto;
+      transform: translateY(0%);
+    }
+  }
   nav {
     display: flex;
     flex-direction: column;
@@ -543,19 +552,6 @@ export const social = css`
     color: white;
     i {
       margin-right: 8px;
-    }
-  }
-  .logo {
-    position: absolute;
-    right: 10px;
-    bottom: 50%;
-    width: 64px;
-    transform: translateY(50%);
-    @media (max-width: 450px) {
-      position: static;
-      display: block;
-      margin: 4px auto;
-      transform: translateY(0%);
     }
   }
 `

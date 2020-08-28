@@ -210,7 +210,7 @@ export const PageStyled = styled.div`
     display: grid;
     grid-template:
       ". content sidebar ." 1fr / minmax(0px, 15%) minmax(50%, 768px)
-      max-content 15%;
+      max-content minmax(0%, 15%);
     .main-content {
       grid-area: content;
       .content {
@@ -318,15 +318,23 @@ export const Layout = ({ children }) => (
         ul {
           line-height: 1.25rem;
         }
+        hr {
+          border: 0;
+          clear: both;
+          display: block;
+          background-color: ${gray.regular};
+          height: 1px;
+        }
         button {
           padding: 8px;
           color: black;
           text-align: center;
           text-decoration: none;
           border: none;
-          &:hover {
+          &:hover:enabled {
+            cursor: pointer;
             color: white;
-            background-color: ${gray.light};
+            background-color: ${gray.dark};
             text-shadow: 1px 1px 0px black, 0px 0px 2px black;
           }
           &:active {
@@ -340,6 +348,13 @@ export const Layout = ({ children }) => (
     <Global
       styles={css`
         .bibliography {
+          margin-top: 40px;
+          color: ${gray.regular};
+          > * {
+            font-size: ${typeScale.body2};
+          }
+        }
+        .source {
           a,
           span {
             text-decoration: none;
