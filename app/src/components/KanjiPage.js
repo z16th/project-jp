@@ -7,9 +7,11 @@ import { jsx } from "@emotion/core"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
 
 import Sidebar from "./Sidebar"
-import CiteSource from "./CiteSource"
 import CharAnimation from "./CharAnimation"
-import { KanjiSubpage } from "./KanjiSubpage"
+import CiteSource from "./CiteSource"
+import Bibliography from "./Bibliography"
+
+const KanjiSubpage = React.lazy(() => import("./KanjiSubpage"))
 
 export default function KanjiPage() {
   const { url } = useRouteMatch()
@@ -21,8 +23,8 @@ export default function KanjiPage() {
   return (
     <PageStyled id="kanji-page">
       <Sidebar>
-        <Route exact path={`${url}/`}>d
-          <Link to={`${url}/cartas/1-80`}>Cartas de kanji</Link>
+        <Route exact path={`${url}/`}>
+          <Link to={`${url}/cartas`}>Cartas de kanji</Link>
         </Route>
       </Sidebar>
 
@@ -31,10 +33,38 @@ export default function KanjiPage() {
           <Route exact path={`${url}`}>
             <Content />
           </Route>
-          <Route exact path={`${url}/cartas/1-80`}>
-            <KanjiSubpage />
+          <Route exact path={`${url}/cartas`}>
+            <React.Suspense
+              fallback={
+                <div className="content" style={{ height: "100vh" }}>
+                  <h1>Cargando</h1>
+                </div>
+              }
+            >
+              <KanjiSubpage />
+            </React.Suspense>
           </Route>
-          <Bibliography />
+          <Bibliography>
+            <p>
+              Las animaciones de trazado están basadas en datos proporcionados
+              por <CiteSource source="kanjiVG" />
+            </p>
+            <p>
+              Parte de la información encontrada esta página puede consultarse
+              en las siguientes referencias:
+            </p>
+            <ul>
+              <li>
+                <CiteSource source="practicalKanji" />
+              </li>
+              <li>
+                <CiteSource source="kanjiForBeginners" />
+              </li>
+              <li>
+                <CiteSource source="guideToJapaneseKanji" />
+              </li>
+            </ul>
+          </Bibliography>
         </div>
       </div>
     </PageStyled>
@@ -42,6 +72,8 @@ export default function KanjiPage() {
 }
 
 function Content() {
+  const { url } = useRouteMatch()
+
   return (
     <>
       <h1>Introducción</h1>
@@ -212,6 +244,10 @@ function Content() {
         diferir en el orden de los trazos a pesar de que usen aparentemente la
         misma estructura que otros.
       </p>
+      <Callout>
+        La tipografía puede cambiar el aspecto de los trazos facilitando o
+        complicando su lectura, incluyendo los escritos a mano.
+      </Callout>
       <h2>Tipos de trazos</h2>
       <p>
         Hacen referencia al flujo que debe seguir la herramienta de escritura
@@ -255,10 +291,6 @@ function Content() {
           <CharAnimation name="curve-upward" isKanji={false} />
         </div>
       </ul>
-      <Callout>
-        Dependiendo de la tipografía, puede que los trazos luzcan distintos a
-        como lucen escritos a mano.
-      </Callout>
       <h2>Reglas generales</h2>
       <p>Hacen referencia al orden en que se deben realizar los trazos.</p>
       <ul>
@@ -318,29 +350,9 @@ function Content() {
         <b>Nota: </b>Dependiendo de la referencia que se consulte se pueden
         encontrar más reglas o menos reglas.
       </Note>
-    </>
-  )
-}
-
-const Bibliography = () => {
-  return (
-    <>
-      <CiteSource source="kanjiVG" />
-      <p>
-        Parte de la información encontrada esta página puede consultarse en las
-        siguientes referencias:
-      </p>
-      <ul>
-        <li>
-          <CiteSource source="practicalKanji" />
-        </li>
-        <li>
-          <CiteSource source="kanjiForBeginners" />
-        </li>
-        <li>
-          <CiteSource source="guideToJapaneseKanji" />
-        </li>
-      </ul>
+      <Link className="link-to" to={`${url}/cartas/1-80`}>
+        Ir a Cartas de kanji.
+      </Link>
     </>
   )
 }

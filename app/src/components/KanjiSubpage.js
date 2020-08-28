@@ -1,23 +1,34 @@
 /** @jsx jsx */
 /** @jsxFrag React.Fragment */
-import React from "react"
+import React, { useEffect } from "react"
 import kanjiData from "../utils/json/kanji-1-80.json"
 import { jsx } from "@emotion/core"
 import { H, K, R, Kj, Note, Callout, Example, kanjiTable } from "../styling"
 
 import KanjiCard from "./KanjiCard"
 
-export function KanjiSubpage() {
+export default function KanjiSubpage() {
   const example = kanjiData[19]
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <h1>Cartas</h1>
       <p>
         En esta sección encontrarás cartas de kanji que contienen información
-        sobre cada caracter. Existen diferentes clasificaciones según el orden
-        en el que son citados en las diferentes referencias, en esta página
-        encontrarás el orden correspondiente al su enseñanza en las escuelas de
-        Japón.
+        sobre algunos caracteres. Existen diferentes clasificaciones según el
+        orden en el que son citados en las diferentes referencias, en esta
+        página encontrarás el orden correspondiente a su enseñanza en las
+        escuelas de Japón, también conocido como <Kj>常用漢字</Kj>{" "}
+        <R>jōyō kanji</R> [kanji de uso común].
+      </p>
+      <p>
+        Otras formas de clasificación que se pueden encontrar son por número de
+        trazos, según su aparición en el examen de dominio de idioma (JLPT) o
+        simplemente un orden arbitrario, usualmente ocupado en diccionarios.
       </p>
       <h2>Cómo usar</h2>
       <div className="flex-center">
@@ -60,10 +71,6 @@ export function KanjiSubpage() {
         el hiragana o el rōmaji en minúsculas se usa para indicar la
         pronuncación kunyomi.
       </Callout>
-      <Note>
-        <b>Nota: </b> Esta página hace uso de ese formato. Es posible que otras
-        fuentes manejen un formato distinto.
-      </Note>
       <p>
         Las pronunciaciones pueden contener signos como &quot;.&quot;,
         &quot;/&quot; y &quot;～&quot; para indicar algunos detalles de este
@@ -94,18 +101,18 @@ export function KanjiSubpage() {
           </Example>
         </li>
         <li>
-          El símbolo "～" indica que se pueden generar palabras añadiendo
-          furigana, sin mencionar explícitamente qué palabras pueden ser
+          El símbolo "～" indica que se pueden generar palabras añadiendo otros
+          caracteres, sin mencionar explícitamente qué palabras pueden ser
           formadas.
         </li>
       </ul>
 
       <Note>
-        <b>Nota: </b>Estos signos pueden ser encontrados en algunos diccionarios
-        para dividir entre los kanjis y el vocabulario en el que son usados, al
-        igual que en esta página. Es posible que otras fuentes utilicen un
+        <b>Nota: </b> Esta página hace uso de algunas convenciones ocupadas en
+        distintas fuentes aunque es posible que otras referencias manejen un
         formato distinto.
       </Note>
+
       <h1 className="text-center">1 - 80</h1>
       <section className="table" css={kanjiTable}>
         {kanjiData.map((data) => (

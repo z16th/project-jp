@@ -11,7 +11,6 @@ const sources = {
   ),
   kanjiVG: (
     <>
-      Las animaciones de trazado están basadas en datos proporcionados por{" "}
       <a href="http://kanjivg.tagaini.net/">KanjiVG</a>.
     </>
   ),
@@ -83,7 +82,19 @@ const sources = {
 }
 
 export default function CiteSource({ source }) {
-  return <span className="bibliography">{sources[`${source}`]}</span>
+  return <span className="source">{sources[`${source}`]}</span>
+}
+
+export function CiteAll() {
+  return (
+    <ul>
+      {Object.entries(sources).map((source) => (
+        <li>
+          <span className="source">{source[1]}</span>
+        </li>
+      ))}
+    </ul>
+  )
 }
 
 CiteSource.propTypes = {

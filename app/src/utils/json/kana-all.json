@@ -576,7 +576,7 @@
     "hiragana": "を",
     "katakana": "ヲ",
     "type": "basic",
-    "attributes": "",
+    "attributes": "exception",
     "row": "10",
     "column": "5",
     "utf16": {

@@ -3,6 +3,7 @@ import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
 import Sidebar from "./Sidebar"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
 import CiteSource from "./CiteSource"
+import Bibliography from "./Bibliography"
 
 const TablesSubpage = React.lazy(() => import("./TablesSubpage"))
 
@@ -387,19 +388,20 @@ const Content = () => {
         respectivamente, mientras que en la pronunciación se puede diferenciar
         con el tono.
       </p>
-      <br />
-      <p>
-        Parte de la información encontrada esta página puede consultarse en las
-        siguientes referencias:
-      </p>
-      <ul>
-        <li>
-          <CiteSource source="minnaNoNihongo" />
-        </li>
-        <li>
-          <CiteSource source="genki" />
-        </li>
-      </ul>
+      <Bibliography>
+        <p>
+          Parte de la información encontrada esta página puede consultarse en
+          las siguientes referencias:
+        </p>
+        <ul>
+          <li>
+            <CiteSource source="minnaNoNihongo" />
+          </li>
+          <li>
+            <CiteSource source="genki" />
+          </li>
+        </ul>
+      </Bibliography>
     </div>
   )
 }

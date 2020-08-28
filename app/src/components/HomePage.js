@@ -2,7 +2,8 @@ import React, { useEffect } from "react"
 import Sidebar from "./Sidebar"
 import WordOfTheDay from "./WordOfTheDay"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
-import CiteSource from "./CiteSource"
+
+import CiteSource, { CiteAll } from "./CiteSource"
 
 export default function HomePage() {
   useEffect(() => {
@@ -77,10 +78,10 @@ const Content = () => {
       </Callout>
       <Example>Texto encerrado de esta manera es un ejemplo</Example>
       <p>
-        [Texto entre corchetes es el significado la palabra usada que le
+        [Texto entre corchetes es el significado la palabra/frase que le
         precede]
       </p>
-      <p className="bibliography">
+      <p className="source">
         <span>Texto con esta apariencia es un link a una página externa</span>
       </p>
       <p className="link-to" style={{ margin: "0" }}>
