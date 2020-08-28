@@ -1,7 +1,8 @@
 import React, { useEffect } from "react"
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
-import Sidebar from "./Sidebar"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
+
+import Sidebar from "./Sidebar"
 import CiteSource from "./CiteSource"
 import Bibliography from "./Bibliography"
 

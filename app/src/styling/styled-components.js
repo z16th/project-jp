@@ -125,13 +125,6 @@ export const KanaTable = styled.section`
   .kana.romaji {
     background-color: ${purple.background};
   }
-  .exception {
-    border: 2px dotted ${gray.regular};
-  }
-  .special {
-    border: 2px solid black;
-    margin-top: 20px;
-  }
   .kana.extended {
     padding: 4px;
     margin: 4px;
@@ -365,6 +358,13 @@ export const Layout = ({ children }) => (
               cursor: pointer;
             }
           }
+        }
+        .exception {
+          border: 2px dotted ${gray.regular};
+        }
+        .special {
+          border: 2px solid black;
+          margin-top: 20px;
         }
         .small {
           font-size: ${typeScale.body2};

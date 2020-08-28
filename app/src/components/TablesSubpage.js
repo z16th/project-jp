@@ -1,10 +1,13 @@
 import React, { useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import queryString from "query-string"
-import ToggleTables from "./ToggleTables"
-import Table from "./Table"
 import { capitalize } from "../utils/vanilla"
-import { Highlight, Note, Callout } from "../styling"
+import { R, Highlight, Note, Callout } from "../styling"
+
+import Table from "./Table"
+import ToggleTables from "./ToggleTables"
+import CiteSource from "./CiteSource"
+import Bibliography from "./Bibliography"
 
 const defaultSyllabaries = ["hiragana", "katakana", "romaji"]
 
@@ -60,6 +63,22 @@ export default function TablesSubpage() {
         katakana, así como las tablas de romanización.
       </p>
       <h2>Cómo usar</h2>
+      <p>
+        Las tablas están compuestas por filas de consonantes y columnas de
+        vocales. Las sílabas correspondientes son formadas en las
+        intersecciones: k + a → <R>ka</R>, etc.
+      </p>
+      <p>
+        Caracteres con este formato{" "}
+        <span className="exception">&nbsp;&nbsp;&nbsp;&nbsp;</span> son una
+        excepción de pronunciación/escritura. Utiliza la tabla de rōmaji para
+        verificar cuál es su forma correcta.
+      </p>
+      <p>
+        Caracteres con este formato{" "}
+        <span className="special">&nbsp;&nbsp;&nbsp;&nbsp;</span> están
+        excluídos de las combinaciones con vocales.
+      </p>
       <ul>
         <li>
           Utiliza la <b>Selección</b> para cambiar entre los silabarios y los
@@ -107,6 +126,12 @@ export default function TablesSubpage() {
             })}
         </div>
       ))}
+      <Bibliography>
+        <p>
+          Las animaciones de trazado están basadas en datos proporcionados por{" "}
+          <CiteSource source="kanjiVG" />
+        </p>
+      </Bibliography>
     </div>
   )
 }
