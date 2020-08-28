@@ -350,7 +350,7 @@ function Content() {
         <b>Nota: </b>Dependiendo de la referencia que se consulte se pueden
         encontrar más reglas o menos reglas.
       </Note>
-      <Link className="link-to" to={`${url}/cartas/1-80`}>
+      <Link className="link-to" to={`${url}/cartas`}>
         Ir a Cartas de kanji.
       </Link>
     </>
