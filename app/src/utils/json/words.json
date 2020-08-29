@@ -207,5 +207,16 @@
       "en": ["start", "beginning"],
       "es": ["inicio", "comienzo"]
     }
+  },
+  {
+    "date": "2020-08-29",
+    "word": "銚子",
+    "furigana": ["ちょう", "し"],
+    "romaji": "chōshi",
+    "type": "n",
+    "meaning": {
+      "en": ["earthenware"],
+      "es": ["loza de barro"]
+    }
   }
 ]
