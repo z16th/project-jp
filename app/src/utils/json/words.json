@@ -229,5 +229,16 @@
       "en": ["perfume"],
       "es": ["perfume"]
     }
+  },
+  {
+    "date": "2020-08-31",
+    "word": "何歳",
+    "furigana": ["なん", "さい"],
+    "romaji": "nansai",
+    "type": "adv",
+    "meaning": {
+      "en": ["how old"],
+      "es": ["qué edad", "cuántos años"]
+    }
   }
 ]
