@@ -218,5 +218,16 @@
       "en": ["earthenware container for sake"],
       "es": ["loza de barro para el sake"]
     }
+  },
+  {
+    "date": "2020-08-30",
+    "word": "香水",
+    "furigana": ["こう", "すい"],
+    "romaji": "kōsui",
+    "type": "n",
+    "meaning": {
+      "en": ["perfume"],
+      "es": ["perfume"]
+    }
   }
 ]
