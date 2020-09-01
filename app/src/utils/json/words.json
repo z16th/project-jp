@@ -240,5 +240,16 @@
       "en": ["how old"],
       "es": ["qué edad", "cuántos años"]
     }
+  },
+  {
+    "date": "2020-09-01",
+    "word": "理知的",
+    "furigana": ["り", "ち", "てき"],
+    "romaji": "richiteki",
+    "type": "adj",
+    "meaning": {
+      "en": ["intelligent", "intellectual"],
+      "es": ["inteligente", "intelectual"]
+    }
   }
 ]
