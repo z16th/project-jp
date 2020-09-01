@@ -27,6 +27,20 @@ export default function SyllabaryPage() {
         <Switch>
           <Route exact path={`${url}/`}>
             <Content />
+            <Bibliography>
+              <p>
+                Parte de la información encontrada esta página puede consultarse
+                en las siguientes referencias:
+              </p>
+              <ul>
+                <li>
+                  <CiteSource source="minnaNoNihongo" />
+                </li>
+                <li>
+                  <CiteSource source="genki" />
+                </li>
+              </ul>
+            </Bibliography>
           </Route>
           <Route path={`${url}/tablas`}>
             <React.Suspense
@@ -389,20 +403,6 @@ const Content = () => {
         respectivamente, mientras que en la pronunciación se puede diferenciar
         con el tono.
       </p>
-      <Bibliography>
-        <p>
-          Parte de la información encontrada esta página puede consultarse en
-          las siguientes referencias:
-        </p>
-        <ul>
-          <li>
-            <CiteSource source="minnaNoNihongo" />
-          </li>
-          <li>
-            <CiteSource source="genki" />
-          </li>
-        </ul>
-      </Bibliography>
     </div>
   )
 }
