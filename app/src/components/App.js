@@ -9,6 +9,7 @@ import { ReactComponent as torii } from "../utils/icons/icons8-torii.svg"
 import { ReactComponent as koi } from "../utils/icons/icons8-koi-fish.svg"
 import { ReactComponent as origami } from "../utils/icons/icons8-origami.svg"
 import RadicalsPage from "./RadicalsPage"
+import EmptyPage from "./EmptyPage"
 
 const HomePage = React.lazy(() => import("./HomePage"))
 const SyllabaryPage = React.lazy(() => import("./SyllabaryPage"))
@@ -55,6 +56,9 @@ export default function App() {
             </Route>
             <Route path="/radicales">
               <RadicalsPage />
+            </Route>
+            <Route path="/empty">
+              <EmptyPage />
             </Route>
             <Route path="*">
               <FourOhFour />

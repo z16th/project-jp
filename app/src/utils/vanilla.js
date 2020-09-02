@@ -27,6 +27,27 @@ export const grammaticalTypes = {
   },
 }
 
+export const noOp = () => {}
+
+export const slug = (str) => {
+  let newStr = str
+  const from = "ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;"
+  const to = "aaaaaeeeeeiiiiooooouuuunc------"
+
+  newStr = newStr.replace(/^\s+|\s+$/g, "").toLowerCase()
+
+  for (let i = 0, l = from.length; i < l; i += 1) {
+    newStr = newStr.replace(new RegExp(from.charAt(i), "g"), to.charAt(i))
+  }
+
+  newStr = newStr
+    .replace(/[^a-z0-9 -]/g, "") // remove invalid chars
+    .replace(/\s+/g, "-") // collapse whitespace and replace by -
+    .replace(/-+/g, "-") // coll  apse dashes
+
+  return newStr
+}
+
 export const generateGridAreas = (rows, columns) => {
   const areas = []
   for (let i = 0; i < columns; i += 1) {
@@ -221,23 +242,24 @@ export const kanaOrKanji = (char) => {
   return "kanji"
 }
 
-export const noOp = () => {}
+export const isRomaji = (str) => {
+  const romaji =
+    "a i u e o ka ki ku ke ko sa shi si su se so ta chi ti tsu tu te to na ni nu ne no ha hi fu hu he ho ma mi mu me mo ya yu yo ra ri ru re ro wa wo nn ga gi gu ge go za ji zi zu ze zo da di du de do ba bi bu be bo pa pi pu pe po kya kyu kyo sha shu sho cha chu cho nya nyu nyo hya hyu hyo mya myu myo rya ryu ryo gya gyu gyo ja ju jo dya dyu dyo bya byu byo pya pyu pyo"
+  return romaji.includes(str)
+}
 
-export const slug = (str) => {
-  let newStr = str
-  const from = "ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;"
-  const to = "aaaaaeeeeeiiiiooooouuuunc------"
+export const shuffleArray = (arr) => {
+  let currentIndex = arr.length
+  let temp, randomIndex
 
-  newStr = newStr.replace(/^\s+|\s+$/g, "").toLowerCase()
-
-  for (let i = 0, l = from.length; i < l; i += 1) {
-    newStr = newStr.replace(new RegExp(from.charAt(i), "g"), to.charAt(i))
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex)
+    currentIndex -= 1
+    temp = arr[currentIndex]
+    arr[currentIndex] = arr[randomIndex]
+    arr[randomIndex] = temp
   }
 
-  newStr = newStr
-    .replace(/[^a-z0-9 -]/g, "") // remove invalid chars
-    .replace(/\s+/g, "-") // collapse whitespace and replace by -
-    .replace(/-+/g, "-") // coll  apse dashes
-
-  return newStr
+  return arr
 }
+
