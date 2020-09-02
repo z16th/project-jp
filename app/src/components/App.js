@@ -8,6 +8,7 @@ import Footer from "./Footer"
 import { ReactComponent as torii } from "../utils/icons/icons8-torii.svg"
 import { ReactComponent as koi } from "../utils/icons/icons8-koi-fish.svg"
 import { ReactComponent as origami } from "../utils/icons/icons8-origami.svg"
+import RadicalsPage from "./RadicalsPage"
 
 const HomePage = React.lazy(() => import("./HomePage"))
 const SyllabaryPage = React.lazy(() => import("./SyllabaryPage"))
@@ -51,6 +52,9 @@ export default function App() {
             </Route>
             <Route path="/kanji">
               <KanjiPage />
+            </Route>
+            <Route path="/radicales">
+              <RadicalsPage />
             </Route>
             <Route path="*">
               <FourOhFour />

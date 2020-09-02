@@ -6,6 +6,13 @@ import texture from "../utils/images/paper.jpg"
 const minWidth = 280
 const maxWidth = 800
 
+export const radical = css`
+  > .left {
+  }
+  > .right {
+  }
+`
+
 // =============================================TABLES
 export const toggleTables = css`
   .buttons {
