@@ -251,5 +251,16 @@
       "en": ["intelligent", "intellectual"],
       "es": ["inteligente", "intelectual"]
     }
+  },
+  {
+    "date": "2020-09-02",
+    "word": "流す",
+    "furigana": ["なが", "す"],
+    "romaji": "nagasu",
+    "type": "vb",
+    "meaning": {
+      "en": ["drain", "pour", "flush"],
+      "es": ["drenar", "verter", "enjuagar"]
+    }
   }
 ]
