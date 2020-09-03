@@ -5,11 +5,11 @@ import { Layout } from "../styling"
 import NavBar from "./NavBar"
 import Footer from "./Footer"
 
-import { ReactComponent as torii } from "../utils/icons/icons8-torii.svg"
-import { ReactComponent as koi } from "../utils/icons/icons8-koi-fish.svg"
-import { ReactComponent as origami } from "../utils/icons/icons8-origami.svg"
+import { ReactComponent as Torii } from "../utils/icons/icons8-torii.svg"
+import { ReactComponent as Koi } from "../utils/icons/icons8-koi-fish.svg"
+import { ReactComponent as Origami } from "../utils/icons/icons8-origami.svg"
 import RadicalsPage from "./RadicalsPage"
-import EmptyPage from "./EmptyPage"
+import PractiKana from "./PractiKana"
 
 const HomePage = React.lazy(() => import("./HomePage"))
 const SyllabaryPage = React.lazy(() => import("./SyllabaryPage"))
@@ -21,19 +21,19 @@ const links = [
     to: "/",
     exact: true,
     label: "INICIO",
-    Icon: torii,
+    Icon: Torii,
   },
   {
     to: "/silabarios",
     exact: false,
     label: "SILABARIOS",
-    Icon: koi,
+    Icon: Koi,
   },
   {
     to: "/kanji",
     exact: false,
     label: "KANJI",
-    Icon: origami,
+    Icon: Origami,
   },
 ]
 
@@ -58,7 +58,7 @@ export default function App() {
               <RadicalsPage />
             </Route>
             <Route path="/empty">
-              <EmptyPage />
+              <PractiKana />
             </Route>
             <Route path="*">
               <FourOhFour />

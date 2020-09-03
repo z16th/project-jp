@@ -1,0 +1,410 @@
+[
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["あ", "い", "う", "え", "お"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["か", "き", "く", "け", "こ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["さ", "し", "す", "せ", "そ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["た", "ち", "つ", "て", "と"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["な", "に", "ぬ", "ね", "の"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["は", "ひ", "ふ", "へ", "ほ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["ま", "み", "む", "め", "も"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["や", "ゆ", "よ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["ら", "り", "る", "れ", "ろ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["わ", "を"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "basic",
+    "kanas": ["ん"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "diacritic",
+    "kanas": ["が", "ぎ", "ぐ", "げ", "ご"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "diacritic",
+    "kanas": ["ざ", "じ", "ず", "ぜ", "ぞ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "diacritic",
+    "kanas": ["だ", "ぢ", "づ", "で", "ど"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "diacritic",
+    "kanas": ["ば", "び", "ぶ", "べ", "ぼ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "diacritic",
+    "kanas": ["ぱ", "ぴ", "ぷ", "ぺ", "ぽ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["きゃ", "きゅ", "きょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["しゃ", "しゅ", "しょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["ちゃ", "ちゅ", "ちょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["にゃ", "にゅ", "にょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["ひゃ", "ひゅ", "ひょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["みゃ", "みゅ", "みょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["りゃ", "りゅ", "りょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["ぎゃ", "ぎゅ", "ぎょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["じゃ", "じゅ", "じょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["ぢゃ", "ぢゅ", "ぢょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["びゃ", "びゅ", "びょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "hiragana",
+    "type": "combination",
+    "kanas": ["ぴゃ", "ぴゅ", "ぴょ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["ア", "イ", "ウ", "エ", "オ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["カ", "キ", "ク", "ケ", "コ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["サ", "シ", "ス", "セ", "ソ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["タ", "チ", "ツ", "テ", "ト"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["ナ", "ニ", "ヌ", "ネ", "ノ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["ハ", "ヒ", "フ", "ヘ", "ホ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["マ", "ミ", "ム", "メ", "モ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["ヤ", "ユ", "ヨ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["ラ", "リ", "ル", "レ", "ロ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["ワ", "ヲ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "basic",
+    "kanas": ["ン"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "diacritic",
+    "kanas": ["ガ", "ギ", "グ", "ゲ", "ゴ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "diacritic",
+    "kanas": ["ザ", "ジ", "ズ", "ゼ", "ゾ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "diacritic",
+    "kanas": ["ダ", "ヂ", "ヅ", "デ", "ド"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "diacritic",
+    "kanas": ["バ", "ビ", "ブ", "ベ", "ボ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "diacritic",
+    "kanas": ["パ", "ピ", "プ", "ペ", "ポ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["キャ", "キュ", "キョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["シャ", "シュ", "ショ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["チャ", "チュ", "チョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["ニャ", "ニュ", "ニョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["ヒャ", "ヒュ", "ヒョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["ミャ", "ミュ", "ミョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["リャ", "リュ", "リョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["ギャ", "ギュ", "ギョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["ジャ", "ジュ", "ジョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["ヂャ", "ヂュ", "ヂョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["ビャ", "ビュ", "ビョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "combination",
+    "kanas": ["ピャ", "ピュ", "ピョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["ウィ", "ウォ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["ヴァ", "ヴィ", "ヴ", "ヴェ", "ヴォ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["シェ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["ウェ", "チェ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["ツァ", "ツィ", "ツェ", "ツォ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["ティ", "トゥ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["ファ", "フィ", "フェ", "フォ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["ジェ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["ディ", "ドゥ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["イェ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["ヴャ", "ヴュ", "ヴョ"],
+    "checked": false
+  },
+  {
+    "syllabary": "katakana",
+    "type": "extended",
+    "kanas": ["フュ"],
+    "checked": false
+  }
+]

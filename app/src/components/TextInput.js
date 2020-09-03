@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import PropTypes from "prop-types"
 import { isRomaji } from "../utils/vanilla"
 import kanas from "../utils/json/kana-as-input.json"
 
@@ -10,8 +11,6 @@ export default function TextInput({ currentKana, nextKana, updateScore }) {
       (kana) => kana.hiragana === currentKana || kana.katakana === currentKana
     )
     event.preventDefault()
-    console.log("input value: ", value)
-    console.log("matched: ", match)
     if (match) {
       if (
         match.romaji === value ||
@@ -48,4 +47,10 @@ export default function TextInput({ currentKana, nextKana, updateScore }) {
       </form>
     </>
   )
+}
+
+TextInput.propTypes = {
+  currentKana: PropTypes.string.isRequired,
+  nextKana: PropTypes.func.isRequired,
+  updateScore: PropTypes.func.isRequired,
 }

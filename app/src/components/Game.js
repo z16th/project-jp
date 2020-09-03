@@ -1,35 +1,20 @@
-import React, { useEffect, useState, useLayoutEffect } from "react"
+import React, { useState } from "react"
+import PropTypes from "prop-types"
 import TextInput from "./TextInput"
-import { shuffleArray } from "../utils/vanilla"
 
-const test = ["あ", "タ", "チ", "ツ", "テ"]
-
-export default function EmptyPage() {
-  const shuffledKanas = shuffleArray(test)
-
-  return (
-    <div id="empty-page" style={{ height: "100vh", width: "100vw" }}>
-      <Game kanas={shuffledKanas} />
-    </div>
-  )
-}
-
-function Game({ kanas }) {
+export default function Game({ kanas }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [score, setScore] = useState(0)
   const gameOver = currentIndex === kanas.length
-
   const input = {
-    currentKana: !gameOver ? kanas[currentIndex] : {},
+    currentKana: !gameOver ? kanas[currentIndex] : "",
     nextKana() {
       if (!gameOver) {
         setCurrentIndex((value) => value + 1)
       }
-      return
     },
     updateScore() {
       setScore((value) => value + 1)
-      return
     },
   }
 
@@ -42,7 +27,21 @@ function Game({ kanas }) {
         {!gameOver ? currentIndex + 1 : null}/{kanas.length}
       </div>
       <div className="kana">{kanas[currentIndex]}</div>
-      {!gameOver ? <TextInput {...input} /> : null}
+
+      {
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        !gameOver ? (
+          <TextInput {...input} />
+        ) : (
+          <button type="button" onClick={() => window.location.reload(false)}>
+            Volver
+          </button>
+        )
+      }
     </div>
   )
+}
+
+Game.propTypes = {
+  kanas: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
