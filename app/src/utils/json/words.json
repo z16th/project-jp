@@ -263,4 +263,15 @@
       "es": ["drenar", "verter", "enjuagar"]
     }
   }
+  {
+    "date": "2020-09-03",
+    "word": "不賛成",
+    "furigana": ["ふ", "さん","せい"],
+    "romaji": "fusansei",
+    "type": "n",
+    "meaning": {
+      "en": ["disagreement", "disapproval"],
+      "es": ["desacuerdo","desaprobación"]
+    }
+  }
 ]
