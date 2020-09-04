@@ -6,6 +6,97 @@ import texture from "../utils/images/paper.jpg"
 const minWidth = 280
 const maxWidth = 800
 
+// =============================================GAME
+export const menuButtons = css`
+  .hiragana {
+    &.active {
+      background-color: ${yellow.regular};
+    }
+    &:hover:not(.active) {
+      background-color: ${yellow.background};
+    }
+  }
+  .katakana {
+    &.active {
+      background-color: ${blue.regular};
+    }
+    &:hover:not(.active) {
+      background-color: ${blue.background};
+    }
+  }
+  .type-buttons {
+    .type-button {
+      &.active {
+        color: white;
+        background-color: ${gray.regular};
+        text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+        &:hover {
+          background-color: ${gray.dark};
+        }
+      }
+      &:hover:not(.active) {
+        background-color: ${gray.background};
+      }
+      &.active {
+        background-color: ${gray.regular};
+        &:hover {
+          background-color: ${gray.regular};
+        }
+      }
+    }
+  }
+`
+
+export const menuRows = css`
+  display: flex;
+  flex-direction: column;
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 96px;
+    width: fit-content;
+    margin: 4px 8px;
+    border: 2px dashed ${gray.regular};
+    border-radius: 16px;
+  }
+  .row.hiragana {
+    &.selected {
+      background-color: ${yellow.regular};
+      &:hover {
+        background-color: ${yellow.regular};
+      }
+    }
+  }
+  .row.katakana {
+    &.selected {
+      background-color: ${blue.regular};
+      &:hover {
+        background-color: ${blue.regular};
+      }
+    }
+  }
+  .char {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    padding: 16px;
+    margin: 16px 8px;
+    background-color: white;
+  }
+`
+
+// =============================================RADICALS
+
+export const radical = css`
+  > .left {
+  }
+  > .right {
+  }
+`
+
 // =============================================TABLES
 export const toggleTables = css`
   .buttons {

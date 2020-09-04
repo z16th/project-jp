@@ -1422,8 +1422,8 @@
     "katakana": "ウェ",
     "type": "extended",
     "attributes": "extended",
-    "row": "4",
-    "column": "1",
+    "row": "1",
+    "column": "4",
     "utf16": {
       "hiragana": [],
       "katakana": ["30a6", "30a7"]

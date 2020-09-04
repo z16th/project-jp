@@ -1,0 +1,1500 @@
+[
+  {
+    "utf16": "4e00",
+    "number": "1",
+    "strokes": "1",
+    "character": "一",
+    "name": "uno"
+  },
+  {
+    "utf16": "4e28",
+    "number": "2",
+    "strokes": "1",
+    "character": "丨",
+    "name": "línea, vara, palo"
+  },
+  {
+    "utf16": "4e36",
+    "number": "3",
+    "strokes": "1",
+    "character": "丶",
+    "name": "punto, gota"
+  },
+  {
+    "utf16": "4e3f",
+    "number": "4",
+    "strokes": "1",
+    "character": "丿",
+    "name": "(kana) no"
+  },
+  {
+    "utf16": "4e59",
+    "number": "5",
+    "strokes": "1",
+    "character": "乙",
+    "name": "anzuelo"
+  },
+  {
+    "utf16": "4e85",
+    "number": "6",
+    "strokes": "1",
+    "character": "亅",
+    "name": "gancho"
+  },
+  {
+    "utf16": "4e8c",
+    "number": "7",
+    "strokes": "2",
+    "character": "二",
+    "name": "dos"
+  },
+  {
+    "utf16": "4ea0",
+    "number": "8",
+    "strokes": "2",
+    "character": "亠",
+    "name": "tapa"
+  },
+  {
+    "utf16": "4eba",
+    "number": "9",
+    "strokes": "2",
+    "character": "人",
+    "name": "persona"
+  },
+  {
+    "utf16": "513f",
+    "number": "10",
+    "strokes": "2",
+    "character": "儿",
+    "name": "piernas"
+  },
+  {
+    "utf16": "5165",
+    "number": "11",
+    "strokes": "2",
+    "character": "入",
+    "name": "entrar"
+  },
+  {
+    "utf16": "516b",
+    "number": "12",
+    "strokes": "2",
+    "character": "八",
+    "name": "ocho"
+  },
+  {
+    "utf16": "5182",
+    "number": "13",
+    "strokes": "2",
+    "character": "冂",
+    "name": "tapa de caja"
+  },
+  {
+    "utf16": "5196",
+    "number": "14",
+    "strokes": "2",
+    "character": "冖",
+    "name": "cubierta"
+  },
+  {
+    "utf16": "51ab",
+    "number": "15",
+    "strokes": "2",
+    "character": "冫",
+    "name": "hielo"
+  },
+  {
+    "utf16": "51e0",
+    "number": "16",
+    "strokes": "2",
+    "character": "几",
+    "name": "mesa"
+  },
+  {
+    "utf16": "51f5",
+    "number": "17",
+    "strokes": "2",
+    "character": "凵",
+    "name": "caja abierta"
+  },
+  {
+    "utf16": "5200",
+    "number": "18",
+    "strokes": "2",
+    "character": "刀",
+    "name": "espata"
+  },
+  {
+    "utf16": "529b",
+    "number": "19",
+    "strokes": "2",
+    "character": "力",
+    "name": "fuerza"
+  },
+  {
+    "utf16": "52f9",
+    "number": "20",
+    "strokes": "2",
+    "character": "勹",
+    "name": "envoltura"
+  },
+  {
+    "utf16": "5315",
+    "number": "21",
+    "strokes": "2",
+    "character": "匕",
+    "name": "cuchara"
+  },
+  {
+    "utf16": "531a",
+    "number": "22",
+    "strokes": "2",
+    "character": "匚",
+    "name": "caja de lado"
+  },
+  {
+    "utf16": "5338",
+    "number": "23",
+    "strokes": "2",
+    "character": "匸",
+    "name": "cofre"
+  },
+  {
+    "utf16": "5341",
+    "number": "24",
+    "strokes": "2",
+    "character": "十",
+    "name": "diez"
+  },
+  {
+    "utf16": "535c",
+    "number": "25",
+    "strokes": "2",
+    "character": "卜",
+    "name": "(kana) to"
+  },
+  {
+    "utf16": "5369",
+    "number": "26",
+    "strokes": "2",
+    "character": "卩",
+    "name": "sello"
+  },
+  {
+    "utf16": "5382",
+    "number": "27",
+    "strokes": "2",
+    "character": "厂",
+    "name": "precipicio"
+  },
+  {
+    "utf16": "53b6",
+    "number": "28",
+    "strokes": "2",
+    "character": "厶",
+    "name": "(kana) mu"
+  },
+  {
+    "utf16": "53c8",
+    "number": "29",
+    "strokes": "2",
+    "character": "又",
+    "name": "de nuevo"
+  },
+  {
+    "utf16": "53e3",
+    "number": "30",
+    "strokes": "3",
+    "character": "口",
+    "name": "boca"
+  },
+  {
+    "utf16": "56d7",
+    "number": "31",
+    "strokes": "3",
+    "character": "囗",
+    "name": "caja"
+  },
+  {
+    "utf16": "571f",
+    "number": "32",
+    "strokes": "3",
+    "character": "土",
+    "name": "tierra"
+  },
+  {
+    "utf16": "58eb",
+    "number": "33",
+    "strokes": "3",
+    "character": "士",
+    "name": "guerrero"
+  },
+  {
+    "utf16": "5902",
+    "number": "34",
+    "strokes": "3",
+    "character": "夂",
+    "name": "descender"
+  },
+  {
+    "utf16": "590a",
+    "number": "35",
+    "strokes": "3",
+    "character": "夊",
+    "name": "invierno"
+  },
+  {
+    "utf16": "5915",
+    "number": "36",
+    "strokes": "3",
+    "character": "夕",
+    "name": "tarde"
+  },
+  {
+    "utf16": "5927",
+    "number": "37",
+    "strokes": "3",
+    "character": "大",
+    "name": "grande"
+  },
+  {
+    "utf16": "5973",
+    "number": "38",
+    "strokes": "3",
+    "character": "女",
+    "name": "mujer"
+  },
+  {
+    "utf16": "5b50",
+    "number": "39",
+    "strokes": "3",
+    "character": "子",
+    "name": "niño"
+  },
+  {
+    "utf16": "5b80",
+    "number": "40",
+    "strokes": "3",
+    "character": "宀",
+    "name": "techo"
+  },
+  {
+    "utf16": "5bf8",
+    "number": "41",
+    "strokes": "3",
+    "character": "寸",
+    "name": "medida"
+  },
+  {
+    "utf16": "5c0f",
+    "number": "42",
+    "strokes": "3",
+    "character": "小",
+    "name": "pequeño"
+  },
+  {
+    "utf16": "5c22",
+    "number": "43",
+    "strokes": "3",
+    "character": "尢",
+    "name": "pierna torcida"
+  },
+  {
+    "utf16": "5c38",
+    "number": "44",
+    "strokes": "3",
+    "character": "尸",
+    "name": "cadáver"
+  },
+  {
+    "utf16": "5c6e",
+    "number": "45",
+    "strokes": "3",
+    "character": "屮",
+    "name": "planta"
+  },
+  {
+    "utf16": "5c71",
+    "number": "46",
+    "strokes": "3",
+    "character": "山",
+    "name": "montaña"
+  },
+  {
+    "utf16": "5ddd",
+    "number": "47",
+    "strokes": "3",
+    "character": "川",
+    "name": "río"
+  },
+  {
+    "utf16": "5de5",
+    "number": "48",
+    "strokes": "3",
+    "character": "工",
+    "name": "construcción"
+  },
+  {
+    "utf16": "5df1",
+    "number": "49",
+    "strokes": "3",
+    "character": "己",
+    "name": "serpiente"
+  },
+  {
+    "utf16": "5dfe",
+    "number": "50",
+    "strokes": "3",
+    "character": "巾",
+    "name": "tela"
+  },
+  {
+    "utf16": "5e72",
+    "number": "51",
+    "strokes": "3",
+    "character": "干",
+    "name": "seco"
+  },
+  {
+    "utf16": "5e7a",
+    "number": "52",
+    "strokes": "3",
+    "character": "幺",
+    "name": "hilo fino/pequeño"
+  },
+  {
+    "utf16": "5e7f",
+    "number": "53",
+    "strokes": "3",
+    "character": "广",
+    "name": "tejado, edificio"
+  },
+  {
+    "utf16": "5ef4",
+    "number": "54",
+    "strokes": "3",
+    "character": "廴",
+    "name": "mover, ir"
+  },
+  {
+    "utf16": "5efe",
+    "number": "55",
+    "strokes": "3",
+    "character": "廾",
+    "name": "levantar"
+  },
+  {
+    "utf16": "5f0b",
+    "number": "56",
+    "strokes": "3",
+    "character": "弋",
+    "name": "ceremonia"
+  },
+  {
+    "utf16": "5f13",
+    "number": "57",
+    "strokes": "3",
+    "character": "弓",
+    "name": "arco"
+  },
+  {
+    "utf16": "5f50",
+    "number": "58",
+    "strokes": "3",
+    "character": "彐",
+    "name": "cabeza de animal"
+  },
+  {
+    "utf16": "5f61",
+    "number": "59",
+    "strokes": "3",
+    "character": "彡",
+    "name": "pelaje, cerdas"
+  },
+  {
+    "utf16": "5f73",
+    "number": "60",
+    "strokes": "3",
+    "character": "彳",
+    "name": "cruce, persona andando"
+  },
+  {
+    "utf16": "5fc3",
+    "number": "61",
+    "strokes": "4",
+    "character": "心",
+    "name": "corazón, mente"
+  },
+  {
+    "utf16": "6208",
+    "number": "62",
+    "strokes": "4",
+    "character": "戈",
+    "name": "alabarda"
+  },
+  {
+    "utf16": "6238",
+    "number": "63",
+    "strokes": "4",
+    "character": "戸",
+    "name": "puerta"
+  },
+  {
+    "utf16": "624b",
+    "number": "64",
+    "strokes": "4",
+    "character": "手",
+    "name": "mano"
+  },
+  {
+    "utf16": "652f",
+    "number": "65",
+    "strokes": "4",
+    "character": "支",
+    "name": "rama, apoyo"
+  },
+  {
+    "utf16": "6534",
+    "number": "66",
+    "strokes": "4",
+    "character": "攴",
+    "name": "silla plegable"
+  },
+  {
+    "utf16": "6587",
+    "number": "67",
+    "strokes": "4",
+    "character": "文",
+    "name": "escritura, frase, patrón"
+  },
+  {
+    "utf16": "6597",
+    "number": "68",
+    "strokes": "4",
+    "character": "斗",
+    "name": "cucharón"
+  },
+  {
+    "utf16": "65a4",
+    "number": "69",
+    "strokes": "4",
+    "character": "斤",
+    "name": "hacha"
+  },
+  {
+    "utf16": "65b9",
+    "number": "70",
+    "strokes": "4",
+    "character": "方",
+    "name": "lado, dirección"
+  },
+  {
+    "utf16": "65e1",
+    "number": "71",
+    "strokes": "4",
+    "character": "旡",
+    "name": "asfixia"
+  },
+  {
+    "utf16": "65e5",
+    "number": "72",
+    "strokes": "4",
+    "character": "日",
+    "name": "sol, día"
+  },
+  {
+    "utf16": "66f0",
+    "number": "73",
+    "strokes": "4",
+    "character": "曰",
+    "name": "hablar, decir"
+  },
+  {
+    "utf16": "6708",
+    "number": "74",
+    "strokes": "4",
+    "character": "月",
+    "name": "luna"
+  },
+  {
+    "utf16": "6728",
+    "number": "75",
+    "strokes": "4",
+    "character": "木",
+    "name": "árbol"
+  },
+  {
+    "utf16": "6b20",
+    "number": "76",
+    "strokes": "4",
+    "character": "欠",
+    "name": "bostezo, falta"
+  },
+  {
+    "utf16": "6b62",
+    "number": "77",
+    "strokes": "4",
+    "character": "止",
+    "name": "parar"
+  },
+  {
+    "utf16": "6b79",
+    "number": "78",
+    "strokes": "4",
+    "character": "歹",
+    "name": "muerte, huesos"
+  },
+  {
+    "utf16": "6bb3",
+    "number": "79",
+    "strokes": "4",
+    "character": "殳",
+    "name": "ataque con arma"
+  },
+  {
+    "utf16": "6bcb",
+    "number": "80",
+    "strokes": "4",
+    "character": "毋",
+    "name": "ventana"
+  },
+  {
+    "utf16": "6bd4",
+    "number": "81",
+    "strokes": "4",
+    "character": "比",
+    "name": "comparar"
+  },
+  {
+    "utf16": "6bdb",
+    "number": "82",
+    "strokes": "4",
+    "character": "毛",
+    "name": "pelo, pelaje"
+  },
+  {
+    "utf16": "6c0f",
+    "number": "83",
+    "strokes": "4",
+    "character": "氏",
+    "name": "apellido, clan"
+  },
+  {
+    "utf16": "6c14",
+    "number": "84",
+    "strokes": "4",
+    "character": "气",
+    "name": "vapor"
+  },
+  {
+    "utf16": "6c34",
+    "number": "85",
+    "strokes": "4",
+    "character": "水",
+    "name": "agua, líquido"
+  },
+  {
+    "utf16": "706b",
+    "number": "86",
+    "strokes": "4",
+    "character": "火",
+    "name": "fuego"
+  },
+  {
+    "utf16": "722a",
+    "number": "87",
+    "strokes": "4",
+    "character": "爪",
+    "name": "garra"
+  },
+  {
+    "utf16": "7236",
+    "number": "88",
+    "strokes": "4",
+    "character": "父",
+    "name": "padre"
+  },
+  {
+    "utf16": "723b",
+    "number": "89",
+    "strokes": "4",
+    "character": "爻",
+    "name": "mezcla"
+  },
+  {
+    "utf16": "723f",
+    "number": "90",
+    "strokes": "4",
+    "character": "爿",
+    "name": "tablas"
+  },
+  {
+    "utf16": "7247",
+    "number": "91",
+    "strokes": "4",
+    "character": "片",
+    "name": "un lado"
+  },
+  {
+    "utf16": "7259",
+    "number": "92",
+    "strokes": "4",
+    "character": "牙",
+    "name": "colmillo"
+  },
+  {
+    "utf16": "725b",
+    "number": "93",
+    "strokes": "4",
+    "character": "牛",
+    "name": "vaca"
+  },
+  {
+    "utf16": "72ac",
+    "number": "94",
+    "strokes": "4",
+    "character": "犬",
+    "name": "perro"
+  },
+  {
+    "utf16": "7384",
+    "number": "95",
+    "strokes": "5",
+    "character": "玄",
+    "name": "oscuro, misterioso"
+  },
+  {
+    "utf16": "7389",
+    "number": "96",
+    "strokes": "5",
+    "character": "玉",
+    "name": "joya"
+  },
+  {
+    "utf16": "74dc",
+    "number": "97",
+    "strokes": "5",
+    "character": "瓜",
+    "name": "melón"
+  },
+  {
+    "utf16": "74e6",
+    "number": "98",
+    "strokes": "5",
+    "character": "瓦",
+    "name": "teja"
+  },
+  {
+    "utf16": "7518",
+    "number": "99",
+    "strokes": "5",
+    "character": "甘",
+    "name": "dulce"
+  },
+  {
+    "utf16": "751f",
+    "number": "100",
+    "strokes": "5",
+    "character": "生",
+    "name": "nacimiento, vida, fresco"
+  },
+  {
+    "utf16": "7528",
+    "number": "101",
+    "strokes": "5",
+    "character": "用",
+    "name": "usar"
+  },
+  {
+    "utf16": "7530",
+    "number": "102",
+    "strokes": "5",
+    "character": "田",
+    "name": "campo de arroz"
+  },
+  {
+    "utf16": "758b",
+    "number": "103",
+    "strokes": "5",
+    "character": "疋",
+    "name": "número de animales"
+  },
+  {
+    "utf16": "7592",
+    "number": "104",
+    "strokes": "5",
+    "character": "疒",
+    "name": "enfermedad"
+  },
+  {
+    "utf16": "7676",
+    "number": "105",
+    "strokes": "5",
+    "character": "癶",
+    "name": "tienda, primavera"
+  },
+  {
+    "utf16": "767d",
+    "number": "106",
+    "strokes": "5",
+    "character": "白",
+    "name": "blanco"
+  },
+  {
+    "utf16": "76ae",
+    "number": "107",
+    "strokes": "5",
+    "character": "皮",
+    "name": "piel"
+  },
+  {
+    "utf16": "76bf",
+    "number": "108",
+    "strokes": "5",
+    "character": "皿",
+    "name": "plato"
+  },
+  {
+    "utf16": "76ee",
+    "number": "109",
+    "strokes": "5",
+    "character": "目",
+    "name": "ojo"
+  },
+  {
+    "utf16": "77db",
+    "number": "110",
+    "strokes": "5",
+    "character": "矛",
+    "name": "lanza"
+  },
+  {
+    "utf16": "77e2",
+    "number": "111",
+    "strokes": "5",
+    "character": "矢",
+    "name": "flecha"
+  },
+  {
+    "utf16": "77f3",
+    "number": "112",
+    "strokes": "5",
+    "character": "石",
+    "name": "piedra"
+  },
+  {
+    "utf16": "793a",
+    "number": "113",
+    "strokes": "5",
+    "character": "示",
+    "name": "altar"
+  },
+  {
+    "utf16": "79b8",
+    "number": "114",
+    "strokes": "5",
+    "character": "禸",
+    "name": "criatura con cola"
+  },
+  {
+    "utf16": "79be",
+    "number": "115",
+    "strokes": "5",
+    "character": "禾",
+    "name": "planta de granos"
+  },
+  {
+    "utf16": "7a74",
+    "number": "116",
+    "strokes": "5",
+    "character": "穴",
+    "name": "cueva, agujero"
+  },
+  {
+    "utf16": "7acb",
+    "number": "117",
+    "strokes": "5",
+    "character": "立",
+    "name": "de pie"
+  },
+  {
+    "utf16": "7af9",
+    "number": "118",
+    "strokes": "6",
+    "character": "竹",
+    "name": "bambú"
+  },
+  {
+    "utf16": "7c73",
+    "number": "119",
+    "strokes": "6",
+    "character": "米",
+    "name": "arroz"
+  },
+  {
+    "utf16": "7cf8",
+    "number": "120",
+    "strokes": "6",
+    "character": "糸",
+    "name": "hilo"
+  },
+  {
+    "utf16": "7f36",
+    "number": "121",
+    "strokes": "6",
+    "character": "缶",
+    "name": "jarra de barro, lata"
+  },
+  {
+    "utf16": "7f51",
+    "number": "122",
+    "strokes": "6",
+    "character": "网",
+    "name": "red"
+  },
+  {
+    "utf16": "7f8a",
+    "number": "123",
+    "strokes": "6",
+    "character": "羊",
+    "name": "oveja"
+  },
+  {
+    "utf16": "7fbd",
+    "number": "124",
+    "strokes": "6",
+    "character": "羽",
+    "name": "alas, plumas"
+  },
+  {
+    "utf16": "8001",
+    "number": "125",
+    "strokes": "6",
+    "character": "老",
+    "name": "viejo"
+  },
+  {
+    "utf16": "800c",
+    "number": "126",
+    "strokes": "6",
+    "character": "而",
+    "name": "barba, bigotes"
+  },
+  {
+    "utf16": "8012",
+    "number": "127",
+    "strokes": "6",
+    "character": "耒",
+    "name": "arado"
+  },
+  {
+    "utf16": "8033",
+    "number": "128",
+    "strokes": "6",
+    "character": "耳",
+    "name": "oreja"
+  },
+  {
+    "utf16": "807f",
+    "number": "129",
+    "strokes": "6",
+    "character": "聿",
+    "name": "pincel de escritura"
+  },
+  {
+    "utf16": "8089",
+    "number": "130",
+    "strokes": "6",
+    "character": "肉",
+    "name": "carne"
+  },
+  {
+    "utf16": "81e3",
+    "number": "131",
+    "strokes": "6",
+    "character": "臣",
+    "name": "ministro, esclavo"
+  },
+  {
+    "utf16": "81ea",
+    "number": "132",
+    "strokes": "6",
+    "character": "自",
+    "name": "uno mismo"
+  },
+  {
+    "utf16": "81f3",
+    "number": "133",
+    "strokes": "6",
+    "character": "至",
+    "name": "llegada"
+  },
+  {
+    "utf16": "81fc",
+    "number": "134",
+    "strokes": "6",
+    "character": "臼",
+    "name": "mortero, molino"
+  },
+  {
+    "utf16": "820c",
+    "number": "135",
+    "strokes": "6",
+    "character": "舌",
+    "name": "lengua"
+  },
+  {
+    "utf16": "821b",
+    "number": "136",
+    "strokes": "6",
+    "character": "舛",
+    "name": "pies opuestos"
+  },
+  {
+    "utf16": "821f",
+    "number": "137",
+    "strokes": "6",
+    "character": "舟",
+    "name": "bote, barco"
+  },
+  {
+    "utf16": "826e",
+    "number": "138",
+    "strokes": "6",
+    "character": "艮",
+    "name": "mirar atrás"
+  },
+  {
+    "utf16": "8272",
+    "number": "139",
+    "strokes": "6",
+    "character": "色",
+    "name": "color"
+  },
+  {
+    "utf16": "8278",
+    "number": "140",
+    "strokes": "6",
+    "character": "艸",
+    "name": "plantas, vegetación"
+  },
+  {
+    "utf16": "864d",
+    "number": "141",
+    "strokes": "6",
+    "character": "虍",
+    "name": "tigre"
+  },
+  {
+    "utf16": "866b",
+    "number": "142",
+    "strokes": "6",
+    "character": "虫",
+    "name": "insecto"
+  },
+  {
+    "utf16": "8840",
+    "number": "143",
+    "strokes": "6",
+    "character": "血",
+    "name": "sangre"
+  },
+  {
+    "utf16": "884c",
+    "number": "144",
+    "strokes": "6",
+    "character": "行",
+    "name": "ir"
+  },
+  {
+    "utf16": "8863",
+    "number": "145",
+    "strokes": "6",
+    "character": "衣",
+    "name": "prenda, vestidura"
+  },
+  {
+    "utf16": "897f",
+    "number": "146",
+    "strokes": "6",
+    "character": "西",
+    "name": "oeste"
+  },
+  {
+    "utf16": "898b",
+    "number": "147",
+    "strokes": "7",
+    "character": "見",
+    "name": "ver"
+  },
+  {
+    "utf16": "89d2",
+    "number": "148",
+    "strokes": "7",
+    "character": "角",
+    "name": "ángulo, esquina"
+  },
+  {
+    "utf16": "8a00",
+    "number": "149",
+    "strokes": "7",
+    "character": "言",
+    "name": "palabra, decir"
+  },
+  {
+    "utf16": "8c37",
+    "number": "150",
+    "strokes": "7",
+    "character": "谷",
+    "name": "valle"
+  },
+  {
+    "utf16": "8c46",
+    "number": "151",
+    "strokes": "7",
+    "character": "豆",
+    "name": "frijoles"
+  },
+  {
+    "utf16": "8c55",
+    "number": "152",
+    "strokes": "7",
+    "character": "豕",
+    "name": "cerdo"
+  },
+  {
+    "utf16": "8c78",
+    "number": "153",
+    "strokes": "7",
+    "character": "豸",
+    "name": "bestia"
+  },
+  {
+    "utf16": "8c9d",
+    "number": "154",
+    "strokes": "7",
+    "character": "貝",
+    "name": "caparazón, molusco"
+  },
+  {
+    "utf16": "8d64",
+    "number": "155",
+    "strokes": "7",
+    "character": "赤",
+    "name": "rojo"
+  },
+  {
+    "utf16": "8d70",
+    "number": "156",
+    "strokes": "7",
+    "character": "走",
+    "name": "correr"
+  },
+  {
+    "utf16": "8db3",
+    "number": "157",
+    "strokes": "7",
+    "character": "足",
+    "name": "pie"
+  },
+  {
+    "utf16": "8eab",
+    "number": "158",
+    "strokes": "7",
+    "character": "身",
+    "name": "cuerpo"
+  },
+  {
+    "utf16": "8eca",
+    "number": "159",
+    "strokes": "7",
+    "character": "車",
+    "name": "vehículo, coche"
+  },
+  {
+    "utf16": "8f9b",
+    "number": "160",
+    "strokes": "7",
+    "character": "辛",
+    "name": "amargo"
+  },
+  {
+    "utf16": "8fb0",
+    "number": "161",
+    "strokes": "7",
+    "character": "辰",
+    "name": "(signo zodiacal) dragón"
+  },
+  {
+    "utf16": "8fb5",
+    "number": "162",
+    "strokes": "7",
+    "character": "辵",
+    "name": "avanzar"
+  },
+  {
+    "utf16": "9091",
+    "number": "163",
+    "strokes": "7",
+    "character": "邑",
+    "name": "asentamiento, aldea"
+  },
+  {
+    "utf16": "9149",
+    "number": "164",
+    "strokes": "7",
+    "character": "酉",
+    "name": "sake, (signo zodiacal) pájaro"
+  },
+  {
+    "utf16": "91c6",
+    "number": "165",
+    "strokes": "7",
+    "character": "釆",
+    "name": "semilla"
+  },
+  {
+    "utf16": "91cc",
+    "number": "166",
+    "strokes": "7",
+    "character": "里",
+    "name": "pueblo"
+  },
+  {
+    "utf16": "91d1",
+    "number": "167",
+    "strokes": "8",
+    "character": "金",
+    "name": "metal, oro"
+  },
+  {
+    "utf16": "9577",
+    "number": "168",
+    "strokes": "8",
+    "character": "長",
+    "name": "largo"
+  },
+  {
+    "utf16": "9580",
+    "number": "169",
+    "strokes": "8",
+    "character": "門",
+    "name": "puerta"
+  },
+  {
+    "utf16": "961c",
+    "number": "170",
+    "strokes": "8",
+    "character": "阜",
+    "name": "colina"
+  },
+  {
+    "utf16": "96b6",
+    "number": "171",
+    "strokes": "8",
+    "character": "隶",
+    "name": "atrapar"
+  },
+  {
+    "utf16": "96b9",
+    "number": "172",
+    "strokes": "8",
+    "character": "隹",
+    "name": "pájaro (de cola corta)"
+  },
+  {
+    "utf16": "96e8",
+    "number": "173",
+    "strokes": "8",
+    "character": "雨",
+    "name": "lluvia, clima"
+  },
+  {
+    "utf16": "9752",
+    "number": "174",
+    "strokes": "8",
+    "character": "青",
+    "name": "azul, verde"
+  },
+  {
+    "utf16": "975e",
+    "number": "175",
+    "strokes": "8",
+    "character": "非",
+    "name": "negación"
+  },
+  {
+    "utf16": "9762",
+    "number": "176",
+    "strokes": "9",
+    "character": "面",
+    "name": "cara, superficie"
+  },
+  {
+    "utf16": "9769",
+    "number": "177",
+    "strokes": "9",
+    "character": "革",
+    "name": "cuero"
+  },
+  {
+    "utf16": "97cb",
+    "number": "178",
+    "strokes": "9",
+    "character": "韋",
+    "name": "rodear, oponer"
+  },
+  {
+    "utf16": "97ed",
+    "number": "179",
+    "strokes": "9",
+    "character": "韭",
+    "name": "puerro"
+  },
+  {
+    "utf16": "97f3",
+    "number": "180",
+    "strokes": "9",
+    "character": "音",
+    "name": "sonido"
+  },
+  {
+    "utf16": "9801",
+    "number": "181",
+    "strokes": "9",
+    "character": "頁",
+    "name": "cabeza, página"
+  },
+  {
+    "utf16": "98a8",
+    "number": "182",
+    "strokes": "9",
+    "character": "風",
+    "name": "viento"
+  },
+  {
+    "utf16": "98db",
+    "number": "183",
+    "strokes": "9",
+    "character": "飛",
+    "name": "volar"
+  },
+  {
+    "utf16": "98df",
+    "number": "184",
+    "strokes": "9",
+    "character": "食",
+    "name": "comida, comer"
+  },
+  {
+    "utf16": "9996",
+    "number": "185",
+    "strokes": "9",
+    "character": "首",
+    "name": "cuello"
+  },
+  {
+    "utf16": "9999",
+    "number": "186",
+    "strokes": "9",
+    "character": "香",
+    "name": "fragancia, perfume, olor"
+  },
+  {
+    "utf16": "99ac",
+    "number": "187",
+    "strokes": "10",
+    "character": "馬",
+    "name": "caballo"
+  },
+  {
+    "utf16": "9aa8",
+    "number": "188",
+    "strokes": "10",
+    "character": "骨",
+    "name": "hueso"
+  },
+  {
+    "utf16": "9ad8",
+    "number": "189",
+    "strokes": "10",
+    "character": "高",
+    "name": "alto, elevado"
+  },
+  {
+    "utf16": "9adf",
+    "number": "190",
+    "strokes": "10",
+    "character": "髟",
+    "name": "cabello"
+  },
+  {
+    "utf16": "9b25",
+    "number": "191",
+    "strokes": "10",
+    "character": "鬥",
+    "name": "pelea, lucha, combate"
+  },
+  {
+    "utf16": "9b2f",
+    "number": "192",
+    "strokes": "10",
+    "character": "鬯",
+    "name": "hierbas aromáticas"
+  },
+  {
+    "utf16": "9b32",
+    "number": "193",
+    "strokes": "10",
+    "character": "鬲",
+    "name": "caldero, trípode"
+  },
+  {
+    "utf16": "9b3c",
+    "number": "194",
+    "strokes": "10",
+    "character": "鬼",
+    "name": "demonio"
+  },
+  {
+    "utf16": "9b5a",
+    "number": "195",
+    "strokes": "11",
+    "character": "魚",
+    "name": "pescado"
+  },
+  {
+    "utf16": "9ce5",
+    "number": "196",
+    "strokes": "11",
+    "character": "鳥",
+    "name": "pájaro, ave"
+  },
+  {
+    "utf16": "9e75",
+    "number": "197",
+    "strokes": "11",
+    "character": "鹵",
+    "name": "sal"
+  },
+  {
+    "utf16": "9e7f",
+    "number": "198",
+    "strokes": "11",
+    "character": "鹿",
+    "name": "ciervo"
+  },
+  {
+    "utf16": "9ea5",
+    "number": "199",
+    "strokes": "11",
+    "character": "麥",
+    "name": "trigo"
+  },
+  {
+    "utf16": "9ebb",
+    "number": "200",
+    "strokes": "11",
+    "character": "麻",
+    "name": "lino, cáñamo"
+  },
+  {
+    "utf16": "9ec4",
+    "number": "201",
+    "strokes": "12",
+    "character": "黄",
+    "name": "amarillo"
+  },
+  {
+    "utf16": "9ecd",
+    "number": "202",
+    "strokes": "12",
+    "character": "黍",
+    "name": "mijo"
+  },
+  {
+    "utf16": "9ed2",
+    "number": "203",
+    "strokes": "12",
+    "character": "黒",
+    "name": "negro"
+  },
+  {
+    "utf16": "9ef9",
+    "number": "204",
+    "strokes": "12",
+    "character": "黹",
+    "name": "costura"
+  },
+  {
+    "utf16": "9efd",
+    "number": "205",
+    "strokes": "13",
+    "character": "黽",
+    "name": "rana"
+  },
+  {
+    "utf16": "9f0e",
+    "number": "206",
+    "strokes": "13",
+    "character": "鼎",
+    "name": "caldera"
+  },
+  {
+    "utf16": "9f13",
+    "number": "207",
+    "strokes": "13",
+    "character": "鼓",
+    "name": "tambor"
+  },
+  {
+    "utf16": "9f20",
+    "number": "208",
+    "strokes": "13",
+    "character": "鼠",
+    "name": "rata"
+  },
+  {
+    "utf16": "9f3b",
+    "number": "209",
+    "strokes": "14",
+    "character": "鼻",
+    "name": "nariz"
+  },
+  {
+    "utf16": "9f4a",
+    "number": "210",
+    "strokes": "14",
+    "character": "齊",
+    "name": "completo, igual"
+  },
+  {
+    "utf16": "9f52",
+    "number": "211",
+    "strokes": "15",
+    "character": "齒",
+    "name": "diente"
+  },
+  {
+    "utf16": "9f8d",
+    "number": "212",
+    "strokes": "16",
+    "character": "龍",
+    "name": "dragón"
+  },
+  {
+    "utf16": "9f9c",
+    "number": "213",
+    "strokes": "16",
+    "character": "龜",
+    "name": "tortuga"
+  },
+  {
+    "utf16": "9fa0",
+    "number": "214",
+    "strokes": "17",
+    "character": "龠",
+    "name": "flauta"
+  }
+]
