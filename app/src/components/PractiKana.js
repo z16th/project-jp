@@ -19,9 +19,7 @@ export default function PractiKana() {
 
   const updateRows = (indexes, value) => {
     const newRows = JSON.parse(JSON.stringify(rows))
-    console.log("newRows initial: ", newRows)
     indexes.forEach((i) => (newRows[i].checked = value))
-    console.log("newRows edited: ", newRows)
     setRows(newRows)
   }
 
