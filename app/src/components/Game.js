@@ -1,5 +1,7 @@
+//* *@jsx jsx */
 import React, { useState } from "react"
 import PropTypes from "prop-types"
+
 import TextInput from "./TextInput"
 
 export default function Game({ kanas }) {
@@ -30,14 +32,11 @@ export default function Game({ kanas }) {
 
       {
         // eslint-disable-next-line react/jsx-props-no-spreading
-        !gameOver ? (
-          <TextInput {...input} />
-        ) : (
-          <button type="button" onClick={() => window.location.reload(false)}>
-            Volver
-          </button>
-        )
+        !gameOver ? <TextInput {...input} /> : null
       }
+      <button type="button" onClick={() => window.location.reload(false)}>
+        Volver
+      </button>
     </div>
   )
 }
