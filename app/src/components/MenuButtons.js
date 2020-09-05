@@ -8,7 +8,7 @@ export default function MenuButtons({
   current,
   syllabary,
   type,
-  onPlay,
+  game,
   onSelectAll,
 }) {
   const [isSelectAll, setIsSelectAll] = useState(
@@ -48,7 +48,7 @@ export default function MenuButtons({
       <div className="type-buttons">
         <button
           type="button"
-          className={`type-button ${type.state === "basic" ? "active" : ""}`}
+          className={`type-button basic ${type.state === "basic" ? "active" : ""}`}
           onClick={() => type.update("basic")}
         >
           Básico
@@ -73,7 +73,7 @@ export default function MenuButtons({
         </button>
         <button
           type="button"
-          className={`type-button ${type.state === "extended" ? "active" : ""}`}
+          className={`type-button extended ${type.state === "extended" ? "active" : ""}`}
           onClick={() => {
             syllabary.update("katakana")
             type.update("extended")
@@ -89,9 +89,16 @@ export default function MenuButtons({
       >
         {isSelectAll ? "Seleccionar Todo" : "Deseleccionar Todo"}
       </button>
-      <button type="button" className="start-button" onClick={onPlay}>
-        Comenzar
-      </button>
+
+      {game.canPlay() ? (
+        <button type="button" className="start-button active" onClick={game.start}>
+          Comenzar
+        </button>
+      ) : (
+        <button type="button" className="start-button" disabled>
+          Comenzar
+        </button>
+      )}
     </div>
   )
 }

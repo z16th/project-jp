@@ -335,11 +335,18 @@ export const Layout = ({ children }) => (
             background-color: ${gray.regular};
             text-shadow: 1px 1px 0px black, 0px 0px 2px black;
           }
+          &:disabled {
+            color: ${gray.regular};
+          }
         }
       `}
     />
     <Global
       styles={css`
+        .active {
+          color: white;
+          text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+        }
         .bibliography {
           margin-top: 40px;
           color: ${gray.regular};

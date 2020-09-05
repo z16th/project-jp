@@ -12,10 +12,10 @@ export const yellow = {
 }
 
 export const green = {
-  regular: "#82F0FF",
-  light: "#B8FFFF",
-  dark: "#4ABDCC",
-  background: "#E2FBFF",
+  regular: "#b2ff82",
+  light: "#e6ffb3",
+  dark: "#7fcb52",
+  background: "#f1f8e9",
 }
 
 export const pink = {

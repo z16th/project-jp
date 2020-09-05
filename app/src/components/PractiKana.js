@@ -1,7 +1,11 @@
+/**@jsx jsx*/
+/** @jsxFrag React.Fragment */
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useRef } from "react"
-import { shuffleArray } from "../utils/vanilla"
+import { jsx } from "@emotion/core"
 import gameRows from "../utils/json/game-rows.json"
-import { PageStyled, Example, R } from "../styling"
+import { shuffleArray } from "../utils/vanilla"
+import { PageStyled, Example, Callout, R, H, menuStyle } from "../styling"
 
 import Game from "./Game"
 import MenuButtons from "./MenuButtons"
@@ -21,6 +25,11 @@ export default function PractiKana() {
     const newRows = JSON.parse(JSON.stringify(rows))
     indexes.forEach((i) => (newRows[i].checked = value))
     setRows(newRows)
+  }
+
+  const canPlay = () => {
+    const data = rows.filter((obj) => obj.checked === true)
+    return data.length > 0
   }
 
   const handleAllClicked = (value) => {
@@ -51,12 +60,12 @@ export default function PractiKana() {
           {!isPlaying ? <Content /> : null}
 
           {!isPlaying ? (
-            <div id="game-menu">
+            <div id="game-menu" css={menuStyle}>
               <MenuButtons
                 current={currentRows}
                 syllabary={{ state: syllabary, update: setSyllabary }}
                 type={{ state: type, update: setType }}
-                onPlay={handlePlayClicked}
+                game={{ canPlay: canPlay, start: handlePlayClicked }}
                 onSelectAll={handleAllClicked}
               />
               <MenuRows
@@ -67,7 +76,10 @@ export default function PractiKana() {
               />
             </div>
           ) : (
-            <Game kanas={kanasToGuess.current} />
+            <Game
+              kanas={kanasToGuess.current}
+              endGame={() => setIsPlaying(false)}
+            />
           )}
         </div>
       </div>
@@ -79,38 +91,38 @@ function Content() {
   return (
     <>
       <h1>Introducción</h1>
-      <p>
-        En esta página podrás poner a prueba tus conocimientos sobre los kanas.
-      </p>
+      <p>En esta página podrás poner a prueba tus conocimientos sobre kanas.</p>
       <h2>Cómo usar</h2>
+      <h3>Menú</h3>
       <ul>
         <li>
           <b>Selecciona</b> las filas de kanas que quieras repasar
         </li>
         <li>
-          Puedes cambiar entre cada <b>silabario</b> con presionando en la
-          pestaña correspondiente
+          Puedes cambiar entre cada <b>silabario</b> presionando en la pestaña
+          correspondiente
         </li>
         <li>
           Cuando estés listo presiona <b>Comenzar</b>
         </li>
       </ul>
+      <h3>Juego</h3>
       <ul>
         <li>
           Escribe el <b>rōmaji</b> correspondiente para cada kana
         </li>
       </ul>
-      <p>
-        Recuerda que el rōmaji de entrada por teclado es ligeramente diferente
-        para algunos caracteres.
-      </p>
+      <Callout>
+        El rōmaji de entrada por teclado es ligeramente diferente para algunos
+        caracteres en comparación con el romaji de lectura.
+      </Callout>
       <Example>
-        を a pesar de ser leído como "o" se tiene que escribir <R>wo</R> ya que
-        escribir <R>o</R> resulta en お
+        <H>を</H> se lee como "o" pero se escribe <R>wo</R> en teclado ya que
+        escribir <R>o</R> resulta en <H>お</H>
       </Example>
       <p>Hay caracteres que pueden ser introducidos de distintas maneras.</p>
       <Example>
-        し puede ser escrito como <R>shi</R> o "si"{" "}
+        <H>し</H> puede ser escrito como <R>shi</R> o "si"{" "}
       </Example>
     </>
   )

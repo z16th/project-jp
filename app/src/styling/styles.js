@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { pink, yellow, blue, gray, green, brands } from "./colors"
+import { pink, yellow, blue, gray, brands, green } from "./colors"
 import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
 import texture from "../utils/images/paper.jpg"
 
@@ -7,35 +7,51 @@ const minWidth = 280
 const maxWidth = 800
 
 // =============================================GAME
+export const menuStyle = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`
+
 export const menuButtons = css`
-  .hiragana {
-    &.active {
-      background-color: ${yellow.regular};
+  width: 100%;
+  .syllabary-buttons {
+    font-size: 32px;
+    margin: 20px 0;
+    .hiragana {
+      width: 50%;
+      height: 64px;
+      border-radius: 12px 0 0 12px;
+      &.active {
+        background-color: ${yellow.regular};
+      }
+      &:hover:not(.active) {
+        background-color: ${yellow.dark};
+      }
     }
-    &:hover:not(.active) {
-      background-color: ${yellow.background};
-    }
-  }
-  .katakana {
-    &.active {
-      background-color: ${blue.regular};
-    }
-    &:hover:not(.active) {
-      background-color: ${blue.background};
+    .katakana {
+      width: 50%;
+      height: 64px;
+      border-radius: 0 12px 12px 0;
+      &.active {
+        background-color: ${blue.regular};
+      }
+      &:hover:not(.active) {
+        background-color: ${blue.dark};
+      }
     }
   }
   .type-buttons {
+    margin: 20px 0;
     .type-button {
-      &.active {
-        color: white;
-        background-color: ${gray.regular};
-        text-shadow: 1px 1px 0px black, 0px 0px 2px black;
-        &:hover {
-          background-color: ${gray.dark};
-        }
+      width: 25%;
+      &.basic {
+        border-radius: 6px 0 0 6px;
       }
-      &:hover:not(.active) {
-        background-color: ${gray.background};
+      &.extended {
+        border-radius: 0 6px 6px 0;
       }
       &.active {
         background-color: ${gray.regular};
@@ -45,11 +61,23 @@ export const menuButtons = css`
       }
     }
   }
+  .start-button {
+    &:not(:disabled) {
+      background-color: ${green.dark};
+      &:hover {
+        background-color: ${green.regular};
+      }
+    }
+  }
 `
 
 export const menuRows = css`
   display: flex;
   flex-direction: column;
+  margin: 20px 0;
+  button:focus {
+    outline: none;
+  }
   .row {
     display: flex;
     flex-direction: row;
@@ -57,23 +85,50 @@ export const menuRows = css`
     align-items: center;
     height: 96px;
     width: fit-content;
-    margin: 4px 8px;
+    margin: 6px 8px;
     border: 2px dashed ${gray.regular};
     border-radius: 16px;
-  }
-  .row.hiragana {
-    &.selected {
-      background-color: ${yellow.regular};
-      &:hover {
-        background-color: ${yellow.regular};
+    &:hover {
+      .char {
+        background-color: ${gray.regular};
       }
     }
-  }
-  .row.katakana {
+    &:focus {
+      .char {
+        color: white;
+        text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+        background-color: ${gray.regular};
+      }
+    }
     &.selected {
-      background-color: ${blue.regular};
+      border-style: solid;
+    }
+    &.hiragana {
       &:hover {
+        background-color: ${yellow.background};
+      }
+      &:focus {
+        background-color: ${yellow.background};
+      }
+      &.selected {
+        background-color: ${yellow.regular};
+        &:hover {
+          background-color: ${yellow.regular};
+        }
+      }
+    }
+    &.katakana {
+      &:hover {
+        background-color: ${blue.background};
+      }
+      &:focus {
+        background-color: ${blue.background};
+      }
+      &.selected {
         background-color: ${blue.regular};
+        &:hover {
+          background-color: ${blue.regular};
+        }
       }
     }
   }

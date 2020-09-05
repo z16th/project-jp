@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import TextInput from "./TextInput"
 
-export default function Game({ kanas }) {
+export default function Game({ kanas, endGame }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [score, setScore] = useState(0)
   const gameOver = currentIndex === kanas.length
@@ -33,7 +33,7 @@ export default function Game({ kanas }) {
         // eslint-disable-next-line react/jsx-props-no-spreading
         !gameOver ? <TextInput {...input} /> : null
       }
-      <button type="button" onClick={() => window.location.reload(false)}>
+      <button type="button" onClick={endGame}>
         Volver
       </button>
     </div>
