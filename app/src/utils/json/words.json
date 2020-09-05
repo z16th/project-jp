@@ -207,5 +207,82 @@
       "en": ["start", "beginning"],
       "es": ["inicio", "comienzo"]
     }
+  },
+  {
+    "date": "2020-08-29",
+    "word": "銚子",
+    "furigana": ["ちょう", "し"],
+    "romaji": "chōshi",
+    "type": "n",
+    "meaning": {
+      "en": ["earthenware container for sake"],
+      "es": ["loza de barro para el sake"]
+    }
+  },
+  {
+    "date": "2020-08-30",
+    "word": "香水",
+    "furigana": ["こう", "すい"],
+    "romaji": "kōsui",
+    "type": "n",
+    "meaning": {
+      "en": ["perfume"],
+      "es": ["perfume"]
+    }
+  },
+  {
+    "date": "2020-08-31",
+    "word": "何歳",
+    "furigana": ["なん", "さい"],
+    "romaji": "nansai",
+    "type": "adv",
+    "meaning": {
+      "en": ["how old"],
+      "es": ["qué edad", "cuántos años"]
+    }
+  },
+  {
+    "date": "2020-09-01",
+    "word": "理知的",
+    "furigana": ["り", "ち", "てき"],
+    "romaji": "richiteki",
+    "type": "adj",
+    "meaning": {
+      "en": ["intelligent", "intellectual"],
+      "es": ["inteligente", "intelectual"]
+    }
+  },
+  {
+    "date": "2020-09-02",
+    "word": "流す",
+    "furigana": ["なが", "す"],
+    "romaji": "nagasu",
+    "type": "vb",
+    "meaning": {
+      "en": ["drain", "pour", "flush"],
+      "es": ["drenar", "verter", "enjuagar"]
+    }
+  },
+  {
+    "date": "2020-09-03",
+    "word": "不賛成",
+    "furigana": ["ふ", "さん", "せい"],
+    "romaji": "fusansei",
+    "type": "n",
+    "meaning": {
+      "en": ["disagreement", "disapproval"],
+      "es": ["desacuerdo", "desaprobación"]
+    }
+  },
+  {
+    "date": "2020-09-04",
+    "word": "相棒",
+    "furigana": ["あい", "ぼう"],
+    "romaji": "aibō",
+    "type": "n",
+    "meaning": {
+      "en": ["associate", "partner", "buddy"],
+      "es": ["asociado", "compañero", "amigo"]
+    }
   }
 ]
