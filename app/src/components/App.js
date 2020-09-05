@@ -8,6 +8,7 @@ import Footer from "./Footer"
 import { ReactComponent as Torii } from "../utils/icons/icons8-torii.svg"
 import { ReactComponent as Koi } from "../utils/icons/icons8-koi-fish.svg"
 import { ReactComponent as Origami } from "../utils/icons/icons8-origami.svg"
+import { ReactComponent as RiceBowl } from "../utils/icons/icons8-rice-bowl.svg"
 
 const HomePage = React.lazy(() => import("./HomePage"))
 const SyllabaryPage = React.lazy(() => import("./SyllabaryPage"))
@@ -34,6 +35,12 @@ const links = [
     exact: false,
     label: "KANJI",
     Icon: Origami,
+  },
+  {
+    to: "/practikana",
+    exact: false,
+    label: "PRACTIKANA",
+    Icon: RiceBowl,
   },
 ]
 

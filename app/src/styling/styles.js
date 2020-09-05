@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { pink, yellow, blue, gray, brands } from "./colors"
+import { pink, yellow, blue, gray, green, brands } from "./colors"
 import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
 import texture from "../utils/images/paper.jpg"
 
@@ -391,17 +391,24 @@ export const hamburgerMenu = css`
     z-index: 20;
     cursor: pointer;
     position: fixed;
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     right: 24px;
+    padding: 0;
     bottom: 48px;
     border: none;
     border-radius: 50%;
-    background-color: ${gray.background};
-    box-shadow: 2px 2px 4px black;
+    background-color: transparent;
     &:active {
-      background-color: ${gray.dark};
-      box-shadow: 2px 2px 4px white;
+      svg {
+        fill: white;
+        stroke: ${gray.regular};
+      }
+    }
+    svg {
+      fill: ${gray.regular};
+      stroke: white;
+      stroke-width: 2px;
     }
   }
   .menu {

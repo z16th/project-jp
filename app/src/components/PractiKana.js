@@ -80,9 +80,9 @@ export default function PractiKana() {
 function Content() {
   return (
     <>
-      <h1>PractiKana</h1>
+      <h1>Introducción</h1>
       <p>
-        En esta página podrás repasar tus conocimientos sobre los silabarios.
+        En esta página podrás poner a prueba tus conocimientos sobre los kanas.
       </p>
       <h2>Cómo usar</h2>
       <ul>

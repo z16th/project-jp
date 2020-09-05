@@ -74,7 +74,10 @@ export default function MenuButtons({
         <button
           type="button"
           className={`type-button ${type.state === "extended" ? "active" : ""}`}
-          onClick={() => type.update("extended")}
+          onClick={() => {
+            syllabary.update("katakana")
+            type.update("extended")
+          }}
         >
           Extendido
         </button>

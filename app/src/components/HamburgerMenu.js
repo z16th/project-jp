@@ -3,6 +3,8 @@
 import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
 import { hamburgerMenu } from "../styling"
+import { ReactComponent as Plus } from "../utils/icons/icons8-plus-edited.svg"
+import { ReactComponent as Minus } from "../utils/icons/icons8-minus-edited.svg"
 
 export default function HamburgerMenu({ controller, children }) {
   const { state, setState } = controller
@@ -29,17 +31,7 @@ export default function HamburgerMenu({ controller, children }) {
         onClick={toggle}
         onKeyDown={handleKeyDown}
       >
-        {state ? (
-          <img
-            src="https://img.icons8.com/ios-filled/20/000000/minus-math.png"
-            alt="botón - abrir menú"
-          />
-        ) : (
-          <img
-            src="https://img.icons8.com/ios-filled/20/000000/plus-math.png"
-            alt="botón - cerrar menú"
-          />
-        )}
+        {state ? <Minus /> : <Plus />}
       </button>
       <div
         tabIndex="-1"
