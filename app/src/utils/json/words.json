@@ -266,12 +266,23 @@
   {
     "date": "2020-09-03",
     "word": "不賛成",
-    "furigana": ["ふ", "さん","せい"],
+    "furigana": ["ふ", "さん", "せい"],
     "romaji": "fusansei",
     "type": "n",
     "meaning": {
       "en": ["disagreement", "disapproval"],
-      "es": ["desacuerdo","desaprobación"]
+      "es": ["desacuerdo", "desaprobación"]
+    }
+  },
+  {
+    "date": "2020-09-04",
+    "word": "相棒",
+    "furigana": ["あい", "ぼう"],
+    "romaji": "aibō",
+    "type": "n",
+    "meaning": {
+      "en": ["associate", "partner", "buddy"],
+      "es": ["asociado", "compañero", "amigo"]
     }
   }
 ]
