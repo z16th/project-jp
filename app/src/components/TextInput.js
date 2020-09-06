@@ -10,6 +10,7 @@ export default function TextInput({ currentKana, nextKana, updateScore }) {
     const match = kanas.find(
       (kana) => kana.hiragana === currentKana || kana.katakana === currentKana
     )
+
     event.preventDefault()
     if (match) {
       if (
@@ -30,22 +31,18 @@ export default function TextInput({ currentKana, nextKana, updateScore }) {
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="kana">
-          Kana:
-          <input
-            id="kana"
-            type="text"
-            value={value}
-            onChange={handleChange}
-            maxLength={3}
-            autoFocus
-          />
-        </label>
-        <input type="submit" value=">" />
-      </form>
-    </>
+    <form onSubmit={handleSubmit}>
+      <input
+        id="text-input"
+        type="text"
+        value={value}
+        onChange={handleChange}
+        maxLength={3}
+        autoFocus
+        placeholder="rōmaji"
+      />
+      <input type="submit" value=">" />
+    </form>
   )
 }
 

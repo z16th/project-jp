@@ -48,7 +48,9 @@ export default function MenuButtons({
       <div className="type-buttons">
         <button
           type="button"
-          className={`type-button basic ${type.state === "basic" ? "active" : ""}`}
+          className={`type-button basic ${
+            type.state === "basic" ? "active" : ""
+          }`}
           onClick={() => type.update("basic")}
         >
           Básico
@@ -73,7 +75,9 @@ export default function MenuButtons({
         </button>
         <button
           type="button"
-          className={`type-button extended ${type.state === "extended" ? "active" : ""}`}
+          className={`type-button extended ${
+            type.state === "extended" ? "active" : ""
+          }`}
           onClick={() => {
             syllabary.update("katakana")
             type.update("extended")
@@ -82,23 +86,21 @@ export default function MenuButtons({
           Extendido
         </button>
       </div>
-      <button
-        type="button"
-        className="select-all-button"
-        onClick={handleSelection}
-      >
-        {isSelectAll ? "Seleccionar Todo" : "Deseleccionar Todo"}
-      </button>
-
-      {game.canPlay() ? (
-        <button type="button" className="start-button active" onClick={game.start}>
-          Comenzar
+      <div className="action-buttons">
+        {" "}
+        <button type="button" className="select-all" onClick={handleSelection}>
+          {isSelectAll ? "Seleccionar Sección" : "Deseleccionar Sección"}
         </button>
-      ) : (
-        <button type="button" className="start-button" disabled>
-          Comenzar
-        </button>
-      )}
+        {game.canPlay() ? (
+          <button type="button" className="start active" onClick={game.start}>
+            Comenzar
+          </button>
+        ) : (
+          <button type="button" className="start" disabled>
+            Comenzar
+          </button>
+        )}
+      </div>
     </div>
   )
 }

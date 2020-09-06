@@ -5,11 +5,21 @@ import React, { useState, useRef } from "react"
 import { jsx } from "@emotion/core"
 import gameRows from "../utils/json/game-rows.json"
 import { shuffleArray } from "../utils/vanilla"
-import { PageStyled, Example, Callout, R, H, menuStyle } from "../styling"
+import {
+  PageStyled,
+  Example,
+  Callout,
+  R,
+  H,
+  menuStyle,
+  sidebar,
+} from "../styling"
 
+import Sidebar from "./Sidebar"
 import Game from "./Game"
 import MenuButtons from "./MenuButtons"
 import MenuRows from "./MenuRows"
+import useOnLoadAction from "../hooks/useOnLoadAction"
 
 export default function PractiKana() {
   const kanasToGuess = useRef([])
@@ -42,7 +52,7 @@ export default function PractiKana() {
 
   const handlePlayClicked = () => {
     let data = rows.filter((obj) => obj.checked === true)
-
+    console.log("returned")
     if (!data.length > 0) return
 
     data = data
@@ -53,12 +63,13 @@ export default function PractiKana() {
     setIsPlaying(true)
   }
 
+  useOnLoadAction(handlePlayClicked)
+
   return (
     <PageStyled id="practikana-page">
+      <Sidebar from=".main-content" select="h1, h2" />
       <div className="main-content">
         <div className="content">
-          {!isPlaying ? <Content /> : null}
-
           {!isPlaying ? (
             <div id="game-menu" css={menuStyle}>
               <MenuButtons
@@ -81,6 +92,8 @@ export default function PractiKana() {
               endGame={() => setIsPlaying(false)}
             />
           )}
+
+          {!isPlaying ? <Content /> : null}
         </div>
       </div>
     </PageStyled>

@@ -17,8 +17,16 @@ export const menuStyle = css`
 
 export const menuButtons = css`
   width: 100%;
+  @media (max-width: 400px) {
+    font-size: 9px;
+    .syllabary-buttons {
+      button {
+        font-size: 1.2rem;
+      }
+    }
+  }
   .syllabary-buttons {
-    font-size: 32px;
+    font-size: 2rem;
     margin: 20px 0;
     .hiragana {
       width: 50%;
@@ -61,11 +69,22 @@ export const menuButtons = css`
       }
     }
   }
-  .start-button {
-    &:not(:disabled) {
-      background-color: ${green.dark};
-      &:hover {
-        background-color: ${green.regular};
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    .select-all {
+      border-radius: 6px;
+    }
+    .start {
+      font-size: 1.2rem;
+      border-radius: 6px;
+      &:not(:disabled) {
+        background-color: ${green.dark};
+        &:hover {
+          color: black;
+          text-shadow: none;
+          background-color: ${green.regular};
+        }
       }
     }
   }
@@ -140,6 +159,49 @@ export const menuRows = css`
     padding: 16px;
     margin: 16px 8px;
     background-color: white;
+    @media (max-width: 400px) {
+      padding: 8px;
+      margin: 4px 2px;
+    }
+  }
+`
+
+export const game = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh;
+  .total {
+  }
+  .kana {
+    font-size: 100px;
+    margin: 20px;
+  }
+  .score {
+  }
+  .back {
+  }
+  form {
+    margin: 20px;
+    input {
+      font-size: 2rem;
+      padding: 16px;
+      border: none;
+      background-color: ${gray.background};
+      &:focus {
+        outline: none;
+        border-radius: 16px 0 0 16px;
+        border: 2px solid ${gray.dark};
+      }
+      &[type="text"] {
+        border-radius: 16px 0 0 16px;
+        width: 90px;
+      }
+      &[type="submit"] {
+        background-color: ${green.regular};
+        border-radius: 0 16px 16px 0;
+      }
+    }
   }
 `
 
@@ -644,6 +706,7 @@ export const footer = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   text-align: center;
   width: 100%;
   padding-top: 16px;
@@ -656,18 +719,12 @@ export const footer = css`
       width: 85%;
     }
   }
-`
-
-export const social = css`
-  position: relative;
-  width: 100%;
-  svg {
+  .logo {
     fill: white;
     position: absolute;
     right: 10px;
-    bottom: 50%;
+    bottom: 10px;
     width: 64px;
-    transform: translateY(50%);
     @media (max-width: 450px) {
       position: static;
       display: block;
@@ -675,36 +732,43 @@ export const social = css`
       transform: translateY(0%);
     }
   }
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @media (min-width: 411px) {
-      flex-direction: row;
-    }
-    &:hover {
-      text-shadow: 0 0 1px black, 1px 1px 0px black;
-    }
-    #facebook:hover {
-      color: ${brands.facebook};
-    }
-    #twitter:hover {
-      color: ${brands.twitter};
-    }
-    #github:hover {
-      color: ${brands.github};
-    }
+`
+
+export const social = css`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 411px) {
+    flex-direction: row;
   }
   .network {
-    display: inline-block;
+    display: flex;
     padding: 8px 8px 6px;
     margin: 6px 0px;
     font-size: 1.16rem;
     text-decoration: none;
     color: white;
-    i {
+    &:hover > * {
+      -webkit-filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.8));
+      filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.8));
+    }
+    &#facebook:hover > * {
+      color: ${brands.facebook};
+      fill: ${brands.facebook};
+    }
+    &#twitter:hover > * {
+      color: ${brands.twitter};
+      fill: ${brands.twitter};
+    }
+    &#github:hover > * {
+      color: ${brands.github};
+      fill: ${brands.github};
+    }
+    svg {
       margin-right: 8px;
+      fill: white;
     }
   }
 `

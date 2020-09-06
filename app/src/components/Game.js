@@ -1,5 +1,9 @@
+/**@jsx jsx */
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react"
 import PropTypes from "prop-types"
+import { jsx } from "@emotion/core"
+import { game } from "../styling"
 
 import TextInput from "./TextInput"
 
@@ -20,20 +24,21 @@ export default function Game({ kanas, endGame }) {
   }
 
   return (
-    <div id="game">
-      {gameOver ? <p>Fin del juego</p> : null}
+    <div id="game" css={game}>
+      {gameOver ? <p>{((score / kanas.length) * 100).toFixed()}%</p> : null}
 
-      <div className="score">Puntaje: {score}</div>
       <div className="total">
-        {!gameOver ? currentIndex + 1 : null}/{kanas.length}
+        {!gameOver ? `${currentIndex + 1}/${kanas.length}` : null}
       </div>
       <div className="kana">{kanas[currentIndex]}</div>
-
+      <div className="score">
+        Puntaje: {!gameOver ? score : `${score}/${kanas.length}`}
+      </div>
       {
         // eslint-disable-next-line react/jsx-props-no-spreading
         !gameOver ? <TextInput {...input} /> : null
       }
-      <button type="button" onClick={endGame}>
+      <button type="button" className="back" onClick={endGame}>
         Volver
       </button>
     </div>
