@@ -285,4 +285,15 @@
       "es": ["asociado", "compañero", "amigo"]
     }
   }
+  {
+    "date": "2020-09-05",
+    "word": "働き",
+    "furigana": ["はたら","き"],
+    "romaji": "hataraki",
+    "type": "n",
+    "meaning": {
+      "en": ["work", "function", "activity"],
+      "es": ["trabajo", "función", "actividad"]
+    }
+  }
 ]
