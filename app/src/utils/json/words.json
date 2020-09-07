@@ -288,12 +288,23 @@
   {
     "date": "2020-09-05",
     "word": "働き",
-    "furigana": ["はたら","き"],
+    "furigana": ["はたら", "き"],
     "romaji": "hataraki",
     "type": "n",
     "meaning": {
       "en": ["work", "function", "activity"],
       "es": ["trabajo", "función", "actividad"]
+    }
+  },
+  {
+    "date": "2020-09-06",
+    "word": "看護婦",
+    "furigana": ["かん", "ご", "ふ"],
+    "romaji": "kangofu",
+    "type": "n",
+    "meaning": {
+      "en": ["nurse"],
+      "es": ["enfermera"]
     }
   }
 ]
