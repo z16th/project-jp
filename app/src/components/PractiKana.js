@@ -10,7 +10,6 @@ import { PageStyled, Example, Callout, R, H, menuStyle } from "../styling"
 import Game from "./Game"
 import MenuButtons from "./MenuButtons"
 import MenuRows from "./MenuRows"
-import useOnLoadAction from "../hooks/useOnLoadAction"
 
 export default function PractiKana() {
   const kanasToGuess = useRef([])
@@ -52,8 +51,6 @@ export default function PractiKana() {
     kanasToGuess.current = shuffleArray(data)
     setIsPlaying(true)
   }
-
-  useOnLoadAction(handlePlayClicked)
 
   return (
     <PageStyled id="practikana-page">
