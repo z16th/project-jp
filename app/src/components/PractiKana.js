@@ -43,7 +43,6 @@ export default function PractiKana() {
 
   const handlePlayClicked = () => {
     let data = rows.filter((obj) => obj.checked === true)
-    console.log("returned")
     if (!data.length > 0) return
 
     data = data

@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
+import { sizes } from "./styles"
 import { blue, yellow, gray, pink, purple } from "./colors"
 import {
   primaryFont,
@@ -213,11 +214,13 @@ export const PageStyled = styled.div`
   }
   @media (max-width: 1024px) {
     .content {
+      min-height: calc(100vh - ${sizes.navBar.height});
       padding: 20px 12px;
     }
   }
   @media (max-width: 280px) {
     .content {
+      min-height: calc(100vh - ${sizes.navBar.height});
       padding: 20px 12px;
     }
   }

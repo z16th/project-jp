@@ -3,6 +3,12 @@ import { pink, yellow, blue, gray, brands, green } from "./colors"
 import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
 import texture from "../utils/images/paper.jpg"
 
+export const sizes = {
+  navBar: {
+    height: "50px",
+  },
+}
+
 const minWidth = 280
 const maxWidth = 800
 
@@ -489,7 +495,7 @@ export const sidebar = css`
   display: none;
   grid-area: sidebar;
   position: sticky;
-  top: 48px;
+  top: ${sizes.navBar.height};
   height: 100vh;
   border-left: 1px solid ${gray.dark};
   background-color: white;
@@ -534,11 +540,11 @@ export const hamburgerMenu = css`
     align-items: center;
     text-align: center;
     position: fixed;
-    top: 48px;
+    top: ${sizes.navBar.height};
     right: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 48px);
+    height: calc(100vh - ${sizes.navBar.height});
     overflow-y: scroll;
     background-color: ${gray.background};
     .links {
@@ -566,15 +572,15 @@ export const navbar = css`
   top: 0px;
   justify-content: center;
   align-items: center;
-  height: 48px;
+  height: ${sizes.navBar.height};
   width: 100vw;
   border-bottom: 1px solid ${pink.background};
   background-color: ${gray.regular};
   a {
     display: inherit;
     align-items: center;
-    margin: 20px;
-    padding: 2px;
+    margin: 0 20px;
+    padding: 3px;
     svg {
       margin-right: 8px;
       fill: white;
@@ -594,7 +600,7 @@ export const navbar = css`
 `
 
 export const navbarEmpty = css`
-  height: 48px;
+  height: ${sizes.navBar.height};
 `
 
 // =============================================KANJI
