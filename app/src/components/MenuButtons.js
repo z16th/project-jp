@@ -90,7 +90,7 @@ export default function MenuButtons({
       <div className="action-buttons">
         {" "}
         <button type="button" className="select-all" onClick={handleSelection}>
-          {isSelectAll ? "Seleccionar Sección" : "Deseleccionar Sección"}
+          {isSelectAll ? "Agregar Sección" : "Quitar Sección"}
         </button>
         {game.canPlay() ? (
           <button type="button" className="start active" onClick={game.start}>
