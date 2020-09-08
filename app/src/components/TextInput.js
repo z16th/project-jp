@@ -7,18 +7,14 @@ export default function TextInput({ currentKana, nextKana, updateScore }) {
   const [value, setValue] = useState("")
 
   const handleSubmit = (event) => {
+    event.preventDefault()
+    if (value === "") return
+
     const match = kanas.find(
       (kana) => kana.hiragana === currentKana || kana.katakana === currentKana
     )
-
-    event.preventDefault()
-    if (match) {
-      if (
-        match.romaji === value ||
-        (match.alternative !== "" && match.alternative === value)
-      ) {
-        updateScore()
-      }
+    if (match.romaji === value || match.alternative === value) {
+      updateScore()
     }
     nextKana()
     setValue("")

@@ -1,11 +1,12 @@
 /** @jsx jsx */
 // eslint-disable-next-line no-unused-vars
 import React from "react"
+import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
 import { menuRows } from "../styling"
 import Row from "./Row"
 
-export default function MenuRows({ rows, updateRows, syllabary, type }) {
+export default function MenuRows({ syllabary, type, rows, updateRows }) {
   return (
     <div className="menu-rows" css={menuRows}>
       {rows.map((currentRow, i) =>
@@ -24,4 +25,18 @@ export default function MenuRows({ rows, updateRows, syllabary, type }) {
       ) : null}
     </div>
   )
+}
+
+MenuRows.propTypes = {
+  syllabary: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  rows: PropTypes.arrayOf(
+    PropTypes.shape({
+      syllabary: PropTypes.string,
+      type: PropTypes.string,
+      kanas: PropTypes.arrayOf(PropTypes.string),
+      checked: PropTypes.bool,
+    })
+  ).isRequired,
+  updateRows: PropTypes.func.isRequired,
 }

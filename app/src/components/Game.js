@@ -1,4 +1,4 @@
-/**@jsx jsx */
+/** @jsx jsx */
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react"
 import PropTypes from "prop-types"
@@ -6,6 +6,7 @@ import { jsx } from "@emotion/core"
 import { game } from "../styling"
 
 import TextInput from "./TextInput"
+import useScrollOnLoad from "../hooks/useScrollOnLoad"
 
 export default function Game({ kanas, endGame }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -22,6 +23,8 @@ export default function Game({ kanas, endGame }) {
       setScore((value) => value + 1)
     },
   }
+
+  useScrollOnLoad()
 
   return (
     <div id="game" css={game}>
@@ -47,4 +50,5 @@ export default function Game({ kanas, endGame }) {
 
 Game.propTypes = {
   kanas: PropTypes.arrayOf(PropTypes.string).isRequired,
+  endGame: PropTypes.func.isRequired,
 }

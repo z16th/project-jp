@@ -1,19 +1,18 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
 
 import Sidebar from "./Sidebar"
 import CiteSource from "./CiteSource"
 import Bibliography from "./Bibliography"
+import useScrollOnLoad from "../hooks/useScrollOnLoad"
 
 const TablesSubpage = React.lazy(() => import("./TablesSubpage"))
 
 export default function SyllabaryPage() {
   const { url } = useRouteMatch()
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  useScrollOnLoad()
 
   return (
     <PageStyled id="syllabary-page">

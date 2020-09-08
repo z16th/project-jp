@@ -7,13 +7,12 @@ import kanjiData from "../utils/json/kanji-1-80.json"
 import { H, R, Kj, Note, Callout, Example, kanjiTable } from "../styling"
 
 import KanjiCard from "./KanjiCard"
+import useScrollOnLoad from "../hooks/useScrollOnLoad"
 
 export default function KanjiSubpage() {
   const example = kanjiData[19]
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  useScrollOnLoad()
 
   return (
     <>
