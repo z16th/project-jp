@@ -317,5 +317,16 @@
       "en": ["sheep"],
       "es": ["oveja"]
     }
+  },
+  {
+    "date": "2020-09-08",
+    "word": "中国",
+    "furigana": ["ちゅう", "ごく"],
+    "romaji": "chūgoku",
+    "type": "n",
+    "meaning": {
+      "en": ["China"],
+      "es": ["China"]
+    }
   }
 ]
