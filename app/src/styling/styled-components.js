@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
-import { sizes } from "./styles"
 import { blue, yellow, gray, pink, purple } from "./colors"
 import {
   primaryFont,
