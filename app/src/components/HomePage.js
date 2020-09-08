@@ -1,14 +1,13 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Sidebar from "./Sidebar"
 import WordOfTheDay from "./WordOfTheDay"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
 
 import CiteSource from "./CiteSource"
+import useScrollOnLoad from "../hooks/useScrollOnLoad"
 
 export default function HomePage() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  useScrollOnLoad()
 
   return (
     <PageStyled id="home-page">

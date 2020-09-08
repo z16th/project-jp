@@ -1,41 +1,71 @@
 import { css } from "@emotion/core"
-import { pink, yellow, blue, gray, brands } from "./colors"
+import { pink, yellow, blue, gray, brands, green } from "./colors"
 import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
 import texture from "../utils/images/paper.jpg"
+
+export const sizes = {
+  navBar: {
+    height: "50px",
+  },
+}
 
 const minWidth = 280
 const maxWidth = 800
 
 // =============================================GAME
+export const menuStyle = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`
+
 export const menuButtons = css`
-  .hiragana {
-    &.active {
-      background-color: ${yellow.regular};
-    }
-    &:hover:not(.active) {
-      background-color: ${yellow.background};
+  width: 100%;
+  @media (max-width: 400px) {
+    font-size: 9px;
+    .syllabary-buttons {
+      button {
+        font-size: 1.2rem;
+      }
     }
   }
-  .katakana {
-    &.active {
-      background-color: ${blue.regular};
+  .syllabary-buttons {
+    font-size: 2rem;
+    margin: 20px 0;
+    .hiragana {
+      width: 50%;
+      height: 64px;
+      border-radius: 12px 0 0 12px;
+      &.active {
+        background-color: ${yellow.regular};
+      }
+      &:hover:not(.active) {
+        background-color: ${yellow.dark};
+      }
     }
-    &:hover:not(.active) {
-      background-color: ${blue.background};
+    .katakana {
+      width: 50%;
+      height: 64px;
+      border-radius: 0 12px 12px 0;
+      &.active {
+        background-color: ${blue.regular};
+      }
+      &:hover:not(.active) {
+        background-color: ${blue.dark};
+      }
     }
   }
   .type-buttons {
+    margin: 20px 0;
     .type-button {
-      &.active {
-        color: white;
-        background-color: ${gray.regular};
-        text-shadow: 1px 1px 0px black, 0px 0px 2px black;
-        &:hover {
-          background-color: ${gray.dark};
-        }
+      width: 25%;
+      &.basic {
+        border-radius: 6px 0 0 6px;
       }
-      &:hover:not(.active) {
-        background-color: ${gray.background};
+      &.extended {
+        border-radius: 0 6px 6px 0;
       }
       &.active {
         background-color: ${gray.regular};
@@ -45,11 +75,34 @@ export const menuButtons = css`
       }
     }
   }
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    .select-all {
+      border-radius: 6px;
+    }
+    .start {
+      font-size: 1.2rem;
+      border-radius: 6px;
+      &:not(:disabled) {
+        background-color: ${green.dark};
+        &:hover {
+          color: black;
+          text-shadow: none;
+          background-color: ${green.regular};
+        }
+      }
+    }
+  }
 `
 
 export const menuRows = css`
   display: flex;
   flex-direction: column;
+  margin: 20px 0;
+  button:focus {
+    outline: none;
+  }
   .row {
     display: flex;
     flex-direction: row;
@@ -57,23 +110,50 @@ export const menuRows = css`
     align-items: center;
     height: 96px;
     width: fit-content;
-    margin: 4px 8px;
+    margin: 6px 8px;
     border: 2px dashed ${gray.regular};
     border-radius: 16px;
-  }
-  .row.hiragana {
-    &.selected {
-      background-color: ${yellow.regular};
-      &:hover {
-        background-color: ${yellow.regular};
+    &:hover {
+      .char {
+        background-color: ${gray.regular};
       }
     }
-  }
-  .row.katakana {
+    &:focus {
+      .char {
+        color: white;
+        text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+        background-color: ${gray.regular};
+      }
+    }
     &.selected {
-      background-color: ${blue.regular};
+      border-style: solid;
+    }
+    &.hiragana {
       &:hover {
+        background-color: ${yellow.background};
+      }
+      &:focus {
+        background-color: ${yellow.background};
+      }
+      &.selected {
+        background-color: ${yellow.regular};
+        &:hover {
+          background-color: ${yellow.regular};
+        }
+      }
+    }
+    &.katakana {
+      &:hover {
+        background-color: ${blue.background};
+      }
+      &:focus {
+        background-color: ${blue.background};
+      }
+      &.selected {
         background-color: ${blue.regular};
+        &:hover {
+          background-color: ${blue.regular};
+        }
       }
     }
   }
@@ -85,6 +165,49 @@ export const menuRows = css`
     padding: 16px;
     margin: 16px 8px;
     background-color: white;
+    @media (max-width: 400px) {
+      padding: 8px;
+      margin: 4px 2px;
+    }
+  }
+`
+
+export const game = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh;
+  .total {
+  }
+  .kana {
+    font-size: 100px;
+    margin: 20px;
+  }
+  .score {
+  }
+  .back {
+  }
+  form {
+    margin: 20px;
+    input {
+      font-size: 2rem;
+      padding: 16px;
+      border: none;
+      background-color: ${gray.background};
+      &:focus {
+        outline: none;
+        border-radius: 16px 0 0 16px;
+        border: 2px solid ${gray.dark};
+      }
+      &[type="text"] {
+        border-radius: 16px 0 0 16px;
+        width: 90px;
+      }
+      &[type="submit"] {
+        background-color: ${green.regular};
+        border-radius: 0 16px 16px 0;
+      }
+    }
   }
 `
 
@@ -372,7 +495,7 @@ export const sidebar = css`
   display: none;
   grid-area: sidebar;
   position: sticky;
-  top: 48px;
+  top: ${sizes.navBar.height};
   height: 100vh;
   border-left: 1px solid ${gray.dark};
   background-color: white;
@@ -391,17 +514,24 @@ export const hamburgerMenu = css`
     z-index: 20;
     cursor: pointer;
     position: fixed;
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     right: 24px;
+    padding: 0;
     bottom: 48px;
     border: none;
     border-radius: 50%;
-    background-color: ${gray.background};
-    box-shadow: 2px 2px 4px black;
+    background-color: transparent;
     &:active {
-      background-color: ${gray.dark};
-      box-shadow: 2px 2px 4px white;
+      svg {
+        fill: white;
+        stroke: ${gray.regular};
+      }
+    }
+    svg {
+      fill: ${gray.regular};
+      stroke: white;
+      stroke-width: 2px;
     }
   }
   .menu {
@@ -410,11 +540,11 @@ export const hamburgerMenu = css`
     align-items: center;
     text-align: center;
     position: fixed;
-    top: 48px;
+    top: ${sizes.navBar.height};
     right: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 48px);
+    height: calc(100vh - ${sizes.navBar.height});
     overflow-y: scroll;
     background-color: ${gray.background};
     .links {
@@ -442,15 +572,15 @@ export const navbar = css`
   top: 0px;
   justify-content: center;
   align-items: center;
-  height: 48px;
+  height: ${sizes.navBar.height};
   width: 100vw;
   border-bottom: 1px solid ${pink.background};
   background-color: ${gray.regular};
   a {
     display: inherit;
     align-items: center;
-    margin: 20px;
-    padding: 2px;
+    margin: 0 20px;
+    padding: 3px;
     svg {
       margin-right: 8px;
       fill: white;
@@ -470,7 +600,7 @@ export const navbar = css`
 `
 
 export const navbarEmpty = css`
-  height: 48px;
+  height: ${sizes.navBar.height};
 `
 
 // =============================================KANJI
@@ -582,6 +712,7 @@ export const footer = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   text-align: center;
   width: 100%;
   padding-top: 16px;
@@ -594,18 +725,12 @@ export const footer = css`
       width: 85%;
     }
   }
-`
-
-export const social = css`
-  position: relative;
-  width: 100%;
-  svg {
+  .logo {
     fill: white;
     position: absolute;
     right: 10px;
-    bottom: 50%;
+    bottom: 10px;
     width: 64px;
-    transform: translateY(50%);
     @media (max-width: 450px) {
       position: static;
       display: block;
@@ -613,36 +738,43 @@ export const social = css`
       transform: translateY(0%);
     }
   }
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @media (min-width: 411px) {
-      flex-direction: row;
-    }
-    &:hover {
-      text-shadow: 0 0 1px black, 1px 1px 0px black;
-    }
-    #facebook:hover {
-      color: ${brands.facebook};
-    }
-    #twitter:hover {
-      color: ${brands.twitter};
-    }
-    #github:hover {
-      color: ${brands.github};
-    }
+`
+
+export const social = css`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 411px) {
+    flex-direction: row;
   }
   .network {
-    display: inline-block;
+    display: flex;
     padding: 8px 8px 6px;
     margin: 6px 0px;
     font-size: 1.16rem;
     text-decoration: none;
     color: white;
-    i {
+    &:hover > * {
+      -webkit-filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.8));
+      filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.8));
+    }
+    &#facebook:hover > * {
+      color: ${brands.facebook};
+      fill: ${brands.facebook};
+    }
+    &#twitter:hover > * {
+      color: ${brands.twitter};
+      fill: ${brands.twitter};
+    }
+    &#github:hover > * {
+      color: ${brands.github};
+      fill: ${brands.github};
+    }
+    svg {
       margin-right: 8px;
+      fill: white;
     }
   }
 `

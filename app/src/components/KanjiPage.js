@@ -10,15 +10,14 @@ import Sidebar from "./Sidebar"
 import CharAnimation from "./CharAnimation"
 import CiteSource from "./CiteSource"
 import Bibliography from "./Bibliography"
+import useScrollOnLoad from "../hooks/useScrollOnLoad"
 
 const KanjiSubpage = React.lazy(() => import("./KanjiSubpage"))
 
 export default function KanjiPage() {
   const { url } = useRouteMatch()
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  useScrollOnLoad()
 
   return (
     <PageStyled id="kanji-page">

@@ -242,7 +242,7 @@ export const kanaOrKanji = (char) => {
   return "kanji"
 }
 
-export const isRomaji = (str) => {
+export const validateRomaji = (str) => {
   const romaji =
     "a i u e o ka ki ku ke ko sa shi si su se so ta chi ti tsu tu te to na ni nu ne no ha hi fu hu he ho ma mi mu me mo ya yu yo ra ri ru re ro wa wo nn ga gi gu ge go za ji zi zu ze zo da di du de do ba bi bu be bo pa pi pu pe po kya kyu kyo sha shu sho cha chu cho nya nyu nyo hya hyu hyo mya myu myo rya ryu ryo gya gyu gyo ja ju jo dya dyu dyo bya byu byo pya pyu pyo wi we wo va vi vu ve vo she che tsa tsi tse tso ti tu fa fi fe fo je di du ye vya vyu vyo fyu"
   return romaji.includes(str)

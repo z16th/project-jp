@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import LolzSocial from "./LolzSocial"
 import { footer, Note } from "../styling"
+
+import LolzSocial from "./LolzSocial"
+import { ReactComponent as Logo } from "../utils/icons/logo.svg"
 
 export default function Footer() {
   return (
@@ -17,6 +19,7 @@ export default function Footer() {
         la página, contribuciones u otros asuntos no dudes en contactarme.
       </Note>
       <LolzSocial />
+      <Logo className="logo" />
     </div>
   )
 }

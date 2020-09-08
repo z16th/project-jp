@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useLocation } from "react-router-dom"
 import queryString from "query-string"
 import { capitalize } from "../utils/vanilla"
@@ -8,6 +8,7 @@ import Table from "./Table"
 import ToggleTables from "./ToggleTables"
 import CiteSource from "./CiteSource"
 import Bibliography from "./Bibliography"
+import useScrollOnLoad from "../hooks/useScrollOnLoad"
 
 const defaultSyllabaries = ["hiragana", "katakana", "romaji"]
 
@@ -39,9 +40,7 @@ export default function TablesSubpage() {
       ? defaultSpanishTypes.filter((e) => tipo.includes(e))
       : [...defaultSpanishTypes]
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  useScrollOnLoad()
 
   return (
     <div className="content">

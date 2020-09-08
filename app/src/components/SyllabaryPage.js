@@ -1,19 +1,18 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
 
 import Sidebar from "./Sidebar"
 import CiteSource from "./CiteSource"
 import Bibliography from "./Bibliography"
+import useScrollOnLoad from "../hooks/useScrollOnLoad"
 
 const TablesSubpage = React.lazy(() => import("./TablesSubpage"))
 
 export default function SyllabaryPage() {
   const { url } = useRouteMatch()
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  useScrollOnLoad()
 
   return (
     <PageStyled id="syllabary-page">
@@ -27,20 +26,6 @@ export default function SyllabaryPage() {
         <Switch>
           <Route exact path={`${url}/`}>
             <Content />
-            <Bibliography>
-              <p>
-                Parte de la información encontrada esta página puede consultarse
-                en las siguientes referencias:
-              </p>
-              <ul>
-                <li>
-                  <CiteSource source="minnaNoNihongo" />
-                </li>
-                <li>
-                  <CiteSource source="genki" />
-                </li>
-              </ul>
-            </Bibliography>
           </Route>
           <Route path={`${url}/tablas`}>
             <React.Suspense
@@ -403,6 +388,20 @@ const Content = () => {
         respectivamente, mientras que en la pronunciación se puede diferenciar
         con el tono.
       </p>
+      <Bibliography>
+        <p>
+          Parte de la información encontrada esta página puede consultarse en
+          las siguientes referencias:
+        </p>
+        <ul>
+          <li>
+            <CiteSource source="minnaNoNihongo" />
+          </li>
+          <li>
+            <CiteSource source="genki" />
+          </li>
+        </ul>
+      </Bibliography>
     </div>
   )
 }
