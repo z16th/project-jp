@@ -23,14 +23,6 @@ export const menuStyle = css`
 
 export const menuButtons = css`
   width: 100%;
-  @media (max-width: 400px) {
-    font-size: 9px;
-    .syllabary-buttons {
-      button {
-        font-size: 1.2rem;
-      }
-    }
-  }
   .syllabary-buttons {
     font-size: 2rem;
     margin: 20px 0;
@@ -59,6 +51,7 @@ export const menuButtons = css`
   }
   .type-buttons {
     margin: 20px 0;
+    font-size: 0.72rem;
     .type-button {
       width: 25%;
       &.basic {
@@ -79,6 +72,7 @@ export const menuButtons = css`
     display: flex;
     justify-content: space-between;
     .select-all {
+      font-size: 0.8rem;
       border-radius: 6px;
     }
     .start {
@@ -108,11 +102,15 @@ export const menuRows = css`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 96px;
+    height: fit-content;
+    max-height: 96px;
     width: fit-content;
     margin: 6px 8px;
     border: 2px dashed ${gray.regular};
     border-radius: 16px;
+    @media (max-width: 375px) {
+      margin: 4px 2px;
+    }
     &:hover {
       .char {
         background-color: ${gray.regular};
@@ -163,9 +161,9 @@ export const menuRows = css`
     align-items: center;
     border-radius: 32px;
     padding: 16px;
-    margin: 16px 8px;
+    margin: 8px 8px;
     background-color: white;
-    @media (max-width: 400px) {
+    @media (max-width: 375px) {
       padding: 8px;
       margin: 4px 2px;
     }

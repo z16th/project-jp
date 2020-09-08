@@ -116,7 +116,7 @@ function Content() {
         caracteres en comparación con el romaji de lectura.
       </Callout>
       <Example>
-        <H>を</H> se lee como &quot;o&quot; pero se escribe <R>wo</R> en teclado
+        <H>を</H> se lee como <R>o</R> pero en teclado se escribe &quot;wo&quot;
         ya que escribir <R>o</R> resulta en <H>お</H>
       </Example>
       <p>Hay caracteres que pueden ser introducidos de distintas maneras.</p>

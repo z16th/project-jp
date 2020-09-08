@@ -156,6 +156,7 @@ export const Callout = styled.div`
   width: fit-content;
   font-family: ${secondaryFont};
   font-size: ${typeScale.body1};
+  line-height: 1.5rem;
   margin: 8px;
   padding: 16px;
   border-radius: 8px;
@@ -166,6 +167,7 @@ export const Example = styled.div`
   width: fit-content;
   font-family: ${secondaryFont};
   font-size: ${typeScale.body1};
+  line-height: 1.5rem;
   margin: 16px 8px;
   padding: 16px;
   border-radius: 8px;
@@ -199,29 +201,27 @@ export const PageStyled = styled.div`
   background-size: 64px;
   .main-content {
     background-color: white;
+    min-height: 100vh;
+    .content {
+      height: 100%;
+      @media (max-width: 1024px) {
+        padding: 20px 12px;
+      }
+      @media (max-width: 280px) {
+        padding: 20px 12px;
+      }
+    }
   }
   @media (min-width: 1024px) {
     display: grid;
     grid-template:
-      ". content sidebar ." 1fr / minmax(0px, 15%) minmax(50%, 768px)
+      ". main-content sidebar ." 1fr / minmax(0px, 15%) minmax(50%, 768px)
       max-content minmax(0%, 15%);
     .main-content {
-      grid-area: content;
+      grid-area: main-content;
       .content {
         padding: 20px 40px;
       }
-    }
-  }
-  @media (max-width: 1024px) {
-    .content {
-      min-height: calc(100vh - ${sizes.navBar.height});
-      padding: 20px 12px;
-    }
-  }
-  @media (max-width: 280px) {
-    .content {
-      min-height: calc(100vh - ${sizes.navBar.height});
-      padding: 20px 12px;
     }
   }
 `
