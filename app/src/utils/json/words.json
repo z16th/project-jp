@@ -306,5 +306,16 @@
       "en": ["nurse"],
       "es": ["enfermera"]
     }
+  },
+  {
+    "date": "2020-09-07",
+    "word": "羊",
+    "furigana": ["ひつじ"],
+    "romaji": "hitsuji",
+    "type": "n",
+    "meaning": {
+      "en": ["sheep"],
+      "es": ["oveja"]
+    }
   }
 ]
