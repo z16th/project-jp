@@ -201,7 +201,7 @@ export const PageStyled = styled.div`
   background-size: 64px;
   .main-content {
     background-color: white;
-    height: 100%;
+    min-height: 100vh;
     .content {
       height: 100%;
       @media (max-width: 1024px) {
