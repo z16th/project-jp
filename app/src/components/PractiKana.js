@@ -98,7 +98,13 @@ function Content() {
   return (
     <>
       <h1>Introducción</h1>
-      <p>En esta página podrás poner a prueba tus conocimientos sobre kanas.</p>
+      <p>
+        Practicar los conocimientos adquiridos es una parte importante del
+        aprendizaje, especialmente en el japonés ya que existe una gran cantidad
+        de caracteres y puede resultar complicado memorizarlos todos. En esta
+        sección podrás poner a prueba tu memoria, lo que te ayudará a
+        familiarizarte con los kanas rápidamente.
+      </p>
       <h2>Cómo usar</h2>
       <h3>Menú</h3>
       <ul>

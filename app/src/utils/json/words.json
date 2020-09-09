@@ -328,5 +328,16 @@
       "en": ["China"],
       "es": ["China"]
     }
+  },
+  {
+    "date": "2020-09-09",
+    "word": "一方的",
+    "furigana": ["いっ", "ぽう", "てき"],
+    "romaji": "ippōteki",
+    "type": "adj",
+    "meaning": {
+      "en": ["one-sided", "unilateral"],
+      "es": ["unilateral"]
+    }
   }
 ]
