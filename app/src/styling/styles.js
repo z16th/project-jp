@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { pink, yellow, blue, gray, brands, green } from "./colors"
+import { pink, yellow, blue, gray, brands, green, purple } from "./colors"
 import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
 import texture from "../utils/images/paper.jpg"
 
@@ -51,7 +51,12 @@ export const menuButtons = css`
   }
   .type-buttons {
     margin: 20px 0;
-    font-size: 0.72rem;
+    @media (max-width: 500px) {
+      font-size: 0.72rem;
+    }
+    @media (max-width: 360px) {
+      font-size: 0.64rem;
+    }
     .type-button {
       width: 25%;
       &.basic {
@@ -72,18 +77,25 @@ export const menuButtons = css`
     display: flex;
     justify-content: space-between;
     .select-all {
-      font-size: 0.8rem;
       border-radius: 6px;
+    }
+    .quick-mode {
+      border-radius: 6px;
+      &.active {
+        background-color: ${purple.dark};
+        &:hover {
+          text-shadow: none;
+          background-color: ${purple.regular};
+        }
+      }
     }
     .start {
       font-size: 1.2rem;
       border-radius: 6px;
       &:not(:disabled) {
-        background-color: ${green.dark};
+        background-color: ${green.light};
         &:hover {
-          color: black;
-          text-shadow: none;
-          background-color: ${green.regular};
+          background-color: ${green.dark};
         }
       }
     }
@@ -176,14 +188,31 @@ export const game = css`
   align-items: center;
   padding: 4vh;
   .total {
+    font-size: 1.2rem;
+  }
+  .percent {
+    font-size: 100px;
   }
   .kana {
     font-size: 100px;
     margin: 20px;
   }
   .score {
+    font-size: 1.5rem;
+    margin: 20px;
   }
-  .back {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .back {
+      border-radius: 6px;
+    }
+    svg {
+      width: 30px;
+      fill: ${gray.regular};
+    }
   }
   form {
     margin: 20px;

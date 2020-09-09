@@ -17,6 +17,7 @@ export default function PractiKana() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [syllabary, setSyllabary] = useState("hiragana")
   const [type, setType] = useState("basic")
+  const [quickMode, setQuickMode] = useState(false)
 
   const currentRows = () =>
     rows.filter((e) => e.syllabary === syllabary && e.type === type)
@@ -64,6 +65,10 @@ export default function PractiKana() {
                 current={currentRows}
                 syllabary={{ state: syllabary, update: setSyllabary }}
                 type={{ state: type, update: setType }}
+                quickMode={{
+                  state: quickMode,
+                  update: () => setQuickMode((value) => !value),
+                }}
                 game={{ canPlay, start: handlePlayClicked }}
                 onSelectAll={handleAllClicked}
               />
@@ -77,7 +82,10 @@ export default function PractiKana() {
           ) : (
             <Game
               kanas={kanasToGuess.current}
-              endGame={() => setIsPlaying(false)}
+              gameSettings={{
+                gameOver: () => setIsPlaying(false),
+                quickMode,
+              }}
             />
           )}
         </div>
@@ -102,6 +110,10 @@ function Content() {
           correspondiente
         </li>
         <li>
+          Activar el <b>Modo Rápido</b> hará que tu respuesta sea enviada
+          automáticamente si es correcta
+        </li>
+        <li>
           Cuando estés listo presiona <b>Comenzar</b>
         </li>
       </ul>
@@ -112,14 +124,18 @@ function Content() {
         </li>
       </ul>
       <Callout>
-        El rōmaji de entrada por teclado es ligeramente diferente para algunos
+        El rōmaji de entrada por teclado puede ser diferente para algunos
         caracteres en comparación con el romaji de lectura.
       </Callout>
       <Example>
         <H>を</H> se lee como <R>o</R> pero en teclado se escribe &quot;wo&quot;
         ya que escribir <R>o</R> resulta en <H>お</H>
       </Example>
-      <p>Hay caracteres que pueden ser introducidos de distintas maneras.</p>
+      <p>
+        En este juego algunos caracteres que pueden ser introducidos de
+        distintas maneras ya que toma en cuenta diferentes sistemas de
+        romanización y métodos de entrada.
+      </p>
       <Example>
         <H>し</H> puede ser escrito como <R>shi</R> o &quot;si&quot;{" "}
       </Example>

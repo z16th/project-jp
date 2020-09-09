@@ -1,6 +1,6 @@
 /** @jsx jsx */
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
 import kanaData from "../utils/json/kana-as-input.json"
@@ -8,27 +8,44 @@ import { validateRomaji } from "../utils/vanilla"
 import { game } from "../styling"
 
 import useScrollOnLoad from "../hooks/useScrollOnLoad"
+import { ReactComponent as QuickLogo } from "../utils/icons/icons8-quick-mode-on.svg"
 
-export default function Game({ kanas: kanaQueue, endGame }) {
+export default function Game({ kanas: kanaQueue, gameSettings }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const gameOver = currentIndex === kanaQueue.length
   const [score, setScore] = useState(0)
   const [input, setInput] = useState("")
+  const findKanaMatch = useCallback(
+    () =>
+      kanaData.find(
+        (kana) =>
+          kana.hiragana === kanaQueue[currentIndex] ||
+          kana.katakana === kanaQueue[currentIndex]
+      ),
+    [currentIndex, kanaQueue]
+  )
+
+  const validateInput = useCallback(() => {
+    if (input === "") return
+    const match = findKanaMatch()
+
+    if (match) {
+      if (match.romaji === input || match.alternative === input) {
+        setScore((current) => current + 1)
+        if (gameSettings.quickMode) {
+          setTimeout(() => {
+            setCurrentIndex((current) => current + 1)
+            setInput("")
+          }, 120)
+        }
+      }
+    }
+  }, [input, findKanaMatch, gameSettings.quickMode])
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    if (input === "") return
-
-    const match = kanaData.find(
-      (kana) =>
-        kana.hiragana === kanaQueue[currentIndex] ||
-        kana.katakana === kanaQueue[currentIndex]
-    )
-
-    if ((match.romaji === input || match.alternative === input) && !gameOver) {
-      setScore((value) => value + 1)
-      setCurrentIndex((value) => value + 1)
-    }
+    validateInput()
+    setCurrentIndex((value) => value + 1)
     setInput("")
   }
 
@@ -40,9 +57,25 @@ export default function Game({ kanas: kanaQueue, endGame }) {
 
   useScrollOnLoad()
 
+  useEffect(() => {
+    if (gameSettings.quickMode) {
+      validateInput()
+    }
+  }, [input, gameSettings.quickMode, validateInput])
+
   return (
     <div id="game" css={game}>
-      {gameOver ? <p>{((score / kanaQueue.length) * 100).toFixed()}%</p> : null}
+      <div className="header">
+        <button type="button" className="back" onClick={gameSettings.gameOver}>
+          Volver
+        </button>
+        {gameSettings.quickMode ? <QuickLogo /> : null}
+      </div>
+      {gameOver ? (
+        <p className="percent">
+          {((score / kanaQueue.length) * 100).toFixed()}%
+        </p>
+      ) : null}
 
       <div className="total">
         {!gameOver ? `${currentIndex + 1}/${kanaQueue.length}` : null}
@@ -68,14 +101,14 @@ export default function Game({ kanas: kanaQueue, endGame }) {
           </form>
         ) : null
       }
-      <button type="button" className="back" onClick={endGame}>
-        Volver
-      </button>
     </div>
   )
 }
 
 Game.propTypes = {
   kanas: PropTypes.arrayOf(PropTypes.string).isRequired,
-  endGame: PropTypes.func.isRequired,
+  gameSettings: PropTypes.shape({
+    gameOver: PropTypes.func,
+    quickMode: PropTypes.bool,
+  }).isRequired,
 }

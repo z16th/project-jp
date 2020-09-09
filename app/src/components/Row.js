@@ -31,7 +31,7 @@ Row.propTypes = {
       type: PropTypes.string,
       kanas: PropTypes.arrayOf(PropTypes.string),
       checked: PropTypes.bool,
-    })
+    }).isRequired
   ),
   updateRows: PropTypes.func.isRequired,
 }

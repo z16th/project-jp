@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
-import { blue, yellow, gray, pink, purple } from "./colors"
+import { blue, yellow, gray, pink, purple, green } from "./colors"
 import {
   primaryFont,
   secondaryFont,
@@ -412,6 +412,13 @@ export const Layout = ({ children }) => (
         .fade-appear-active {
           opacity: 1;
           transition: opacity 250ms ease-in;
+        }
+        .correct-appear {
+          background-color: none;
+        }
+        .correct-appear-active {
+          background-color: ${green.background};
+          transition: background-color 250ms ease-in;
         }
       `}
     />
