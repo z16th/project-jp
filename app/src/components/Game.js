@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/**@jsxFrag React.Fragment */
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect, useCallback } from "react"
 import PropTypes from "prop-types"
@@ -65,25 +66,34 @@ export default function Game({ kanas: kanaQueue, gameSettings }) {
 
   return (
     <div id="game" css={game}>
-      <div className="header">
+      <section className="header">
         <button type="button" className="back" onClick={gameSettings.gameOver}>
           Volver
         </button>
-        {gameSettings.quickMode ? <QuickLogo /> : null}
-      </div>
-      {gameOver ? (
-        <p className="percent">
-          {((score / kanaQueue.length) * 100).toFixed()}%
-        </p>
-      ) : null}
+        {!gameOver ? (
+          <div className="total">
+            {`${currentIndex + 1}/${kanaQueue.length}`}
+          </div>
+        ) : null}
+        {gameSettings.quickMode ? (
+          <div className="empty">
+            <QuickLogo />
+          </div>
+        ) : (
+          <div className="empty"></div>
+        )}
+      </section>
 
-      <div className="total">
-        {!gameOver ? `${currentIndex + 1}/${kanaQueue.length}` : null}
-      </div>
+      {gameOver ? (
+        <>
+          <div className="percent">
+            {((score / kanaQueue.length) * 100).toFixed()}%
+          </div>
+          <div className="score">{`Puntaje: ${score}/${kanaQueue.length}`}</div>
+        </>
+      ) : null}
       <div className="kana">{kanaQueue[currentIndex]}</div>
-      <div className="score">
-        Puntaje: {!gameOver ? score : `${score}/${kanaQueue.length}`}
-      </div>
+
       {
         // eslint-disable-next-line react/jsx-props-no-spreading
         !gameOver ? (

@@ -186,20 +186,8 @@ export const game = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4vh;
-  .total {
-    font-size: 1.2rem;
-  }
-  .percent {
-    font-size: 100px;
-  }
-  .kana {
-    font-size: 100px;
-    margin: 20px;
-  }
-  .score {
-    font-size: 1.5rem;
-    margin: 20px;
+  @media (min-width: 1024px) {
+    padding: 4vh 0;
   }
   .header {
     display: flex;
@@ -207,17 +195,64 @@ export const game = css`
     align-items: center;
     width: 100%;
     .back {
+      width: 62px;
       border-radius: 6px;
     }
-    svg {
-      width: 30px;
-      fill: ${gray.regular};
+    .total {
+      display: inherit;
+      justify-content: center;
+      width: 62px;
+      font-size: 1.2rem;
+    }
+    .score {
+      display: inherit;
+      justify-content: center;
+      width: 62px;
+      font-size: 1.5rem;
+      margin: 20px;
+    }
+    .empty {
+      display: inherit;
+      width: 62px;
+      justify-content: flex-end;
+      svg {
+        height: 34px;
+        width: auto;
+        fill: ${gray.regular};
+      }
     }
   }
+  .percent {
+    margin: 0;
+    font-size: 100px;
+  }
+  .kana {
+    font-size: 100px;
+    margin: 20px;
+    @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+      font-size: calc(
+        50px + (100 - 50) *
+          ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+      );
+    }
+    @media (min-width: ${maxWidth}px) {
+      font-size: 100px;
+    }
+  }
+
   form {
     margin: 20px;
     input {
       font-size: 2rem;
+      @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
+        font-size: calc(
+          18px + (${typeScale.header3} - 18) *
+            ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth}))
+        );
+      }
+      @media (min-width: ${maxWidth}px) {
+        font-size: ${typeScale.header3}px;
+      }
       padding: 16px;
       border: none;
       background-color: ${gray.background};
