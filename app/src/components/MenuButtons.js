@@ -1,4 +1,5 @@
 //* *@jsx jsx */
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 // eslint-disable-next-line no-unused-vars
@@ -9,6 +10,7 @@ export default function MenuButtons({
   current,
   syllabary,
   type,
+  quickMode,
   game,
   onSelectAll,
 }) {
@@ -92,8 +94,15 @@ export default function MenuButtons({
         <button type="button" className="select-all" onClick={handleSelection}>
           {isSelectAll ? "Agregar Sección" : "Quitar Sección"}
         </button>
+        <button
+          type="button"
+          className={`quick-mode ${quickMode.state ? "active" : ""}`}
+          onClick={quickMode.update}
+        >
+          Modo Rápido
+        </button>
         {game.canPlay() ? (
-          <button type="button" className="start active" onClick={game.start}>
+          <button type="button" className="start" onClick={game.start}>
             Comenzar
           </button>
         ) : (
@@ -113,6 +122,8 @@ MenuButtons.propTypes = {
     update: PropTypes.func,
   }).isRequired,
   type: PropTypes.shape({ state: PropTypes.string, update: PropTypes.func })
+    .isRequired,
+  quickMode: PropTypes.shape({ state: PropTypes.bool, update: PropTypes.func })
     .isRequired,
   game: PropTypes.shape({ canPlay: PropTypes.func, start: PropTypes.func })
     .isRequired,
