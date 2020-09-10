@@ -51,8 +51,8 @@ export default function Game({ kanas: kanaQueue, gameSettings }) {
   }
 
   const handleChange = (event) => {
-    if (validateRomaji(event.target.value)) {
-      setInput(event.target.value)
+    if (validateRomaji(event.target.value.toLowerCase())) {
+      setInput(event.target.value.toLowerCase())
     }
   }
 
