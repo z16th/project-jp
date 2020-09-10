@@ -245,7 +245,7 @@ export const kanaOrKanji = (char) => {
 export const validateRomaji = (str) => {
   const romaji =
     "a i u e o ka ki ku ke ko sa shi si su se so ta chi ti tsu tu te to na ni nu ne no ha hi fu hu he ho ma mi mu me mo ya yu yo ra ri ru re ro wa wo n ga gi gu ge go za ji zi zu ze zo da di du de do ba bi bu be bo pa pi pu pe po kya kyu kyo sha sya shu syu sho syo cha tya chu tyu cho tyo nya nyu nyo hya hyu hyo mya myu myo rya ryu ryo gya gyu gyo ja zya ju zyu jo zyo dya dyu dyo bya byu byo pya pyu pyo wi we wo va vi vu ve vo she che tsa tsi tse tso ti tu fa fi fe fo je di du ye vya vyu vyo fyu"
-  return romaji.includes(str)
+  return romaji.includes(str.toLowerCase())
 }
 
 export const shuffleArray = (arr) => {
