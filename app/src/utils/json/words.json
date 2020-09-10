@@ -339,5 +339,16 @@
       "en": ["one-sided", "unilateral"],
       "es": ["unilateral"]
     }
+  },
+  {
+    "date": "2020-09-10",
+    "word": "農耕",
+    "furigana": ["のう", "こう"],
+    "romaji": "nōkō",
+    "type": "n",
+    "meaning": {
+      "en": ["agriculture"],
+      "es": ["agricultura"]
+    }
   }
 ]
