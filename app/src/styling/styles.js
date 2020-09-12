@@ -332,6 +332,13 @@ export const charAnimation = css`
     margin: 0;
     &:hover {
       cursor: pointer;
+      background-color: transparent;
+    }
+    &:active {
+      background-color: transparent;
+    }
+    &:focus {
+      background-color: transparent;
     }
   }
   svg {

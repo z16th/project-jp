@@ -1,5 +1,5 @@
 /** @jsx jsx */
-/**@jsxFrag React.Fragment */
+/** @jsxFrag React.Fragment */
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect, useCallback } from "react"
 import PropTypes from "prop-types"
@@ -80,7 +80,7 @@ export default function Game({ kanas: kanaQueue, gameSettings }) {
             <QuickLogo />
           </div>
         ) : (
-          <div className="empty"></div>
+          <div className="empty" />
         )}
       </section>
 

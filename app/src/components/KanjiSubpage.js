@@ -45,7 +45,7 @@ export default function KanjiSubpage() {
         <li>
           Al <b>pulsar en Trazos cargará la animación de trazado</b>. Por
           defecto las cartas reproducen su propia animación al cargar. Para
-          reiniciarla sólo tienes que pulsar en ella.
+          reiniciarla solo tienes que pulsar en ella.
         </li>
         <li>
           <b>Número</b> según el orden encontrado en el libro The Complete Guide
@@ -69,7 +69,7 @@ export default function KanjiSubpage() {
         En el estudio de los kanji usualmente se hace uso del katakana o del
         rōmaji en mayúsculas para indicar la pronunciación onyomi. Mientras que
         el hiragana o el rōmaji en minúsculas se usa para indicar la
-        pronuncación kunyomi.
+        pronunciación kunyomi.
       </Callout>
       <p>
         Las pronunciaciones pueden contener signos como &quot;.&quot;,
@@ -79,11 +79,11 @@ export default function KanjiSubpage() {
       <ul>
         <li>
           El punto (.) indica que la pronunciación del kanji termina en ese
-          lugar y las sílabas siguentes corresponden a la formación de una
+          lugar y las sílabas siguientes corresponden a la formación de una
           palabra completa.
           <Example>
             <H>み.る</H> <R>mi.ru</R>: donde <H>み</H> <R>mi</R> es la
-            pronunciación del kanji y <H>る</H> <R>ru</R> es el furigana →{" "}
+            pronunciación del kanji y <H>る</H> <R>ru</R> es el okurigana →{" "}
             <Kj>見</Kj>
             <H>る</H>
           </Example>

@@ -129,7 +129,7 @@ function Content() {
         rōmaji en mayúsculas para indicar la pronunciación china y hiragana o
         rōmaji en minúsculas para indicar la pronunciación japonesa. En otro
         tipo de textos se utiliza exclusivamente el hiragana para indicar las
-        pronuniciaciones.
+        pronunciaciones.
       </p>
       <Note>
         <b>Nota: </b>Dependiendo de la fuente que sea consultada se puede

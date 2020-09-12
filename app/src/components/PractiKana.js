@@ -100,7 +100,7 @@ function Content() {
       <h1>Introducción</h1>
       <p>
         Practicar los conocimientos adquiridos es una parte importante del
-        aprendizaje, especialmente en el japonés ya que existe una gran cantidad
+        aprendizaje especialmente en el japonés, ya que existe una gran cantidad
         de caracteres y puede resultar complicado memorizarlos todos. En esta
         sección podrás poner a prueba tu memoria, lo que te ayudará a
         familiarizarte con los kanas rápidamente.
@@ -134,12 +134,12 @@ function Content() {
         caracteres en comparación con el romaji de lectura.
       </Callout>
       <Example>
-        <H>を</H> se lee como <R>o</R> pero en teclado se escribe &quot;wo&quot;
-        ya que escribir <R>o</R> resulta en <H>お</H>
+        <H>を</H> se lee como <R>o</R> pero en teclado se escribe
+        &quot;wo&quot;, ya que escribir <R>o</R> resulta en <H>お</H>
       </Example>
       <p>
         En este juego algunos caracteres que pueden ser introducidos de
-        distintas maneras ya que toma en cuenta diferentes sistemas de
+        distintas maneras debido a que toma en cuenta diferentes sistemas de
         romanización y métodos de entrada.
       </p>
       <Example>

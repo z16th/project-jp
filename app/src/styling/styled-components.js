@@ -397,12 +397,15 @@ export const Layout = ({ children }) => (
             background-color: ${gray.background};
             &:hover {
               cursor: pointer;
+              background-color: ${gray.background};
             }
             &:active {
-              background-color: ${gray.dark};
+              border: 1px solid ${gray.regular};
+              background-color: ${gray.light};
             }
             &:focus {
               border: 1px solid ${gray.regular};
+              background-color: ${gray.background};
             }
           }
         }

@@ -76,7 +76,7 @@ export default function TablesSubpage() {
       <p>
         Caracteres con este formato{" "}
         <span className="special">&nbsp;&nbsp;&nbsp;&nbsp;</span> están
-        excluídos de las combinaciones con vocales.
+        excluidos de las combinaciones con vocales.
       </p>
       <ul>
         <li>

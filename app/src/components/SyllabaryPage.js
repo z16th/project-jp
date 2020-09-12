@@ -117,7 +117,7 @@ const Content = () => {
       <p>
         En el estudio serio de la lengua japonesa, usar rōmaji por completo
         puede ser contraproducente y es recomendado únicamente para aprender los
-        silabarios. Para turismo, su uso es mucho más común ya que facilita el
+        silabarios. Para turismo su uso es mucho más común, ya que facilita el
         aprendizaje de frases completas sin la necesidad de comprender la
         gramática ni la correcta pronunciación/ortografía.
       </p>
@@ -321,8 +321,8 @@ const Content = () => {
         Mientras que algunas referencias mencionan que la pronunciación de este
         caracter puede variar dependiendo de los sonidos que le siguen, esta
         diferencia no es lo suficientemente notable para ser respetada como
-        principiante, sólo para tenerla en cuenta a la hora de perfeccionar la
-        pronunciación para sonar como un nativo .
+        principiante, pero sí para tomarla en cuenta al momento de perfeccionar
+        la pronunciación para sonar como un nativo.
       </p>
       <p>
         En el rōmaji, estos cambios pueden notarse cuando se transcribe <R>m</R>{" "}
@@ -338,7 +338,7 @@ const Content = () => {
         <H>つ</H> <K>ツ</K>, se utiliza <H>っ</H> <K>ッ</K>.{" "}
         <b>Se escribe en pequeño</b> para hacer una diferencia de pronunciación.
         Su trabajo es alargar el sonido de la consonante que va inmediatamente
-        después de éste.
+        después de este.
       </p>
       <Callout>Es un sonido que tiene duración de una mora.</Callout>
       <Example>
@@ -348,7 +348,7 @@ const Content = () => {
         <K>ベッド</K> <R>beddo</R> [bed (cama)]
       </Example>
       <p>
-        La única excepción es la doble &quot;n&quot; ya que se escribe con{" "}
+        La única excepción es la doble &quot;n&quot;, ya que se escribe con{" "}
         <H>ん</H> <R>n</R> + kana de la fila (n), no con <H>っ</H>
         <b>.</b>
       </p>
