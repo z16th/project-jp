@@ -350,5 +350,16 @@
       "en": ["agriculture"],
       "es": ["agricultura"]
     }
+  },
+  {
+    "date": "2020-09-11",
+    "word": "取り入れる",
+    "furigana": ["と", "り", "い", "れ", "る"],
+    "romaji": "tori'ireru",
+    "type": "vb",
+    "meaning": {
+      "en": ["harvest", "reap"],
+      "es": ["cosechar", "recoger"]
+    }
   }
 ]
