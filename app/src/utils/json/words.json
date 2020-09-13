@@ -361,5 +361,16 @@
       "en": ["harvest", "reap"],
       "es": ["cosechar", "recoger"]
     }
+  },
+  {
+    "date": "2020-09-12",
+    "word": "風流",
+    "furigana": ["ふう", "りゅう"],
+    "romaji": "fūryū",
+    "type": "adj",
+    "meaning": {
+      "en": ["refined"],
+      "es": ["refinado"]
+    }
   }
 ]
