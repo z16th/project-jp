@@ -372,5 +372,16 @@
       "en": ["refined"],
       "es": ["refinado"]
     }
+  },
+  {
+    "date": "2020-09-13",
+    "word": "休講",
+    "furigana": ["きゅう", "こう"],
+    "romaji": "kyūkō",
+    "type": "n",
+    "meaning": {
+      "en": ["canceled class"],
+      "es": ["clase cancelada"]
+    }
   }
 ]
