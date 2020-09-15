@@ -383,5 +383,16 @@
       "en": ["canceled class"],
       "es": ["clase cancelada"]
     }
+  },
+  {
+    "date": "2020-09-14",
+    "word": "集団",
+    "furigana": ["しゅう", "だん"],
+    "romaji": "shūdan",
+    "type": "n",
+    "meaning": {
+      "en": ["group", "mass"],
+      "es": ["grupo", "masa"]
+    }
   }
 ]
