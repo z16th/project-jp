@@ -276,9 +276,60 @@ export const game = css`
 // =============================================RADICALS
 
 export const radical = css`
-  > .left {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  max-width: 324px;
+  margin: 10px;
+  text-align: center;
+  border: 2px solid ${green.regular};
+  border-radius: 8px;
+  font-family: ${kanjiSansFont};
+  @media (max-width: 320px) {
+    min-width: 75vw;
+    max-width: 80vw;
   }
-  > .right {
+  .char {
+    min-height: 130px;
+    padding-top: 12px;
+    font-size: 5rem;
+    &:hover {
+      font-family: ${kanjiSerifFont};
+    }
+  }
+  .animation {
+    .reset {
+      border: 1px dashed ${green.regular};
+      background-color: ${green.background};
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {
+        background-color: ${green.dark};
+      }
+      &:focus {
+        border: 1px solid ${green.regular};
+      }
+    }
+  }
+  .strokes {
+    width: 100%;
+    padding: 4px 0px;
+    margin-top: 8px;
+    border: 0;
+    background-color: ${green.regular};
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      background-color: ${green.dark};
+    }
+  }
+  .number {
+    padding: 4px 0;
+  }
+  .name {
+    padding: 4px 0;
   }
 `
 
