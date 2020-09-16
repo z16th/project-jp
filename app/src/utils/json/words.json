@@ -394,5 +394,16 @@
       "en": ["group", "mass"],
       "es": ["grupo", "masa"]
     }
+  },
+  {
+    "date": "2020-09-15",
+    "word": "赤字",
+    "furigana": ["あか", "じ"],
+    "romaji": "akaji",
+    "type": "n",
+    "meaning": {
+      "en": ["deficit"],
+      "es": ["déficit"]
+    }
   }
 ]
