@@ -14,7 +14,6 @@ const HomePage = React.lazy(() => import("./HomePage"))
 const SyllabaryPage = React.lazy(() => import("./SyllabaryPage"))
 const KanjiPage = React.lazy(() => import("./KanjiPage"))
 const FourOhFour = React.lazy(() => import("./FourOhFour"))
-const RadicalsPage = React.lazy(() => import("./RadicalsPage"))
 const PractiKana = React.lazy(() => import("./PractiKana"))
 
 const links = [
@@ -60,9 +59,6 @@ export default function App() {
             </Route>
             <Route path="/kanji">
               <KanjiPage />
-            </Route>
-            <Route path="/radicales">
-              <RadicalsPage />
             </Route>
             <Route path="/practikana">
               <PractiKana />

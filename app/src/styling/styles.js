@@ -12,6 +12,43 @@ export const sizes = {
 const minWidth = 280
 const maxWidth = 800
 
+// =============================================RADICALS
+export const radicalsTable = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .table {
+    display: inherit;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+`
+
+export const pageButton = css`
+  padding: 8px;
+  margin: 0 4px;
+  color: black;
+  background-color: ${gray.background};
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: ${gray.regular};
+    text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+  }
+  &:active {
+    cursor: pointer;
+    color: white;
+    background-color: ${gray.dark};
+    text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+  }
+  &.active {
+    color: white;
+    background-color: ${gray.dark};
+  }
+`
+
 // =============================================GAME
 export const menuStyle = css`
   display: flex;
