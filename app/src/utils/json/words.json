@@ -405,5 +405,16 @@
       "en": ["deficit"],
       "es": ["déficit"]
     }
+  },
+  {
+    "date": "2020-09-16",
+    "word": "増産",
+    "furigana": ["そう", "さん"],
+    "romaji": "sōsan",
+    "type": "n",
+    "meaning": {
+      "en": ["production increase"],
+      "es": ["incremento de producción"]
+    }
   }
 ]
