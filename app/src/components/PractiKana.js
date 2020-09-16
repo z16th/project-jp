@@ -18,6 +18,7 @@ export default function PractiKana() {
   const [syllabary, setSyllabary] = useState("hiragana")
   const [type, setType] = useState("basic")
   const [quickMode, setQuickMode] = useState(false)
+  const [fonts, setFonts] = useState([])
 
   const currentRows = () =>
     rows.filter((e) => e.syllabary === syllabary && e.type === type)
@@ -72,6 +73,7 @@ export default function PractiKana() {
                 game={{ canPlay, start: handlePlayClicked }}
                 onSelectAll={handleAllClicked}
               />
+              <FontButtons currentFonts={fonts} setCurrentFonts={setFonts} />
               <MenuRows
                 rows={rows}
                 updateRows={updateRows}
@@ -82,6 +84,7 @@ export default function PractiKana() {
           ) : (
             <Game
               kanas={kanasToGuess.current}
+              fonts={fonts}
               gameSettings={{
                 gameOver: () => setIsPlaying(false),
                 quickMode,
@@ -91,6 +94,40 @@ export default function PractiKana() {
         </div>
       </div>
     </PageStyled>
+  )
+}
+
+function FontButtons({ currentFonts, setCurrentFonts }) {
+  const fonts = ["Mk POP", "Asobi Memogaki", "Komorebi Gothic", "Umeboshi"]
+
+  const handleClick = (index) => {
+    if (currentFonts.includes(fonts[index])) {
+      console.log("match found")
+      const newArr = currentFonts.filter((e) => e !== currentFonts[index])
+      console.log("erasing from array", newArr)
+      setCurrentFonts(newArr)
+    } else {
+      let newArr = [...currentFonts]
+      newArr.push(fonts[index])
+      setCurrentFonts(newArr)
+    }
+  }
+
+  return (
+    <div className="font-buttons">
+      {console.log("currentFonts", currentFonts)}
+      {fonts.map((e, i) => (
+        <button
+          key={fonts[i]}
+          type="button"
+          style={{ fontFamily: fonts[i], fontSize: "3rem" }}
+          className={currentFonts.includes(fonts[i]) ? "active" : ""}
+          onClick={() => handleClick(i)}
+        >
+          お
+        </button>
+      ))}
+    </div>
   )
 }
 

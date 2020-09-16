@@ -11,11 +11,12 @@ import { game } from "../styling"
 import useScrollOnLoad from "../hooks/useScrollOnLoad"
 import { ReactComponent as QuickLogo } from "../utils/icons/icons8-quick-mode-on.svg"
 
-export default function Game({ kanas: kanaQueue, gameSettings }) {
+export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const gameOver = currentIndex === kanaQueue.length
   const [score, setScore] = useState(0)
   const [input, setInput] = useState("")
+  const [currentFont, setCurrentFont] = useState(null)
   const findKanaMatch = useCallback(
     () =>
       kanaData.find(
@@ -25,6 +26,10 @@ export default function Game({ kanas: kanaQueue, gameSettings }) {
       ),
     [currentIndex, kanaQueue]
   )
+
+  const getRandomFont = useCallback(() => {
+    return fonts[Math.floor(Math.random() * fonts.length)]
+  }, [fonts])
 
   const validateInput = useCallback(() => {
     if (input === "") return
@@ -41,7 +46,8 @@ export default function Game({ kanas: kanaQueue, gameSettings }) {
         }
       }
     }
-  }, [input, findKanaMatch, gameSettings.quickMode])
+    setCurrentFont(getRandomFont())
+  }, [input, findKanaMatch, gameSettings.quickMode, getRandomFont])
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -57,6 +63,10 @@ export default function Game({ kanas: kanaQueue, gameSettings }) {
   }
 
   useScrollOnLoad()
+
+  useEffect(() => {
+    setCurrentFont(getRandomFont())
+  }, [getRandomFont])
 
   useEffect(() => {
     if (gameSettings.quickMode) {
@@ -92,7 +102,9 @@ export default function Game({ kanas: kanaQueue, gameSettings }) {
           <div className="score">{`Puntaje: ${score}/${kanaQueue.length}`}</div>
         </>
       ) : null}
-      <div className="kana">{kanaQueue[currentIndex]}</div>
+      <div className="kana" style={{ fontFamily: currentFont }}>
+        {kanaQueue[currentIndex]}
+      </div>
 
       {
         // eslint-disable-next-line react/jsx-props-no-spreading

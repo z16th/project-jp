@@ -3,8 +3,8 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  font-family:"Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Droid Sans", "Helvetica Neue",
+  font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,6 +14,23 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+}
+
+@font-face {
+  font-family: "Mk POP";
+  src: url("./utils/fonts/851MkPOP_002.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Asobi Memogaki";
+  src: url("./utils/fonts/AsobiMemogaki-Regular-1-01.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Komorebi Gothic";
+  src: url("./utils/fonts/komorebi-gothic-P.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Umeboshi";
+  src: url("./utils/fonts/umeboshi_.ttf") format("truetype");
 }
 
 code {
@@ -50,10 +67,10 @@ code {
 
 /* Util Styles */
 
-.display-flex{
+.display-flex {
   display: flex;
 }
-.display-none{
+.display-none {
   display: none;
 }
 
@@ -71,7 +88,7 @@ code {
   align-items: center;
 }
 
-.space-around{
+.space-around {
   justify-content: space-around;
 }
 
@@ -270,7 +287,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -280,7 +298,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
