@@ -131,7 +131,6 @@ export const KanaTable = styled.section`
     svg {
       width: 42px;
       height: auto;
-      font-family: ${kanjiSansFont};
       @media (min-width: ${minWidth}px) and (max-width: ${maxWidth}px) {
         width: calc(
           24px + (42 - 38) *
@@ -143,8 +142,11 @@ export const KanaTable = styled.section`
       }
     }
   }
-  span:hover {
-    font-family: ${kanjiSerifFont};
+  span {
+    font-family: ${(props) => props.font};
+    &:hover {
+      font-family: ${kanjiSerifFont};
+    }
   }
 `
 

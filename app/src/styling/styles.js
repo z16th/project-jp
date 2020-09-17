@@ -12,6 +12,58 @@ export const sizes = {
 const minWidth = 280
 const maxWidth = 800
 
+// ============================================= KANA TABLES
+export const fontHandler = css`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 20px;
+  font-family: fonts[currentFont];
+  font-size: 1.5rem;
+  svg {
+    width: 24px;
+    height: auto;
+  }
+`
+
+// =============================================RADICALS
+export const radicalsTable = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .table {
+    display: inherit;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+`
+
+export const pageButton = css`
+  padding: 8px;
+  margin: 0 4px;
+  color: black;
+  background-color: ${gray.background};
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: ${gray.regular};
+    text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+  }
+  &:active {
+    cursor: pointer;
+    color: white;
+    background-color: ${gray.dark};
+    text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+  }
+  &.active {
+    color: white;
+    background-color: ${gray.dark};
+  }
+`
+
 // =============================================GAME
 export const menuStyle = css`
   display: flex;
@@ -98,6 +150,17 @@ export const menuButtons = css`
           background-color: ${green.dark};
         }
       }
+    }
+  }
+`
+
+export const fontButtons = css`
+  margin-top: 20px;
+  button {
+    border-radius: 8px;
+    margin: 0 10px;
+    &.active {
+      background-color: ${gray.regular};
     }
   }
 `
@@ -218,7 +281,7 @@ export const game = css`
       svg {
         height: 34px;
         width: auto;
-        fill: ${gray.regular};
+        fill: ${purple.regular};
       }
     }
   }

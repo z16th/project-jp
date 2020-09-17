@@ -11,6 +11,7 @@ import CharAnimation from "./CharAnimation"
 import CiteSource from "./CiteSource"
 import Bibliography from "./Bibliography"
 import useScrollOnLoad from "../hooks/useScrollOnLoad"
+import RadicalsSubpage from "./RadicalsSubpage"
 
 const KanjiSubpage = React.lazy(() => import("./KanjiSubpage"))
 
@@ -24,6 +25,7 @@ export default function KanjiPage() {
       <Sidebar>
         <Route exact path={`${url}/`}>
           <Link to={`${url}/cartas`}>Cartas de kanji</Link>
+          <Link to={`${url}/radicales`}>Cartas de radicales</Link>
         </Route>
       </Sidebar>
 
@@ -41,6 +43,17 @@ export default function KanjiPage() {
               }
             >
               <KanjiSubpage />
+            </React.Suspense>
+          </Route>
+          <Route exact path={`${url}/radicales`}>
+            <React.Suspense
+              fallback={
+                <div className="content" style={{ height: "100vh" }}>
+                  <h1>Cargando</h1>
+                </div>
+              }
+            >
+              <RadicalsSubpage />
             </React.Suspense>
           </Route>
           <Bibliography>

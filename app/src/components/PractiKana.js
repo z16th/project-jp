@@ -5,11 +5,12 @@ import React, { useState, useRef } from "react"
 import { jsx } from "@emotion/core"
 import gameRows from "../utils/json/game-rows.json"
 import { shuffleArray } from "../utils/vanilla"
-import { PageStyled, Example, Callout, R, H, menuStyle } from "../styling"
+import { PageStyled, Note, Example, Callout, R, H, menuStyle } from "../styling"
 
 import Game from "./Game"
 import MenuButtons from "./MenuButtons"
 import MenuRows from "./MenuRows"
+import FontButtons from "./FontButtons"
 
 export default function PractiKana() {
   const kanasToGuess = useRef([])
@@ -18,6 +19,7 @@ export default function PractiKana() {
   const [syllabary, setSyllabary] = useState("hiragana")
   const [type, setType] = useState("basic")
   const [quickMode, setQuickMode] = useState(false)
+  const [fonts, setFonts] = useState([])
 
   const currentRows = () =>
     rows.filter((e) => e.syllabary === syllabary && e.type === type)
@@ -72,6 +74,7 @@ export default function PractiKana() {
                 game={{ canPlay, start: handlePlayClicked }}
                 onSelectAll={handleAllClicked}
               />
+              <FontButtons currentFonts={fonts} setCurrentFonts={setFonts} />
               <MenuRows
                 rows={rows}
                 updateRows={updateRows}
@@ -82,6 +85,7 @@ export default function PractiKana() {
           ) : (
             <Game
               kanas={kanasToGuess.current}
+              fonts={fonts}
               gameSettings={{
                 gameOver: () => setIsPlaying(false),
                 quickMode,
@@ -120,6 +124,10 @@ function Content() {
           automáticamente si es correcta
         </li>
         <li>
+          <b>Selecciona</b> con los botones correspondientes las tipografías que
+          quieras practicar
+        </li>
+        <li>
           Cuando estés listo presiona <b>Comenzar</b>
         </li>
       </ul>
@@ -128,6 +136,14 @@ function Content() {
         <li>
           Escribe el <b>rōmaji</b> correspondiente para cada kana
         </li>
+        <li>
+          La tipografía de la letra cambiará aleatoriamente si elegiste una o
+          más en el menú
+        </li>
+        <Note>
+          <b>Nota:</b> Si no se selecciona tipografía, se usará Noto Sans JP por
+          defecto
+        </Note>
       </ul>
       <Callout>
         El rōmaji de entrada por teclado puede ser diferente para algunos
