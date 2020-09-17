@@ -15,7 +15,7 @@ const numberOfPages = Array.from(
   Array(Math.ceil(radicals.length / cardsPerPage))
 )
 
-export default function RadicalsPage() {
+export default function RadicalsSubpage() {
   const history = useHistory()
   const { search } = useLocation()
   const { pagina } = queryString.parse(search, { parseNumbers: true })
@@ -28,7 +28,7 @@ export default function RadicalsPage() {
 
   return (
     <div id="radicals-page">
-      <Content />
+      {/* <Content /> */}
       <section css={radicalsTable}>
         <PageButtons currentPage={pagina} />
         <div className="table">
