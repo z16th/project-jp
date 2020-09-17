@@ -45,6 +45,7 @@ export default function RadicalsSubpage() {
   )
 }
 
+// eslint-disable-next-line no-unused-vars
 const Content = () => {
   return (
     <>
