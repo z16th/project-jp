@@ -5,11 +5,12 @@ import React, { useState, useRef } from "react"
 import { jsx } from "@emotion/core"
 import gameRows from "../utils/json/game-rows.json"
 import { shuffleArray } from "../utils/vanilla"
-import { PageStyled, Example, Callout, R, H, menuStyle } from "../styling"
+import { PageStyled, Note, Example, Callout, R, H, menuStyle } from "../styling"
 
 import Game from "./Game"
 import MenuButtons from "./MenuButtons"
 import MenuRows from "./MenuRows"
+import FontButtons from "./FontButtons"
 
 export default function PractiKana() {
   const kanasToGuess = useRef([])
@@ -97,40 +98,6 @@ export default function PractiKana() {
   )
 }
 
-function FontButtons({ currentFonts, setCurrentFonts }) {
-  const fonts = ["Mk POP", "Asobi Memogaki", "Komorebi Gothic", "Umeboshi"]
-
-  const handleClick = (index) => {
-    if (currentFonts.includes(fonts[index])) {
-      console.log("match found")
-      const newArr = currentFonts.filter((e) => e !== currentFonts[index])
-      console.log("erasing from array", newArr)
-      setCurrentFonts(newArr)
-    } else {
-      let newArr = [...currentFonts]
-      newArr.push(fonts[index])
-      setCurrentFonts(newArr)
-    }
-  }
-
-  return (
-    <div className="font-buttons">
-      {console.log("currentFonts", currentFonts)}
-      {fonts.map((e, i) => (
-        <button
-          key={fonts[i]}
-          type="button"
-          style={{ fontFamily: fonts[i], fontSize: "3rem" }}
-          className={currentFonts.includes(fonts[i]) ? "active" : ""}
-          onClick={() => handleClick(i)}
-        >
-          お
-        </button>
-      ))}
-    </div>
-  )
-}
-
 function Content() {
   return (
     <>
@@ -157,6 +124,10 @@ function Content() {
           automáticamente si es correcta
         </li>
         <li>
+          <b>Selecciona</b> con los botones correspondientes las tipografías que
+          quieras practicar
+        </li>
+        <li>
           Cuando estés listo presiona <b>Comenzar</b>
         </li>
       </ul>
@@ -165,6 +136,14 @@ function Content() {
         <li>
           Escribe el <b>rōmaji</b> correspondiente para cada kana
         </li>
+        <li>
+          La tipografía de la letra cambiará aleatoriamente si elegiste una o
+          más en el menú
+        </li>
+        <Note>
+          <b>Nota:</b> Si no se selecciona tipografía, se usará Noto Sans JP por
+          defecto
+        </Note>
       </ul>
       <Callout>
         El rōmaji de entrada por teclado puede ser diferente para algunos

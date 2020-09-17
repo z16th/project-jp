@@ -11,7 +11,7 @@ import CharAnimation from "./CharAnimation"
 import CiteSource from "./CiteSource"
 import Bibliography from "./Bibliography"
 import useScrollOnLoad from "../hooks/useScrollOnLoad"
-import RadicalsPage from "./RadicalsPage"
+import RadicalsSubpage from "./RadicalsSubpage"
 
 const KanjiSubpage = React.lazy(() => import("./KanjiSubpage"))
 
@@ -53,7 +53,7 @@ export default function KanjiPage() {
                 </div>
               }
             >
-              <RadicalsPage />
+              <RadicalsSubpage />
             </React.Suspense>
           </Route>
           <Bibliography>

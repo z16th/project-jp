@@ -12,6 +12,21 @@ export const sizes = {
 const minWidth = 280
 const maxWidth = 800
 
+// ============================================= KANA TABLES
+export const fontHandler = css`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 20px;
+  font-family: fonts[currentFont];
+  font-size: 1.5rem;
+  svg {
+    width: 24px;
+    height: auto;
+  }
+`
+
 // =============================================RADICALS
 export const radicalsTable = css`
   display: flex;
@@ -139,6 +154,17 @@ export const menuButtons = css`
   }
 `
 
+export const fontButtons = css`
+  margin-top: 20px;
+  button {
+    border-radius: 8px;
+    margin: 0 10px;
+    &.active {
+      background-color: ${gray.regular};
+    }
+  }
+`
+
 export const menuRows = css`
   display: flex;
   flex-direction: column;
@@ -255,7 +281,7 @@ export const game = css`
       svg {
         height: 34px;
         width: auto;
-        fill: ${gray.regular};
+        fill: ${purple.regular};
       }
     }
   }

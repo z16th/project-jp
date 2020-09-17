@@ -1,10 +1,17 @@
+/**@jsx jsx */
+/**@jsxFrag React.Fragment */
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import TableChars from "./TableChars"
-import { generateGridAreas } from "../utils/vanilla"
+import { jsx } from "@emotion/core"
 import kanas from "../utils/json/kana-all.json"
 import headers from "../utils/json/headers-all.json"
-import { KanaTable, TableHeader } from "../styling"
+import { generateGridAreas } from "../utils/vanilla"
+import { KanaTable, TableHeader, fontHandler } from "../styling"
+
+import TableChars from "./TableChars"
+import { ReactComponent as Left } from "../utils/icons/icons8-left.svg"
+import { ReactComponent as Right } from "../utils/icons/icons8-right.svg"
 
 const gridAreas = {
   basic: {
@@ -29,12 +36,32 @@ const gridAreas = {
   },
 }
 
+const fonts = [
+  "Noto Sans JP",
+  "Mk POP",
+  "Asobi Memogaki",
+  "Komorebi Gothic",
+  "Umeboshi",
+]
+
 export default function Table({ syllabary, type }) {
   const [renderAnimations, setRenderAnimations] = useState(false)
   const canRenderAnimations = renderAnimations && syllabary !== "romaji"
+  const [currentFont, setFont] = useState(0)
 
   const toggleAnimations = () => {
     setRenderAnimations((state) => !state)
+  }
+
+  const handleClick = (value) => {
+    if (value === 1) {
+      setFont((index) => (index + value) % fonts.length)
+    }
+    if (value === -1) {
+      setFont((index) =>
+        index + value > 0 ? (index + value) % fonts.length : fonts.length - 1
+      )
+    }
   }
 
   return (
@@ -48,6 +75,17 @@ export default function Table({ syllabary, type }) {
           {!renderAnimations ? "Ver animaciones" : "Ver caracteres"}
         </button>
       ) : null}
+
+      <div className="font-buttons" css={fontHandler}>
+        <button type="button" onClick={() => handleClick(-1)}>
+          <Left />
+        </button>
+        <div>{fonts[currentFont]}</div>
+        <button type="button" onClick={() => handleClick(1)}>
+          <Right />
+        </button>
+      </div>
+
       <KanaTable
         className={`table ${syllabary}`}
         columns={gridAreas[`${type}`].columns}
@@ -56,6 +94,7 @@ export default function Table({ syllabary, type }) {
           gridAreas[`${type}`].columns,
           gridAreas[`${type}`].rows
         )}
+        font={fonts[currentFont]}
       >
         {headers[`${type}`].map((header) => (
           <TableHeader
