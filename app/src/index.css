@@ -18,19 +18,19 @@ body {
 
 @font-face {
   font-family: "Mk POP";
-  src: url("./utils/fonts/851MkPOP_002.ttf") format("truetype");
+  src: url("./utils/fonts/851mkpop_002-opt.ttf") format("truetype");
 }
 @font-face {
   font-family: "Asobi Memogaki";
-  src: url("./utils/fonts/AsobiMemogaki-Regular-1-01.ttf") format("truetype");
+  src: url("./utils/fonts/asobimemogaki-regular-1-01-opt.ttf") format("truetype");
 }
 @font-face {
   font-family: "Komorebi Gothic";
-  src: url("./utils/fonts/komorebi-gothic-P.ttf") format("truetype");
-}
+  src: url("./utils/fonts/komorebi-gothic-p-opt.ttf") format("truetype");
+}     
 @font-face {
   font-family: "Umeboshi";
-  src: url("./utils/fonts/umeboshi_.ttf") format("truetype");
+  src: url("./utils/fonts/umeboshi_-opt.ttf") format("truetype");
 }
 
 code {
