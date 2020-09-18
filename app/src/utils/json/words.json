@@ -427,5 +427,16 @@
       "en": ["mechanical drawing", "drafting"],
       "es": ["dibujo mecánico", "bosquejo"]
     }
+  },
+  {
+    "date": "2020-09-18",
+    "word": "ぼつぼつ",
+    "furigana": [""],
+    "romaji": "botsubotsu",
+    "type": "n",
+    "meaning": {
+      "en": ["dots", "spots"],
+      "es": ["puntos", "manchas"]
+    }
   }
 ]
