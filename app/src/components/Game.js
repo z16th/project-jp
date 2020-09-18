@@ -40,8 +40,8 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
         setScore((current) => current + 1)
         if (gameSettings.quickMode) {
           setTimeout(() => {
-            setCurrentIndex((current) => current + 1)
             setInput("")
+            setCurrentIndex((current) => current + 1)
             setCurrentFont(getRandomFont())
           }, 120)
         }
@@ -52,8 +52,8 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
   const handleSubmit = (event) => {
     event.preventDefault()
     validateInput()
-    setCurrentIndex((value) => value + 1)
     setInput("")
+    setCurrentIndex((value) => value + 1)
     setCurrentFont(getRandomFont())
   }
 
