@@ -3,9 +3,11 @@ import PropTypes from "prop-types"
 
 export default function Row({ index, syllabary, rows, updateRows }) {
   const [state, setState] = useState(rows[index].checked)
+
   useEffect(() => {
     setState(rows[index].checked)
   }, [index, rows])
+
   return (
     <button
       key={index}
