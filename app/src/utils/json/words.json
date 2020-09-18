@@ -416,5 +416,16 @@
       "en": ["production increase"],
       "es": ["incremento de producción"]
     }
+  },
+  {
+    "date": "2020-09-17",
+    "word": "製図",
+    "furigana": ["せい", "ず"],
+    "romaji": "seizu",
+    "type": "n",
+    "meaning": {
+      "en": ["mechanical drawing", "drafting"],
+      "es": ["dibujo mecánico", "bosquejo"]
+    }
   }
 ]
