@@ -17,6 +17,9 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
   const [score, setScore] = useState(0)
   const [input, setInput] = useState("")
   const [currentFont, setCurrentFont] = useState(null)
+  const [answers, setAnswers] = useState([])
+  const [answerType, setAnswerType] = useState(null)
+
   const findKanaMatch = useCallback(
     () =>
       kanaData.find(
@@ -40,11 +43,17 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
         setScore((current) => current + 1)
         if (gameSettings.quickMode) {
           setTimeout(() => {
-            setCurrentIndex((current) => current + 1)
             setInput("")
+            setCurrentIndex((current) => current + 1)
             setCurrentFont(getRandomFont())
-          }, 120)
+          }, 140)
         }
+        setAnswerType("correct")
+      } else {
+        let tempAnswers = [...answers]
+        tempAnswers.push([input, kanaQueue[currentIndex], match.romaji])
+        setAnswers(tempAnswers)
+        setAnswerType("wrong")
       }
     }
   }, [input, findKanaMatch, gameSettings.quickMode, getRandomFont])
@@ -52,8 +61,8 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
   const handleSubmit = (event) => {
     event.preventDefault()
     validateInput()
-    setCurrentIndex((value) => value + 1)
     setInput("")
+    setCurrentIndex((value) => value + 1)
     setCurrentFont(getRandomFont())
   }
 
@@ -75,8 +84,14 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
     }
   }, [input, gameSettings.quickMode, validateInput])
 
+  useEffect(() => {
+    const timer = setTimeout(() => setAnswerType(null), 400)
+    return () => clearTimeout(timer)
+  }, [answerType])
+
   return (
     <div id="game" css={game}>
+      {console.log(answers)}
       <section className="header">
         <button type="button" className="back" onClick={gameSettings.gameOver}>
           Volver
@@ -101,6 +116,26 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
             {((score / kanaQueue.length) * 100).toFixed()}%
           </div>
           <div className="score">{`Puntaje: ${score}/${kanaQueue.length}`}</div>
+          {answers.length > 0 ? (
+            <div className="answers">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Tu respuesta</th>
+                    <th>Caracter</th>
+                    <th>Respuesta correcta</th>
+                  </tr>
+                  {answers.map((e, i) => (
+                    <tr key={i}>
+                      <td>{e[0]}</td>
+                      <td>{e[1]}</td>
+                      <td>{e[2]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : null}
         </>
       ) : null}
       <div className="kana" style={{ fontFamily: currentFont }}>
@@ -115,6 +150,7 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
               id="text-input"
               type="text"
               value={input}
+              className={answerType}
               onChange={handleChange}
               maxLength={3}
               placeholder="rōmaji"

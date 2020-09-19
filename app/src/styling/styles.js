@@ -329,8 +329,16 @@ export const game = css`
         width: 90px;
       }
       &[type="submit"] {
-        background-color: ${green.regular};
+        background-color: ${gray.background};
         border-radius: 0 16px 16px 0;
+      }
+      &.correct {
+        border: 2px solid ${green.regular};
+        background-color: ${green.background};
+      }
+      &.wrong {
+        border: 2px solid ${pink.regular};
+        background-color: ${pink.background};
       }
     }
   }
