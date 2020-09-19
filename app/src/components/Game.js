@@ -17,6 +17,8 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
   const [score, setScore] = useState(0)
   const [input, setInput] = useState("")
   const [currentFont, setCurrentFont] = useState(null)
+  const [answers, setAnswers] = useState([])
+
   const findKanaMatch = useCallback(
     () =>
       kanaData.find(
@@ -45,6 +47,10 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
             setCurrentFont(getRandomFont())
           }, 120)
         }
+      } else {
+        let tempAnswers = [...answers]
+        tempAnswers.push([input, kanaQueue[currentIndex], match.romaji])
+        setAnswers(tempAnswers)
       }
     }
   }, [input, findKanaMatch, gameSettings.quickMode, getRandomFont])
@@ -77,6 +83,7 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
 
   return (
     <div id="game" css={game}>
+      {console.log(answers)}
       <section className="header">
         <button type="button" className="back" onClick={gameSettings.gameOver}>
           Volver
@@ -101,6 +108,26 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
             {((score / kanaQueue.length) * 100).toFixed()}%
           </div>
           <div className="score">{`Puntaje: ${score}/${kanaQueue.length}`}</div>
+          {answers.length > 0 ? (
+            <div className="answers">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Tu respuesta</th>
+                    <th>Caracter</th>
+                    <th>Respuesta correcta</th>
+                  </tr>
+                  {answers.map((e, i) => (
+                    <tr key={i}>
+                      <td>{e[0]}</td>
+                      <td>{e[1]}</td>
+                      <td>{e[2]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : null}
         </>
       ) : null}
       <div className="kana" style={{ fontFamily: currentFont }}>
