@@ -56,7 +56,15 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
         setAnswerType("wrong")
       }
     }
-  }, [input, findKanaMatch, gameSettings.quickMode, getRandomFont])
+  }, [
+    input,
+    findKanaMatch,
+    gameSettings.quickMode,
+    getRandomFont,
+    answers,
+    currentIndex,
+    kanaQueue,
+  ])
 
   const handleSubmit = (event) => {
     event.preventDefault()
