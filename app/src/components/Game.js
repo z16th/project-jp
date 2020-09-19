@@ -18,6 +18,7 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
   const [input, setInput] = useState("")
   const [currentFont, setCurrentFont] = useState(null)
   const [answers, setAnswers] = useState([])
+  const [answerType, setAnswerType] = useState(null)
 
   const findKanaMatch = useCallback(
     () =>
@@ -45,12 +46,14 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
             setInput("")
             setCurrentIndex((current) => current + 1)
             setCurrentFont(getRandomFont())
-          }, 120)
+          }, 140)
         }
+        setAnswerType("correct")
       } else {
         let tempAnswers = [...answers]
         tempAnswers.push([input, kanaQueue[currentIndex], match.romaji])
         setAnswers(tempAnswers)
+        setAnswerType("wrong")
       }
     }
   }, [input, findKanaMatch, gameSettings.quickMode, getRandomFont])
@@ -80,6 +83,11 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
       validateInput()
     }
   }, [input, gameSettings.quickMode, validateInput])
+
+  useEffect(() => {
+    const timer = setTimeout(() => setAnswerType(null), 400)
+    return () => clearTimeout(timer)
+  }, [answerType])
 
   return (
     <div id="game" css={game}>
@@ -142,6 +150,7 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
               id="text-input"
               type="text"
               value={input}
+              className={answerType}
               onChange={handleChange}
               maxLength={3}
               placeholder="rōmaji"
