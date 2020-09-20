@@ -438,5 +438,16 @@
       "en": ["dots", "spots"],
       "es": ["puntos", "manchas"]
     }
+  },
+  {
+    "date": "2020-09-19",
+    "word": "出来物",
+    "furigana": ["で", "き", "もの"],
+    "romaji": "dekimono",
+    "type": "n",
+    "meaning": {
+      "en": ["boil", "polyp", "ulcer"],
+      "es": ["furúnculo", "pólipo", "úlcera"]
+    }
   }
 ]
