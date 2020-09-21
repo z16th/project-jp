@@ -449,5 +449,16 @@
       "en": ["boil", "polyp", "ulcer"],
       "es": ["furúnculo", "pólipo", "úlcera"]
     }
+  },
+  {
+    "date": "2020-09-20",
+    "word": "出来心",
+    "furigana": ["で", "き", "ごころ"],
+    "romaji": "dekigokoro",
+    "type": "n",
+    "meaning": {
+      "en": ["impulse"],
+      "es": ["impulso"]
+    }
   }
 ]
