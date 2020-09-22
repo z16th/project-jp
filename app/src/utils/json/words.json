@@ -460,5 +460,16 @@
       "en": ["impulse"],
       "es": ["impulso"]
     }
+  },
+  {
+    "date": "2020-09-21",
+    "word": "未婚",
+    "furigana": ["み", "こん"],
+    "romaji": "mikon",
+    "type": "adj",
+    "meaning": {
+      "en": ["unmarried"],
+      "es": ["soltero/a"]
+    }
   }
 ]
