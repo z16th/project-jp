@@ -471,5 +471,16 @@
       "en": ["unmarried"],
       "es": ["soltero/a"]
     }
+  },
+  {
+    "date": "2020-09-22",
+    "word": "限度",
+    "furigana": ["げん", "ど"],
+    "romaji": "gendo",
+    "type": "n",
+    "meaning": {
+      "en": ["limit", "restriction"],
+      "es": ["límite", "restricción"]
+    }
   }
 ]
