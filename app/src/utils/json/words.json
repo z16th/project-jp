@@ -482,5 +482,16 @@
       "en": ["limit", "restriction"],
       "es": ["límite", "restricción"]
     }
+  },
+  {
+    "date": "2020-09-23",
+    "word": "文章",
+    "furigana": ["ぶん", "しょう"],
+    "romaji": "bunshō",
+    "type": "n",
+    "meaning": {
+      "en": ["sentence", "composition", "writing"],
+      "es": ["frase", "composición", "escrito"]
+    }
   }
 ]
