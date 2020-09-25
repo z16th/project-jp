@@ -493,5 +493,16 @@
       "en": ["sentence", "composition", "writing"],
       "es": ["frase", "composición", "escrito"]
     }
+  },
+  {
+    "date": "2020-09-24",
+    "word": "こめかみ",
+    "furigana": ["こ", "め", "か", "き"],
+    "romaji": "komekami",
+    "type": "n",
+    "meaning": {
+      "en": ["temple (side of head)"],
+      "es": ["sien (parte de la cabeza)"]
+    }
   }
 ]
