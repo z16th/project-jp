@@ -504,5 +504,16 @@
       "en": ["temple (side of head)"],
       "es": ["sien (parte de la cabeza)"]
     }
+  },
+  {
+    "date": "2020-09-25",
+    "word": "電送写真",
+    "furigana": ["でん", "そう", "しゃ", "しん"],
+    "romaji": "densōshashin",
+    "type": "n",
+    "meaning": {
+      "en": ["wirephoto, phototelegram"],
+      "es": ["fototelegrama"]
+    }
   }
 ]
