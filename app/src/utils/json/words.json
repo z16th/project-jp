@@ -515,5 +515,16 @@
       "en": ["wirephoto, phototelegram"],
       "es": ["fototelegrama"]
     }
+  },
+  {
+    "date": "2020-09-26",
+    "word": "鳥",
+    "furigana": ["とり"],
+    "romaji": "tori",
+    "type": "n",
+    "meaning": {
+      "en": ["bird", "bird meat"],
+      "es": ["pájaro", "pollo"]
+    }
   }
 ]
