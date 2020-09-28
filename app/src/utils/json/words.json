@@ -526,5 +526,16 @@
       "en": ["bird", "bird meat"],
       "es": ["pájaro", "pollo"]
     }
+  },
+  {
+    "date": "2020-09-27",
+    "word": "弱々しい",
+    "furigana": ["よわ", "よわ", "し", "い"],
+    "romaji": "yowayowashii",
+    "type": "adj",
+    "meaning": {
+      "en": ["fragile"],
+      "es": ["frágil"]
+    }
   }
 ]
