@@ -537,5 +537,16 @@
       "en": ["fragile"],
       "es": ["frágil"]
     }
+  },
+  {
+    "date": "2020-09-28",
+    "word": "塵紙",
+    "furigana": ["ちり", "がみ"],
+    "romaji": "chirigami",
+    "type": "n",
+    "meaning": {
+      "en": ["toilet paper"],
+      "es": ["papel de baño"]
+    }
   }
 ]
