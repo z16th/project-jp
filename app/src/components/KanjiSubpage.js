@@ -34,7 +34,7 @@ export default function KanjiSubpage() {
 
   return (
     <>
-      <h1>Cartas</h1>
+      <h1>Cartas de Kanji</h1>
       <p>
         En esta sección encontrarás cartas de kanji que contienen información
         sobre algunos caracteres. Existen diferentes clasificaciones según el
@@ -58,7 +58,7 @@ export default function KanjiSubpage() {
           <b>Kanji</b> en tipografía o animación
         </li>
         <li>
-          Número de <b>Trazos</b> que necesarios para escribirlo
+          Número de <b>Trazos</b> necesarios para escribirlo
         </li>{" "}
         <li>
           Al <b>pulsar en Trazos cargará la animación de trazado</b>. Por

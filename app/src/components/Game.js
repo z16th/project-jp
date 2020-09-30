@@ -50,7 +50,7 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
         }
         setAnswerType("correct")
       } else {
-        let tempAnswers = [...answers]
+        const tempAnswers = [...answers]
         tempAnswers.push([input, kanaQueue[currentIndex], match.romaji])
         setAnswers(tempAnswers)
         setAnswerType("wrong")

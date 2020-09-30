@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import Sidebar from "./Sidebar"
 import WordOfTheDay from "./WordOfTheDay"
 import { PageStyled, H, K, Kj, R, Callout, Example, Note } from "../styling"
@@ -12,6 +13,7 @@ export default function HomePage() {
   return (
     <PageStyled id="home-page">
       <Sidebar />
+
       <div className="main-content">
         <Content />
       </div>
@@ -24,6 +26,9 @@ const Content = () => {
     <div className="content">
       <h1>Palabra del día</h1>
       <WordOfTheDay />
+      <Link className="link-to" to="/historial">
+        Historial de palabras
+      </Link>
       <h2>Características</h2>
       <p>
         La palabra del día está compuesta de los siguientes elementos, de arriba

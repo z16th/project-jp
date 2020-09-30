@@ -1,4 +1,4 @@
-/**@jsx jsx */
+/** @jsx jsx */
 /* @jsxFrag React.Fragment */
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react"
@@ -29,6 +29,7 @@ export default function RadicalsSubpage() {
 
   return (
     <div id="radicals-page">
+      <Content />
       <section css={radicalsTable}>
         <PageButtons currentPage={pagina} numberOfPages={numberOfPages} />
         <div className="table">
@@ -47,16 +48,45 @@ export default function RadicalsSubpage() {
 
 // eslint-disable-next-line no-unused-vars
 const Content = () => {
+  const example = radicals[143]
   return (
     <>
-      <h1>Introducción</h1>
+      <h1>Cartas de Radicales</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi possimus
-        natus consequatur vitae aspernatur qui deleniti, architecto unde
-        consectetur, hic nostrum! Porro, odit. Maiores quasi quod natus id
-        delectus aliquid quis, error minima, optio, velit tempora. Aperiam
-        nostrum explicabo molestiae!
+        En esta sección encontrarás cartas de radicales que contienen
+        información sobre series de trazos que se utilizan para formar los
+        kanji.
       </p>
+      <h2>Cómo usar</h2>
+      <div
+        className="example"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Radical {...example} />
+      </div>
+      <p>En la parte superior se encuentra:</p>
+      <ul>
+        <li>
+          <b>Radical</b> en tipografía o animación
+        </li>
+      </ul>
+      <p>En la parte inferior se encuentra:</p>
+      <ul>
+        <li>
+          Número de <b>Trazos</b> necesarios para escribirlo
+        </li>
+        <li>
+          <b>Número</b> según el orden encontrado en el libro The Complete Guide
+          to Japanese Kanji
+        </li>
+        <li>
+          <b>Nombre</b> arbitrario en español
+        </li>
+      </ul>
     </>
   )
 }

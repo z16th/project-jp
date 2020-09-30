@@ -11,6 +11,7 @@ import { ReactComponent as Origami } from "../utils/icons/icons8-origami.svg"
 import { ReactComponent as RiceBowl } from "../utils/icons/icons8-rice-bowl.svg"
 
 const HomePage = React.lazy(() => import("./HomePage"))
+const History = React.lazy(() => import("./History"))
 const SyllabaryPage = React.lazy(() => import("./SyllabaryPage"))
 const KanjiPage = React.lazy(() => import("./KanjiPage"))
 const FourOhFour = React.lazy(() => import("./FourOhFour"))
@@ -53,6 +54,9 @@ export default function App() {
           <Switch>
             <Route exact path="/">
               <HomePage />
+            </Route>
+            <Route path="/historial">
+              <History />
             </Route>
             <Route path="/silabarios">
               <SyllabaryPage />

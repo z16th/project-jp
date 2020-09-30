@@ -1,4 +1,4 @@
-/**@jsx jsx */
+/** @jsx jsx */
 // eslint-disable-next-line no-unused-vars
 import React from "react"
 import { jsx } from "@emotion/core"
@@ -9,7 +9,7 @@ const fonts = ["Mk POP", "Asobi Memogaki", "Komorebi Gothic", "Umeboshi"]
 export default function FontButtons({ currentFonts, setCurrentFonts }) {
   const handleClick = (index) => {
     if (!currentFonts.includes(fonts[index])) {
-      let newArr = [...currentFonts]
+      const newArr = [...currentFonts]
       newArr.push(fonts[index])
       setCurrentFonts(newArr)
     } else {

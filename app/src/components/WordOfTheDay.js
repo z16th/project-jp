@@ -5,8 +5,8 @@ import Japanify from "./Japanify"
 import { grammaticalTypes } from "../utils/vanilla"
 import { wotd } from "../styling"
 
-export default function WordOfTheDay() {
-  const wordIndex = words.length - 1
+export default function WordOfTheDay({ index }) {
+  const wordIndex = index || words.length - 1
   const current = words[wordIndex]
   const defaultLanguage = "es"
 
@@ -22,6 +22,7 @@ export default function WordOfTheDay() {
       <div className="meaning">
         {current.meaning[`${defaultLanguage}`].join(", ")}
       </div>
+      <div className="date">{current.date}</div>
     </div>
   )
 }

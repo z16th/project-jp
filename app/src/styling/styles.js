@@ -581,6 +581,9 @@ export const wotd = css`
       font-size: ${typeScale.header3}px;
     }
   }
+  .date {
+    text-align: right;
+  }
 `
 
 export const japaneseChar = css`
