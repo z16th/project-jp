@@ -548,5 +548,16 @@
       "en": ["toilet paper"],
       "es": ["papel de baño"]
     }
+  },
+  {
+    "date": "2020-09-29",
+    "word": "判決",
+    "furigana": ["はん", "けつ"],
+    "romaji": "hanketsu",
+    "type": "n",
+    "meaning": {
+      "en": ["judgment"],
+      "es": ["juicio"]
+    }
   }
 ]
