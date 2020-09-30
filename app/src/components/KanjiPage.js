@@ -35,26 +35,10 @@ export default function KanjiPage() {
             <Content />
           </Route>
           <Route exact path={`${url}/cartas`}>
-            <React.Suspense
-              fallback={
-                <div className="content" style={{ height: "100vh" }}>
-                  <h1>Cargando</h1>
-                </div>
-              }
-            >
-              <KanjiSubpage />
-            </React.Suspense>
+            <KanjiSubpage />
           </Route>
           <Route exact path={`${url}/radicales`}>
-            <React.Suspense
-              fallback={
-                <div className="content" style={{ height: "100vh" }}>
-                  <h1>Cargando</h1>
-                </div>
-              }
-            >
-              <RadicalsSubpage />
-            </React.Suspense>
+            <RadicalsSubpage />
           </Route>
           <Bibliography>
             <p>

@@ -798,10 +798,20 @@ export const navbarEmpty = css`
 
 export const kanjiTable = css`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px 0 40px 0;
+  h2 {
+    display: none;
+  }
+  .table {
+    display: inherit;
+    flex-wrap: wrap;
+    justify-content: inherit;
+    align-items: inherit;
+    margin: 20px 0;
+  }
 `
 
 export const kanjiCard = css`

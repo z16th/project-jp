@@ -2,13 +2,14 @@
 /* @jsxFrag React.Fragment */
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react"
-import { Link, useLocation, useRouteMatch, useHistory } from "react-router-dom"
+import { useLocation, useHistory } from "react-router-dom"
 import { jsx } from "@emotion/core"
 import queryString from "query-string"
 import radicals from "../utils/json/radicals.json"
-import { pageButton, radicalsTable } from "../styling"
+import { radicalsTable } from "../styling"
 
 import Radical from "./Radical"
+import PageButtons from "./PageButtons"
 
 const cardsPerPage = 20
 const numberOfPages = Array.from(
@@ -28,9 +29,8 @@ export default function RadicalsSubpage() {
 
   return (
     <div id="radicals-page">
-      {/* <Content /> */}
       <section css={radicalsTable}>
-        <PageButtons currentPage={pagina} />
+        <PageButtons currentPage={pagina} numberOfPages={numberOfPages} />
         <div className="table">
           {radicals.map((radical) =>
             radical.number > (pagina - 1) * cardsPerPage &&
@@ -39,7 +39,7 @@ export default function RadicalsSubpage() {
             ) : null
           )}
         </div>
-        <PageButtons currentPage={pagina} />
+        <PageButtons currentPage={pagina} numberOfPages={numberOfPages} />
       </section>
     </div>
   )
@@ -58,24 +58,5 @@ const Content = () => {
         nostrum explicabo molestiae!
       </p>
     </>
-  )
-}
-
-const PageButtons = ({ currentPage }) => {
-  const { url } = useRouteMatch()
-  return (
-    <div className="page-buttons">
-      {numberOfPages.map((e, i) => (
-        <Link
-          key={i}
-          to={`${url}?pagina=${i + 1}`}
-          type="button"
-          css={pageButton}
-          className={currentPage - 1 === i ? "active" : ""}
-        >
-          {i + 1}
-        </Link>
-      ))}
-    </div>
   )
 }
