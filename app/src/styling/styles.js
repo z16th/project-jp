@@ -1,7 +1,6 @@
 import { css } from "@emotion/core"
 import { pink, yellow, blue, gray, brands, green, purple } from "./colors"
 import { kanjiSansFont, kanjiSerifFont, typeScale } from "./typography"
-import texture from "../utils/images/paper.jpg"
 
 export const sizes = {
   navBar: {
@@ -28,15 +27,23 @@ export const fontHandler = css`
 `
 
 // =============================================RADICALS
-export const radicalsTable = css`
+export const cardsTable = css`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin: 20px 0 40px 0;
+  h2 {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
   .table {
     display: inherit;
-    justify-content: center;
     flex-wrap: wrap;
-    margin: 20px;
+    justify-content: inherit;
+    align-items: inherit;
+    margin: 20px 0;
   }
 `
 
@@ -509,7 +516,6 @@ export const wotd = css`
   margin: 20px 0;
   border-radius: 16px;
   background-color: ${gray.background};
-  background-image: url(${texture});
   background-size: 100px;
   box-shadow: 4px 4px 4px ${gray.light};
   .word {
@@ -798,24 +804,6 @@ export const navbarEmpty = css`
 `
 
 // =============================================KANJI
-
-export const kanjiTable = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0 40px 0;
-  h2 {
-    display: none;
-  }
-  .table {
-    display: inherit;
-    flex-wrap: wrap;
-    justify-content: inherit;
-    align-items: inherit;
-    margin: 20px 0;
-  }
-`
 
 export const kanjiCard = css`
   display: flex;
