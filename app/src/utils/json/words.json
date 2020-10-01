@@ -559,5 +559,16 @@
       "en": ["judgment"],
       "es": ["juicio"]
     }
+  },
+  {
+    "date": "2020-09-30",
+    "word": "操作する",
+    "furigana": ["そう", "さ", "す", "る"],
+    "romaji": "sōsasuru",
+    "type": "n",
+    "meaning": {
+      "en": ["operate a machine"],
+      "es": ["operar una máquina"]
+    }
   }
 ]
