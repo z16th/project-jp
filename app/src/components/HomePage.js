@@ -12,7 +12,9 @@ export default function HomePage() {
 
   return (
     <PageStyled id="home-page">
-      <Sidebar />
+      <Sidebar>
+        <Link to="/historial">Historial de palabras</Link>
+      </Sidebar>
 
       <div className="main-content">
         <Content />

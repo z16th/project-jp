@@ -12,6 +12,7 @@ export default function WordOfTheDay({ index }) {
 
   return (
     <div id="wotd" css={wotd}>
+      <div className="date">{current.date}</div>
       <div className="word">
         <Japanify word={current.word} furigana={current.furigana} />
       </div>
@@ -22,7 +23,6 @@ export default function WordOfTheDay({ index }) {
       <div className="meaning">
         {current.meaning[`${defaultLanguage}`].join(", ")}
       </div>
-      <div className="date">{current.date}</div>
     </div>
   )
 }

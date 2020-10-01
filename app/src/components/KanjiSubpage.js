@@ -1,37 +1,50 @@
 /** @jsx jsx */
 /** @jsxFrag React.Fragment */
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect } from "react"
-import { useHistory, useLocation } from "react-router-dom"
-import queryString from "query-string"
+import React from "react"
 import { jsx } from "@emotion/core"
 import kanjiData from "../utils/json/kanji-1-80.json"
-import { H, R, Kj, Note, Callout, Example, kanjiTable } from "../styling"
+import { H, R, Kj, Note, Callout, Example, cardsTable } from "../styling"
 
 import KanjiCard from "./KanjiCard"
 import useScrollOnLoad from "../hooks/useScrollOnLoad"
 import PageButtons from "./PageButtons"
+import usePagesQuery from "../hooks/useCurrentLocation"
 
 const cardsPerPage = 10
-const numberOfPages = Array.from(
-  Array(Math.ceil(kanjiData.length / cardsPerPage))
-)
+const numberOfPages = Math.ceil(kanjiData.length / cardsPerPage)
 
 export default function KanjiSubpage() {
-  const history = useHistory()
-  const { search } = useLocation()
-  const { pagina } = queryString.parse(search, { parseNumbers: true })
-  const example = kanjiData[19]
+  const page = usePagesQuery(numberOfPages)
 
   useScrollOnLoad()
 
-  useEffect(() => {
-    if (pagina === undefined || pagina < 0 || pagina > numberOfPages.length) {
-      history.push("?pagina=1")
-      console.log(pagina)
-    }
-  }, [pagina, history])
+  return (
+    <div id="kanji-subpage">
+      <Content />
 
+      <h1>Kanji</h1>
+      <section css={cardsTable}>
+        <PageButtons currentPage={page} numberOfPages={numberOfPages} />
+        <div className="table">
+          {kanjiData.map((data) =>
+            data.number > (page - 1) * cardsPerPage &&
+            data.number < (page - 1) * cardsPerPage + cardsPerPage + 1 ? (
+              <div key={data.number}>
+                <h2>{`No.${data.number}: ${data.character}`}</h2>
+                <KanjiCard key={data.utf16} data={data} />
+              </div>
+            ) : null
+          )}
+        </div>
+        <PageButtons currentPage={page} numberOfPages={numberOfPages} />
+      </section>
+    </div>
+  )
+}
+
+function Content() {
+  const example = kanjiData[19]
   return (
     <>
       <h1>Cartas de Kanji</h1>
@@ -130,23 +143,6 @@ export default function KanjiSubpage() {
         distintas fuentes aunque es posible que otras referencias manejen un
         formato distinto.
       </Note>
-
-      <h1 className="text-center">1 - 80</h1>
-      <section className="table" css={kanjiTable}>
-        <PageButtons currentPage={pagina} numberOfPages={numberOfPages} />
-        <div className="table">
-          {kanjiData.map((data) =>
-            data.number > (pagina - 1) * cardsPerPage &&
-            data.number < (pagina - 1) * cardsPerPage + cardsPerPage + 1 ? (
-              <div key={data.number}>
-                <h2>{data.number}</h2>
-                <KanjiCard key={data.utf16} data={data} />
-              </div>
-            ) : null
-          )}
-        </div>
-        <PageButtons currentPage={pagina} numberOfPages={numberOfPages} />
-      </section>
     </>
   )
 }
