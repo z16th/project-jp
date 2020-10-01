@@ -10,7 +10,6 @@ import {
   kanjiSansFont,
   kanjiSerifFont,
 } from "./typography"
-import texture from "../utils/images/paper.jpg"
 
 const minWidth = 280
 const maxWidth = 800
@@ -197,8 +196,7 @@ export const PageStyled = styled.div`
   justify-content: flex-start;
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(${gray.background}, ${gray.background}),
-    url(${texture});
+  background-image: linear-gradient(${gray.background}, ${gray.background});
   background-size: 64px;
   .main-content {
     background-color: white;
