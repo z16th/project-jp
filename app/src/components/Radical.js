@@ -1,6 +1,7 @@
 /** @jsx jsx */
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react"
+import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
 import { radical } from "../styling"
 
@@ -29,4 +30,12 @@ export default function Radical({ utf16, number, strokes, character, name }) {
       <div className="name">Nombre: {name}</div>
     </div>
   )
+}
+
+Radical.propTypes = {
+  utf16: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  strokes: PropTypes.string.isRequired,
+  character: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 }

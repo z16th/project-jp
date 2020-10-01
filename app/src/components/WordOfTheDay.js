@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
 import words from "../utils/json/words.json"
 import Japanify from "./Japanify"
@@ -6,8 +7,7 @@ import { grammaticalTypes } from "../utils/vanilla"
 import { wotd } from "../styling"
 
 export default function WordOfTheDay({ index }) {
-  const wordIndex = index || words.length - 1
-  const current = words[wordIndex]
+  const current = words[index]
   const defaultLanguage = "es"
 
   return (
@@ -25,4 +25,12 @@ export default function WordOfTheDay({ index }) {
       <div className="date">{current.date}</div>
     </div>
   )
+}
+
+WordOfTheDay.propTypes = {
+  index: PropTypes.number,
+}
+
+WordOfTheDay.defaultProps = {
+  index: words.length - 1,
 }

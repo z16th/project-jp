@@ -1,15 +1,17 @@
 /** @jsx jsx */
 // eslint-disable-next-line no-unused-vars
-import React from "react"
+import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
 import { Link, useRouteMatch } from "react-router-dom"
 import { pageButton } from "../styling"
 
 export default function PageButtons({ currentPage, numberOfPages }) {
+  const buttonsToMake = Array.from(Array(numberOfPages))
+
   const { url } = useRouteMatch()
   return (
     <div className="page-buttons">
-      {numberOfPages.map((e, i) => (
+      {buttonsToMake.map((e, i) => (
         <Link
           key={i}
           to={`${url}?pagina=${i + 1}`}
@@ -22,4 +24,13 @@ export default function PageButtons({ currentPage, numberOfPages }) {
       ))}
     </div>
   )
+}
+
+PageButtons.propTypes = {
+  numberOfPages: PropTypes.number,
+  currentPage: PropTypes.number,
+}
+
+PageButtons.defaultProps = {
+  currentPage: 1,
 }

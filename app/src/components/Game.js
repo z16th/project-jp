@@ -56,7 +56,15 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
         setAnswerType("wrong")
       }
     }
-  }, [input, findKanaMatch, gameSettings.quickMode, getRandomFont])
+  }, [
+    input,
+    findKanaMatch,
+    gameSettings.quickMode,
+    getRandomFont,
+    answers,
+    currentIndex,
+    kanaQueue,
+  ])
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -91,7 +99,6 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
 
   return (
     <div id="game" css={game}>
-      {console.log(answers)}
       <section className="header">
         <button type="button" className="back" onClick={gameSettings.gameOver}>
           Volver
@@ -126,7 +133,7 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
                     <th>Respuesta correcta</th>
                   </tr>
                   {answers.map((e, i) => (
-                    <tr key={i}>
+                    <tr key={`${e[0]}-${i}`}>
                       <td>{e[0]}</td>
                       <td>{e[1]}</td>
                       <td>{e[2]}</td>
@@ -166,6 +173,7 @@ export default function Game({ kanas: kanaQueue, fonts, gameSettings }) {
 
 Game.propTypes = {
   kanas: PropTypes.arrayOf(PropTypes.string).isRequired,
+  fonts: PropTypes.arrayOf(PropTypes.string).isRequired,
   gameSettings: PropTypes.shape({
     gameOver: PropTypes.func,
     quickMode: PropTypes.bool,

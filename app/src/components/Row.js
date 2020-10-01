@@ -16,7 +16,7 @@ export default function Row({ index, syllabary, rows, updateRows }) {
       className={`row ${syllabary} ${state ? "selected" : ""}`}
     >
       {rows[index].kanas.map((item, i) => (
-        <h3 key={i} className="char">
+        <h3 key={`${item}-${i}`} className="char">
           {item}
         </h3>
       ))}
@@ -33,7 +33,7 @@ Row.propTypes = {
       type: PropTypes.string,
       kanas: PropTypes.arrayOf(PropTypes.string),
       checked: PropTypes.bool,
-    }).isRequired
-  ),
+    })
+  ).isRequired,
   updateRows: PropTypes.func.isRequired,
 }

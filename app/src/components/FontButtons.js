@@ -1,6 +1,7 @@
 /** @jsx jsx */
 // eslint-disable-next-line no-unused-vars
 import React from "react"
+import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
 import { fontButtons } from "../styling"
 
@@ -33,4 +34,9 @@ export default function FontButtons({ currentFonts, setCurrentFonts }) {
       ))}
     </div>
   )
+}
+
+FontButtons.propTypes = {
+  currentFonts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  setCurrentFonts: PropTypes.func.isRequired,
 }
