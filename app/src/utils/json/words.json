@@ -361,5 +361,214 @@
       "en": ["harvest", "reap"],
       "es": ["cosechar", "recoger"]
     }
+  },
+  {
+    "date": "2020-09-12",
+    "word": "風流",
+    "furigana": ["ふう", "りゅう"],
+    "romaji": "fūryū",
+    "type": "adj",
+    "meaning": {
+      "en": ["refined"],
+      "es": ["refinado"]
+    }
+  },
+  {
+    "date": "2020-09-13",
+    "word": "休講",
+    "furigana": ["きゅう", "こう"],
+    "romaji": "kyūkō",
+    "type": "n",
+    "meaning": {
+      "en": ["canceled class"],
+      "es": ["clase cancelada"]
+    }
+  },
+  {
+    "date": "2020-09-14",
+    "word": "集団",
+    "furigana": ["しゅう", "だん"],
+    "romaji": "shūdan",
+    "type": "n",
+    "meaning": {
+      "en": ["group", "mass"],
+      "es": ["grupo", "masa"]
+    }
+  },
+  {
+    "date": "2020-09-15",
+    "word": "赤字",
+    "furigana": ["あか", "じ"],
+    "romaji": "akaji",
+    "type": "n",
+    "meaning": {
+      "en": ["deficit"],
+      "es": ["déficit"]
+    }
+  },
+  {
+    "date": "2020-09-16",
+    "word": "増産",
+    "furigana": ["ぞう", "さん"],
+    "romaji": "zōsan",
+    "type": "n",
+    "meaning": {
+      "en": ["production increase"],
+      "es": ["incremento de producción"]
+    }
+  },
+  {
+    "date": "2020-09-17",
+    "word": "製図",
+    "furigana": ["せい", "ず"],
+    "romaji": "seizu",
+    "type": "n",
+    "meaning": {
+      "en": ["mechanical drawing", "drafting"],
+      "es": ["dibujo mecánico", "bosquejo"]
+    }
+  },
+  {
+    "date": "2020-09-18",
+    "word": "ぼつぼつ",
+    "furigana": [""],
+    "romaji": "botsubotsu",
+    "type": "n",
+    "meaning": {
+      "en": ["dots", "spots"],
+      "es": ["puntos", "manchas"]
+    }
+  },
+  {
+    "date": "2020-09-19",
+    "word": "出来物",
+    "furigana": ["で", "き", "もの"],
+    "romaji": "dekimono",
+    "type": "n",
+    "meaning": {
+      "en": ["boil", "polyp", "ulcer"],
+      "es": ["furúnculo", "pólipo", "úlcera"]
+    }
+  },
+  {
+    "date": "2020-09-20",
+    "word": "出来心",
+    "furigana": ["で", "き", "ごころ"],
+    "romaji": "dekigokoro",
+    "type": "n",
+    "meaning": {
+      "en": ["impulse"],
+      "es": ["impulso"]
+    }
+  },
+  {
+    "date": "2020-09-21",
+    "word": "未婚",
+    "furigana": ["み", "こん"],
+    "romaji": "mikon",
+    "type": "adj",
+    "meaning": {
+      "en": ["unmarried"],
+      "es": ["soltero/a"]
+    }
+  },
+  {
+    "date": "2020-09-22",
+    "word": "限度",
+    "furigana": ["げん", "ど"],
+    "romaji": "gendo",
+    "type": "n",
+    "meaning": {
+      "en": ["limit", "restriction"],
+      "es": ["límite", "restricción"]
+    }
+  },
+  {
+    "date": "2020-09-23",
+    "word": "文章",
+    "furigana": ["ぶん", "しょう"],
+    "romaji": "bunshō",
+    "type": "n",
+    "meaning": {
+      "en": ["sentence", "composition", "writing"],
+      "es": ["frase", "composición", "escrito"]
+    }
+  },
+  {
+    "date": "2020-09-24",
+    "word": "こめかみ",
+    "furigana": ["こ", "め", "か", "み"],
+    "romaji": "komekami",
+    "type": "n",
+    "meaning": {
+      "en": ["temple (side of head)"],
+      "es": ["sien (parte de la cabeza)"]
+    }
+  },
+  {
+    "date": "2020-09-25",
+    "word": "電送写真",
+    "furigana": ["でん", "そう", "しゃ", "しん"],
+    "romaji": "densōshashin",
+    "type": "n",
+    "meaning": {
+      "en": ["wirephoto, phototelegram"],
+      "es": ["fototelegrama"]
+    }
+  },
+  {
+    "date": "2020-09-26",
+    "word": "鳥",
+    "furigana": ["とり"],
+    "romaji": "tori",
+    "type": "n",
+    "meaning": {
+      "en": ["bird", "bird meat"],
+      "es": ["pájaro", "pollo"]
+    }
+  },
+  {
+    "date": "2020-09-27",
+    "word": "弱々しい",
+    "furigana": ["よわ", "よわ", "し", "い"],
+    "romaji": "yowayowashii",
+    "type": "adj",
+    "meaning": {
+      "en": ["fragile"],
+      "es": ["frágil"]
+    }
+  },
+  {
+    "date": "2020-09-28",
+    "word": "塵紙",
+    "furigana": ["ちり", "がみ"],
+    "romaji": "chirigami",
+    "type": "n",
+    "meaning": {
+      "en": ["toilet paper"],
+      "es": ["papel de baño"]
+    }
+  },
+  {
+    "date": "2020-09-29",
+    "word": "判決",
+    "furigana": ["はん", "けつ"],
+    "romaji": "hanketsu",
+    "type": "n",
+    "meaning": {
+      "en": ["judgment"],
+      "es": ["juicio"]
+    }
+  },
+  {
+    "date": "2020-09-30",
+    "word": "操作する",
+    "furigana": ["そう", "さ", "す", "る"],
+    "romaji": "sōsasuru",
+    "type": "n",
+    "meaning": {
+      "en": ["operate a machine"],
+      "es": ["operar una máquina"]
+    }
   }
 ]
