@@ -570,5 +570,16 @@
       "en": ["operate a machine"],
       "es": ["operar una máquina"]
     }
+  },
+  {
+    "date": "2020-10-01",
+    "word": "売り場",
+    "furigana": ["う", "り", "ば"],
+    "romaji": "uriba",
+    "type": "n",
+    "meaning": {
+      "en": ["counter", "box office"],
+      "es": ["mostrador", "taquilla"]
+    }
   }
 ]
