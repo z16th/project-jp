@@ -565,7 +565,7 @@
     "word": "操作する",
     "furigana": ["そう", "さ", "す", "る"],
     "romaji": "sōsasuru",
-    "type": "n",
+    "type": "vb",
     "meaning": {
       "en": ["operate a machine"],
       "es": ["operar una máquina"]
@@ -580,6 +580,17 @@
     "meaning": {
       "en": ["counter", "box office"],
       "es": ["mostrador", "taquilla"]
+    }
+  },
+  {
+    "date": "2020-10-02",
+    "word": "肯定する",
+    "furigana": ["こう", "てい", "す", "る"],
+    "romaji": "kōteisuru",
+    "type": "vb",
+    "meaning": {
+      "en": ["affirm", "answer positively", "admit"],
+      "es": ["afirmar", "responder positivamente", "admitir"]
     }
   }
 ]
