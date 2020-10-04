@@ -592,5 +592,16 @@
       "en": ["affirm", "answer positively", "admit"],
       "es": ["afirmar", "responder positivamente", "admitir"]
     }
+  },
+  {
+    "date": "2020-10-03",
+    "word": "激しい",
+    "furigana": ["はげ", "し", "い"],
+    "romaji": "hageshii",
+    "type": "adj",
+    "meaning": {
+      "en": ["fierce", "tempestuous"],
+      "es": ["feroz", "tempestuoso"]
+    }
   }
 ]
