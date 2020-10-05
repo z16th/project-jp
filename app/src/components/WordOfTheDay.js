@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import PropTypes from "prop-types"
 import { jsx } from "@emotion/core"
-import words from "../utils/json/words.json"
+import words from "../../public/words.json"
 import Japanify from "./Japanify"
 import { grammaticalTypes } from "../utils/vanilla"
 import { wotd } from "../styling"
