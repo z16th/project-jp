@@ -603,5 +603,16 @@
       "en": ["fierce", "tempestuous"],
       "es": ["feroz", "tempestuoso"]
     }
+  },
+  {
+    "date": "2020-10-04",
+    "word": "こらしめる",
+    "furigana": ["こ", "ら", "し", "め", "る"],
+    "romaji": "korashimeru",
+    "type": "vb",
+    "meaning": {
+      "en": ["punish"],
+      "es": ["castigar"]
+    }
   }
 ]
