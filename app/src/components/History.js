@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react"
 import { jsx } from "@emotion/core"
-import wordData from "../utils/json/words.json"
+import wordData from "../../public/words.json"
 import { PageStyled, cardsTable } from "../styling"
 
 import WordOfTheDay from "./WordOfTheDay"
