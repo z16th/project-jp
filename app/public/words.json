@@ -614,5 +614,16 @@
       "en": ["punish"],
       "es": ["castigar"]
     }
+  },
+  {
+    "date": "2020-10-05",
+    "word": "塗る",
+    "furigana": ["ぬ", "る"],
+    "romaji": "nuru",
+    "type": "vb",
+    "meaning": {
+      "en": ["paint", "spread (butter)"],
+      "es": ["pintar", "propagar"]
+    }
   }
 ]
