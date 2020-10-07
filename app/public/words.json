@@ -625,5 +625,16 @@
       "en": ["paint", "spread (butter)"],
       "es": ["pintar", "propagar"]
     }
+  },
+  {
+    "date": "2020-10-06",
+    "word": "捗る",
+    "furigana": ["はかど", "る"],
+    "romaji": "hakadoru",
+    "type": "vb",
+    "meaning": {
+      "en": ["develop further", "make progress"],
+      "es": ["desarrollar", "progresar"]
+    }
   }
 ]
