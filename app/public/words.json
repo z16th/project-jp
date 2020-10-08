@@ -636,5 +636,16 @@
       "en": ["develop further", "make progress"],
       "es": ["desarrollar", "progresar"]
     }
+  },
+  {
+    "date": "2020-10-07",
+    "word": "賃上げ",
+    "furigana": ["ちん", "あ", "げ"],
+    "romaji": "chin'age",
+    "type": "n",
+    "meaning": {
+      "en": ["wage increase"],
+      "es": ["aumento salarial"]
+    }
   }
 ]
