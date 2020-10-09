@@ -647,5 +647,16 @@
       "en": ["wage increase"],
       "es": ["aumento salarial"]
     }
+  },
+  {
+    "date": "2020-10-08",
+    "word": "圧倒する",
+    "furigana": ["あっ", "とう", "す", "る"],
+    "romaji": "attōsuru",
+    "type": "vb",
+    "meaning": {
+      "en": ["overwhelm", "overpower"],
+      "es": ["abrumar", "dominar"]
+    }
   }
 ]
