@@ -658,5 +658,16 @@
       "en": ["overwhelm", "overpower"],
       "es": ["abrumar", "dominar"]
     }
+  },
+  {
+    "date": "2020-10-09",
+    "word": "近寄る",
+    "furigana": ["ちか", "よ", "る"],
+    "romaji": "chikayoru",
+    "type": "vb",
+    "meaning": {
+      "en": ["approach", "come up to", "go up to"],
+      "es": ["acercarse", "llegar a", "subir a"]
+    }
   }
 ]
