@@ -669,5 +669,16 @@
       "en": ["approach", "come up to", "go up to"],
       "es": ["acercarse", "llegar a", "subir a"]
     }
+  },
+  {
+    "date": "2020-10-10",
+    "word": "化物",
+    "furigana": ["ばけ", "もの"],
+    "romaji": "bakemono",
+    "type": "n",
+    "meaning": {
+      "en": ["ghost", "phantom", "monster"],
+      "es": ["fantasma", "monstruo"]
+    }
   }
 ]
