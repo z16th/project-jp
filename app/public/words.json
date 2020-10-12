@@ -680,5 +680,16 @@
       "en": ["ghost", "phantom", "monster"],
       "es": ["fantasma", "monstruo"]
     }
+  },
+  {
+    "date": "2020-10-11",
+    "word": "この世",
+    "furigana": ["こ", "の", "よ"],
+    "romaji": "kono yo",
+    "type": "n",
+    "meaning": {
+      "en": ["this world", "world of the living"],
+      "es": ["este mundo", "mundo de los vivos"]
+    }
   }
 ]
