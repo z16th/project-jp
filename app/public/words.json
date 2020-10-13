@@ -691,5 +691,16 @@
       "en": ["this world", "world of the living"],
       "es": ["este mundo", "mundo de los vivos"]
     }
+  },
+  {
+    "date": "2020-10-12",
+    "word": "後",
+    "furigana": ["のち"],
+    "romaji": "nochi",
+    "type": "adj",
+    "meaning": {
+      "en": ["later", "future"],
+      "es": ["después", "futuro"]
+    }
   }
 ]
