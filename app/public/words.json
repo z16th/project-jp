@@ -702,5 +702,16 @@
       "en": ["later", "future"],
       "es": ["después", "futuro"]
     }
+  },
+  {
+    "date": "2020-10-13",
+    "word": "過ごす",
+    "furigana": ["す", "ご", "す"],
+    "romaji": "sugosu",
+    "type": "vb",
+    "meaning": {
+      "en": ["spend (time)", "pass (time)"],
+      "es": ["pasar (tiempo)"]
+    }
   }
 ]
