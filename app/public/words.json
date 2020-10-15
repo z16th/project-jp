@@ -724,5 +724,16 @@
       "en": ["touch", "feel"],
       "es": ["tocar", "sentir"]
     }
+  },
+  {
+    "date": "2020-10-15",
+    "word": "画用紙",
+    "furigana": ["が", "よう", "し"],
+    "romaji": "gayōshi",
+    "type": "n",
+    "meaning": {
+      "en": ["drawing paper"],
+      "es": ["papel para dibujar"]
+    }
   }
 ]
