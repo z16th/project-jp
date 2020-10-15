@@ -713,5 +713,16 @@
       "en": ["spend (time)", "pass (time)"],
       "es": ["pasar (tiempo)"]
     }
+  },
+  {
+    "date": "2020-10-14",
+    "word": "触れる",
+    "furigana": ["ふ", "れ", "る"],
+    "romaji": "fureru",
+    "type": "vb",
+    "meaning": {
+      "en": ["touch", "feel"],
+      "es": ["tocar", "sentir"]
+    }
   }
 ]
