@@ -735,5 +735,16 @@
       "en": ["drawing paper"],
       "es": ["papel para dibujar"]
     }
+  },
+  {
+    "date": "2020-10-16",
+    "word": "面白い",
+    "furigana": ["おも", "しろ", "い"],
+    "romaji": "omoshiroi",
+    "type": "adj",
+    "meaning": {
+      "en": ["interesting", "enjoyable", "funny"],
+      "es": ["interesante", "agradable", "divertido"]
+    }
   }
 ]
