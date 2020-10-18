@@ -757,5 +757,16 @@
       "en": ["local", "hometown"],
       "es": ["local"]
     }
+  },
+  {
+    "date": "2020-10-18",
+    "word": "振られる",
+    "furigana": ["ふ", "ら", "れ", "る"],
+    "romaji": "furareru",
+    "type": "vb",
+    "meaning": {
+      "en": ["be spurned (romance)"],
+      "es": ["ser rechazado/a (romance)"]
+    }
   }
 ]
