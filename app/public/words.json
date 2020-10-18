@@ -746,5 +746,16 @@
       "en": ["interesting", "enjoyable", "funny"],
       "es": ["interesante", "agradable", "divertido"]
     }
+  },
+  {
+    "date": "2020-10-17",
+    "word": "地元",
+    "furigana": ["じ", "もと"],
+    "romaji": "jimoto",
+    "type": "adj",
+    "meaning": {
+      "en": ["local", "hometown"],
+      "es": ["local"]
+    }
   }
 ]
