@@ -768,5 +768,16 @@
       "en": ["be spurned (romance)"],
       "es": ["ser rechazado/a (romance)"]
     }
+  },
+  {
+    "date": "2020-10-19",
+    "word": "色男",
+    "furigana": ["いろ", "おとこ"],
+    "romaji": "iro'otoko",
+    "type": "n",
+    "meaning": {
+      "en": ["attractive man", "lady-killer"],
+      "es": ["hombre atractivo", "seductor"]
+    }
   }
 ]
