@@ -779,5 +779,16 @@
       "en": ["attractive man", "lady-killer"],
       "es": ["hombre atractivo", "seductor"]
     }
+  },
+  {
+    "date": "2020-10-20",
+    "word": "恐らく",
+    "furigana": ["おそ", "ら", "く"],
+    "romaji": "osoraku",
+    "type": "adv",
+    "meaning": {
+      "en": ["perhaps", "probably"],
+      "es": ["quizá", "probablemente"]
+    }
   }
 ]
