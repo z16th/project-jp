@@ -790,5 +790,16 @@
       "en": ["perhaps", "probably"],
       "es": ["quizá", "probablemente"]
     }
+  },
+  {
+    "date": "2020-10-21",
+    "word": "無条件で",
+    "furigana": ["む", "じょう", "けん", "で"],
+    "romaji": "mujōken de",
+    "type": "adv",
+    "meaning": {
+      "en": ["unconditionally"],
+      "es": ["incondicionalmente"]
+    }
   }
 ]
