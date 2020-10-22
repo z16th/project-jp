@@ -801,5 +801,16 @@
       "en": ["unconditionally"],
       "es": ["incondicionalmente"]
     }
+  },
+  {
+    "date": "2020-10-22",
+    "word": "蜂蜜",
+    "furigana": ["はち", "みつ"],
+    "romaji": "hachimitsu",
+    "type": "n",
+    "meaning": {
+      "en": ["honey"],
+      "es": ["miel"]
+    }
   }
 ]
