@@ -823,5 +823,16 @@
       "en": ["direct", "indicate"],
       "es": ["dirigir", "indicar"]
     }
+  },
+  {
+    "date": "2020-10-24",
+    "word": "変",
+    "furigana": ["へん"],
+    "romaji": "hen",
+    "type": "adj",
+    "meaning": {
+      "en": ["funny", "strange", "clumsy"],
+      "es": ["divertido", "extraño", "torpe"]
+    }
   }
 ]
