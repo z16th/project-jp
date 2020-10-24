@@ -812,5 +812,16 @@
       "en": ["honey"],
       "es": ["miel"]
     }
+  },
+  {
+    "date": "2020-10-23",
+    "word": "指示する",
+    "furigana": ["し", "じ", "す", "る"],
+    "romaji": "shiji suru",
+    "type": "vb",
+    "meaning": {
+      "en": ["direct", "indicate"],
+      "es": ["dirigir", "indicar"]
+    }
   }
 ]
