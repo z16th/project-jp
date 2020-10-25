@@ -834,5 +834,16 @@
       "en": ["funny", "strange", "clumsy"],
       "es": ["divertido", "extraño", "torpe"]
     }
+  },
+  {
+    "date": "2020-10-25",
+    "word": "現世",
+    "furigana": ["げん", "せ"],
+    "romaji": "gense",
+    "type": "n",
+    "meaning": {
+      "en": ["this world or life"],
+      "es": ["este mundo", "esta vida"]
+    }
   }
 ]
