@@ -845,5 +845,16 @@
       "en": ["this world or life"],
       "es": ["este mundo", "esta vida"]
     }
+  },
+  {
+    "date": "2020-10-26",
+    "word": "防音",
+    "furigana": ["ぼう", "おん"],
+    "romaji": "bō'on",
+    "type": "n",
+    "meaning": {
+      "en": ["soundproofing"],
+      "es": ["insonorización"]
+    }
   }
 ]
