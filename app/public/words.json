@@ -856,5 +856,16 @@
       "en": ["soundproofing"],
       "es": ["insonorización"]
     }
+  },
+  {
+    "date": "2020-10-27",
+    "word": "旗",
+    "furigana": ["はた"],
+    "romaji": "hata",
+    "type": "n",
+    "meaning": {
+      "en": ["banner", "flag"],
+      "es": ["estandarte", "bandera"]
+    }
   }
 ]
