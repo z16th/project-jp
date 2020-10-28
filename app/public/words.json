@@ -867,5 +867,16 @@
       "en": ["banner", "flag"],
       "es": ["estandarte", "bandera"]
     }
+  },
+  {
+    "date": "2020-10-28",
+    "word": "切符",
+    "furigana": ["きっ", "ぷ"],
+    "romaji": "kippu",
+    "type": "n",
+    "meaning": {
+      "en": ["ticket"],
+      "es": ["boleto"]
+    }
   }
 ]
