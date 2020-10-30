@@ -878,5 +878,16 @@
       "en": ["ticket"],
       "es": ["boleto"]
     }
+  },
+  {
+    "date": "2020-10-29",
+    "word": "立ち見席",
+    "furigana": ["た", "ち", "み", "せき"],
+    "romaji": "tachimiseki",
+    "type": "n",
+    "meaning": {
+      "en": ["standing room"],
+      "es": ["sala para estar de pie"]
+    }
   }
 ]
