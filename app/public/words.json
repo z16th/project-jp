@@ -889,5 +889,16 @@
       "en": ["standing room"],
       "es": ["sala para estar de pie"]
     }
+  },
+  {
+    "date": "2020-10-30",
+    "word": "乗務員",
+    "furigana": ["じょう", "む", "いん"],
+    "romaji": "jōmuin",
+    "type": "n",
+    "meaning": {
+      "en": ["crew member (plane, train, ship)"],
+      "es": ["miembro de la tripulación (avión, tren, barco)"]
+    }
   }
 ]
