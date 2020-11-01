@@ -900,5 +900,16 @@
       "en": ["crew member (plane, train, ship)"],
       "es": ["miembro de la tripulación (avión, tren, barco)"]
     }
+  },
+  {
+    "date": "2020-10-31",
+    "word": "世慣れた",
+    "furigana": ["よ", "な", "れ", "た"],
+    "romaji": "yonareta",
+    "type": "adj",
+    "meaning": {
+      "en": ["wordly wise", "sophisticated"],
+      "es": ["mundano", "sofisticado"]
+    }
   }
 ]
