@@ -922,5 +922,16 @@
       "en": ["ridiculous", "absurd", "useless"],
       "es": ["ridículo", "absurdo", "inútil"]
     }
+  },
+  {
+    "date": "2020-11-02",
+    "word": "えじき",
+    "furigana": ["え", "じ", "き"],
+    "romaji": "ejiki",
+    "type": "n",
+    "meaning": {
+      "en": ["prey", "victim"],
+      "es": ["presa", "víctima"]
+    }
   }
 ]
