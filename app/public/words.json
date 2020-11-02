@@ -911,5 +911,16 @@
       "en": ["wordly wise", "sophisticated"],
       "es": ["mundano", "sofisticado"]
     }
+  },
+  {
+    "date": "2020-11-01",
+    "word": "馬鹿らしい",
+    "furigana": ["ば", "か", "ら", "し", "い"],
+    "romaji": "bakarashii",
+    "type": "adj",
+    "meaning": {
+      "en": ["ridiculous", "absurd", "useless"],
+      "es": ["ridículo", "absurdo", "inútil"]
+    }
   }
 ]
