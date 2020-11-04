@@ -933,5 +933,16 @@
       "en": ["prey", "victim"],
       "es": ["presa", "víctima"]
     }
+  },
+  {
+    "date": "2020-11-03",
+    "word": "沸騰する",
+    "furigana": ["ふっ", "とう", "す", "る"],
+    "romaji": "futtōsuru",
+    "type": "vb",
+    "meaning": {
+      "en": ["boil"],
+      "es": ["hervir"]
+    }
   }
 ]
