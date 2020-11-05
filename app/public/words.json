@@ -944,5 +944,16 @@
       "en": ["boil"],
       "es": ["hervir"]
     }
+  },
+  {
+    "date": "2020-11-04",
+    "word": "金魚",
+    "furigana": ["きん", "ぎょ"],
+    "romaji": "kingyo",
+    "type": "n",
+    "meaning": {
+      "en": ["goldfish"],
+      "es": ["pez dorado"]
+    }
   }
 ]
