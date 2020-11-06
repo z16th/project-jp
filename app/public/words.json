@@ -955,5 +955,16 @@
       "en": ["goldfish"],
       "es": ["pez dorado"]
     }
+  },
+  {
+    "date": "2020-11-05",
+    "word": "お前",
+    "furigana": ["お", "まえ"],
+    "romaji": "omae",
+    "type": "pron",
+    "meaning": {
+      "en": ["you (informal)"],
+      "es": ["tú (informal)"]
+    }
   }
 ]
