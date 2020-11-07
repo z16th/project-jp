@@ -966,5 +966,16 @@
       "en": ["you (informal)"],
       "es": ["tú (informal)"]
     }
+  },
+  {
+    "date": "2020-11-06",
+    "word": "財産",
+    "furigana": ["ざい", "さん"],
+    "romaji": "saizan",
+    "type": "n",
+    "meaning": {
+      "en": ["assets", "fortune", "property"],
+      "es": ["bienes", "fortuna", "propiedad"]
+    }
   }
 ]
