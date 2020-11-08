@@ -977,5 +977,16 @@
       "en": ["assets", "fortune", "property"],
       "es": ["bienes", "fortuna", "propiedad"]
     }
+  },
+  {
+    "date": "2020-11-07",
+    "word": "妥協",
+    "furigana": ["だ", "きょう"],
+    "romaji": "dakyō",
+    "type": "n",
+    "meaning": {
+      "en": ["compromise"],
+      "es": ["compromiso"]
+    }
   }
 ]
