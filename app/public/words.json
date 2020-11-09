@@ -988,5 +988,16 @@
       "en": ["compromise"],
       "es": ["compromiso"]
     }
+  },
+  {
+    "date": "2020-11-08",
+    "word": "彗星",
+    "furigana": ["すい", "せい"],
+    "romaji": "suisei",
+    "type": "n",
+    "meaning": {
+      "en": ["comet"],
+      "es": ["cometa"]
+    }
   }
 ]
