@@ -999,5 +999,16 @@
       "en": ["comet"],
       "es": ["cometa"]
     }
+  },
+  {
+    "date": "2020-11-09",
+    "word": "弱み",
+    "furigana": ["よわ", "み"],
+    "romaji": "yowami",
+    "type": "n",
+    "meaning": {
+      "en": ["weak point"],
+      "es": ["punto débil"]
+    }
   }
 ]
