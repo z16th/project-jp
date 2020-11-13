@@ -1010,5 +1010,16 @@
       "en": ["weak point"],
       "es": ["punto débil"]
     }
+  },
+  {
+    "date": "2020-11-13",
+    "word": "果て",
+    "furigana": ["は", "て"],
+    "romaji": "hate",
+    "type": "n",
+    "meaning": {
+      "en": ["tip", "end"],
+      "es": ["punta", "extremo"]
+    }
   }
 ]
