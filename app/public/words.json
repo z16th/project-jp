@@ -1021,5 +1021,16 @@
       "en": ["tip", "end"],
       "es": ["punta", "extremo"]
     }
+  },
+  {
+    "date": "2020-11-14",
+    "word": "長命",
+    "furigana": ["ちょう", "めい"],
+    "romaji": "chōmei",
+    "type": "n",
+    "meaning": {
+      "en": ["long life"],
+      "es": ["larga vida"]
+    }
   }
 ]
