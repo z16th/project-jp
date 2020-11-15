@@ -1032,5 +1032,16 @@
       "en": ["long life"],
       "es": ["larga vida"]
     }
+  },
+  {
+    "date": "2020-11-15",
+    "word": "熱狂",
+    "furigana": ["ねっ", "きょう"],
+    "romaji": "nekkyō",
+    "type": "n",
+    "meaning": {
+      "en": ["enthusiasm", "excitement"],
+      "es": ["entusiasmo", "emoción"]
+    }
   }
 ]
