@@ -1043,5 +1043,16 @@
       "en": ["enthusiasm", "excitement"],
       "es": ["entusiasmo", "emoción"]
     }
+  },
+  {
+    "date": "2020-11-16",
+    "word": "何だか",
+    "furigana": ["なん", "だ", "か"],
+    "romaji": "nan da ka",
+    "type": "adv",
+    "meaning": {
+      "en": ["somehow"],
+      "es": ["de alguna manera"]
+    }
   }
 ]
