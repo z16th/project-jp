@@ -1054,5 +1054,16 @@
       "en": ["somehow"],
       "es": ["de alguna manera"]
     }
+  },
+  {
+    "date": "2020-11-17",
+    "word": "蔑む",
+    "furigana": ["さげす", "む"],
+    "romaji": "sagesumu",
+    "type": "vb",
+    "meaning": {
+      "en": ["look down on"],
+      "es": ["despreciar"]
+    }
   }
 ]
