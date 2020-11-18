@@ -1065,5 +1065,16 @@
       "en": ["look down on"],
       "es": ["despreciar"]
     }
+  },
+  {
+    "date": "2020-11-18",
+    "word": "性癖",
+    "furigana": ["せい", "へき"],
+    "romaji": "seiheki",
+    "type": "n",
+    "meaning": {
+      "en": ["proclivity", "propensity"],
+      "es": ["propensión", "inclinación"]
+    }
   }
 ]
