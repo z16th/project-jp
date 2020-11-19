@@ -1076,5 +1076,16 @@
       "en": ["proclivity", "propensity"],
       "es": ["propensión", "inclinación"]
     }
+  },
+  {
+    "date": "2020-11-19",
+    "word": "旧姓",
+    "furigana": ["きゅう", "せい"],
+    "romaji": "kyūsei",
+    "type": "n",
+    "meaning": {
+      "en": ["former name", "maiden name"],
+      "es": ["nombre anterior", "apellido de soltera"]
+    }
   }
 ]
