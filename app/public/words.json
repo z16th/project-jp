@@ -1087,5 +1087,16 @@
       "en": ["former name", "maiden name"],
       "es": ["nombre anterior", "apellido de soltera"]
     }
+  },
+  {
+    "date": "2020-11-20",
+    "word": "病原菌",
+    "furigana": ["びょう", "げん", "きん"],
+    "romaji": "byōgenkin",
+    "type": "n",
+    "meaning": {
+      "en": ["germ", "pathogen"],
+      "es": ["germen", "patógeno"]
+    }
   }
 ]
