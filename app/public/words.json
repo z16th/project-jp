@@ -1098,5 +1098,16 @@
       "en": ["germ", "pathogen"],
       "es": ["germen", "patógeno"]
     }
+  },
+  {
+    "date": "2020-11-22",
+    "word": "思い遣る",
+    "furigana": ["おも", "い", "や", "る"],
+    "romaji": "omoiyaru",
+    "type": "vb",
+    "meaning": {
+      "en": ["empathize", "identify with", "care about"],
+      "es": ["empatizar", "identificarse con", "preocuparse de/por"]
+    }
   }
 ]
