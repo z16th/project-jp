@@ -1109,5 +1109,16 @@
       "en": ["empathize", "identify with", "care about"],
       "es": ["empatizar", "identificarse con", "preocuparse de/por"]
     }
+  },
+  {
+    "date": "2020-11-24",
+    "word": "赤",
+    "furigana": ["あか"],
+    "romaji": "aka",
+    "type": "n",
+    "meaning": {
+      "en": ["red", "crimson", "scarlet"],
+      "es": ["rojo", "carmesí", "escarlata"]
+    }
   }
 ]
