@@ -2,6 +2,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react"
 import { jsx } from "@emotion/core"
+import { Helmet } from "react-helmet-async"
+
 import wordData from "../../public/words.json"
 import { PageStyled, cardsTable } from "../styling"
 
@@ -18,6 +20,17 @@ export default function History() {
 
   return (
     <PageStyled>
+      <Helmet>
+        <meta property="og:title" content="Historial de palabras" />
+        <meta
+          property="og:description"
+          content="Aquí encontrarás todas las palabras del día hasta el momento"
+        />
+        <meta name="twitter:label1" value="Page" />
+        <meta name="twitter:data1" value={page} />
+        <meta name="twitter:label2" value="Pages" />
+        <meta name="twitter:data2" value={numberOfPages} />
+      </Helmet>
       <Sidebar />
       <div className="main-content">
         <div className="content">
