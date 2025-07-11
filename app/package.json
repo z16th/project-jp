@@ -23,9 +23,9 @@
   },
   "scripts": {
     "start-r": "react-scripts start",
-    "start": "craco start",
+    "start": "NODE_OPTIONS='--openssl-legacy-provider' craco start",
     "build-r": "react-scripts build",
-    "build": "craco build",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' craco build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ."
