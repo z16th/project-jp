@@ -72,7 +72,7 @@ export default function App() {
             </Route>
           </Switch>
         </React.Suspense>
-
+        <Footer />
       </Layout>
     </Router>
   )

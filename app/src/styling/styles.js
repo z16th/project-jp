@@ -907,9 +907,8 @@ export const footer = css`
   position: relative;
   text-align: center;
   width: 100%;
-  padding-top: 16px;
-  color: white;
-  background-color: ${gray.regular};
+  height: 64px;
+  background-color: ${gray.background};
   div {
     width: 65%;
     margin: 8px 0px;
